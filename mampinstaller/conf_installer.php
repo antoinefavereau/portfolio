@@ -1,0 +1,20 @@
+<?php
+	define('MAMP_EXTRA_SITE_NAME','My Great Blog');
+	define('MAMP_EXTRA_ADMIN_EMAIL','test@example.com');
+	define('MAMP_EXTRA_DB_HOST','127.0.0.1');
+	define('MAMP_EXTRA_DB_PORT','3306');
+	define('MAMP_EXTRA_DB_USERNAME','root');
+	define('MAMP_EXTRA_DB_PASSWORD','root');
+	define('MAMP_EXTRA_DB_CHARSET','utf8');
+	define('MAMP_EXTRA_SITE_START_PAGE','index.php');
+	define('MAMP_EXTRA_SITE_ADMIN_PAGE','wp-login.php');
+	define('MAMP_EXTRA_SITE_PATH','');
+	define('MAMP_EXTRA_DB_PREFIX','wp_');
+	define('MAMP_EXTRA_DB_NAME','antoinefavereau');
+	define('MAMP_EXTRA_ACCOUNT_USERNAME','antoinefavereau');
+	define('MAMP_EXTRA_ACCOUNT_PASSWORD','Favere45.,');
+	define('MAMP_EXTRA_SITE_ADDRESS','https://dev-antoine-favereau.fr');
+	define('MAMP_EXTRA_DOCUMENT_ROOT','C:/Users/Antoine/Desktop/Programmation/Sites/antoine-favereau');
+	define('MAMP_EXTRA_INSTALLATION_HOST','https://dev-antoine-favereau.fr');
+	define('MAMP_EXTRA_DB_CONF_PORT','3306');
+?>

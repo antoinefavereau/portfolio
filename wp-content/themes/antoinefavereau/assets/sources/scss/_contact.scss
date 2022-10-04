@@ -1,0 +1,170 @@
+#contact {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+
+    @media (max-width: 992px) {
+        padding-top: 4rem;
+    }
+
+    @media (max-width: 576px) {
+        padding-top: 3rem;
+    }
+
+    h1 {
+        font-size: calc(10px + 6vw);
+        letter-spacing: .4em;
+        width: fit-content;
+        padding-bottom: 2rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 30%;
+            height: 5px;
+            background-color: $white;
+            opacity: .6;
+            border-radius: 5px;
+        }
+    }
+
+    h4 {
+        font-size: calc(10px + 1vw);
+    }
+
+    #socialMedias {
+        transform: skewY(12deg);
+        background-color: rgba($white, .8);
+        padding-block: 1rem;
+        border-radius: .5rem;
+
+        a {
+            transition: all .3s ease-in-out;
+            color: $black;
+
+            .bgImage {
+                transition: all .3s ease-in-out;
+                box-shadow: 0 0 10px $black;
+            }
+
+            svg {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                transform: skewY(-12deg);
+            }
+
+            &:hover {
+                color: $white;
+
+                .bgImage {
+                    transform: scale(1.1);
+                }
+            }
+
+            &:not(:hover) .bgImage {
+                opacity: 0;
+            }
+        }
+    }
+
+    form {
+        max-width: 900px;
+
+        .ligne {
+            position: absolute;
+            bottom: 0;
+            left: 1rem;
+            width: calc(100% - 2rem);
+            height: 4px;
+            background-color: rgba($white, .5);
+
+            &::after {
+                content: '';
+                transition: all .3s ease-in-out;
+                position: absolute;
+                bottom: 0;
+                left: 20%;
+                width: 0;
+                height: 4px;
+                background-color: $white;
+            }
+        }
+
+        .input {
+            // transition: all .3s ease-in-out;
+            position: relative;
+            background-color: transparent;
+            border: none;
+            // border-bottom: solid 4px $white;
+            padding: 1rem 2rem;
+            outline: none;
+            color: inherit;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 4px;
+                background-color: $white;
+            }
+
+            &:focus,
+            &:not(:placeholder-shown) {
+
+                +label {
+                    margin-top: 0;
+                    transform: translateY(-50%);
+                    font-size: smaller;
+
+                    +.ligne::after {
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        label {
+            transition: all .3s ease-in-out;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: 1rem;
+            margin-left: 2rem;
+        }
+
+        #contact_submit {
+            transition: all .3s ease-in-out;
+            width: fit-content;
+            font-size: larger;
+            background-color: $white;
+            border-radius: 2px;
+
+            &::before {
+                content: "";
+                transition: all .3s ease-in-out;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                border: solid 2px $white;
+                border-radius: 2px;
+            }
+
+            &:hover {
+                transform: translate(calc(-50% + 4px), -4px) !important;
+
+                &::before {
+                    transform: translate(-8px, 8px);
+                }
+            }
+        }
+    }
+}
