@@ -6,10 +6,11 @@
     a {
         padding: 1rem;
         color: $black;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
 
         &:hover {
             color: $primary;
+            stroke-width: 1.5;
         }
 
         &.logo {

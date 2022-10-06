@@ -16,7 +16,7 @@ require('variables.php');
     </a>
     <div class="d-flex flex-grow-1 flex-column justify-content-around align-items-center my-2">
         <a href="#home" data-bs-toggle="tooltip" data-bs-title="Home">
-            <svg class="icon icon-tabler icon-tabler-home" width="60" height="60" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="icon icon-tabler icon-tabler-home" width="60" height="60" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <title>Home</title>
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <polyline points="5 12 3 12 12 3 21 12 19 12" />
@@ -25,14 +25,14 @@ require('variables.php');
             </svg>
         </a>
         <a href="#about">
-            <svg width="60" height="60" stroke-width="1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <title>About</title>
                 <path d="M5 20V19C5 15.134 8.13401 12 12 12V12C15.866 12 19 15.134 19 19V20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </a>
         <a href="#portfolio">
-            <svg class="icon icon-tabler icon-tabler-briefcase" width="60" height="60" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="icon icon-tabler icon-tabler-briefcase" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                 <title>Portfolio</title>
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <rect x="3" y="7" width="18" height="13" rx="2" />
@@ -42,7 +42,7 @@ require('variables.php');
             </svg>
         </a>
         <a href="#contact">
-            <svg width="60" height="60" stroke-width="1" viewBox="0 0 24 24" fill="none" color="currentcolor">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" color="currentcolor">
                 <path d="M7 9l5 3.5L17 9" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"></path>
                 <path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="currentcolor"></path>
             </svg>
@@ -50,9 +50,9 @@ require('variables.php');
     </div>
     <?= get_category_link('cours') ?>
     <a class="cours w-100" href="<?= get_category_link(get_cat_ID('cours')) ?>">
-        <svg class="d-block mx-auto" width="60" height="60" viewBox="0 0 24 24" stroke-width="1" fill="none">
-            <path d="M5 19.5V5a2 2 0 012-2h11.4a.6.6 0 01.6.6V21M9 7h6M6.5 15H19M6.5 18H19M6.5 21H19" stroke="currentcolor" stroke-width="1" stroke-linecap="round"></path>
-            <path d="M6.5 18c-1 0-1.5-.672-1.5-1.5S5.5 15 6.5 15M6.5 21c-1 0-1.5-.672-1.5-1.5S5.5 18 6.5 18" stroke="currentcolor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+        <svg class="d-block mx-auto" width="60" height="60" viewBox="0 0 24 24" fill="none">
+            <path d="M5 19.5V5a2 2 0 012-2h11.4a.6.6 0 01.6.6V21M9 7h6M6.5 15H19M6.5 18H19M6.5 21H19" stroke="currentcolor" stroke-linecap="round"></path>
+            <path d="M6.5 18c-1 0-1.5-.672-1.5-1.5S5.5 15 6.5 15M6.5 21c-1 0-1.5-.672-1.5-1.5S5.5 18 6.5 18" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
     </a>
 </aside>
@@ -68,9 +68,6 @@ require('variables.php');
     </section>
 
     <section id="about" class="position-relative w-100 px-4 px-sm-5">
-        <svg class="angle d-none d-lg-block position-absolute bottom-0 end-0" width="200" height="200" viewBox="0 0 210 210" fill="none">
-            <path d="M205 5V205H5" stroke="#B9B9B9" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
         <div class="w-100 row gx-0 row-cols-1 row-cols-lg-2">
             <div class="col">
                 <h1 class="position-relative text-uppercase text-center fw-bold mx-auto">about</h1>
@@ -140,9 +137,6 @@ require('variables.php');
     </section>
 
     <section id="portfolio" class="position-relative w-100 px-4 px-sm-5">
-        <svg class="angle d-none d-lg-block position-absolute top-0 start-0 ms-5 mt-5" width="200" height="200" viewBox="0 0 210 210" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M205 5H5V205" stroke="#B9B9B9" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
         <h1 class="position-relative text-uppercase text-center fw-bold mx-auto">portfolio</h1>
         <div id="swiperPortfolio" class="swiper mx-3 mx-sm-4 mx-lg-5">
             <div class="swiper-wrapper">
@@ -167,17 +161,17 @@ require('variables.php');
             </div>
             <div class="d-flex justify-content-center mt-5 mb-2">
                 <div class="swiper-button-prev-arrow mx-5">
-                    <svg width="70" height="40" viewBox="0 0 91 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M88.9167 27.1667L2.00002 27.1667" stroke="white" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M26.8333 2.33341L1.99998 27.1667" stroke="white" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M26.8333 52L1.99998 27.1667" stroke="white" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg width="70" height="40" viewBox="0 0 91 54" fill="none">
+                        <path d="M88.9167 27.1667L2.00002 27.1667" stroke="currentcolor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M26.8333 2.33341L1.99998 27.1667" stroke="currentcolor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M26.8333 52L1.99998 27.1667" stroke="currentcolor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
                 <div class="swiper-button-next-arrow mx-5">
-                    <svg width="70" height="40" viewBox="0 0 91 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 26.8333H88.9167" stroke="white" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M64.0834 51.6666L88.9167 26.8333" stroke="white" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M64.0834 2L88.9167 26.8333" stroke="white" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg width="70" height="40" viewBox="0 0 91 54" fill="none">
+                        <path d="M2 26.8333H88.9167" stroke="currentcolor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M64.0834 51.6666L88.9167 26.8333" stroke="currentcolor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M64.0834 2L88.9167 26.8333" stroke="currentcolor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
             </div>
@@ -185,11 +179,8 @@ require('variables.php');
     </section>
 
     <section id="contact" class="position-relative w-100">
-        <svg class="angle d-none d-lg-block position-absolute top-0 end-0 me-5 mt-5" width="200" height="200" viewBox="0 0 210 210" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 5H205V205" stroke="#B9B9B9" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
         <h1 class="position-relative text-uppercase text-center fw-bold mx-auto">Contact</h1>
-        <h4 class="opacity-75 text-center text-nowrap mt-5">Me contacter pour <span class="txt-type" data-speed="80" data-wait="15" data-words='["un projet ?", "une question ?", "une proposition ?"]'></span></h4>
+        <!-- <h4 class="opacity-75 text-center text-nowrap mt-5">Me contacter pour <span class="txt-type" data-speed="80" data-wait="15" data-words='["un projet ?", "une question ?", "une proposition ?"]'></span></h4> -->
         <!-- <aside id="socialMedias" class="position-absolute d-flex flex-column ms-5">
         <?php foreach ($socialMedias as $socialMedia) : ?>
             <a class="position-relative p-3" href="<?= $socialMedia['lien'] ?>" target="blanc">
@@ -197,7 +188,7 @@ require('variables.php');
                 <?= $socialMedia['svg'] ?>
             </a>
         <?php endforeach; ?>
-    </aside> -->
+        </aside> -->
         <form method="post" class="container">
             <div class="row py-4 px-4">
                 <div class="col-6 position-relative mt-5 px-3">
@@ -222,7 +213,7 @@ require('variables.php');
                 </div>
 
             </div>
-            <button type="submit" id="contact_submit" class="position-relative start-50 translate-middle-x border-0 mt-5 mb-5 py-3 px-5">
+            <button type="submit" id="contact_submit" class="position-relative start-50 translate-middle-x border-0 mt-5 mb-5 py-3 px-5 rounded-pill">
                 Envoyer
             </button>
         </form>

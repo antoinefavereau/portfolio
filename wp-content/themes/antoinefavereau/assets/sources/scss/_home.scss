@@ -101,31 +101,31 @@
     //     }
     // }
 
-    // .scrollIndicator {
-    //     width: 20px;
-    //     height: 60px;
-    //     overflow: hidden;
-    //     border-radius: 2rem;
+    .scrollIndicator {
+        width: 20px;
+        height: 60px;
+        overflow: hidden;
+        border-radius: 2rem;
 
-    //     @media (max-width: 576px) {
-    //         right: 50% !important;
-    //         transform: translateX(50%);
-    //         margin-right: 0 !important;
-    //     }
+        @media (max-width: 576px) {
+            right: 50% !important;
+            transform: translateX(50%);
+            margin-right: 0 !important;
+        }
 
-    //     &::after {
-    //         content: '';
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         width: 100%;
-    //         height: 100%;
-    //         background-color: $white;
-    //         opacity: .6;
-    //         border-radius: 2rem;
-    //         animation: 2s infinite scrollIndicator;
-    //     }
-    // }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $black;
+            opacity: .8;
+            border-radius: 2rem;
+            animation: 2s infinite scrollIndicator;
+        }
+    }
 }
 
 @keyframes clignoter {

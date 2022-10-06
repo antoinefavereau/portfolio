@@ -95,7 +95,7 @@ $portfolio = array(
             "En cours",
         ),
         "image" => get_template_directory_uri() . "/assets/dist/images/srma.jpg",
-        "lien" => get_template_directory_uri() . "/assets/dist/images/srma.jpg",
+        "lien" => "https://salon-metiersdart.centre-valdeloire.fr",
     ),
 );
 

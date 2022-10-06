@@ -1,6 +1,5 @@
 #contact {
-    padding-top: 8rem;
-    padding-bottom: 3rem;
+    padding-block: 4rem;
 
     @media (max-width: 992px) {
         padding-top: 4rem;
@@ -24,7 +23,7 @@
             bottom: 0;
             width: 30%;
             height: 5px;
-            background-color: $white;
+            background-color: $black;
             opacity: .6;
             border-radius: 5px;
         }
@@ -79,7 +78,7 @@
             left: 1rem;
             width: calc(100% - 2rem);
             height: 4px;
-            background-color: rgba($white, .5);
+            background-color: rgba($black, .5);
 
             &::after {
                 content: '';
@@ -89,7 +88,7 @@
                 left: 20%;
                 width: 0;
                 height: 4px;
-                background-color: $white;
+                background-color: $black;
             }
         }
 
@@ -142,29 +141,30 @@
             transition: all .3s ease-in-out;
             width: fit-content;
             font-size: larger;
-            background-color: $white;
+            background-color: $primary;
+            color: $white;
             border-radius: 2px;
 
-            &::before {
-                content: "";
-                transition: all .3s ease-in-out;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: transparent;
-                border: solid 2px $white;
-                border-radius: 2px;
-            }
+            // &::before {
+            //     content: "";
+            //     transition: all .3s ease-in-out;
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: transparent;
+            //     border: solid 2px $black;
+            //     border-radius: 2px;
+            // }
 
-            &:hover {
-                transform: translate(calc(-50% + 4px), -4px) !important;
+            // &:hover {
+            //     transform: translate(calc(-50% + 4px), -4px) !important;
 
-                &::before {
-                    transform: translate(-8px, 8px);
-                }
-            }
+            //     &::before {
+            //         transform: translate(-8px, 8px);
+            //     }
+            // }
         }
     }
 }

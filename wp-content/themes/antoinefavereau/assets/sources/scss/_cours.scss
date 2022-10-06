@@ -27,11 +27,11 @@
         #arrowRight {
             background-color: transparent;
             cursor: pointer;
-            border: solid 3px $white;
+            border: solid 3px $black;
             border-radius: 3px;
             margin-inline: 6px;
             overflow: hidden;
-            color: $white;
+            color: $black;
         }
 
         #arrowLeft:hover svg {

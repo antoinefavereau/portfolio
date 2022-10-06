@@ -104,10 +104,11 @@ body #main {
 #sideBar a {
   padding: 1rem;
   color: black;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 #sideBar a:hover {
   color: #ff4f5a;
+  stroke-width: 1.5;
 }
 #sideBar a.logo img {
   width: 100px;
@@ -135,6 +136,31 @@ body #main {
   font-weight: 600;
   color: rgba(53, 50, 82, 0.7);
 }
+#home .scrollIndicator {
+  width: 20px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+@media (max-width: 576px) {
+  #home .scrollIndicator {
+    right: 50% !important;
+    transform: translateX(50%);
+    margin-right: 0 !important;
+  }
+}
+#home .scrollIndicator::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 2rem;
+  animation: 2s infinite scrollIndicator;
+}
 
 @keyframes clignoter {
   0% {
@@ -160,8 +186,7 @@ body #main {
   }
 }
 #about {
-  padding-top: 8rem;
-  padding-bottom: 10rem;
+  padding-block: 4rem;
 }
 @media (max-width: 992px) {
   #about {
@@ -323,8 +348,7 @@ body #main {
 }
 
 #portfolio {
-  padding-top: 8rem;
-  padding-bottom: 5rem;
+  padding-block: 4rem;
 }
 @media (max-width: 992px) {
   #portfolio {
@@ -352,7 +376,7 @@ body #main {
   bottom: 0;
   width: 30%;
   height: 5px;
-  background-color: white;
+  background-color: black;
   opacity: 0.6;
   border-radius: 5px;
 }
@@ -364,6 +388,7 @@ body #main {
   border-radius: 2rem;
   overflow: hidden;
   aspect-ratio: 1/1;
+  color: white;
 }
 #portfolio #swiperPortfolio .swiper-wrapper .swiper-slide:not(.swiper-slide-active) {
   transform: scale(0.8) translateY(10%);
@@ -417,8 +442,7 @@ body #main {
 }
 
 #contact {
-  padding-top: 8rem;
-  padding-bottom: 3rem;
+  padding-block: 4rem;
 }
 @media (max-width: 992px) {
   #contact {
@@ -444,7 +468,7 @@ body #main {
   bottom: 0;
   width: 30%;
   height: 5px;
-  background-color: white;
+  background-color: black;
   opacity: 0.6;
   border-radius: 5px;
 }
@@ -489,7 +513,7 @@ body #main {
   left: 1rem;
   width: calc(100% - 2rem);
   height: 4px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #contact form .ligne::after {
   content: "";
@@ -499,7 +523,7 @@ body #main {
   left: 20%;
   width: 0;
   height: 4px;
-  background-color: white;
+  background-color: black;
 }
 #contact form .input {
   position: relative;
@@ -539,26 +563,9 @@ body #main {
   transition: all 0.3s ease-in-out;
   width: fit-content;
   font-size: larger;
-  background-color: white;
+  background-color: #ff4f5a;
+  color: white;
   border-radius: 2px;
-}
-#contact form #contact_submit::before {
-  content: "";
-  transition: all 0.3s ease-in-out;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  border: solid 2px white;
-  border-radius: 2px;
-}
-#contact form #contact_submit:hover {
-  transform: translate(calc(-50% + 4px), -4px) !important;
-}
-#contact form #contact_submit:hover::before {
-  transform: translate(-8px, 8px);
 }
 
 #archivesCours {
@@ -601,11 +608,11 @@ body #main {
 .cours .sectionButtons #arrowRight {
   background-color: transparent;
   cursor: pointer;
-  border: solid 3px white;
+  border: solid 3px black;
   border-radius: 3px;
   margin-inline: 6px;
   overflow: hidden;
-  color: white;
+  color: black;
 }
 .cours .sectionButtons #arrowLeft:hover svg {
   animation: leftArrowHover 0.3s ease-in-out;
