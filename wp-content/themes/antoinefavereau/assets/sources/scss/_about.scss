@@ -31,7 +31,7 @@
             bottom: 0;
             width: 30%;
             height: 5px;
-            background-color: $white;
+            background-color: $black;
             opacity: .6;
             border-radius: 5px;
         }
@@ -63,7 +63,7 @@
                 content: "";
                 transition: all .3s ease-in-out;
                 position: absolute;
-                background-color: $white;
+                background-color: $black;
                 border-radius: 2px;
                 left: 0;
                 bottom: 25px;
@@ -112,11 +112,25 @@
         }
 
         a {
-            color: unset;
             transition: all .2s ease-in-out;
+            color: unset;
+            text-decoration: none;
+            position: relative;
 
-            &:hover {
-                color: $primary;
+            &::after {
+                content: '';
+                transition: all .3s ease-in-out;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: -2px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: currentColor;
+            }
+
+            &:hover::after {
+                width: 50%;
             }
         }
 
@@ -130,8 +144,9 @@
         .swiper-wrapper {
 
             .swiper-slide {
-                background-color: $dark;
-                border: solid 5px $white;
+                background-color: $primaryLight;
+                color: $white;
+                // border: solid 5px $black;
                 border-radius: 1rem;
 
                 -ms-overflow-style: none; // IE and Edge 
@@ -145,7 +160,7 @@
 
         .swiper-button-prev,
         .swiper-button-next {
-            color: $white;
+            color: $black;
 
             @media (max-width: 576px) {
                 display: none;
