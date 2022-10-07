@@ -6,7 +6,7 @@ $primary: #ff4f5a;
 $primaryLight: #ff4f5a;
 
 body {
-    background-color: $light;
+    background-color: $white;
 
     ::selection {
         background-color: rgba($primary, .8);
@@ -20,7 +20,7 @@ body {
         top: 0;
         width: 100vw;
         height: 100vh;
-        background-color: $light;
+        background-color: $white;
         display: flex;
         justify-content: center;
         align-items: center;

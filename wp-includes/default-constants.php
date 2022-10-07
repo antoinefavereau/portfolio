@@ -380,7 +380,7 @@ function wp_functionality_constants() {
 	 * @since 3.3.0
 	 */
 	if ( ! defined( 'WP_CRON_LOCK_TIMEOUT' ) ) {
-		define( 'WP_CRON_LOCK_TIMEOUT', MINUTE_IN_SECONDS );
+		define( 'WP_CRON_LOCK_TIMEOUT', 300 );
 	}
 }
 

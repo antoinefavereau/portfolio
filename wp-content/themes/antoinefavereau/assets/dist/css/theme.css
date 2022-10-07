@@ -31,7 +31,7 @@
   }
 }
 body {
-  background-color: #f3f3f3;
+  background-color: white;
 }
 body ::selection {
   background-color: rgba(255, 79, 90, 0.8);
@@ -44,7 +44,7 @@ body #loader {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #f3f3f3;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,7 +111,7 @@ body #main {
   stroke-width: 1.5;
 }
 #sideBar a.logo img {
-  width: 100px;
+  width: 80px;
   user-select: none;
 }
 #sideBar a.cours {
