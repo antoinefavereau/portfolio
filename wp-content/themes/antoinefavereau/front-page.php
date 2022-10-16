@@ -10,12 +10,54 @@ require('variables.php');
     <span></span>
 </div>
 
+<script>
+    document.body.classList.add("overflow-hidden");
+</script>
+
+<style>
+    #loader {
+        position: fixed;
+        z-index: 1001;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #loader span {
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        position: relative;
+        background: black;
+        animation: flipX 1s linear infinite;
+    }
+
+    @keyframes flipX {
+        0% {
+            transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+        }
+
+        50% {
+            transform: perspective(200px) rotateX(-180deg) rotateY(0deg);
+        }
+
+        100% {
+            transform: perspective(200px) rotateX(-180deg) rotateY(-180deg)
+        }
+    }
+</style>
+
 <aside id="sideBar" class="position-fixed h-100 d-flex flex-column justify-content-between align-items-center">
     <a class="logo" href="">
         <img src="<?= get_template_directory_uri() ?>/assets/dist/images/logo.png" alt="logo">
     </a>
     <div class="d-flex flex-grow-1 flex-column justify-content-around align-items-center my-2">
-        <a href="#home" data-bs-toggle="tooltip" data-bs-title="Home">
+        <a class="lienSidebar" href="#home" data-bs-toggle="tooltip" data-bs-title="Home">
             <svg class="icon icon-tabler icon-tabler-home" width="60" height="60" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <title>Home</title>
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -24,14 +66,14 @@ require('variables.php');
                 <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
             </svg>
         </a>
-        <a href="#about">
+        <a class="lienSidebar" href="#about">
             <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <title>About</title>
                 <path d="M5 20V19C5 15.134 8.13401 12 12 12V12C15.866 12 19 15.134 19 19V20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </a>
-        <a href="#portfolio">
+        <a class="lienSidebar" href="#portfolio">
             <svg class="icon icon-tabler icon-tabler-briefcase" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                 <title>Portfolio</title>
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -41,7 +83,8 @@ require('variables.php');
                 <path d="M3 13a20 20 0 0 0 18 0" />
             </svg>
         </a>
-        <a href="#contact">
+        <a class="lienSidebar" href="#contact">
+            <title>Contact</title>
             <svg width="60" height="60" viewBox="0 0 24 24" fill="none" color="currentcolor">
                 <path d="M7 9l5 3.5L17 9" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"></path>
                 <path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="currentcolor"></path>
@@ -57,6 +100,27 @@ require('variables.php');
     </a>
 </aside>
 
+<div id="nav" class="d-flex flex-column justify-content-around align-items-center">
+    <a class="lienSidebar" href="#home" data-bs-toggle="tooltip" data-bs-title="Home">
+        Home
+    </a>
+    <a class="lienSidebar" href="#about">
+        About
+    </a>
+    <a class="lienSidebar" href="#portfolio">
+        Portfolio
+    </a>
+    <a class="lienSidebar" href="#contact">
+        Contact
+    </a>
+</div>
+
+<button id="btnNav">
+    <div></div>
+    <div></div>
+    <div></div>
+</button>
+
 <main id="main" class="position-relative">
     <section id="home" class="position-relative w-100 vh-100">
         <div class="position-absolute start-50 top-50 translate-middle d-flex flex-column align-items-center">
@@ -64,7 +128,7 @@ require('variables.php');
             <h1 class="mt-3 text-center">Antoine Favereau</h1>
             <h2 class="mt-1 text-center">Je suis un <span class="txt-type" data-speed="60" data-wait="20" data-words='["étudiant ingénieur", "développeur web en freelance"]'></span></h2>
         </div>
-        <div class="scrollIndicator position-absolute end-0 bottom-0 me-5 mb-5"></div>
+        <div class="scrollIndicator position-absolute end-0 bottom-0 me-5"></div>
     </section>
 
     <section id="about" class="position-relative w-100 px-4 px-sm-5">

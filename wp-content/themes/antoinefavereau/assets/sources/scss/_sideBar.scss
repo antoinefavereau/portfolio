@@ -8,7 +8,8 @@
         color: $black;
         transition: all 0.2s ease-in-out;
 
-        &:hover {
+        &:hover,
+        &.active {
             color: $primary;
             stroke-width: 1.5;
         }
@@ -25,5 +26,10 @@
             color: $white;
             padding-block: 1.5rem;
         }
+    }
+
+    @media screen and (max-width: 768px) {
+        //md
+        transform: translateX(-100%);
     }
 }

@@ -106,8 +106,11 @@ $(document).ready(() => {
         $('#swiperAboutExperiences').addClass('active');
     });
 
-    $('.lienHeader').click(function () {
+    $('.lienSidebar').on('click', function () {
         event.preventDefault();
+        $('#btnNav').removeClass('active')
+        $('#nav').removeClass('active')
+        $('body').removeClass('overflow-hidden');
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 500);
@@ -160,10 +163,22 @@ $(document).scroll(function () {
     ctx.stroke();
 });
 
-$(document).mousemove(function (event) {
-    // console.log(event.clientX);
-    // console.log($("goTop").position());
-});
+$(window).resize(function () {
+    if ($(window).width() > 768) {
+        $('#btnNav').removeClass('active')
+        $('#nav').removeClass('active')
+    }
+})
+
+$('#btnNav').on('click', function () {
+    $(this).toggleClass('active')
+    $('#nav').toggleClass('active')
+    if ($('#nav').hasClass('active')) {
+        $('body').addClass('overflow-hidden');
+    } else {
+        $('body').removeClass('overflow-hidden');
+    }
+})
 
 function goTop() {
     $(document).scrollTop(0);
