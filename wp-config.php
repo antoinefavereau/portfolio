@@ -23,7 +23,7 @@ define('DB_NAME', 'antoinefavereau'); //antoi1888818
 /** Utilisateur de la base de données MySQL. */
 define('DB_USER', 'root'); //antoi1888818
 /** Mot de passe de la base de données MySQL. */
-define('DB_PASSWORD', 'root'); //gygpkn3udo
+define('DB_PASSWORD', 'root'); //Favere45+-
 /** Adresse de l'hébergement MySQL. */
 define('DB_HOST', 'localhost:3306'); //185.98.131.91
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */

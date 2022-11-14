@@ -21,6 +21,16 @@ $formations = array(
 
 $competences = array(
     array(
+        "info" => "Programmation système",
+        "details" => array(
+            "programmation orientée objet",
+            "programmation procédurale",
+            "algorithmique",
+            "notions et modélisation UML",
+            "architecture micro-contrôleur",
+        ),
+    ),
+    array(
         "info" => "Développement WEB",
         "details" => array(
             "PHP, HTML, CSS, JavaScript",
@@ -46,6 +56,13 @@ $competences = array(
 );
 
 $experiences = array(
+    array(
+        "info" => "Freelance",
+        "details" => array(
+            "depuis octobre 2022",
+            "développement web",
+        ),
+    ),
     array(
         "info" => "CDD Xapiema",
         "details" => array(

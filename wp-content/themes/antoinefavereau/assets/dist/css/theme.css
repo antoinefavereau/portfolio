@@ -176,6 +176,7 @@ body #main {
 #sideBar a:hover, #sideBar a.active {
   color: #ff4f5a;
   stroke-width: 1.5;
+  animation: dash 1s linear forwards;
 }
 #sideBar a.logo img {
   width: 80px;
@@ -192,6 +193,15 @@ body #main {
   }
 }
 
+@keyframes dash {
+  0% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 #home #imagePhoto {
   border-radius: 50%;
   width: 15rem;
