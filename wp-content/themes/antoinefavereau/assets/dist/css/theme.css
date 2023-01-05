@@ -666,6 +666,20 @@ body #main {
   color: white;
 }
 
+#archivesCours {
+  color: black;
+}
+#archivesCours .card h5 {
+  font-weight: bold;
+}
+#archivesCours .card hr {
+  border-top-width: 2px;
+}
+#archivesCours .card a {
+  background-color: #ff4f5a;
+  color: white;
+}
+
 .cours {
   padding: 1rem 5rem;
 }
