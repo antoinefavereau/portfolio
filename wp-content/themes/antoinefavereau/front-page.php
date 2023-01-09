@@ -52,11 +52,11 @@ require('variables.php');
     }
 </style>
 
-<aside id="sideBar" class="position-fixed h-100 d-flex flex-column justify-content-between align-items-center">
+<aside id="sideBar" class="position-fixed d-flex flex-column justify-content-between align-items-center shadow">
     <a class="logo" href="">
         <img src="<?= get_template_directory_uri() ?>/assets/dist/images/logo.png" alt="logo">
     </a>
-    <div class="d-flex flex-grow-1 flex-column justify-content-around align-items-center my-2">
+    <div class="d-flex flex-grow-1 flex-column justify-content-around align-items-center my-2 w-100">
         <a class="lienSidebar" href="#home" data-bs-toggle="tooltip" data-bs-title="Home">
             <svg class="icon icon-tabler icon-tabler-home" width="60" height="60" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <title>Home</title>
@@ -92,7 +92,7 @@ require('variables.php');
         </a>
     </div>
     <?= get_category_link('cours') ?>
-    <a class="cours w-100" href="<?= get_category_link(get_cat_ID('jeux')) ?>">
+    <a class="jeux w-100" href="<?= get_category_link(get_cat_ID('jeux')) ?>">
         <!-- <svg class="d-block mx-auto" width="60" height="60" viewBox="0 0 24 24" fill="none">
             <path d="M5 19.5V5a2 2 0 012-2h11.4a.6.6 0 01.6.6V21M9 7h6M6.5 15H19M6.5 18H19M6.5 21H19" stroke="currentcolor" stroke-linecap="round"></path>
             <path d="M6.5 18c-1 0-1.5-.672-1.5-1.5S5.5 15 6.5 15M6.5 21c-1 0-1.5-.672-1.5-1.5S5.5 18 6.5 18" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"></path>
