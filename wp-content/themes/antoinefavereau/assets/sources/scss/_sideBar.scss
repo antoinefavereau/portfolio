@@ -1,36 +1,54 @@
 #sideBar {
     width: 10rem;
-    border-right: solid 3px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
     overflow: auto;
+    height: calc(100% - 4rem);
+    margin: 2rem;
+    transition: all 0.2s ease-in-out;
 
-    a {
+    .logo {
         padding: 1rem;
+
+        img {
+            width: 80px;
+            user-select: none;
+        }
+    }
+
+    .lienSidebar {
         color: $black;
         transition: all 0.2s ease-in-out;
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover,
         &.active {
             color: $primary;
             stroke-width: 1.5;
             animation: dash 1s linear forwards;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, .15);
+            border-radius: 2rem;
         }
+    }
 
-        &.logo {
-            img {
-                width: 80px;
-                user-select: none;
-            }
-        }
 
-        &.cours {
-            background-color: $primary;
-            color: $white;
-            padding-block: 1.5rem;
+    .jeux {
+        background-color: $primary;
+        color: $white;
+        padding-block: 1.5rem;
+
+        &:hover,
+        &.active {
+            stroke-width: 1.5;
+            animation: dash 1s linear forwards;
         }
     }
 
     @media screen and (max-width: 768px) {
-        transform: translateX(-100%);
+        transform: translateX(-150%);
     }
 }
 
@@ -39,6 +57,7 @@
         stroke-dasharray: 100;
         stroke-dashoffset: 100;
     }
+
     100% {
         stroke-dashoffset: 0;
     }

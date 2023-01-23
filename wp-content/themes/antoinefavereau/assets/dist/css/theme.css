@@ -62,7 +62,7 @@ body #goTop:hover svg path {
   stroke-width: 6px;
 }
 body #main {
-  margin-left: 10rem;
+  margin-left: 14rem;
   overflow: hidden;
 }
 @media screen and (max-width: 768px) {
@@ -165,31 +165,47 @@ body #main {
 
 #sideBar {
   width: 10rem;
-  border-right: solid 3px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
   overflow: auto;
-}
-#sideBar a {
-  padding: 1rem;
-  color: black;
+  height: calc(100% - 4rem);
+  margin: 2rem;
   transition: all 0.2s ease-in-out;
 }
-#sideBar a:hover, #sideBar a.active {
-  color: #ff4f5a;
-  stroke-width: 1.5;
-  animation: dash 1s linear forwards;
+#sideBar .logo {
+  padding: 1rem;
 }
-#sideBar a.logo img {
+#sideBar .logo img {
   width: 80px;
   user-select: none;
 }
-#sideBar a.cours {
+#sideBar .lienSidebar {
+  color: black;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sideBar .lienSidebar:hover, #sideBar .lienSidebar.active {
+  color: #ff4f5a;
+  stroke-width: 1.5;
+  animation: dash 1s linear forwards;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+}
+#sideBar .jeux {
   background-color: #ff4f5a;
   color: white;
   padding-block: 1.5rem;
 }
+#sideBar .jeux:hover, #sideBar .jeux.active {
+  stroke-width: 1.5;
+  animation: dash 1s linear forwards;
+}
 @media screen and (max-width: 768px) {
   #sideBar {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
 }
 
