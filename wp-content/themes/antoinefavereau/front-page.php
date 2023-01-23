@@ -128,9 +128,9 @@ require('variables.php');
 <main id="main" class="position-relative">
     <section id="home" class="position-relative w-100 vh-100">
         <div class="position-absolute start-50 top-50 translate-middle d-flex flex-column align-items-center">
-            <img id="imagePhoto" src="<?= get_template_directory_uri() ?>/assets/dist/images/photo.jpg" alt="photo de profil">
+            <img id="imagePhoto" src="<?= get_template_directory_uri() ?>/assets/dist/images/pp.jpeg" alt="photo de profil">
             <h1 class="mt-3 text-center">Antoine Favereau</h1>
-            <h2 class="mt-1 text-center">Je suis un <span class="txt-type" data-speed="60" data-wait="20" data-words='["étudiant ingénieur", "développeur web en freelance"]'></span></h2>
+            <h2 class="mt-1 text-center">Je suis <span class="txt-type" data-speed="60" data-wait="20" data-words='["étudiant ingénieur", "développeur web en freelance"]'></span></h2>
         </div>
         <div class="scrollIndicator position-absolute end-0 bottom-0 me-5"></div>
     </section>
