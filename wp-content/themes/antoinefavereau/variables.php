@@ -96,12 +96,12 @@ $portfolio = array(
         "info" => "Europe 22",
         "details" => array(
             "Chez Xapiema",
-            "Participation au développement",
+            "Participation au développement (front-end)",
             "Site Wordpress",
             "En cours",
         ),
         "image" => get_template_directory_uri() . "/assets/dist/images/europe22.jpg",
-        "lien" => get_template_directory_uri() . "/assets/dist/images/europe22.jpg",
+        "lien" => "https://www.europeocentre-valdeloire.eu/",
     ),
     array(
         "info" => "SRMA",
