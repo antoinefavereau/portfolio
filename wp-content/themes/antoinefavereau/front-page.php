@@ -281,8 +281,8 @@ require('variables.php');
                 </div>
 
             </div>
-            <button type="submit" id="contact_submit" class="position-relative start-50 translate-middle-x border-0 mt-5 mb-5 py-3 px-5 rounded-pill">
-                Envoyer
+            <button type="submit" id="contact_submit" class="hover_button position-relative start-50 translate-middle-x mt-5 mb-5 py-3 px-5 rounded-pill">
+                <span>Envoyer</span>
             </button>
         </form>
         <?php
