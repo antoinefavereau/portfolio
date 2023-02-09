@@ -84,8 +84,8 @@ require('variables.php');
             </svg>
         </a>
         <a class="lienSidebar" href="#contact">
-            <title>Contact</title>
             <svg width="60" height="60" viewBox="0 0 24 24" fill="none" color="currentcolor">
+                <title>Contact</title>
                 <path d="M7 9l5 3.5L17 9" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"></path>
                 <path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" stroke="currentcolor"></path>
             </svg>

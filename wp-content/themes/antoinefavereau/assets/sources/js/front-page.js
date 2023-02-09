@@ -117,9 +117,11 @@ $(document).ready(() => {
     });
 
     Array.from(document.querySelectorAll(".hover_button")).forEach(element => {
-        element.addEventListener("mouseenter", function (event) {
-            element.style.setProperty("--left", (event.x - element.getBoundingClientRect().left).toString() + "px")
-            element.style.setProperty("--top", (event.y - element.getBoundingClientRect().top).toString() + "px")
+        ["mouseenter", "mouseleave"].forEach(eventItem => {
+            element.addEventListener(eventItem, function (event) {
+                element.style.setProperty("--left", (event.x - element.getBoundingClientRect().left).toString() + "px")
+                element.style.setProperty("--top", (event.y - element.getBoundingClientRect().top).toString() + "px")
+            })
         })
     })
 
