@@ -142,11 +142,6 @@ body #main {
   border-radius: 5px;
   overflow: hidden;
 }
-@media screen and (max-width: 768px) {
-  #btnNav {
-    display: block;
-  }
-}
 #btnNav div {
   transition: all 0.3s ease-in-out;
   position: absolute;
@@ -166,18 +161,6 @@ body #main {
 #btnNav div:nth-child(3) {
   bottom: 0;
 }
-#btnNav:hover div:nth-child(1) {
-  top: 50%;
-  transform: translateY(-50%);
-}
-#btnNav:hover div:nth-child(2) {
-  top: 50%;
-  transform: translateY(-50%);
-}
-#btnNav:hover div:nth-child(3) {
-  bottom: 50%;
-  transform: translateY(50%);
-}
 #btnNav.active div:nth-child(1) {
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
@@ -188,6 +171,11 @@ body #main {
 #btnNav.active div:nth-child(3) {
   bottom: 50%;
   transform: translateY(50%) rotate(-45deg);
+}
+@media screen and (max-width: 768px) {
+  #btnNav {
+    display: block;
+  }
 }
 
 #sideBar {

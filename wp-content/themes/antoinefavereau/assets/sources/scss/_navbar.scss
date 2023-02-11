@@ -47,11 +47,6 @@
     border-radius: 5px;
     overflow: hidden;
 
-    @media screen and (max-width: 768px) {
-        //md
-        display: block;
-    }
-
     div {
         transition: all .3s ease-in-out;
         position: absolute;
@@ -75,22 +70,22 @@
         }
     }
 
-    &:hover {
-        div:nth-child(1) {
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    // &:hover {
+    //     div:nth-child(1) {
+    //         top: 50%;
+    //         transform: translateY(-50%);
+    //     }
 
-        div:nth-child(2) {
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    //     div:nth-child(2) {
+    //         top: 50%;
+    //         transform: translateY(-50%);
+    //     }
 
-        div:nth-child(3) {
-            bottom: 50%;
-            transform: translateY(50%);
-        }
-    }
+    //     div:nth-child(3) {
+    //         bottom: 50%;
+    //         transform: translateY(50%);
+    //     }
+    // }
 
     &.active {
 
@@ -108,5 +103,10 @@
             bottom: 50%;
             transform: translateY(50%) rotate(-45deg);
         }
+    }
+
+    @media screen and (max-width: 768px) {
+        //md
+        display: block;
     }
 }
