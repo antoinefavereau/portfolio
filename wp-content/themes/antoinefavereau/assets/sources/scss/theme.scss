@@ -1,13 +1,287 @@
-@import '_variables.scss';
-@import '_animations.scss';
-@import '_global.scss';
-@import '_bootstrap.scss';
-@import '_navbar.scss';
-@import '_sideBar.scss';
-@import '_home.scss';
-@import '_about.scss';
-@import '_portfolio.scss';
-@import '_contact.scss';
-@import '_archivesCours.scss';
-@import '_archivesJeux.scss';
-@import '_cours.scss';
+$black: #101010;
+$white: #ffffff;
+$darkWhite: #EFEFEF;
+$primary: #88B4E8;
+
+@font-face {
+    font-family: "audiowide";
+    src: url("../fonts/Audiowide-Regular.ttf");
+}
+
+* {
+    cursor: none !important;
+}
+
+body {
+    margin: 0;
+    background-color: $black;
+    overflow-x: hidden;
+}
+
+#maintenance {
+    position: fixed;
+    inset: 0;
+    background-color: $white;
+    color: $black;
+    z-index: 100000;
+}
+
+#cursor {
+    transition: width 0.3s, height 0.3s;
+    position: fixed;
+    pointer-events: none;
+    -webkit-backdrop-filter: invert(1);
+    backdrop-filter: invert(1);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 10000;
+
+    &.active {
+        display: block;
+    }
+
+    &.hover {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.toTop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    fill: none;
+    stroke: black;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    circle {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+}
+
+.hover_button {
+    position: relative;
+    transition: all .2s ease-in-out;
+    background-color: transparent;
+    border: none;
+    outline: solid 3px $primary;
+    padding: 16px 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+    border-radius: 50px;
+    overflow: hidden;
+    font-family: "audiowide";
+    font-size: 32px;
+    font-weight: 700;
+    color: $darkWhite;
+
+    span {
+        position: relative;
+    }
+
+    &::before {
+        content: "";
+        transition: width .3s ease-in-out, height .3s ease-in-out;
+        position: absolute;
+        background-color: $primary;
+        left: var(--left);
+        top: var(--top);
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-radius: inherit;
+    }
+
+    &:hover {
+        color: $black;
+        outline-width: 0;
+
+        &::before {
+            width: 200%;
+            height: 200%;
+        }
+    }
+}
+
+#navBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+
+    .logo {
+        position: relative;
+        margin-left: 3rem;
+        color: $darkWhite;
+        opacity: .8;
+
+        svg {
+            transform: scale(.8);
+        }
+    }
+
+    ul {
+        position: relative;
+        margin-inline: 3rem;
+        padding: 0;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        -webkit-user-select: none;
+        user-select: none;
+
+        li {
+            transition: all .3s ease-in-out;
+            list-style: none;
+            opacity: 1;
+
+            a {
+                font-family: "audiowide";
+                font-size: 24px;
+                text-decoration: none;
+                color: $primary;
+                padding: 0rem 2rem;
+            }
+        }
+
+        &:hover li:not(:hover) {
+            opacity: .6;
+        }
+    }
+}
+
+#home {
+    position: relative;
+    height: 100vh;
+    background: radial-gradient(circle, #202020 0%, #101010 100%);
+
+    .description {
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translateY(-50%);
+
+        h1 {
+            font-family: "audiowide";
+            color: $darkWhite;
+
+            span:first-child {
+                font-size: 72px;
+            }
+
+            span:last-child {
+                font-size: 96px;
+            }
+        }
+
+        p {
+            color: $darkWhite;
+            font-size: 24px;
+            font-weight: 100;
+            max-width: 500px;
+            margin-top: 3rem;
+        }
+
+        button {
+            margin-top: 1rem;
+            font-size: 24px;
+        }
+    }
+
+    #homeAvatar {
+        position: absolute;
+        bottom: 0;
+        left: 75%;
+        transform: translateX(-50%);
+        -webkit-user-select: none;
+        user-select: none;
+        max-height: 80%;
+    }
+
+    .arrowDown {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+        animation: arrowDown 2s ease infinite;
+    }
+}
+
+@keyframes arrowDown {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(0%);
+    }
+}
+
+#parcours {
+    position: relative;
+    height: 100vh;
+    background-color: $darkWhite;
+
+    .brand {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        display: flex;
+        align-items: center;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, $darkWhite 0%, transparent 20%, transparent 80%, $darkWhite 100%)
+        }
+
+        span {
+            $dot-width: 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-right: calc($dot-width*3);
+            font-size: 72px;
+            font-family: "audiowide";
+            -webkit-user-select: none;
+            user-select: none;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: $dot-width;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                width: $dot-width;
+                height: $dot-width;
+                background-color: $black;
+                border-radius: $dot-width;
+            }
+        }
+    }
+}
