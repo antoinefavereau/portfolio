@@ -1,7 +1,7 @@
 <?php
 get_header();
-var_dump(get_template_directory_uri());
 ?>
+
 <div id="maintenance">maintenance en cours</div>
 <section id="home">
     <img id="homeAvatar" src="<?= get_template_directory_uri() ?>/assets/dist/images/ReadyPlayerMe-Avatar 1.png" alt="avatar">
