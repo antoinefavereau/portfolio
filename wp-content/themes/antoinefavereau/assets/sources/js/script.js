@@ -8,13 +8,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
     var cursor = document.querySelector("#cursor");
-
-    ["mousemove", "scroll"].map(function (listEvent) {
-        document.addEventListener(listEvent, (event) => {
-            cursor.classList.add("active")
-            cursor.style.left = event.pageX - window.scrollX + "px"
-            cursor.style.top = event.pageY - window.scrollY + "px"
-        })
+    document.addEventListener("mousemove", (event) => {
+        cursor.classList.add("active")
+        cursor.style.left = event.pageX - window.scrollX + "px"
+        cursor.style.top = event.pageY - window.scrollY + "px"
     })
 
     createBrandSpan()
@@ -87,9 +84,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
 
 
+    var parcoursScroll = 0
 
     document.addEventListener("scroll", function (event) {
         document.querySelector(".toTop circle").style.strokeDashoffset = 1000 - Math.floor(window.scrollY / (document.body.scrollHeight - window.innerHeight) * 185)
+
+        if (parcoursScroll > 0) {
+            window.scrollTo(0, document.querySelector("#parcours").offsetTop)
+        }
+    })
+
+    document.addEventListener("wheel", function (event) {
+        if (Math.ceil(window.scrollY) >= document.querySelector("#parcours").offsetTop) {
+            parcoursScroll += event.deltaY;
+            window.scrollTo(0, document.querySelector("#parcours").offsetTop)
+        }
+        console.log(parcoursScroll);
     })
 
     document.querySelector(".toTop").addEventListener("click", function () {
@@ -100,4 +110,46 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     })
 
+    var parcoursTab = []
+
+    var barreSelection = document.querySelector("#parcours .parcoursLeft .barreSelection")
+    Array.from(document.querySelectorAll(".parcours")).forEach(function (element) {
+        var dateDebut = parseInt(element.dataset.dateDebut.substring(6))
+        var dateFin = parseInt(element.dataset.dateFin.substring(6))
+        parcoursTab.push([
+            element.dataset.id,
+            element.dataset.titreCours,
+            element.dataset.titreLong,
+            dateDebut,
+            dateFin,
+            element.dataset.texte,
+        ])
+    })
+
+    parcoursTab.sort((a, b) => a[3] - b[3]);
+
+    var dateTab = []
+
+    parcoursTab.forEach(element => {
+        if (!dateTab.includes(element[3]) && element[3]) {
+            dateTab.push(element[3])
+        }
+        if (!dateTab.includes(element[4]) && element[4]) {
+            dateTab.push(element[4])
+        }
+    })
+
+    dateTab.sort((a, b) => a - b);
+
+    for (let i = 0; i < dateTab.length; i++) {
+        var point = document.createElement('div')
+        point.classList.add("point")
+        document.querySelector("#parcours .parcoursLeft").appendChild(point)
+        point.style.top = (dateTab[i] - dateTab[0]) * 50 + "px"
+        point.dataset.year = dateTab[i]
+    }
+
+    function getParcoursActiveElement() {
+
+    }
 });

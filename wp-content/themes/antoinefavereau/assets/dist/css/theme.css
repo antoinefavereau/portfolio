@@ -17,7 +17,7 @@ body {
   inset: 0;
   background-color: #ffffff;
   color: #101010;
-  z-index: 100000;
+  z-index: 10000;
 }
 
 #cursor {
@@ -31,7 +31,7 @@ body {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  z-index: 10000;
+  z-index: 100000;
 }
 #cursor.active {
   display: block;
@@ -209,13 +209,12 @@ body {
   position: relative;
   height: 100vh;
   background-color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
 }
 #parcours .brand {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  right: 0;
-  height: 100px;
+  position: relative;
+  height: 120px;
   display: flex;
   align-items: center;
 }
@@ -249,6 +248,67 @@ body {
   height: 20px;
   background-color: #101010;
   border-radius: 20px;
+}
+#parcours .divParcours {
+  position: relative;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: minmax(200px, 30%) 70%;
+}
+#parcours .divParcours .parcoursLeft {
+  position: relative;
+  height: 100%;
+}
+#parcours .divParcours .parcoursLeft .barreVerticale {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #101010 0%, #101010 calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), #101010 calc(100% - 70px), #101010 calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), #101010 calc(100% - 30px), #101010 100%);
+}
+#parcours .divParcours .parcoursLeft .barreSelection {
+  position: absolute;
+  width: 20px;
+  border: 6px solid #101010;
+  border-left-width: 0px;
+}
+#parcours .divParcours .parcoursLeft .point {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #101010;
+}
+#parcours .divParcours .parcoursLeft .point::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #EFEFEF;
+}
+#parcours .divParcours .parcoursLeft .point::before {
+  content: attr(data-year);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100%;
+  margin-right: 20px;
+  font-family: "audiowide";
+}
+
+#competences {
+  position: relative;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=theme.css.map */
