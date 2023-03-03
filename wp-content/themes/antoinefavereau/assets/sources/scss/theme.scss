@@ -30,8 +30,8 @@ body {
     transition: width 0.3s, height 0.3s;
     position: fixed;
     pointer-events: none;
-    -webkit-backdrop-filter: invert(1);
-    backdrop-filter: invert(1);
+    -webkit-backdrop-filter: invert(1) grayscale(1);
+    backdrop-filter: invert(1) grayscale(1);
     width: 20px;
     height: 20px;
     border-radius: 50%;
