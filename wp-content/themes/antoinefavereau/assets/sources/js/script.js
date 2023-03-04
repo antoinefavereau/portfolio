@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
+    var parcoursHeight = 1000
+
     document.addEventListener("keypress", function (event) {
         if (event.key == "m") {
             document.querySelector("#maintenance").style.display = "none";
@@ -83,25 +85,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     })
 
-
-    var parcoursScroll = 0
-
-    document.addEventListener("scroll", function (event) {
-        document.querySelector(".toTop circle").style.strokeDashoffset = 1000 - Math.floor(window.scrollY / (document.body.scrollHeight - window.innerHeight) * 185)
-
-        if (parcoursScroll > 0) {
-            window.scrollTo(0, document.querySelector("#parcours").offsetTop)
-        }
-    })
-
-    document.addEventListener("wheel", function (event) {
-        if (Math.ceil(window.scrollY) >= document.querySelector("#parcours").offsetTop) {
-            parcoursScroll += event.deltaY;
-            window.scrollTo(0, document.querySelector("#parcours").offsetTop)
-        }
-        console.log(parcoursScroll);
-    })
-
     document.querySelector(".toTop").addEventListener("click", function () {
         window.scrollTo({
             top: 0,
@@ -112,8 +95,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     var parcoursTab = []
 
-    var barreSelection = document.querySelector("#parcours .parcoursLeft .barreSelection")
-    Array.from(document.querySelectorAll(".parcours")).forEach(function (element) {
+    var htmlParcoursTab = Array.from(document.querySelectorAll(".parcours"))
+    htmlParcoursTab.forEach(function (element) {
         var dateDebut = parseInt(element.dataset.dateDebut.substring(6))
         var dateFin = parseInt(element.dataset.dateFin.substring(6))
         parcoursTab.push([
@@ -127,6 +110,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
 
     parcoursTab.sort((a, b) => a[3] - b[3]);
+
+    document.querySelector("#parcours").style.height = "calc(" + parcoursTab.length * parcoursHeight + "px + 100vh)"
 
     var dateTab = []
 
@@ -144,12 +129,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
     for (let i = 0; i < dateTab.length; i++) {
         var point = document.createElement('div')
         point.classList.add("point")
-        document.querySelector("#parcours .parcoursLeft").appendChild(point)
+        document.querySelector("#parcours .parcoursLeft .barreVerticale").appendChild(point)
         point.style.top = (dateTab[i] - dateTab[0]) * 50 + "px"
         point.dataset.year = dateTab[i]
     }
 
-    function getParcoursActiveElement() {
+    document.addEventListener("scroll", function (event) {
+        document.querySelector(".toTop circle").style.strokeDashoffset = 1000 - Math.floor(window.scrollY / (document.body.scrollHeight - window.innerHeight) * 185)
+        getParcoursActiveElement(document.querySelector("#parcours .parcoursContainer").offsetTop)
+    })
 
+    function getParcoursActiveElement(top) {
+        var index = Math.floor(top / parcoursHeight)
+        if (index >= parcoursTab.length) {
+            return
+        }
+
+        var top = 0
+        var bottom = document.querySelector("#parcours .barreVerticale").clientHeight
+        Array.from(document.querySelectorAll("#parcours .point")).forEach(function (element) {
+            if (element.dataset.year == parcoursTab[index][3]) {
+                top = element.offsetTop;
+            }
+            if (element.dataset.year == parcoursTab[index][4]) {
+                bottom = element.offsetTop;
+            }
+        })
+        document.querySelector("#parcours .barreSelection").style.top = top + "px"
+        document.querySelector("#parcours .barreSelection").style.height = bottom - top + "px"
+        document.querySelector("#parcours .barreSelection").dataset.label = parcoursTab[index][1]
     }
 });
