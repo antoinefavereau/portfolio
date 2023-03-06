@@ -1,0 +1,354 @@
+@import "variables.scss";
+
+#sidebar {
+    transition: all .3s ease-in-out;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: $dark;
+    z-index: 1000;
+
+    header {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-block: 30px;
+        border-bottom: solid 3px rgba(#FFFFFF, .5);
+
+        img {
+            width: 50px;
+            border-radius: 15px;
+        }
+
+        span {
+            color: $white;
+            font-size: 24px;
+            font-weight: 600;
+            margin-left: 20px;
+        }
+    }
+
+    #nav {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+        .item {
+            transition: all .3s ease-in-out;
+            position: relative;
+            width: 100%;
+            padding-block: 20px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border-left: solid 0px $primaryColor;
+
+            span {
+                margin-left: 10px;
+                color: $white;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            &.active {
+                background-color: $darker;
+                border-left: solid 10px $primaryColor;
+            }
+        }
+    }
+}
+
+#main {
+    transition: all .3s ease-in-out;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    padding-left: 270px;
+    background-color: $light;
+
+    .menu {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        display: none;
+        z-index: 500;
+    }
+
+    .page {
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        background-color: $white;
+        border-radius: 5px;
+
+        &:not(.active) {
+            display: none;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 48px;
+        }
+
+        &#questions {
+            .questionContainer {
+                position: relative;
+                margin-top: 0px;
+
+                #exportPdf {
+                    background-color: #FBE216;
+                    border: solid 3px black;
+                    outline: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-weight: 700;
+                }
+
+                .cartes {
+                    position: sticky;
+                    top: 50px;
+
+                    select {
+                        position: relative;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        cursor: pointer;
+                    }
+
+                    .carte {
+                        position: relative;
+                        margin-top: 50px;
+
+                        &:not(.active) {
+                            display: none;
+                        }
+
+                        .pointer {
+                            position: absolute;
+                            transform: rotateX(-10deg);
+
+                            svg {
+                                cursor: pointer;
+                                transition: all .3s ease-in-out;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                transform: translateX(-50%);
+                                stroke-width: 1.5px;
+                            }
+
+                            &.active svg {
+                                width: 50px;
+                                height: 50px;
+                                stroke-width: 2px;
+                            }
+                        }
+                    }
+                }
+
+                .liste {
+                    .categories {
+                        position: sticky;
+                        top: 20px;
+                        width: 100%;
+                        // padding-left: 20px;
+                        box-shadow: 0px 0px 30px rgba(#000, .25);
+                        border-radius: 20px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        background-color: $white;
+                        border: solid 20px $white;
+                        overflow-x: auto;
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+                        z-index: 10;
+
+                        &::-webkit-scrollbar {
+                            width: 0.2em;
+                            background-color: transparent;
+                        }
+
+                        button {
+                            transition: all .2s;
+                            position: relative;
+                            background-color: $light;
+                            padding: 6px 18px;
+                            border-radius: 30px;
+                            margin-right: 10px;
+                            font-weight: 600;
+                            font-size: 20px;
+                            border: none;
+                            outline: none;
+                            white-space: nowrap;
+
+                            &.active {
+                                background-color: $primaryColor;
+                            }
+
+                            &:hover {
+                                filter: brightness(.9);
+                            }
+                        }
+                    }
+
+                    #tabQuestions {
+                        position: relative;
+                        width: 100%;
+                        padding: 20px;
+                        box-shadow: 0px 0px 30px rgba(#000, .25);
+                        border-radius: 20px;
+                        margin-top: 25px;
+                        display: flex;
+                        flex-direction: column;
+
+                        #editSection {
+                            position: relative;
+                            background-color: $primaryColor;
+                            border-radius: 50px;
+                            padding: 20px 40px;
+
+                            &:not(.active) {
+                                display: none;
+                            }
+
+                            p:focus-visible,
+                            span:focus-visible {
+                                outline-color: $black;
+                            }
+
+                            #editSectionQuestion {
+                                text-align: center;
+                            }
+
+
+                        }
+
+                        .item {
+                            transition: transform .2s ease-in-out;
+                            position: relative;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 10px 10px 10px 15px;
+                            font-weight: 700;
+                            border-radius: 10px;
+
+                            &:hover,
+                            &.active {
+                                box-shadow: 0px 0px 20px rgba(#000, .25);
+                                transform: scale(1.02);
+                            }
+
+                            .actionButtons {
+
+                                .edit,
+                                .delete {
+                                    position: relative;
+                                    background: none;
+                                    border: none;
+                                    outline: none;
+
+                                    svg {
+                                        stroke-width: 2.5px;
+                                    }
+
+                                    &:hover svg {
+                                        stroke-width: 3px;
+                                    }
+                                }
+
+                                .delete {
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #resultats {
+            #tabResultats {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+
+                .item {
+                    position: relative;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #sidebar:not(.active) {
+        transform: translateX(-100%);
+    }
+
+    #main {
+        padding-left: 20px;
+
+        .menu {
+            display: block;
+        }
+
+        .page {
+            &#questions {
+                .questionContainer {
+                    .liste {
+                        .categories {
+                            button {
+                                font-size: 16px;
+                            }
+                        }
+
+                        #tabQuestions {
+                            padding-inline: 5px;
+
+                            .item {
+                                font-size: 14px;
+
+                                .actionButtons {
+                                    .delete {
+                                        margin-left: 5px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main {
+        padding: 0px;
+
+        .menu {
+            top: 10px;
+            left: 10px;
+        }
+    }
+}

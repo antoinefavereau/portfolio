@@ -1,5 +1,11 @@
 <?php
 
+//Begin Really Simple SSL session cookie settings
+@ini_set('session.cookie_httponly', true);
+@ini_set('session.cookie_secure', true);
+@ini_set('session.use_only_cookies', true);
+//END Really Simple SSL cookie settings
+
 /**
  * La configuration de base de votre installation WordPress.
  *
@@ -19,15 +25,15 @@
  */
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define('DB_NAME', 'antoinefavereau'); //antoi1888818
+define('DB_NAME', 'antoi1888818'); //antoi1888818
 /** Utilisateur de la base de données MySQL. */
-define('DB_USER', 'root'); //antoi1888818
+define('DB_USER', 'antoi1888818'); //antoi1888818
 /** Mot de passe de la base de données MySQL. */
-define('DB_PASSWORD', 'root'); //Favere45+-
+define('DB_PASSWORD', 'Favere45+-'); //Favere45+-
 /** Adresse de l'hébergement MySQL. */
-define('DB_HOST', 'localhost:3306'); //185.98.131.91
+define('DB_HOST', '185.98.131.91:3306'); //185.98.131.91
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
-define('DB_CHARSET', 'utf8mb4'); //utf8
+define('DB_CHARSET', 'utf8'); //utf8
 /** Type de collation de la base de données. 
   * N'y touchez que si vous savez ce que vous faites. 
   */

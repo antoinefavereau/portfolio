@@ -1,0 +1,452 @@
+html {
+  height: 100%;
+  min-height: 100%;
+}
+html body {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+  box-shadow: 0px 0px 10px black;
+}
+html body .notif {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: white;
+  width: calc(100% - 60px);
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  animation: notifIn 0.5s ease-in-out forwards;
+  transition: opacity 0.5s ease-in-out;
+}
+html body .notif.closed {
+  opacity: 0%;
+}
+html body .notif .left {
+  position: relative;
+  width: 60px;
+  min-width: 60px;
+  min-height: 60px;
+}
+html body .notif .left svg {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html body .notif.notifInfo .left {
+  background-color: #4A9DFF;
+}
+html body .notif.notifInfo .svgInfo {
+  display: block;
+}
+html body .notif.notifSuccess .left {
+  background-color: #41CC3E;
+}
+html body .notif.notifSuccess .svgSuccess {
+  display: block;
+}
+html body .notif.notifAlert .left {
+  background-color: #F28D16;
+}
+html body .notif.notifAlert .svgAlert {
+  display: block;
+}
+html body .notif.notifError .left {
+  background-color: #D93D3D;
+}
+html body .notif.notifError .svgError {
+  display: block;
+}
+html body .notif .message {
+  margin: 0;
+  margin-left: 10px;
+  align-self: center;
+}
+html body .notif .close {
+  position: relative;
+  background: transparent;
+  border: none;
+  width: 60px;
+  min-width: 60px;
+  min-height: 60px;
+}
+html body .notif .close:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+html body #pageInscription {
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  overflow-y: auto;
+}
+html body #pageInscription .fond {
+  object-fit: cover;
+  filter: blur(2px) brightness(0.6);
+}
+html body #pageInscription .logo {
+  top: 10%;
+}
+html body #pageInscription form {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 60%;
+  min-height: 350px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 10;
+  overflow: hidden;
+}
+html body #pageInscription form .formLine {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-inline: 2rem;
+}
+html body #pageInscription form .formLine label {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  transform: translate(0.5rem, -50%);
+  user-select: none;
+  pointer-events: none;
+  font-weight: 700;
+  opacity: 0.8;
+}
+html body #pageInscription form .formLine input {
+  border: none;
+  border-bottom: solid 2px black;
+  outline: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+html body #pageInscription form .formLine input:focus + label, html body #pageInscription form .formLine input:not(:placeholder-shown) + label {
+  margin-top: 0;
+  transform: translateY(-140%) scale(0.8);
+}
+html body #pageInscription form .formLine select {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+html body #pageInscription form .formLine select + label {
+  margin-top: 0;
+  transform: translateY(-150%) scale(0.8);
+}
+html body #pageInscription form input[type=submit] {
+  width: 100%;
+  height: 4rem;
+  background-color: #FBE216;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+html body #pageInscription form input[type=submit]:active {
+  filter: brightness(0.8);
+}
+html body #main {
+  overflow: hidden;
+}
+html body #main #header .logo {
+  width: fit-content;
+  outline: none;
+}
+html body #main #header .logo img {
+  width: 100px;
+}
+html body #main #videoCam {
+  object-fit: cover;
+}
+html body #main #batSelect {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 90px);
+}
+html body #main #batSelect:not(.active) {
+  display: none;
+}
+html body #main #batSelect .bat {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  cursor: pointer;
+}
+html body #main #batSelect .bat img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+html body #main #batSelect .bat span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+html body #main .batPage {
+  position: relative;
+  width: 100%;
+}
+html body #main .batPage:not(.active) {
+  display: none;
+}
+html body #main .batPage .batHeader {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  cursor: pointer;
+}
+html body #main .batPage .batHeader img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+html body #main .batPage .batHeader span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-decoration: underline;
+}
+html body #main .batPage .plan {
+  position: relative;
+  width: 100%;
+  padding-inline: 5%;
+  margin-top: 20px;
+  height: 100%;
+  padding-bottom: 370px;
+}
+html body #main .batPage .plan .batiment {
+  position: relative;
+  overflow: visible;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) perspective(200px) rotateX(10deg);
+  transform-style: preserve-3d;
+}
+html body #main .batPage .plan .pointer {
+  position: absolute;
+  transform: rotateX(-10deg);
+}
+html body #main .batPage .plan .pointer svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+html body #main .batPage .plan #btnEtage {
+  position: absolute;
+  border: none;
+  outline: none;
+  padding: 5px;
+  left: 5%;
+  bottom: 370px;
+  background-color: transparent;
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: 600;
+}
+html body #main .scan-region-highlight {
+  width: 80% !important;
+  height: unset !important;
+  aspect-ratio: 1/1;
+  left: 50% !important;
+  top: 45% !important;
+  transform: translate(-50%, -50%) !important;
+}
+html body #main #btnQRcode {
+  width: 100px;
+  height: 100px;
+  bottom: 30px;
+  background-color: #FBE216;
+  outline: none;
+  border: solid 4px black;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+html body #main #btnQRcode:active {
+  filter: brightness(0.8);
+}
+html body #main #btnQRcode:not(.active) {
+  display: none;
+}
+html body #main #divQuestionCode {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+html body #main #divQuestionCode:not(.active) {
+  display: none;
+}
+html body #main #divQuestionCode #formQuestionCode {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html body #main #divQuestionCode #formQuestionCode p {
+  text-align: center;
+}
+html body #main #divQuestionCode #formQuestionCode #formQuestionCodeValue {
+  transition: all 0.3s;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  width: 20rem;
+  margin-top: 1rem;
+}
+html body #main #divQuestionCode #formQuestionCode #formQuestionCodeValue:focus {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+}
+html body #main #divQuestionCode #formQuestionCode #submitFormQuestionCode {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2rem;
+  border: none;
+  outline: none;
+  background-color: #FBE216;
+  width: fit-content;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+html body #main #divQuestionCode #formQuestionCode #submitFormQuestionCode:active {
+  filter: brightness(0.8);
+}
+html body #main #qcm .fond {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+html body #main #qcm:not(.active) {
+  display: none;
+}
+html body #main #qcm .qcmBox {
+  background-color: white;
+  width: 80%;
+  border-radius: 10px;
+  overflow: auto;
+  max-height: 100%;
+}
+html body #main #qcm .qcmBox .question {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+}
+html body #main #qcm .qcmBox .reponses {
+  width: 85%;
+}
+html body #main #qcm .qcmBox .reponses .reponse {
+  position: relative;
+  padding-block: 0.6rem;
+  padding-inline: 0.4rem;
+  color: white;
+  border: solid 0px;
+  opacity: 1;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 600;
+}
+html body #main #qcm .qcmBox .reponses .reponse.selected {
+  font-weight: 700;
+}
+html body #main #qcm .qcmBox .reponses .reponse:nth-child(1) {
+  background-color: #AFA5D1;
+}
+html body #main #qcm .qcmBox .reponses .reponse:nth-child(1).selected {
+  box-shadow: 0px 0px 0px 6px #6E6885 inset;
+}
+html body #main #qcm .qcmBox .reponses .reponse:nth-child(2) {
+  background-color: #73BAD1;
+}
+html body #main #qcm .qcmBox .reponses .reponse:nth-child(2).selected {
+  box-shadow: 0px 0px 0px 6px #508394 inset;
+}
+html body #main #qcm .qcmBox .reponses .reponse:nth-child(3) {
+  background-color: #F0869D;
+}
+html body #main #qcm .qcmBox .reponses .reponse:nth-child(3).selected {
+  box-shadow: 0px 0px 0px 6px #9B5564 inset;
+}
+html body #main #qcm .qcmBox .reponses .reponse:nth-child(4) {
+  background-color: #6FBC85;
+}
+html body #main #qcm .qcmBox .reponses .reponse:nth-child(4).selected {
+  box-shadow: 0px 0px 0px 6px #4D7E5B inset;
+}
+html body #main #qcm .qcmBox #valider {
+  background-color: #FBE216;
+  border: none;
+  width: 100%;
+  padding-block: 1.5rem;
+  font-size: 24px;
+  font-weight: 700;
+}
+html body #main #qcm .qcmBox #valider:active {
+  filter: brightness(0.8);
+}
+html body #main #messageBienvenue {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+html body #main #messageBienvenue .messageBienvenueBox {
+  background-color: white;
+  width: 80%;
+  border-radius: 10px;
+  overflow: auto;
+  max-height: 100%;
+  padding-top: 2rem;
+}
+html body #main #messageBienvenue .messageBienvenueBox p {
+  margin-inline: 2rem;
+}
+html body #main #messageBienvenue .messageBienvenueBox #validerMessageBienvenue {
+  background-color: #FBE216;
+  border: none;
+  width: 100%;
+  padding-block: 1.5rem;
+  font-size: 24px;
+  font-weight: 700;
+}
+html body #main #messageBienvenue .messageBienvenueBox #validerMessageBienvenue:active {
+  filter: brightness(0.8);
+}
+
+@keyframes notifIn {
+  to {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/*# sourceMappingURL=theme.css.map */

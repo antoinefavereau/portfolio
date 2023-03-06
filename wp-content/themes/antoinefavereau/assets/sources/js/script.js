@@ -156,7 +156,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
         })
         document.querySelector("#parcours .barreSelection").style.top = top + "px"
-        document.querySelector("#parcours .barreSelection").style.height = bottom - top + "px"
+        document.querySelector("#parcours .barreSelection").style.height = Math.max(0, bottom - top - 6) + "px"
         document.querySelector("#parcours .barreSelection").dataset.label = parcoursTab[index][1]
+        document.querySelector("#parcours .titre").textContent = parcoursTab[index][2]
+        document.querySelector("#parcours .texte").textContent = parcoursTab[index][5]
     }
 });

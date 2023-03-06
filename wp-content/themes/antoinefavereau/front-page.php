@@ -8,7 +8,7 @@ get_header();
     <div class="description">
         <h1><span>ANTOINE</span><br><span>FAVEREAU</span></h1>
         <p>
-            Je suis étudiant en école d’ingénieur en informatique et freelance en développement web.
+            Je suis étudiant en école d'ingénieur en informatique et freelance en développement web.
         </p>
         <button id="discoverButton" class="hover_button">
             <span>découvrir</span>
@@ -36,8 +36,10 @@ get_header();
                 <div class="barreSelection" data-label=""></div>
             </div>
             <div class="parcoursRight">
-                <h2 class="titre"></h2>
-                <p class="texte"></p>
+                <div class="parcoursRightContainer">
+                    <h2 class="titre"></h2>
+                    <p class="texte"></p>
+                </div>
             </div>
         </div>
     </div>

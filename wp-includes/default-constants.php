@@ -380,7 +380,7 @@ function wp_functionality_constants() {
 	 * @since 3.3.0
 	 */
 	if ( ! defined( 'WP_CRON_LOCK_TIMEOUT' ) ) {
-		define( 'WP_CRON_LOCK_TIMEOUT', 300 );
+		define( 'WP_CRON_LOCK_TIMEOUT', MINUTE_IN_SECONDS );
 	}
 }
 
@@ -414,7 +414,7 @@ function wp_templating_constants() {
 	 * @see WP_Theme::get_core_default_theme()
 	 */
 	if ( ! defined( 'WP_DEFAULT_THEME' ) ) {
-		define( 'WP_DEFAULT_THEME', 'twentytwentytwo' );
+		define( 'WP_DEFAULT_THEME', 'twentytwentythree' );
 	}
 
 }
