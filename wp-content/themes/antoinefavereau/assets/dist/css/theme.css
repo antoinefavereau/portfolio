@@ -242,5 +242,8 @@ body {
   background-color: #101010;
   border-radius: 20px;
 }
+#parcours .parcoursRight:not(.active) {
+  display: none;
+}
 
 /*# sourceMappingURL=theme.css.map */

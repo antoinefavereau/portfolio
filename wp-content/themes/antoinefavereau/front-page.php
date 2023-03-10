@@ -23,23 +23,22 @@ get_header();
         <div class="brand" data-text="PARCOURS" data-left="0"></div>
         <div class="divParcours">
             <div class="parcoursLeft">
-                <?php
-                query_posts(array(
-                    'category_name' => 'parcours'
-                ));
-                if (have_posts()) : while (have_posts()) : the_post();
-                        echo '<div class="parcours" data-id="' . get_the_ID() . '" data-titre-cours="' . get_the_title() . '" data-titre-long="' . get_field("titre_long") . '" data-date-debut="' . get_field("date_debut") . '" data-date-fin="' . get_field("date_fin") . '" data-texte="' . get_field("texte") . '"></div>';
-                    endwhile;
-                endif;
-                ?>
                 <div class="barreVerticale"></div>
                 <div class="barreSelection" data-label=""></div>
             </div>
             <div class="parcoursRight">
-                <div class="parcoursRightContainer">
-                    <h2 class="titre"></h2>
-                    <p class="texte"></p>
-                </div>
+                <?php
+                query_posts(array(
+                    'category_name' => 'parcours'
+                ));
+                if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        <div class="parcoursRightContainer" data-id="<?= get_the_ID() ?>" data-titre-cours="<?= get_the_title() ?>" data-date-debut="<?= get_field("date_debut") ?>" data-date-fin="<?= get_field("date_fin") ?>">
+                            <h2 class="titre"><?= get_field("titre_long") ?></h2>
+                            <p class="texte"><?= get_field("texte") ?></p>
+                        </div>
+                <?php endwhile;
+                endif;
+                ?>
             </div>
         </div>
     </div>

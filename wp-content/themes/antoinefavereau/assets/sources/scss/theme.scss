@@ -276,4 +276,10 @@ body {
             }
         }
     }
+
+    .parcoursRight {
+        &:not(.active) {
+            display: none;
+        }
+    }
 }
