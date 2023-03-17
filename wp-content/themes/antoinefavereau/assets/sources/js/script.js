@@ -95,32 +95,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     var parcoursTab = []
 
-    var htmlParcoursTab = Array.from(document.querySelectorAll(".parcours"))
+    var htmlParcoursTab = Array.from(document.querySelectorAll("#parcours .parcoursRightContainer"))
     htmlParcoursTab.forEach(function (element) {
         var dateDebut = parseInt(element.dataset.dateDebut.substring(6))
         var dateFin = parseInt(element.dataset.dateFin.substring(6))
         parcoursTab.push([
             element.dataset.id,
             element.dataset.titreCours,
-            element.dataset.titreLong,
             dateDebut,
             dateFin,
-            element.dataset.texte,
         ])
     })
 
-    parcoursTab.sort((a, b) => a[3] - b[3]);
+    parcoursTab.sort((a, b) => a[2] - b[2]);
 
     document.querySelector("#parcours").style.height = "calc(" + parcoursTab.length * parcoursHeight + "px + 100vh)"
 
     var dateTab = []
 
     parcoursTab.forEach(element => {
+        if (!dateTab.includes(element[2]) && element[2]) {
+            dateTab.push(element[2])
+        }
         if (!dateTab.includes(element[3]) && element[3]) {
             dateTab.push(element[3])
-        }
-        if (!dateTab.includes(element[4]) && element[4]) {
-            dateTab.push(element[4])
         }
     })
 
@@ -148,17 +146,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
         var top = 0
         var bottom = document.querySelector("#parcours .barreVerticale").clientHeight
         Array.from(document.querySelectorAll("#parcours .point")).forEach(function (element) {
-            if (element.dataset.year == parcoursTab[index][3]) {
+            if (element.dataset.year == parcoursTab[index][2]) {
                 top = element.offsetTop;
             }
-            if (element.dataset.year == parcoursTab[index][4]) {
+            if (element.dataset.year == parcoursTab[index][3]) {
                 bottom = element.offsetTop;
             }
         })
         document.querySelector("#parcours .barreSelection").style.top = top + "px"
         document.querySelector("#parcours .barreSelection").style.height = Math.max(0, bottom - top - 6) + "px"
         document.querySelector("#parcours .barreSelection").dataset.label = parcoursTab[index][1]
-        document.querySelector("#parcours .titre").textContent = parcoursTab[index][2]
-        document.querySelector("#parcours .texte").textContent = parcoursTab[index][5]
+        Array.from(document.querySelectorAll("#parcours .parcoursRightContainer")).forEach(function(element) {
+            if (element.dataset.id == parcoursTab[index][0]) {
+                element.classList.add("active")
+            } else {
+                element.classList.remove("active")
+            }
+        })
     }
 });
