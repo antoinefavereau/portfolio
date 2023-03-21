@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     var parcoursHeight = 1000
 
-    document.addEventListener("keypress", function (event) {
-        if (event.key == "m") {
-            document.querySelector("#maintenance").style.display = "none";
-        }
+    document.querySelector("#maintenanceButton").addEventListener('click', function () {
+        document.querySelector("#maintenance").style.display = "none";
+        document.body.style.overflowY = "visible";
     })
 
 
@@ -156,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         document.querySelector("#parcours .barreSelection").style.top = top + "px"
         document.querySelector("#parcours .barreSelection").style.height = Math.max(0, bottom - top - 6) + "px"
         document.querySelector("#parcours .barreSelection").dataset.label = parcoursTab[index][1]
-        Array.from(document.querySelectorAll("#parcours .parcoursRightContainer")).forEach(function(element) {
+        Array.from(document.querySelectorAll("#parcours .parcoursRightContainer")).forEach(function (element) {
             if (element.dataset.id == parcoursTab[index][0]) {
                 element.classList.add("active")
             } else {

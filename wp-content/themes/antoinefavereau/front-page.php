@@ -2,11 +2,20 @@
 get_header();
 ?>
 
-<div id="maintenance">maintenance en cours</div>
+<div id="maintenance">
+    <p>Mon site est en cours de maintenance 😅</p>
+    <button id="maintenanceButton" class="hover_button">
+        <span>voir quand même</span>
+    </button>
+</div>
+
 <section id="home">
     <img id="homeAvatar" src="<?= get_template_directory_uri() ?>/assets/dist/images/ReadyPlayerMe-Avatar 1.png" alt="avatar">
     <div class="description">
-        <h1><span>ANTOINE</span><br><span>FAVEREAU</span></h1>
+        <h1>
+            <span>ANTOINE</span>
+            <span>FAVEREAU</span>
+        </h1>
         <p>
             Je suis étudiant en école d'ingénieur en informatique et freelance en développement web.
         </p>

@@ -6,10 +6,25 @@
   cursor: none !important;
 }
 
+#maintenance {
+  position: absolute;
+  inset: 0;
+  z-index: 5000;
+  background-color: #101010;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
 body {
   margin: 0;
   background-color: #101010;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #cursor {
@@ -22,15 +37,20 @@ body {
   height: 20px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  display: block;
   z-index: 10000;
 }
-#cursor.active {
-  display: block;
+#cursor:not(.active) {
+  display: none;
 }
 #cursor.hover {
   width: 60px;
   height: 60px;
+}
+@media only screen and (hover: none) and (pointer: coarse) {
+  #cursor {
+    display: none;
+  }
 }
 
 .toTop {
@@ -60,7 +80,6 @@ body {
   border-radius: 50px;
   overflow: hidden;
   font-family: "audiowide";
-  font-size: 32px;
   font-weight: 700;
   color: #EFEFEF;
 }
@@ -148,12 +167,20 @@ body {
 #home .description h1 {
   font-family: "audiowide";
   color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 #home .description h1 span:first-child {
   font-size: 72px;
 }
 #home .description h1 span:last-child {
   font-size: 96px;
+}
+@media only screen and (hover: none) and (pointer: coarse) {
+  #home .description h1 {
+    align-items: center;
+  }
 }
 #home .description p {
   color: #EFEFEF;
@@ -174,6 +201,11 @@ body {
   -webkit-user-select: none;
   user-select: none;
   max-height: 80%;
+}
+@media screen and (max-width: 992px) {
+  #home #homeAvatar {
+    display: none;
+  }
 }
 #home .arrowDown {
   position: absolute;
@@ -213,6 +245,7 @@ body {
   height: 120px;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 }
 #parcours .parcoursContainer .brand::after {
   content: "";
@@ -267,11 +300,13 @@ body {
   background: linear-gradient(180deg, #101010 0%, #101010 calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), #101010 calc(100% - 70px), #101010 calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), #101010 calc(100% - 30px), #101010 100%);
 }
 #parcours .parcoursContainer .divParcours .parcoursLeft .barreSelection {
+  transition: height 0.3s ease-in-out, top 0.3s ease-in-out;
   position: absolute;
   left: calc(50% + 50px);
   width: 20px;
   border: 6px solid #101010;
   border-left-width: 0px;
+  transform: translateY(-3px);
 }
 #parcours .parcoursContainer .divParcours .parcoursLeft .barreSelection::after {
   content: attr(data-label);
@@ -284,7 +319,7 @@ body {
 #parcours .parcoursContainer .divParcours .parcoursLeft .point {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   top: 0;
   width: 40px;
   height: 40px;
@@ -323,6 +358,8 @@ body {
   opacity: 1;
   min-height: 50%;
   width: 80%;
+  max-height: 100%;
+  overflow-y: auto;
 }
 #parcours .parcoursContainer .divParcours .parcoursRight .parcoursRightContainer:not(.active) {
   opacity: 0;
