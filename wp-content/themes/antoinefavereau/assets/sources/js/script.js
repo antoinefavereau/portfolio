@@ -133,47 +133,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     }
 
-    if (document.querySelector("#logos")) {
-        logosSection()
+    if (document.querySelector("#parcoursTitleList")) {
+        document.querySelector("#parcoursTitleList").ScrollingList({
+            height: "100px",
+        })
     }
 });
-
-class ScrollingList {
-    constructor() {
-
-    }
-}
-
-function logosSection() {
-    const logoDiv = document.querySelector("#logos");
-    const logoDivContainer = document.querySelector(".logos-container");
-    const logoList = document.querySelectorAll("#logos .logos-container .logo");
-    const logoDivContainerWidth = logoDivContainer.offsetWidth + logoDivContainer.children.length; // + parseInt(window.getComputedStyle(logoDivContainer).getPropertyValue("gap"))
-    var logoDivContainerLeft = 0
-
-    function createLogoClones() {
-        while (Array.from(logoDivContainer.children).at(-1).getBoundingClientRect().left <= logoDiv.offsetWidth * 2) {
-            logoList.forEach((logo) => {
-                logoDivContainer.appendChild(logo.cloneNode(true));
-            });
-        }
-    }
-    createLogoClones()
-    window.onresize = createLogoClones;
-
-    let lastTimestamp;
-    function update(timestamp) {
-        if (!lastTimestamp) lastTimestamp = timestamp;
-        const elapsed = timestamp - lastTimestamp;
-        const speed = 0.05; // pixels per millisecond
-        const distance = elapsed * speed;
-        logoDivContainerLeft -= distance
-        if (Math.abs(logoDivContainerLeft) >= logoDivContainerWidth) {
-            logoDivContainerLeft = 0
-        }
-        logoDivContainer.style.left = `${logoDivContainerLeft}px`;
-        lastTimestamp = timestamp;
-        requestAnimationFrame(update);
-    }
-    requestAnimationFrame(update);
-}

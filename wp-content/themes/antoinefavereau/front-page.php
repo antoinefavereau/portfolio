@@ -30,7 +30,6 @@ get_header();
 <section id="parcours">
     <div class="parcoursContainer">
         <div id="parcoursTitleList"><span>PARCOURS</span></div>
-        <div class="brand" data-text="PARCOURS" data-left="0"></div>
         <div class="divParcours">
             <div class="parcoursLeft">
                 <div class="barreVerticale"></div>
