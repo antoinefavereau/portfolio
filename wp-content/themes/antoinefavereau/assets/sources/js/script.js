@@ -15,37 +15,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         cursor.style.top = event.pageY - window.scrollY + "px"
     })
 
-    createBrandSpan()
-
-    setInterval(() => {
-        Array.from(document.querySelectorAll(".brand span")).map(function (spanElement) {
-            spanElement.style.left = spanElement.offsetLeft - 1 + "px"
-        })
-
-        createBrandSpan()
-    }, 10);
-
-    function createBrandSpan() {
-        Array.from(document.querySelectorAll(".brand")).map(function (brand) {
-            if (!brand.firstChild) {
-                let spanElement = document.createElement("span")
-                spanElement.textContent = brand.dataset.text
-                spanElement.style.left = "0px"
-                brand.appendChild(spanElement)
-            } else {
-                if (brand.lastChild.offsetLeft <= window.innerWidth) {
-                    let spanElement = document.createElement("span")
-                    spanElement.textContent = brand.dataset.text
-                    spanElement.style.left = brand.lastChild.offsetLeft + brand.lastChild.offsetWidth + "px"
-                    brand.appendChild(spanElement)
-                }
-                if (brand.firstChild.offsetLeft + brand.lastChild.offsetWidth < 0) {
-                    brand.removeChild(brand.firstChild)
-                }
-            }
-        })
-    }
-
     document.body.addEventListener("mouseleave", (event) => {
         cursor.classList.remove("active")
     })
@@ -163,4 +132,48 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
         })
     }
+
+    if (document.querySelector("#logos")) {
+        logosSection()
+    }
 });
+
+class ScrollingList {
+    constructor() {
+
+    }
+}
+
+function logosSection() {
+    const logoDiv = document.querySelector("#logos");
+    const logoDivContainer = document.querySelector(".logos-container");
+    const logoList = document.querySelectorAll("#logos .logos-container .logo");
+    const logoDivContainerWidth = logoDivContainer.offsetWidth + logoDivContainer.children.length; // + parseInt(window.getComputedStyle(logoDivContainer).getPropertyValue("gap"))
+    var logoDivContainerLeft = 0
+
+    function createLogoClones() {
+        while (Array.from(logoDivContainer.children).at(-1).getBoundingClientRect().left <= logoDiv.offsetWidth * 2) {
+            logoList.forEach((logo) => {
+                logoDivContainer.appendChild(logo.cloneNode(true));
+            });
+        }
+    }
+    createLogoClones()
+    window.onresize = createLogoClones;
+
+    let lastTimestamp;
+    function update(timestamp) {
+        if (!lastTimestamp) lastTimestamp = timestamp;
+        const elapsed = timestamp - lastTimestamp;
+        const speed = 0.05; // pixels per millisecond
+        const distance = elapsed * speed;
+        logoDivContainerLeft -= distance
+        if (Math.abs(logoDivContainerLeft) >= logoDivContainerWidth) {
+            logoDivContainerLeft = 0
+        }
+        logoDivContainer.style.left = `${logoDivContainerLeft}px`;
+        lastTimestamp = timestamp;
+        requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+}
