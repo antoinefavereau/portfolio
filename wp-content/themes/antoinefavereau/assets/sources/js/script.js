@@ -136,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (document.querySelector("#parcoursTitleList")) {
         document.querySelector("#parcoursTitleList").ScrollingList({
             height: "100px",
+            separator: true,
         })
     }
 });
