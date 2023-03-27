@@ -53,7 +53,7 @@ get_header();
     </div>
 </section>
 <section id="competences">
-
+    <div id="competencesTitleList"><span>COMPÉTENCES</span></div>
 </section>
 <svg class="toTop" width="80px" height="80px" transform="rotate(-90)">
     <circle cx="40" cy="40" r="30" />

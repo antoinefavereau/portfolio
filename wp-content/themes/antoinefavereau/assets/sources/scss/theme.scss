@@ -149,7 +149,7 @@ body {
         }
     }
 
-    ul {
+    .nav {
         position: relative;
         margin-inline: 3rem;
         padding: 0;
@@ -177,6 +177,98 @@ body {
             opacity: .6;
         }
     }
+
+    .mobileNav {
+        display: none;
+
+        .btnMobileNav {
+            position: relative;
+            z-index: 100;
+            width: 60px;
+            height: 50px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            padding: 5px;
+            margin: 0;
+            margin-inline: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: stretch;
+
+            .btnDiv {
+                width: 100%;
+                height: 15%;
+                background-color: $white;
+                border-radius: 3px;
+            }
+        }
+
+        .mobileNavContainer {
+            transition: all .6s ease-in-out;
+            position: fixed;
+            width: 0;
+            height: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: $darkWhite;
+        }
+
+        .mobileNavList {
+            position: fixed;
+            inset: 0;
+            display: none;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            padding-top: 100px;
+
+            li a {
+                transition: all .3s ease-in-out;
+                text-decoration: none;
+                font-size: 48px;
+                color: $black;
+                letter-spacing: 0;
+                padding: 20px;
+
+                &:hover {
+                    letter-spacing: 5px;
+                }
+            }
+        }
+
+        &.active {
+            .btnMobileNav {
+                .btnDiv {
+                    background-color: $black;
+                }
+            }
+
+            .mobileNavContainer {
+                width: 200vh;
+                height: 200vh;
+                border-radius: 0;
+            }
+
+            .mobileNavList {
+                display: flex;
+            }
+        }
+    }
+
+    @media screen and (max-width: map-get($breakpoints, md)) {
+        .nav {
+            display: none;
+        }
+
+        .mobileNav {
+            display: block;
+        }
+    }
 }
 
 #home {
@@ -198,15 +290,15 @@ body {
             align-items: flex-start;
 
             span:first-child {
-                font-size: 72px;
+                font-size: calc(20px + 3vw);
             }
 
             span:last-child {
-                font-size: 96px;
+                font-size: calc(32px + 4vw);
             }
 
             @media only screen and (hover: none) and (pointer: coarse) {
-                align-items: center;
+                // align-items: center;
             }
         }
 
@@ -275,46 +367,13 @@ body {
         display: flex;
         flex-direction: column;
 
-        .brand {
-            position: relative;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            overflow-x: hidden;
+        #parcoursTitleList {
 
             &::after {
                 content: "";
                 position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
+                inset: 0;
                 background: linear-gradient(90deg, $darkWhite 0%, transparent 20%, transparent 80%, $darkWhite 100%)
-            }
-
-            span {
-                $dot-width: 20px;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                padding-right: calc($dot-width*3);
-                font-size: 72px;
-                font-family: "audiowide";
-                -webkit-user-select: none;
-                user-select: none;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    right: $dot-width;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    display: block;
-                    width: $dot-width;
-                    height: $dot-width;
-                    background-color: $black;
-                    border-radius: $dot-width;
-                }
             }
         }
 
@@ -403,14 +462,31 @@ body {
                     left: 50%;
                     transform: translate(-50%, -50%);
                     opacity: 1;
-                    min-height: 50%;
+                    min-height: 60%;
                     width: 80%;
                     max-height: 100%;
                     overflow-y: auto;
+                    padding-left: 5px;
 
                     &:not(.active) {
                         opacity: 0;
                         transform: translate(-50%, calc(-50% + 50px));
+                    }
+
+                    .titre {
+                        position: relative;
+                        margin-bottom: 26px;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -10px;
+                            left: -5px;
+                            width: 50px;
+                            height: 3px;
+                            background-color: $black;
+                            border-radius: 1px;
+                        }
                     }
                 }
             }
@@ -421,4 +497,16 @@ body {
 #competences {
     position: relative;
     height: 100vh;
+    background: $black;
+
+    #competencesTitleList {
+        color: $darkWhite;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, $black 0%, transparent 20%, transparent 80%, $black 100%)
+        }
+    }
 }
