@@ -136,11 +136,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 5vw;
 
     .logo {
         position: relative;
-        margin-left: 3rem;
+        margin-left: 5vw;
         color: $darkWhite;
         opacity: .8;
 
@@ -151,7 +151,7 @@ body {
 
     .nav {
         position: relative;
-        margin-inline: 3rem;
+        margin-inline: 5vw;
         padding: 0;
         display: flex;
         justify-content: end;
@@ -191,7 +191,7 @@ body {
             outline: none;
             padding: 5px;
             margin: 0;
-            margin-inline: 3rem;
+            margin-inline: 5vw;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -225,7 +225,7 @@ body {
             list-style: none;
             padding: 0;
             margin: 0;
-            padding-top: 100px;
+            padding-top: 5vw;
 
             li a {
                 transition: all .3s ease-in-out;
@@ -279,7 +279,8 @@ body {
     .description {
         position: absolute;
         top: 50%;
-        left: 15%;
+        left: 0;
+        margin-inline: 15%;
         transform: translateY(-50%);
 
         h1 {
