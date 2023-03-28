@@ -116,11 +116,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5vw;
+  margin-top: min(50px, 5vw);
 }
 #navBar .logo {
   position: relative;
-  margin-left: 5vw;
+  margin-left: min(50px, 5vw);
   color: #EFEFEF;
   opacity: 0.8;
 }
@@ -129,7 +129,7 @@ body {
 }
 #navBar .nav {
   position: relative;
-  margin-inline: 5vw;
+  margin-inline: min(50px, 5vw);
   padding: 0;
   display: flex;
   justify-content: end;
@@ -165,7 +165,7 @@ body {
   outline: none;
   padding: 5px;
   margin: 0;
-  margin-inline: 5vw;
+  margin-inline: min(50px, 5vw);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -256,7 +256,7 @@ body {
 }
 #home .description p {
   color: #EFEFEF;
-  font-size: 24px;
+  font-size: calc(16px + 0.5vw);
   font-weight: 100;
   max-width: 500px;
   margin-top: 3rem;
@@ -264,6 +264,11 @@ body {
 #home .description button {
   margin-top: 1rem;
   font-size: 24px;
+}
+@media screen and (max-width: 576px) {
+  #home .description button {
+    font-size: 20px;
+  }
 }
 #home #homeAvatar {
   position: absolute;
