@@ -47,18 +47,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     })
 
-    document.querySelector("#discoverButton").addEventListener("click", function () {
-        document.querySelector('#parcours').scrollIntoView({
-            behavior: 'smooth'
-        });
-    })
-
-    document.querySelector(".toTop").addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
+    Array.from(document.querySelectorAll(".scrollToButton")).forEach(function (element) {
+        element.addEventListener("click", function () {
+            document.querySelector(element.dataset.target).scrollIntoView({
+                behavior: 'smooth'
+            });
+        })
     })
 
     var parcoursTab = []

@@ -19,7 +19,7 @@ get_header();
         <p>
             Je suis étudiant en école d'ingénieur en informatique et freelance en développement web.
         </p>
-        <button id="discoverButton" class="hover_button">
+        <button id="discoverButton" class="hover_button scrollToButton" data-target="#parcours">
             <span>découvrir</span>
         </button>
     </div>
@@ -55,7 +55,7 @@ get_header();
 <section id="competences">
     <div id="competencesTitleList"><span>COMPÉTENCES</span></div>
 </section>
-<svg class="toTop" width="80px" height="80px" transform="rotate(-90)">
+<svg class="toTop scrollToButton" data-target="#home" width="80px" height="80px" transform="rotate(-90)">
     <circle cx="40" cy="40" r="30" />
 </svg>
 <div id="cursor"></div>
