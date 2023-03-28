@@ -388,6 +388,11 @@ body {
             display: grid;
             grid-template-columns: minmax(200px, 30%) 1fr;
 
+            @media screen and (max-width: map-get($breakpoints, md)) {
+                grid-template-columns: 1fr;
+                grid-template-rows: minmax(200px, 30%) 1fr;
+            }
+
             .parcoursLeft {
                 position: relative;
                 height: 80%;
@@ -494,6 +499,27 @@ body {
                         }
                     }
                 }
+            }
+        }
+
+        .progressBarContainer {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%) skewX(-30deg);
+            width: 50%;
+            height: 20px;
+            background-color: $white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, .1);
+            overflow: hidden;
+
+            .progressBar {
+                transition: width .1s;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $primary;
             }
         }
     }

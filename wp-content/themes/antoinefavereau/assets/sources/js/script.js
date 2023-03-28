@@ -105,6 +105,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             return
         }
 
+        console.log(document.querySelector("#parcours").clientHeight / parcoursTab.length);
+
+        document.querySelector(".progressBar").style.width = "10%"
+
         var top = 0
         var bottom = document.querySelector("#parcours .barreVerticale").clientHeight
         Array.from(document.querySelectorAll("#parcours .point")).forEach(function (element) {

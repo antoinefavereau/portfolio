@@ -50,6 +50,7 @@ get_header();
                 ?>
             </div>
         </div>
+        <div class="progressBarContainer"><div class="progressBar"></div></div>
     </div>
 </section>
 <section id="competences">
