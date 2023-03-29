@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     var parcoursHeight = 1000
 
+    if (window.innerWidth <= 768) {
+        var md = true
+    } else {
+        var md = false
+    }
+
     document.querySelector("#maintenanceButton").addEventListener('click', function () {
         document.querySelector("#maintenance").style.display = "none";
         document.body.style.overflowY = "visible";
@@ -48,7 +54,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
 
     Array.from(document.querySelectorAll(".scrollToButton")).forEach(function (element) {
-        element.addEventListener("click", function () {
+        element.addEventListener("click", function (event) {
+            event.preventDefault()
             document.querySelector(element.dataset.target).scrollIntoView({
                 behavior: 'smooth'
             });
@@ -90,8 +97,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         var point = document.createElement('div')
         point.classList.add("point")
         document.querySelector("#parcours .parcoursLeft .barreVerticale").appendChild(point)
-        point.style.top = (dateTab[i] - dateTab[0]) * 50 + "px"
         point.dataset.year = dateTab[i]
+        if (md) {
+            point.style.left = (dateTab[i] - dateTab[0]) * document.querySelector("#parcours .parcoursLeft .barreVerticale").clientWidth / 9 + "px"
+        } else {
+            point.style.top = (dateTab[i] - dateTab[0]) * document.querySelector("#parcours .parcoursLeft .barreVerticale").clientHeight / 9 + "px"
+        }
     }
 
     document.addEventListener("scroll", function (event) {
@@ -105,26 +116,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
             return
         }
 
-        var value = top * parcoursTab.length * 100 / (document.querySelector("#parcours").clientHeight - parcoursHeight) - 100 * index
-
-        var value = top * parcoursTab.length / (document.querySelector("#parcours").clientHeight - parcoursHeight) * 100 - 100 * index
-
-        console.log(value);
-
-        document.querySelector(".progressBar").style.width = value + "%"
+        document.querySelector(".progressBar").style.width = top * parcoursTab.length / (document.querySelector("#parcours").clientHeight - parcoursHeight) * 100 - 100 * index + "%"
 
         var top = 0
-        var bottom = document.querySelector("#parcours .barreVerticale").clientHeight
+        if (md) {
+            var bottom = document.querySelector("#parcours .barreVerticale").clientWidth
+        } else {
+            var bottom = document.querySelector("#parcours .barreVerticale").clientHeight
+        }
         Array.from(document.querySelectorAll("#parcours .point")).forEach(function (element) {
             if (element.dataset.year == parcoursTab[index][2]) {
-                top = element.offsetTop;
+                if (md) {
+                    top = element.offsetLeft;
+                } else {
+                    top = element.offsetTop;
+                }
             }
             if (element.dataset.year == parcoursTab[index][3]) {
-                bottom = element.offsetTop;
+                if (md) {
+                    bottom = element.offsetLeft;
+                } else {
+                    bottom = element.offsetTop;
+                }
             }
         })
-        document.querySelector("#parcours .barreSelection").style.top = top + "px"
-        document.querySelector("#parcours .barreSelection").style.height = Math.max(0, bottom - top - 6) + "px"
+
+        if (md) {
+            document.querySelector("#parcours .barreSelection").style.left = top + "px"
+            document.querySelector("#parcours .barreSelection").style.width = Math.max(0, bottom - top - 6) + "px"
+        } else {
+            document.querySelector("#parcours .barreSelection").style.top = top + "px"
+            document.querySelector("#parcours .barreSelection").style.height = Math.max(0, bottom - top - 6) + "px"
+        }
         document.querySelector("#parcours .barreSelection").dataset.label = parcoursTab[index][1]
         Array.from(document.querySelectorAll("#parcours .parcoursRightContainer")).forEach(function (element) {
             if (element.dataset.id == parcoursTab[index][0]) {
@@ -154,4 +177,56 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.querySelector(".btnMobileNav").addEventListener("click", function () {
         document.querySelector(".mobileNav").classList.toggle("active")
     })
+
+    Array.from(document.querySelectorAll(".mobileNav a")).forEach(function (element) {
+        element.addEventListener("click", function () {
+            document.querySelector(".mobileNav").classList.remove("active")
+        })
+    })
+
+    // scroll sur la section parcours
+    var children = document.querySelectorAll('#parcours .parcoursRightContainer .texte');
+    var startTouchY;
+    var lastTouchY;
+    var isDragging = false;
+
+    children.forEach(function (child) {
+        if (child.scrollHeight == child.offsetHeight) {
+            return
+        }
+        child.addEventListener('wheel', function (event) {
+            if ((event.deltaY > 0 && child.scrollTop + child.offsetHeight >= child.scrollHeight) ||
+                (event.deltaY < 0 && child.scrollTop === 0)) {
+                event.preventDefault();
+                window.scrollBy(0, event.deltaY);
+            }
+        });
+
+        child.addEventListener('touchstart', function (event) {
+            startTouchY = event.touches[0].clientY;
+            lastTouchY = startTouchY;
+        });
+
+        child.addEventListener('touchmove', function (event) {
+            var currentTouchY = event.touches[0].clientY;
+            var deltaY = lastTouchY - currentTouchY;
+            lastTouchY = currentTouchY;
+
+            if (!isDragging) {
+                if ((deltaY > 0 && child.scrollTop + child.offsetHeight >= child.scrollHeight) ||
+                    (deltaY < 0 && child.scrollTop === 0)) {
+                    isDragging = true;
+                }
+            }
+
+            if (isDragging) {
+                event.preventDefault();
+                window.scrollBy(0, deltaY);
+            }
+        });
+
+        child.addEventListener('touchend', function (event) {
+            isDragging = false;
+        });
+    });
 });
