@@ -21,7 +21,7 @@
         </a>
         <ul class="nav">
             <li><a class="scrollToButton" data-target="#parcours">parcours</a></li>
-            <li><a class="scrollToButton">compétences</a></li>
+            <li><a class="scrollToButton" data-target="#competences">compétences</a></li>
             <li><a class="scrollToButton">portfolio</a></li>
         </ul>
         <div class="mobileNav">
@@ -33,9 +33,9 @@
             </button>
             <div class="mobileNavContainer"></div>
             <ul class="mobileNavList">
-                <li><a href="">parcours</a></li>
-                <li><a href="">compétences</a></li>
-                <li><a href="">portfolio</a></li>
+                <li><a class="scrollToButton" data-target="#parcours">parcours</a></li>
+                <li><a class="scrollToButton" data-target="#competences">compétences</a></li>
+                <li><a class="scrollToButton">portfolio</a></li>
             </ul>
         </div>
     </navbar>
