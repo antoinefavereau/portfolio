@@ -343,12 +343,23 @@ body {
 }
 #parcours .parcoursContainer .divParcours .parcoursLeft .barreVerticale {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 50%;
+  transform: translateY(-50%);
   width: 10px;
   height: 100%;
   border-radius: 10px;
   background: linear-gradient(180deg, #101010 0%, #101010 calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), #101010 calc(100% - 70px), #101010 calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), #101010 calc(100% - 30px), #101010 100%);
+}
+@media screen and (max-width: 768px) {
+  #parcours .parcoursContainer .divParcours .parcoursLeft .barreVerticale {
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, #101010 0%, #101010 calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), #101010 calc(100% - 70px), #101010 calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), #101010 calc(100% - 30px), #101010 100%);
+  }
 }
 #parcours .parcoursContainer .divParcours .parcoursLeft .barreSelection {
   transition: height 0.3s ease-in-out, top 0.3s ease-in-out;

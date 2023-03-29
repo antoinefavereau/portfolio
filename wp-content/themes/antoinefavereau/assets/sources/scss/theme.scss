@@ -401,12 +401,22 @@ body {
 
                 .barreVerticale {
                     position: absolute;
-                    top: 0;
+                    top: 50%;
                     right: 50%;
+                    transform: translateY(-50%);
                     width: 10px;
                     height: 100%;
                     border-radius: 10px;
                     background: linear-gradient(180deg, $black 0%, $black calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), $black calc(100% - 70px), $black calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), $black calc(100% - 30px), $black 100%);
+
+                    @media screen and (max-width: map-get($breakpoints, md)) {
+                        left: 50%;
+                        bottom: 50%;
+                        transform: translateX(-50%);
+                        width: 100%;
+                        height: 10px;
+                        background: linear-gradient(90deg, $black 0%, $black calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), $black calc(100% - 70px), $black calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), $black calc(100% - 30px), $black 100%);
+                    }
                 }
 
                 .barreSelection {
@@ -425,6 +435,10 @@ body {
                         top: 50%;
                         transform: translateY(-50%);
                         margin-left: 1rem;
+                    }
+
+                    @media screen and (max-width: map-get($breakpoints, md)) {
+                        
                     }
                 }
 
