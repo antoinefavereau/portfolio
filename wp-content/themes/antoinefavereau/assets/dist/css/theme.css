@@ -213,8 +213,8 @@ body {
   background-color: #101010;
 }
 #navBar .mobileNav.active .mobileNavContainer {
-  width: 200vh;
-  height: 200vh;
+  width: 200dvh;
+  height: 200dvh;
   border-radius: 0;
 }
 #navBar .mobileNav.active .mobileNavList {
@@ -231,7 +231,7 @@ body {
 
 #home {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   background: radial-gradient(circle, #202020 0%, #101010 100%);
 }
 #home .description {
@@ -312,7 +312,7 @@ body {
 #parcours .parcoursContainer {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100dvh;
   background-color: #EFEFEF;
   display: flex;
   flex-direction: column;
@@ -436,11 +436,12 @@ body {
   bottom: 100px;
   left: 50%;
   transform: translateX(-50%) skewX(-30deg);
-  width: 50%;
-  height: 20px;
+  width: 40%;
+  height: 15px;
   background-color: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  border-radius: 3px;
 }
 #parcours .parcoursContainer .progressBarContainer .progressBar {
   transition: width 0.1s;
@@ -453,7 +454,7 @@ body {
 
 #competences {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   background: #101010;
 }
 #competences #competencesTitleList {

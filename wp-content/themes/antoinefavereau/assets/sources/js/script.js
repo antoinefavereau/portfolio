@@ -105,9 +105,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
             return
         }
 
-        console.log(document.querySelector("#parcours").clientHeight / parcoursTab.length);
+        var value = top * parcoursTab.length * 100 / (document.querySelector("#parcours").clientHeight - parcoursHeight) - 100 * index
 
-        document.querySelector(".progressBar").style.width = "10%"
+        var value = top * parcoursTab.length / (document.querySelector("#parcours").clientHeight - parcoursHeight) * 100 - 100 * index
+
+        console.log(value);
+
+        document.querySelector(".progressBar").style.width = value + "%"
 
         var top = 0
         var bottom = document.querySelector("#parcours .barreVerticale").clientHeight
