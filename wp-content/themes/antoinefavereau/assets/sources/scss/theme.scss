@@ -390,14 +390,24 @@ body {
 
             @media screen and (max-width: map-get($breakpoints, md)) {
                 grid-template-columns: 1fr;
-                grid-template-rows: minmax(200px, 30%) 1fr;
+                grid-template-rows: minmax(160px, 30%) 1fr;
             }
 
             .parcoursLeft {
                 position: relative;
+                width: 100%;
                 height: 80%;
                 top: 50%;
+                left: 0;
                 transform: translateY(-50%);
+
+                @media screen and (max-width: map-get($breakpoints, md)) {
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 80%;
+                    height: 100%;
+                }
 
                 .barreVerticale {
                     position: absolute;
@@ -410,6 +420,8 @@ body {
                     background: linear-gradient(180deg, $black 0%, $black calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), $black calc(100% - 70px), $black calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), $black calc(100% - 30px), $black 100%);
 
                     @media screen and (max-width: map-get($breakpoints, md)) {
+                        top: unset;
+                        right: unset;
                         left: 50%;
                         bottom: 50%;
                         transform: translateX(-50%);
@@ -420,9 +432,9 @@ body {
                 }
 
                 .barreSelection {
-                    transition: height .3s ease-in-out, top .3s ease-in-out;
+                    transition: all .3s ease-in-out;
                     position: absolute;
-                    left: calc(50% + 50px);
+                    left: calc(50% + 40px);
                     width: 20px;
                     border: 6px solid $black;
                     border-left-width: 0px;
@@ -438,15 +450,26 @@ body {
                     }
 
                     @media screen and (max-width: map-get($breakpoints, md)) {
-                        
+                        top: calc(50% + 30px);
+                        height: 15px;
+                        border: 6px solid $black;
+                        border-top-width: 0px;
+
+                        &::after {
+                            top: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin-left: 0;
+                            margin-top: 1rem;
+                        }
                     }
                 }
 
                 .point {
                     position: absolute;
                     left: 50%;
-                    transform: translate(-50%, -50%);
                     top: 0;
+                    transform: translate(-50%, -50%);
                     width: 40px;
                     height: 40px;
                     border-radius: 50%;
@@ -468,10 +491,26 @@ body {
                         content: attr(data-year);
                         position: absolute;
                         top: 50%;
-                        transform: translateY(-50%);
                         right: 100%;
+                        transform: translateY(-50%);
                         margin-right: 20px;
                         font-family: "audiowide";
+                    }
+
+                    @media screen and (max-width: map-get($breakpoints, md)) {
+                        top: 50%;
+                        left: 0;
+
+                        &::before {
+                            top: unset;
+                            left: 50%;
+                            right: unset;
+                            bottom: 100%;
+                            transform: translateX(-50%);
+                            margin-right: 0;
+                            margin-bottom: 20px;
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -489,12 +528,25 @@ body {
                     min-height: 60%;
                     width: 80%;
                     max-height: 100%;
-                    overflow-y: auto;
                     padding-left: 5px;
+                    display: flex;
+                    flex-direction: column;
+
+                    @media screen and (max-width: map-get($breakpoints, md)) {
+                        top: 0;
+                        transform: translateX(-50%);
+                        min-height: unset;
+                        max-height: 90%;
+                    }
 
                     &:not(.active) {
+                        pointer-events: none;
                         opacity: 0;
                         transform: translate(-50%, calc(-50% + 50px));
+
+                        @media screen and (max-width: map-get($breakpoints, md)) {
+                            transform: translate(-50%, 50px);
+                        }
                     }
 
                     .titre {
@@ -512,13 +564,18 @@ body {
                             border-radius: 1px;
                         }
                     }
+
+                    .texte {
+                        flex-shrink: 1;
+                        overflow-y: auto;
+                    }
                 }
             }
         }
 
         .progressBarContainer {
             position: absolute;
-            bottom: 100px;
+            bottom: 80px;
             left: 50%;
             transform: translateX(-50%) skewX(-30deg);
             width: 40%;
@@ -535,6 +592,12 @@ body {
                 bottom: 0;
                 left: 0;
                 background-color: $primary;
+            }
+
+            @media screen and (max-width: map-get($breakpoints, md)) {
+                width: 100%;
+                bottom: 0;
+                transform: translateX(-50%);
             }
         }
     }
