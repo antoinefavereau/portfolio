@@ -186,7 +186,7 @@ body {
   border-radius: 3px;
 }
 #navBar .mobileNav .mobileNavContainer {
-  transition: all 0.6s ease-in-out;
+  transition: all 0.5s ease-in-out;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -218,6 +218,7 @@ body {
   color: #101010;
   letter-spacing: 0;
   padding: 20px;
+  opacity: 0;
 }
 #navBar .mobileNav .mobileNavList li a:hover {
   letter-spacing: 5px;
@@ -226,12 +227,19 @@ body {
   background-color: #101010;
 }
 #navBar .mobileNav.active .mobileNavContainer {
-  width: 200dvh;
-  height: 200dvh;
+  width: max(200dvh, 200dvw);
+  height: max(200dvh, 200dvw);
   border-radius: 0;
 }
 #navBar .mobileNav.active .mobileNavList {
   display: flex;
+}
+#navBar .mobileNav.active .mobileNavList li a {
+  animation-name: mobileMenuLinkAnimation;
+  animation-duration: 0.5s;
+  animation-delay: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 @media screen and (max-width: 768px) {
   #navBar .nav {
@@ -242,6 +250,16 @@ body {
   }
 }
 
+@keyframes mobileMenuLinkAnimation {
+  from {
+    opacity: 0;
+    letter-spacing: 2ch;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0;
+  }
+}
 #home {
   position: relative;
   height: 100dvh;
