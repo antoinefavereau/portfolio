@@ -111,15 +111,15 @@ body {
 
     &::before {
         content: "";
-        transition: width .3s ease-in-out, height .3s ease-in-out;
+        transition: width .5s ease-in-out;
         position: absolute;
         background-color: $primary;
         left: var(--left);
         top: var(--top);
         transform: translate(-50%, -50%);
         width: 0;
-        height: 0;
-        border-radius: inherit;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
     }
 
     &:hover {
@@ -128,7 +128,6 @@ body {
 
         &::before {
             width: 200%;
-            height: 200%;
         }
     }
 }

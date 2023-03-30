@@ -95,15 +95,15 @@ body {
 }
 .hover_button::before {
   content: "";
-  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  transition: width 0.5s ease-in-out;
   position: absolute;
   background-color: #88B4E8;
   left: var(--left);
   top: var(--top);
   transform: translate(-50%, -50%);
   width: 0;
-  height: 0;
-  border-radius: inherit;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
 }
 .hover_button:hover {
   color: #101010;
@@ -111,7 +111,6 @@ body {
 }
 .hover_button:hover::before {
   width: 200%;
-  height: 200%;
 }
 
 #navBar {
