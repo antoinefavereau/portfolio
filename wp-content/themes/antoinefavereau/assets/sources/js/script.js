@@ -171,11 +171,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     }
 
-    document.querySelector(".mobileNavContainer").style.left = Math.round(document.querySelector(".btnMobileNav").getBoundingClientRect().left + document.querySelector(".btnMobileNav").getBoundingClientRect().width / 2) + "px"
-    document.querySelector(".mobileNavContainer").style.top = Math.round(document.querySelector(".btnMobileNav").getBoundingClientRect().top + document.querySelector(".btnMobileNav").getBoundingClientRect().height / 2) + "px"
-
     document.querySelector(".btnMobileNav").addEventListener("click", function () {
         document.querySelector(".mobileNav").classList.toggle("active")
+        if (document.querySelector(".mobileNav").classList.contains("active")) {
+            document.body.style.overflowY = "hidden";
+        } else {
+            document.body.style.overflowY = "visible";
+        }
     })
 
     Array.from(document.querySelectorAll(".mobileNav a")).forEach(function (element) {

@@ -35,6 +35,7 @@ $breakpoints: (
 }
 
 body {
+    width: 100dvw;
     margin: 0;
     background-color: $black;
     overflow-x: hidden;
@@ -82,6 +83,11 @@ body {
     circle {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
+    }
+
+    @media screen and (max-width: map-get($breakpoints, md)) {
+        bottom: 30px;
+        right: 30px;
     }
 }
 
@@ -179,6 +185,7 @@ body {
     }
 
     .mobileNav {
+        position: relative;
         display: none;
 
         .btnMobileNav {
@@ -207,7 +214,9 @@ body {
 
         .mobileNavContainer {
             transition: all .6s ease-in-out;
-            position: fixed;
+            position: absolute;
+            top: 50%;
+            left: 50%;
             width: 0;
             height: 0;
             transform: translate(-50%, -50%);
@@ -217,7 +226,10 @@ body {
 
         .mobileNavList {
             position: fixed;
-            inset: 0;
+            top: 0;
+            left: 0;
+            width: 100dvw;
+            height: 100dvh;
             display: none;
             flex-direction: column;
             justify-content: space-evenly;
@@ -426,7 +438,7 @@ body {
                         bottom: 50%;
                         transform: translateX(-50%);
                         width: 100%;
-                        height: 10px;
+                        height: 8px;
                         background: linear-gradient(90deg, $black 0%, $black calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), $black calc(100% - 70px), $black calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), $black calc(100% - 30px), $black 100%);
                     }
                 }
@@ -452,7 +464,7 @@ body {
                     @media screen and (max-width: map-get($breakpoints, md)) {
                         top: calc(50% + 30px);
                         height: 15px;
-                        border: 6px solid $black;
+                        border: 5px solid $black;
                         border-top-width: 0px;
 
                         &::after {
@@ -473,19 +485,11 @@ body {
                     width: 40px;
                     height: 40px;
                     border-radius: 50%;
-                    background-color: $black;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 50%;
-                        height: 50%;
-                        border-radius: 50%;
-                        background-color: $darkWhite;
-                    }
+                    background-color: $darkWhite;
+                    border: 10px solid $black;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
 
                     &::before {
                         content: attr(data-year);
@@ -500,6 +504,9 @@ body {
                     @media screen and (max-width: map-get($breakpoints, md)) {
                         top: 50%;
                         left: 0;
+                        width: 35px;
+                        height: 35px;
+                        border-width: 8px;
 
                         &::before {
                             top: unset;

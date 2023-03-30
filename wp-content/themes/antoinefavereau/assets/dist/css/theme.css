@@ -21,6 +21,7 @@
 }
 
 body {
+  width: 100dvw;
   margin: 0;
   background-color: #101010;
   overflow-x: hidden;
@@ -67,6 +68,12 @@ body {
 .toTop circle {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
+}
+@media screen and (max-width: 768px) {
+  .toTop {
+    bottom: 30px;
+    right: 30px;
+  }
 }
 
 .hover_button {
@@ -153,6 +160,7 @@ body {
   opacity: 0.6;
 }
 #navBar .mobileNav {
+  position: relative;
   display: none;
 }
 #navBar .mobileNav .btnMobileNav {
@@ -179,7 +187,9 @@ body {
 }
 #navBar .mobileNav .mobileNavContainer {
   transition: all 0.6s ease-in-out;
-  position: fixed;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 0;
   height: 0;
   transform: translate(-50%, -50%);
@@ -188,7 +198,10 @@ body {
 }
 #navBar .mobileNav .mobileNavList {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
   display: none;
   flex-direction: column;
   justify-content: space-evenly;
@@ -370,7 +383,7 @@ body {
     bottom: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 10px;
+    height: 8px;
     background: linear-gradient(90deg, #101010 0%, #101010 calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), #101010 calc(100% - 70px), #101010 calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), #101010 calc(100% - 30px), #101010 100%);
   }
 }
@@ -395,7 +408,7 @@ body {
   #parcours .parcoursContainer .divParcours .parcoursLeft .barreSelection {
     top: calc(50% + 30px);
     height: 15px;
-    border: 6px solid #101010;
+    border: 5px solid #101010;
     border-top-width: 0px;
   }
   #parcours .parcoursContainer .divParcours .parcoursLeft .barreSelection::after {
@@ -414,18 +427,11 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #101010;
-}
-#parcours .parcoursContainer .divParcours .parcoursLeft .point::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
   background-color: #EFEFEF;
+  border: 10px solid #101010;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #parcours .parcoursContainer .divParcours .parcoursLeft .point::before {
   content: attr(data-year);
@@ -440,6 +446,9 @@ body {
   #parcours .parcoursContainer .divParcours .parcoursLeft .point {
     top: 50%;
     left: 0;
+    width: 35px;
+    height: 35px;
+    border-width: 8px;
   }
   #parcours .parcoursContainer .divParcours .parcoursLeft .point::before {
     top: unset;
