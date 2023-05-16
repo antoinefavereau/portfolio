@@ -28,7 +28,41 @@ get_header();
     </svg>
 </section>
 <section id="parcours">
-    <div class="parcoursContainer">
+    <div class="parcoursTitle">
+        <svg class="shape" width="1450" height="414" viewBox="0 0 1450 414" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_348_143)">
+                <path d="M0 0H1400L1366.14 85.9782C1329.8 178.247 1241.36 239.453 1142.21 240.951L514.282 250.439C336.939 253.118 161.982 291.751 0 364V0Z" fill="#FCA311" />
+            </g>
+            <defs>
+                <filter id="filter0_d_348_143" x="-50" y="-50" width="1500" height="464" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="25" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.0635417 0 0 0 0 0.0635417 0 0 0 0 0.0635417 0 0 0 1 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_348_143" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_348_143" result="shape" />
+                </filter>
+            </defs>
+        </svg>
+        <h2 class="title">Mon parcours</h2>
+    </div>
+    <div class="parcoursLIst">
+        <?php
+        query_posts(array(
+            'category_name' => 'parcours'
+        ));
+        if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <div class="item">
+                    <h2 class="title"><?= get_the_title() ?></h2>
+                    <p class="text"><?= get_field("texte") ?></p>
+                </div>
+        <?php endwhile;
+        endif;
+        ?>
+    </div>
+    <!-- <div class="parcoursContainer">
         <div id="parcoursTitleList"><span>PARCOURS</span></div>
         <div class="divParcours">
             <div class="parcoursLeft">
@@ -51,14 +85,14 @@ get_header();
             </div>
         </div>
         <div class="progressBarContainer"><div class="progressBar"></div></div>
-    </div>
+    </div> -->
 </section>
-<section id="competences">
+<!-- <section id="competences">
     <div id="competencesTitleList"><span>COMPÉTENCES</span></div>
-</section>
-<svg class="toTop scrollToButton" data-target="#home" width="80px" height="80px" transform="rotate(-90)">
+</section> -->
+<!-- <svg class="toTop scrollToButton" data-target="#home" width="80px" height="80px" transform="rotate(-90)">
     <circle cx="40" cy="40" r="30" />
-</svg>
+</svg> -->
 <div id="cursor"></div>
 
 <?php

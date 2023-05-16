@@ -10,7 +10,7 @@
   position: fixed;
   inset: 0;
   z-index: 5000;
-  background-color: #101010;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@
 body {
   width: 100dvw;
   margin: 0;
-  background-color: #101010;
+  background-color: #000;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -81,8 +81,8 @@ body {
   transition: all 0.2s ease-in-out;
   background-color: transparent;
   border: none;
-  outline: solid 3px #88B4E8;
-  padding: 16px 40px;
+  outline: solid 3px #FCA311;
+  padding: 12px 30px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   overflow: hidden;
@@ -97,7 +97,7 @@ body {
   content: "";
   transition: width 0.5s ease-in-out;
   position: absolute;
-  background-color: #88B4E8;
+  background-color: #FCA311;
   left: var(--left);
   top: var(--top);
   transform: translate(-50%, -50%);
@@ -106,7 +106,7 @@ body {
   border-radius: 50%;
 }
 .hover_button:hover {
-  color: #101010;
+  color: #000;
   outline-width: 0;
 }
 .hover_button:hover::before {
@@ -122,11 +122,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: min(50px, 5vw);
+  margin-top: min(30px, 5vw);
 }
 #navBar .logo {
   position: relative;
-  margin-left: min(50px, 5vw);
+  margin-left: min(30px, 5vw);
   color: #EFEFEF;
   opacity: 0.8;
 }
@@ -152,7 +152,7 @@ body {
   font-family: "audiowide";
   font-size: 24px;
   text-decoration: none;
-  color: #88B4E8;
+  color: #ffffff;
   padding: 0rem 2rem;
 }
 #navBar .nav:hover li:not(:hover) {
@@ -214,7 +214,7 @@ body {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   font-size: 48px;
-  color: #101010;
+  color: #000;
   letter-spacing: 0;
   padding: 20px;
   opacity: 0;
@@ -223,7 +223,7 @@ body {
   letter-spacing: 5px;
 }
 #navBar .mobileNav.active .btnMobileNav .btnDiv {
-  background-color: #101010;
+  background-color: #000;
 }
 #navBar .mobileNav.active .mobileNavContainer {
   width: max(200dvh, 200dvw);
@@ -262,7 +262,7 @@ body {
 #home {
   position: relative;
   height: 100dvh;
-  background: radial-gradient(circle, #202020 0%, #101010 100%);
+  background: #000;
 }
 #home .description {
   position: absolute;
@@ -273,7 +273,7 @@ body {
 }
 #home .description h1 {
   font-family: "audiowide";
-  color: #EFEFEF;
+  color: #FCA311;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -293,7 +293,7 @@ body {
 }
 #home .description button {
   margin-top: 1rem;
-  font-size: 24px;
+  font-size: 20px;
 }
 @media screen and (max-width: 576px) {
   #home .description button {
@@ -339,230 +339,48 @@ body {
 #parcours {
   position: relative;
 }
-#parcours .parcoursContainer {
+#parcours .parcoursTitle {
   position: sticky;
   top: 0;
-  height: 100dvh;
-  background-color: #EFEFEF;
-  display: flex;
-  flex-direction: column;
+  left: 0;
+  width: 70%;
+  min-width: 300px;
 }
-#parcours .parcoursContainer #parcoursTitleList::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #EFEFEF 0%, transparent 20%, transparent 80%, #EFEFEF 100%);
-}
-#parcours .parcoursContainer .divParcours {
-  position: relative;
-  flex-grow: 1;
-  display: grid;
-  grid-template-columns: minmax(200px, 30%) 1fr;
-}
-@media screen and (max-width: 768px) {
-  #parcours .parcoursContainer .divParcours {
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(160px, 30%) 1fr;
-  }
-}
-#parcours .parcoursContainer .divParcours .parcoursLeft {
+#parcours .parcoursTitle .shape {
   position: relative;
   width: 100%;
-  height: 80%;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  height: auto;
+  object-fit: contain;
 }
-@media screen and (max-width: 768px) {
-  #parcours .parcoursContainer .divParcours .parcoursLeft {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 100%;
-  }
-}
-#parcours .parcoursContainer .divParcours .parcoursLeft .barreVerticale {
+#parcours .parcoursTitle .title {
   position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 100%;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #101010 0%, #101010 calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), #101010 calc(100% - 70px), #101010 calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), #101010 calc(100% - 30px), #101010 100%);
-}
-@media screen and (max-width: 768px) {
-  #parcours .parcoursContainer .divParcours .parcoursLeft .barreVerticale {
-    top: unset;
-    right: unset;
-    left: 50%;
-    bottom: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 8px;
-    background: linear-gradient(90deg, #101010 0%, #101010 calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), #101010 calc(100% - 70px), #101010 calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), #101010 calc(100% - 30px), #101010 100%);
-  }
-}
-#parcours .parcoursContainer .divParcours .parcoursLeft .barreSelection {
-  transition: all 0.3s ease-in-out;
-  position: absolute;
-  left: calc(50% + 40px);
-  width: 20px;
-  border: 6px solid #101010;
-  border-left-width: 0px;
-  transform: translateY(-3px);
-}
-#parcours .parcoursContainer .divParcours .parcoursLeft .barreSelection::after {
-  content: attr(data-label);
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: 1rem;
-}
-@media screen and (max-width: 768px) {
-  #parcours .parcoursContainer .divParcours .parcoursLeft .barreSelection {
-    top: calc(50% + 30px);
-    height: 15px;
-    border: 5px solid #101010;
-    border-top-width: 0px;
-  }
-  #parcours .parcoursContainer .divParcours .parcoursLeft .barreSelection::after {
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 0;
-    margin-top: 1rem;
-  }
-}
-#parcours .parcoursContainer .divParcours .parcoursLeft .point {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #EFEFEF;
-  border: 10px solid #101010;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-#parcours .parcoursContainer .divParcours .parcoursLeft .point::before {
-  content: attr(data-year);
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  transform: translateY(-50%);
-  margin-right: 20px;
   font-family: "audiowide";
-}
-@media screen and (max-width: 768px) {
-  #parcours .parcoursContainer .divParcours .parcoursLeft .point {
-    top: 50%;
-    left: 0;
-    width: 35px;
-    height: 35px;
-    border-width: 8px;
-  }
-  #parcours .parcoursContainer .divParcours .parcoursLeft .point::before {
-    top: unset;
-    left: 50%;
-    right: unset;
-    bottom: 100%;
-    transform: translateX(-50%);
-    margin-right: 0;
-    margin-bottom: 20px;
-    font-size: 12px;
-  }
-}
-#parcours .parcoursContainer .divParcours .parcoursRight {
-  position: relative;
-}
-#parcours .parcoursContainer .divParcours .parcoursRight .parcoursRightContainer {
-  transition: all 0.3s ease-in-out;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 40%;
+  top: 30%;
   transform: translate(-50%, -50%);
-  opacity: 1;
-  min-height: 60%;
-  width: 80%;
-  max-height: 100%;
-  padding-left: 5px;
+  color: #000;
+  font-size: 56px;
+  white-space: nowrap;
+  margin: 0;
+}
+#parcours .parcoursLIst {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex;
+  align-items: stretch;
 }
-@media screen and (max-width: 768px) {
-  #parcours .parcoursContainer .divParcours .parcoursRight .parcoursRightContainer {
-    top: 0;
-    transform: translateX(-50%);
-    min-height: unset;
-    max-height: 90%;
-  }
-}
-#parcours .parcoursContainer .divParcours .parcoursRight .parcoursRightContainer:not(.active) {
-  pointer-events: none;
-  opacity: 0;
-  transform: translate(-50%, calc(-50% + 50px));
-}
-@media screen and (max-width: 768px) {
-  #parcours .parcoursContainer .divParcours .parcoursRight .parcoursRightContainer:not(.active) {
-    transform: translate(-50%, 50px);
-  }
-}
-#parcours .parcoursContainer .divParcours .parcoursRight .parcoursRightContainer .titre {
+#parcours .parcoursLIst .item {
   position: relative;
-  margin-bottom: 26px;
-}
-#parcours .parcoursContainer .divParcours .parcoursRight .parcoursRightContainer .titre::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: -5px;
-  width: 50px;
-  height: 3px;
-  background-color: #101010;
-  border-radius: 1px;
-}
-#parcours .parcoursContainer .divParcours .parcoursRight .parcoursRightContainer .texte {
-  flex-shrink: 1;
-  overflow-y: auto;
-}
-#parcours .parcoursContainer .progressBarContainer {
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%) skewX(-30deg);
-  width: 40%;
-  height: 15px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  border-radius: 3px;
-}
-#parcours .parcoursContainer .progressBarContainer .progressBar {
-  transition: width 0.1s;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #88B4E8;
-}
-@media screen and (max-width: 768px) {
-  #parcours .parcoursContainer .progressBarContainer {
-    width: 100%;
-    bottom: 0;
-    transform: translateX(-50%);
-  }
+  color: #ffffff;
+  display: flex;
 }
 
 #competences {
   position: relative;
   height: 100dvh;
-  background: #101010;
+  background: #000;
 }
 #competences #competencesTitleList {
   color: #EFEFEF;
@@ -571,7 +389,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #101010 0%, transparent 20%, transparent 80%, #101010 100%);
+  background: linear-gradient(90deg, #000 0%, transparent 20%, transparent 80%, #000 100%);
 }
 
 /*# sourceMappingURL=theme.css.map */
