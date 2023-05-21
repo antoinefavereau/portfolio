@@ -2,13 +2,6 @@
 get_header();
 ?>
 
-<div id="maintenance">
-    <p>Mon site est en cours de maintenance 😅</p>
-    <button id="maintenanceButton" class="hover_button">
-        <span>voir quand même</span>
-    </button>
-</div>
-
 <section id="home">
     <img id="homeAvatar" src="<?= get_template_directory_uri() ?>/assets/dist/images/ReadyPlayerMe-Avatar 1.png" alt="avatar">
     <div class="description">

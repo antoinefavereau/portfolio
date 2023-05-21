@@ -16,22 +16,10 @@ $breakpoints: (
     src: url("../fonts/Audiowide-Regular.ttf");
 }
 
+@import "_animations.scss";
+
 * {
     cursor: none !important;
-}
-
-#maintenance {
-    position: fixed;
-    inset: 0;
-    z-index: 5000;
-    background-color: $black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    color: $white;
-    font-size: 1rem;
 }
 
 body {
@@ -39,7 +27,6 @@ body {
     margin: 0;
     background-color: $black;
     overflow-x: hidden;
-    overflow-y: hidden; //maintenance
 }
 
 #cursor {
@@ -132,174 +119,201 @@ body {
     }
 }
 
-#navBar {
+.logo {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: min(30px, 5vw);
+    left: min(30px, 5vw);
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: min(30px, 5vw);
+    color: $darkWhite;
+    opacity: .8;
 
-    .logo {
-        position: relative;
-        margin-left: min(30px, 5vw);
-        color: $darkWhite;
-        opacity: .8;
-
-        svg {
-            transform: scale(.8);
-        }
-    }
-
-    .nav {
-        position: relative;
-        margin-inline: min(50px, 5vw);
-        padding: 0;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        -webkit-user-select: none;
-        user-select: none;
-
-        li {
-            transition: all .3s ease-in-out;
-            list-style: none;
-            opacity: 1;
-
-            a {
-                font-family: "audiowide";
-                font-size: 24px;
-                text-decoration: none;
-                color: $white;
-                padding: 0rem 2rem;
-            }
-        }
-
-        &:hover li:not(:hover) {
-            opacity: .6;
-        }
-    }
-
-    .mobileNav {
-        position: relative;
-        display: none;
-
-        .btnMobileNav {
-            position: relative;
-            z-index: 100;
-            width: 60px;
-            height: 50px;
-            background-color: transparent;
-            border: none;
-            outline: none;
-            padding: 5px;
-            margin: 0;
-            margin-inline: min(50px, 5vw);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: stretch;
-
-            .btnDiv {
-                width: 100%;
-                height: 15%;
-                background-color: $white;
-                border-radius: 3px;
-            }
-        }
-
-        .mobileNavContainer {
-            transition: all .5s ease-in-out;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            background-color: $darkWhite;
-        }
-
-        .mobileNavList {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100dvw;
-            height: 100dvh;
-            display: none;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            padding-top: 5vw;
-
-            li a {
-                transition: all .3s ease-in-out;
-                text-decoration: none;
-                font-size: 48px;
-                color: $black;
-                letter-spacing: 0;
-                padding: 20px;
-                opacity: 0;
-
-                &:hover {
-                    letter-spacing: 5px;
-                }
-            }
-        }
-
-        &.active {
-            .btnMobileNav {
-                .btnDiv {
-                    background-color: $black;
-                }
-            }
-
-            .mobileNavContainer {
-                width: max(200dvh, 200dvw);
-                height: max(200dvh, 200dvw);
-                border-radius: 0;
-            }
-
-            .mobileNavList {
-                display: flex;
-
-                li a {
-                    animation-name: mobileMenuLinkAnimation;
-                    animation-duration: .5s;
-                    animation-delay: .4s;
-                    animation-timing-function: ease-in-out;
-                    animation-fill-mode: forwards;
-                }
-            }
-        }
-    }
-
-    @media screen and (max-width: map-get($breakpoints, md)) {
-        .nav {
-            display: none;
-        }
-
-        .mobileNav {
-            display: block;
-        }
+    svg {
+        transform: scale(.8);
     }
 }
 
-@keyframes mobileMenuLinkAnimation {
-    from {
-        opacity: 0;
-        letter-spacing: 2ch;
+.nav {
+    position: fixed;
+    top: min(30px, 5vw);
+    right: min(30px, 5vw);
+    z-index: 1000;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    .navList {
+        transition: all .3s ease-in-out;
+        position: absolute;
+        right: 0;
+        max-width: 0;
+        height: 60px;
+        padding-right: 90px;
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: $primary;
+        border-radius: 50px;
+        overflow: hidden;
+
+        a {
+            margin: .5rem;
+
+            &:first-child {
+                margin-left: 1rem;
+            }
+
+            svg {
+                transition: transform .1s ease-in-out;
+                height: 100%;
+                width: auto;
+                stroke: $black;
+            }
+
+            &:hover svg {
+                transform: scale(1.1);
+
+                .home-1 {
+                    animation: animate-home-1 0.3s ease-in-out 0s both;
+                }
+
+                .home-2 {
+                    animation: animate-home-2 0.3s ease-in-out 0.1s both;
+                }
+
+                .home-3 {
+                    animation: animate-home-3 0.3s ease-in-out 0.2s both;
+                }
+
+                .home-4 {
+                    animation: animate-home-4 0.3s ease-in-out 0.3s both;
+                }
+
+                .parcours-1 {
+                    animation: animate-parcours-1 0.3s ease-in-out 0s both;
+                }
+
+                .parcours-2 {
+                    animation: animate-parcours-2 0.3s ease-in-out 0.1s both;
+                }
+
+                .parcours-3 {
+                    animation: animate-parcours-3 0.3s ease-in-out 0.2s both;
+                }
+
+                .parcours-4 {
+                    animation: animate-parcours-4 0.3s ease-in-out 0.3s both;
+                }
+
+                .competences-1 {
+                    animation: animate-competences-1 0.3s ease-in-out 0s both;
+                }
+
+                .competences-2 {
+                    animation: animate-competences-2 0.3s ease-in-out 0.1s both;
+                }
+
+                .competences-3 {
+                    animation: animate-competences-3 0.3s ease-in-out 0.2s both;
+                }
+
+                .competences-4 {
+                    animation: animate-competences-4 0.3s ease-in-out 0.3s both;
+                }
+
+                .competences-5 {
+                    animation: animate-competences-5 0.3s ease-in-out 0.4s both;
+                }
+
+                .competences-6 {
+                    animation: animate-competences-6 0.3s ease-in-out 0.5s both;
+                }
+
+                .competences-7 {
+                    animation: animate-competences-7 0.3s ease-in-out 0.6s both;
+                }
+
+                .portfolio-1 {
+                    animation: animate-portfolio-1 0.3s ease-in-out 0s both;
+                }
+
+                .portfolio-2 {
+                    animation: animate-portfolio-2 0.3s ease-in-out 0.1s both;
+                }
+
+                .portfolio-3 {
+                    animation: animate-portfolio-3 0.3s ease-in-out 0.2s both;
+                }
+
+                .portfolio-4 {
+                    animation: animate-portfolio-4 0.3s ease-in-out 0.30000000000000004s both;
+                }
+
+                .portfolio-5 {
+                    animation: animate-portfolio-5 0.3s ease-in-out 0.4s both;
+                }
+
+                .portfolio-6 {
+                    animation: animate-portfolio-6 0.3s ease-in-out 0.5s both;
+                }
+
+                .portfolio-7 {
+                    animation: animate-portfolio-7 0.3s ease-in-out 0.6000000000000001s both;
+                }
+            }
+        }
     }
 
-    to {
-        opacity: 1;
-        letter-spacing: 0;
+    .burger {
+        position: relative;
+        border-radius: 50px;
+        background-color: $primary;
+        border: 10px solid $black;
+        outline: none;
+        height: 90px;
+        aspect-ratio: 1/1;
+
+        div {
+            position: absolute;
+            width: 50%;
+            height: 8%;
+            left: 50%;
+            border-radius: 10px;
+            background-color: $black;
+            transform: translate(-50%, -50%);
+
+            &:nth-child(1) {
+                animation: burgerOut1 .3s ease-in-out forwards;
+            }
+
+            &:nth-child(2) {
+                animation: burgerOut2 .3s ease-in-out forwards;
+            }
+
+            &:nth-child(3) {
+                animation: burgerOut3 .3s ease-in-out forwards;
+            }
+        }
+    }
+
+    &.active {
+        .navList {
+            max-width: 1000px;
+        }
+
+        .burger {
+            div {
+                &:nth-child(1) {
+                    animation: burgerIn1 .3s ease-in-out forwards;
+                }
+
+                &:nth-child(2) {
+                    animation: burgerIn2 .3s ease-in-out forwards;
+                }
+
+                &:nth-child(3) {
+                    animation: burgerIn3 .3s ease-in-out forwards;
+                }
+            }
+        }
     }
 }
 

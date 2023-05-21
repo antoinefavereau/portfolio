@@ -2,22 +2,312 @@
   font-family: "audiowide";
   src: url("../fonts/Audiowide-Regular.ttf");
 }
+@keyframes animate-home-1 {
+  0% {
+    stroke-dashoffset: 75.6396102905px;
+    stroke-dasharray: 75.6396102905px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 75.6396102905px;
+  }
+}
+@keyframes animate-home-2 {
+  0% {
+    stroke-dashoffset: 77.7079849243px;
+    stroke-dasharray: 77.7079849243px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 77.7079849243px;
+  }
+}
+@keyframes animate-home-3 {
+  0% {
+    stroke-dashoffset: 52.7079963684px;
+    stroke-dasharray: 52.7079963684px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 52.7079963684px;
+  }
+}
+@keyframes animate-home-4 {
+  0% {
+    stroke-dashoffset: 242px;
+    stroke-dasharray: 242px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 242px;
+  }
+}
+@keyframes animate-parcours-1 {
+  0% {
+    stroke-dashoffset: 33.4203414917px;
+    stroke-dasharray: 33.4203414917px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 33.4203414917px;
+  }
+}
+@keyframes animate-parcours-2 {
+  0% {
+    stroke-dashoffset: 33.4203414917px;
+    stroke-dasharray: 33.4203414917px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 33.4203414917px;
+  }
+}
+@keyframes animate-parcours-3 {
+  0% {
+    stroke-dashoffset: 33.8198051453px;
+    stroke-dasharray: 33.8198051453px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 33.8198051453px;
+  }
+}
+@keyframes animate-parcours-4 {
+  0% {
+    stroke-dashoffset: 242px;
+    stroke-dasharray: 242px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 242px;
+  }
+}
+@keyframes animate-competences-1 {
+  0% {
+    stroke-dashoffset: 136.1384277344px;
+    stroke-dasharray: 136.1384277344px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 136.1384277344px;
+  }
+}
+@keyframes animate-competences-2 {
+  0% {
+    stroke-dashoffset: 16.1421356201px;
+    stroke-dasharray: 16.1421356201px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 16.1421356201px;
+  }
+}
+@keyframes animate-competences-3 {
+  0% {
+    stroke-dashoffset: 51.4974746704px;
+    stroke-dasharray: 51.4974746704px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 51.4974746704px;
+  }
+}
+@keyframes animate-competences-4 {
+  0% {
+    stroke-dashoffset: 7.3033008575px;
+    stroke-dasharray: 7.3033008575px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 7.3033008575px;
+  }
+}
+@keyframes animate-competences-5 {
+  0% {
+    stroke-dashoffset: 51.4974746704px;
+    stroke-dasharray: 51.4974746704px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 51.4974746704px;
+  }
+}
+@keyframes animate-competences-6 {
+  0% {
+    stroke-dashoffset: 7.3033008575px;
+    stroke-dasharray: 7.3033008575px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 7.3033008575px;
+  }
+}
+@keyframes animate-competences-7 {
+  0% {
+    stroke-dashoffset: 242px;
+    stroke-dasharray: 242px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 242px;
+  }
+}
+@keyframes animate-portfolio-1 {
+  0% {
+    stroke-dashoffset: 128.4160003662px;
+    stroke-dasharray: 128.4160003662px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 128.4160003662px;
+  }
+}
+@keyframes animate-portfolio-2 {
+  0% {
+    stroke-dashoffset: 43.4203567505px;
+    stroke-dasharray: 43.4203567505px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 43.4203567505px;
+  }
+}
+@keyframes animate-portfolio-3 {
+  0% {
+    stroke-dashoffset: 2.0249996185px;
+    stroke-dasharray: 2.0249996185px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 2.0249996185px;
+  }
+}
+@keyframes animate-portfolio-4 {
+  0% {
+    stroke-dashoffset: 7px;
+    stroke-dasharray: 7px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 7px;
+  }
+}
+@keyframes animate-portfolio-5 {
+  0% {
+    stroke-dashoffset: 2.0249996185px;
+    stroke-dasharray: 2.0249996185px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 2.0249996185px;
+  }
+}
+@keyframes animate-portfolio-6 {
+  0% {
+    stroke-dashoffset: 7px;
+    stroke-dasharray: 7px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 7px;
+  }
+}
+@keyframes animate-portfolio-7 {
+  0% {
+    stroke-dashoffset: 242px;
+    stroke-dasharray: 242px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 242px;
+  }
+}
+@keyframes burgerIn1 {
+  0% {
+    top: 33%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
+@keyframes burgerIn2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes burgerIn3 {
+  0% {
+    top: 67%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+@keyframes burgerOut1 {
+  0% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+  50% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    top: 33%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+@keyframes burgerOut2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes burgerOut3 {
+  0% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  50% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    top: 67%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
 * {
   cursor: none !important;
-}
-
-#maintenance {
-  position: fixed;
-  inset: 0;
-  z-index: 5000;
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  color: #ffffff;
-  font-size: 1rem;
 }
 
 body {
@@ -25,7 +315,6 @@ body {
   margin: 0;
   background-color: #000;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 #cursor {
@@ -113,152 +402,161 @@ body {
   width: 200%;
 }
 
-#navBar {
+.logo {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: min(30px, 5vw);
+  left: min(30px, 5vw);
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: min(30px, 5vw);
-}
-#navBar .logo {
-  position: relative;
-  margin-left: min(30px, 5vw);
   color: #EFEFEF;
   opacity: 0.8;
 }
-#navBar .logo svg {
+.logo svg {
   transform: scale(0.8);
 }
-#navBar .nav {
-  position: relative;
-  margin-inline: min(50px, 5vw);
-  padding: 0;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  -webkit-user-select: none;
-  user-select: none;
-}
-#navBar .nav li {
-  transition: all 0.3s ease-in-out;
-  list-style: none;
-  opacity: 1;
-}
-#navBar .nav li a {
-  font-family: "audiowide";
-  font-size: 24px;
-  text-decoration: none;
-  color: #ffffff;
-  padding: 0rem 2rem;
-}
-#navBar .nav:hover li:not(:hover) {
-  opacity: 0.6;
-}
-#navBar .mobileNav {
-  position: relative;
-  display: none;
-}
-#navBar .mobileNav .btnMobileNav {
-  position: relative;
-  z-index: 100;
-  width: 60px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding: 5px;
-  margin: 0;
-  margin-inline: min(50px, 5vw);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-}
-#navBar .mobileNav .btnMobileNav .btnDiv {
-  width: 100%;
-  height: 15%;
-  background-color: #ffffff;
-  border-radius: 3px;
-}
-#navBar .mobileNav .mobileNavContainer {
-  transition: all 0.5s ease-in-out;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background-color: #EFEFEF;
-}
-#navBar .mobileNav .mobileNavList {
+
+.nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100dvw;
-  height: 100dvh;
-  display: none;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style: none;
+  top: min(30px, 5vw);
+  right: min(30px, 5vw);
+  z-index: 1000;
   padding: 0;
-  margin: 0;
-  padding-top: 5vw;
-}
-#navBar .mobileNav .mobileNavList li a {
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  font-size: 48px;
-  color: #000;
-  letter-spacing: 0;
-  padding: 20px;
-  opacity: 0;
-}
-#navBar .mobileNav .mobileNavList li a:hover {
-  letter-spacing: 5px;
-}
-#navBar .mobileNav.active .btnMobileNav .btnDiv {
-  background-color: #000;
-}
-#navBar .mobileNav.active .mobileNavContainer {
-  width: max(200dvh, 200dvw);
-  height: max(200dvh, 200dvw);
-  border-radius: 0;
-}
-#navBar .mobileNav.active .mobileNavList {
   display: flex;
+  align-items: center;
 }
-#navBar .mobileNav.active .mobileNavList li a {
-  animation-name: mobileMenuLinkAnimation;
-  animation-duration: 0.5s;
-  animation-delay: 0.4s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+.nav .navList {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  right: 0;
+  max-width: 0;
+  height: 60px;
+  padding-right: 90px;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #FCA311;
+  border-radius: 50px;
+  overflow: hidden;
 }
-@media screen and (max-width: 768px) {
-  #navBar .nav {
-    display: none;
-  }
-  #navBar .mobileNav {
-    display: block;
-  }
+.nav .navList a {
+  margin: 0.5rem;
+}
+.nav .navList a:first-child {
+  margin-left: 1rem;
+}
+.nav .navList a svg {
+  transition: transform 0.1s ease-in-out;
+  height: 100%;
+  width: auto;
+  stroke: #000;
+}
+.nav .navList a:hover svg {
+  transform: scale(1.1);
+}
+.nav .navList a:hover svg .home-1 {
+  animation: animate-home-1 0.3s ease-in-out 0s both;
+}
+.nav .navList a:hover svg .home-2 {
+  animation: animate-home-2 0.3s ease-in-out 0.1s both;
+}
+.nav .navList a:hover svg .home-3 {
+  animation: animate-home-3 0.3s ease-in-out 0.2s both;
+}
+.nav .navList a:hover svg .home-4 {
+  animation: animate-home-4 0.3s ease-in-out 0.3s both;
+}
+.nav .navList a:hover svg .parcours-1 {
+  animation: animate-parcours-1 0.3s ease-in-out 0s both;
+}
+.nav .navList a:hover svg .parcours-2 {
+  animation: animate-parcours-2 0.3s ease-in-out 0.1s both;
+}
+.nav .navList a:hover svg .parcours-3 {
+  animation: animate-parcours-3 0.3s ease-in-out 0.2s both;
+}
+.nav .navList a:hover svg .parcours-4 {
+  animation: animate-parcours-4 0.3s ease-in-out 0.3s both;
+}
+.nav .navList a:hover svg .competences-1 {
+  animation: animate-competences-1 0.3s ease-in-out 0s both;
+}
+.nav .navList a:hover svg .competences-2 {
+  animation: animate-competences-2 0.3s ease-in-out 0.1s both;
+}
+.nav .navList a:hover svg .competences-3 {
+  animation: animate-competences-3 0.3s ease-in-out 0.2s both;
+}
+.nav .navList a:hover svg .competences-4 {
+  animation: animate-competences-4 0.3s ease-in-out 0.3s both;
+}
+.nav .navList a:hover svg .competences-5 {
+  animation: animate-competences-5 0.3s ease-in-out 0.4s both;
+}
+.nav .navList a:hover svg .competences-6 {
+  animation: animate-competences-6 0.3s ease-in-out 0.5s both;
+}
+.nav .navList a:hover svg .competences-7 {
+  animation: animate-competences-7 0.3s ease-in-out 0.6s both;
+}
+.nav .navList a:hover svg .portfolio-1 {
+  animation: animate-portfolio-1 0.3s ease-in-out 0s both;
+}
+.nav .navList a:hover svg .portfolio-2 {
+  animation: animate-portfolio-2 0.3s ease-in-out 0.1s both;
+}
+.nav .navList a:hover svg .portfolio-3 {
+  animation: animate-portfolio-3 0.3s ease-in-out 0.2s both;
+}
+.nav .navList a:hover svg .portfolio-4 {
+  animation: animate-portfolio-4 0.3s ease-in-out 0.3s both;
+}
+.nav .navList a:hover svg .portfolio-5 {
+  animation: animate-portfolio-5 0.3s ease-in-out 0.4s both;
+}
+.nav .navList a:hover svg .portfolio-6 {
+  animation: animate-portfolio-6 0.3s ease-in-out 0.5s both;
+}
+.nav .navList a:hover svg .portfolio-7 {
+  animation: animate-portfolio-7 0.3s ease-in-out 0.6s both;
+}
+.nav .burger {
+  position: relative;
+  border-radius: 50px;
+  background-color: #FCA311;
+  border: 10px solid #000;
+  outline: none;
+  height: 90px;
+  aspect-ratio: 1/1;
+}
+.nav .burger div {
+  position: absolute;
+  width: 50%;
+  height: 8%;
+  left: 50%;
+  border-radius: 10px;
+  background-color: #000;
+  transform: translate(-50%, -50%);
+}
+.nav .burger div:nth-child(1) {
+  animation: burgerOut1 0.3s ease-in-out forwards;
+}
+.nav .burger div:nth-child(2) {
+  animation: burgerOut2 0.3s ease-in-out forwards;
+}
+.nav .burger div:nth-child(3) {
+  animation: burgerOut3 0.3s ease-in-out forwards;
+}
+.nav.active .navList {
+  max-width: 1000px;
+}
+.nav.active .burger div:nth-child(1) {
+  animation: burgerIn1 0.3s ease-in-out forwards;
+}
+.nav.active .burger div:nth-child(2) {
+  animation: burgerIn2 0.3s ease-in-out forwards;
+}
+.nav.active .burger div:nth-child(3) {
+  animation: burgerIn3 0.3s ease-in-out forwards;
 }
 
-@keyframes mobileMenuLinkAnimation {
-  from {
-    opacity: 0;
-    letter-spacing: 2ch;
-  }
-  to {
-    opacity: 1;
-    letter-spacing: 0;
-  }
-}
 #home {
   position: relative;
   height: 100dvh;
