@@ -58,7 +58,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     Array.from(document.querySelectorAll(".navList a")).forEach(element => {
         element.addEventListener("click", function (event) {
-            document.querySelector(".nav").classList.remove("active")
+            setTimeout(() => {
+                document.querySelector(".nav").classList.remove("active")
+            }, 300);
         })
     })
 
