@@ -14,10 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     Array.from(document.querySelectorAll("button:not(.hover_button), a:not(.hover_button)")).map(function (element) {
         element.addEventListener("mouseenter", function () {
             cursor.classList.add("hover")
-            cursorWidth = element.offsetHeight + 10
-            if (cursorWidth < 60) {
-                cursorWidth = 60
-            }
+            cursorWidth = Math.sqrt(Math.pow(element.offsetWidth, 2) + Math.pow(element.offsetHeight, 2)) + 10
             cursor.style.width = cursorWidth + "px"
             cursor.style.height = cursorWidth + "px"
         })

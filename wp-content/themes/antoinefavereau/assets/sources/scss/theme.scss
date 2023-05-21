@@ -1,6 +1,6 @@
 $black: #000;
 $white: #ffffff;
-$darkWhite: #EFEFEF;
+$darkWhite: #dddddd;
 $primary: #FCA311;
 
 $breakpoints: (
@@ -126,9 +126,14 @@ body {
     z-index: 1000;
     color: $darkWhite;
     opacity: .8;
+    width: 80px;
+    height: 80px;
 
     svg {
-        transform: scale(.8);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 }
 
@@ -140,6 +145,8 @@ body {
     padding: 0;
     display: flex;
     align-items: center;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
 
     .navList {
         transition: all .3s ease-in-out;
@@ -147,24 +154,34 @@ body {
         right: 0;
         max-width: 0;
         height: 60px;
-        padding-right: 90px;
+        padding-right: 70px;
         display: flex;
+        align-items: center;
         flex-wrap: nowrap;
         background-color: $primary;
         border-radius: 50px;
         overflow: hidden;
+        z-index: -2;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
 
         a {
-            margin: .5rem;
+            margin: 0 .5rem;
+            width: 40px;
+            height: 40px;
 
             &:first-child {
-                margin-left: 1rem;
+                margin-left: 1.5rem;
+            }
+
+            &:last-child {
+                margin-right: 1rem;
             }
 
             svg {
                 transition: transform .1s ease-in-out;
                 height: 100%;
-                width: auto;
+                width: 100%;
+                object-fit: contain;
                 stroke: $black;
             }
 
@@ -266,10 +283,23 @@ body {
         position: relative;
         border-radius: 50px;
         background-color: $primary;
-        border: 10px solid $black;
+        border: none;
         outline: none;
-        height: 90px;
-        aspect-ratio: 1/1;
+        width: 65px;
+        height: 65px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            border-radius: 50px;
+            background-color: $black;
+        }
 
         div {
             position: absolute;
@@ -391,22 +421,6 @@ body {
     }
 }
 
-@keyframes arrowDown {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(0%);
-    }
-}
-
 #parcours {
     position: relative;
 
@@ -416,6 +430,7 @@ body {
         left: 0;
         width: 70%;
         min-width: 300px;
+        z-index: 100;
 
         .shape {
             position: relative;
@@ -437,268 +452,64 @@ body {
         }
     }
 
+    .verticalLine {
+        position: absolute;
+        top: 0;
+        left: 40%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background-color: $darkWhite;
+    }
+
     .parcoursLIst {
         position: relative;
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: flex;
         align-items: stretch;
+        gap: 6rem;
 
         .item {
             position: relative;
-            color: $white;
+            color: $darkWhite;
             display: flex;
+            align-items: center;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 40%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                height: 20px;
+                border-radius: 35px;
+                background-color: $darkWhite;
+                border: 15px solid $black;
+            }
+
+            .title {
+                width: 35%;
+                text-align: end;
+                color: inherit;
+            }
+
+            .text {
+                margin-left: 10%;
+                width: 55%;
+                color: inherit;
+            }
+
+            &.active {
+                color: $white;
+            }
         }
     }
-
-    // .parcoursContainer {
-    //     position: sticky;
-    //     top: 0;
-    //     height: 100dvh;
-    //     background-color: $darkWhite;
-    //     display: flex;
-    //     flex-direction: column;
-
-    //     #parcoursTitleList {
-
-    //         &::after {
-    //             content: "";
-    //             position: absolute;
-    //             inset: 0;
-    //             background: linear-gradient(90deg, $darkWhite 0%, transparent 20%, transparent 80%, $darkWhite 100%)
-    //         }
-    //     }
-
-    //     .divParcours {
-    //         position: relative;
-    //         flex-grow: 1;
-    //         display: grid;
-    //         grid-template-columns: minmax(200px, 30%) 1fr;
-
-    //         @media screen and (max-width: map-get($breakpoints, md)) {
-    //             grid-template-columns: 1fr;
-    //             grid-template-rows: minmax(160px, 30%) 1fr;
-    //         }
-
-    //         .parcoursLeft {
-    //             position: relative;
-    //             width: 100%;
-    //             height: 80%;
-    //             top: 50%;
-    //             left: 0;
-    //             transform: translateY(-50%);
-
-    //             @media screen and (max-width: map-get($breakpoints, md)) {
-    //                 top: 0;
-    //                 left: 50%;
-    //                 transform: translateX(-50%);
-    //                 width: 80%;
-    //                 height: 100%;
-    //             }
-
-    //             .barreVerticale {
-    //                 position: absolute;
-    //                 top: 50%;
-    //                 right: 50%;
-    //                 transform: translateY(-50%);
-    //                 width: 10px;
-    //                 height: 100%;
-    //                 border-radius: 10px;
-    //                 background: linear-gradient(180deg, $black 0%, $black calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), $black calc(100% - 70px), $black calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), $black calc(100% - 30px), $black 100%);
-
-    //                 @media screen and (max-width: map-get($breakpoints, md)) {
-    //                     top: unset;
-    //                     right: unset;
-    //                     left: 50%;
-    //                     bottom: 50%;
-    //                     transform: translateX(-50%);
-    //                     width: 100%;
-    //                     height: 8px;
-    //                     background: linear-gradient(90deg, $black 0%, $black calc(100% - 80px), transparent calc(100% - 80px), transparent calc(100% - 70px), $black calc(100% - 70px), $black calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), $black calc(100% - 30px), $black 100%);
-    //                 }
-    //             }
-
-    //             .barreSelection {
-    //                 transition: all .3s ease-in-out;
-    //                 position: absolute;
-    //                 left: calc(50% + 40px);
-    //                 width: 20px;
-    //                 border: 6px solid $black;
-    //                 border-left-width: 0px;
-    //                 transform: translateY(-3px);
-
-    //                 &::after {
-    //                     content: attr(data-label);
-    //                     position: absolute;
-    //                     left: 100%;
-    //                     top: 50%;
-    //                     transform: translateY(-50%);
-    //                     margin-left: 1rem;
-    //                 }
-
-    //                 @media screen and (max-width: map-get($breakpoints, md)) {
-    //                     top: calc(50% + 30px);
-    //                     height: 15px;
-    //                     border: 5px solid $black;
-    //                     border-top-width: 0px;
-
-    //                     &::after {
-    //                         top: 100%;
-    //                         left: 50%;
-    //                         transform: translateX(-50%);
-    //                         margin-left: 0;
-    //                         margin-top: 1rem;
-    //                     }
-    //                 }
-    //             }
-
-    //             .point {
-    //                 position: absolute;
-    //                 left: 50%;
-    //                 top: 0;
-    //                 transform: translate(-50%, -50%);
-    //                 width: 40px;
-    //                 height: 40px;
-    //                 border-radius: 50%;
-    //                 background-color: $darkWhite;
-    //                 border: 10px solid $black;
-    //                 -moz-box-sizing: border-box;
-    //                 -webkit-box-sizing: border-box;
-    //                 box-sizing: border-box;
-
-    //                 &::before {
-    //                     content: attr(data-year);
-    //                     position: absolute;
-    //                     top: 50%;
-    //                     right: 100%;
-    //                     transform: translateY(-50%);
-    //                     margin-right: 20px;
-    //                     font-family: "audiowide";
-    //                 }
-
-    //                 @media screen and (max-width: map-get($breakpoints, md)) {
-    //                     top: 50%;
-    //                     left: 0;
-    //                     width: 35px;
-    //                     height: 35px;
-    //                     border-width: 8px;
-
-    //                     &::before {
-    //                         top: unset;
-    //                         left: 50%;
-    //                         right: unset;
-    //                         bottom: 100%;
-    //                         transform: translateX(-50%);
-    //                         margin-right: 0;
-    //                         margin-bottom: 20px;
-    //                         font-size: 12px;
-    //                     }
-    //                 }
-    //             }
-    //         }
-
-    //         .parcoursRight {
-    //             position: relative;
-
-    //             .parcoursRightContainer {
-    //                 transition: all .3s ease-in-out;
-    //                 position: absolute;
-    //                 top: 50%;
-    //                 left: 50%;
-    //                 transform: translate(-50%, -50%);
-    //                 opacity: 1;
-    //                 min-height: 60%;
-    //                 width: 80%;
-    //                 max-height: 100%;
-    //                 padding-left: 5px;
-    //                 display: flex;
-    //                 flex-direction: column;
-
-    //                 @media screen and (max-width: map-get($breakpoints, md)) {
-    //                     top: 0;
-    //                     transform: translateX(-50%);
-    //                     min-height: unset;
-    //                     max-height: 90%;
-    //                 }
-
-    //                 &:not(.active) {
-    //                     pointer-events: none;
-    //                     opacity: 0;
-    //                     transform: translate(-50%, calc(-50% + 50px));
-
-    //                     @media screen and (max-width: map-get($breakpoints, md)) {
-    //                         transform: translate(-50%, 50px);
-    //                     }
-    //                 }
-
-    //                 .titre {
-    //                     position: relative;
-    //                     margin-bottom: 26px;
-
-    //                     &::after {
-    //                         content: "";
-    //                         position: absolute;
-    //                         bottom: -10px;
-    //                         left: -5px;
-    //                         width: 50px;
-    //                         height: 3px;
-    //                         background-color: $black;
-    //                         border-radius: 1px;
-    //                     }
-    //                 }
-
-    //                 .texte {
-    //                     flex-shrink: 1;
-    //                     overflow-y: auto;
-    //                 }
-    //             }
-    //         }
-    //     }
-
-    //     .progressBarContainer {
-    //         position: absolute;
-    //         bottom: 80px;
-    //         left: 50%;
-    //         transform: translateX(-50%) skewX(-30deg);
-    //         width: 40%;
-    //         height: 15px;
-    //         background-color: $white;
-    //         box-shadow: 0px 4px 10px rgba(0, 0, 0, .1);
-    //         overflow: hidden;
-    //         border-radius: 3px;
-
-    //         .progressBar {
-    //             transition: width .1s;
-    //             position: absolute;
-    //             top: 0;
-    //             bottom: 0;
-    //             left: 0;
-    //             background-color: $primary;
-    //         }
-
-    //         @media screen and (max-width: map-get($breakpoints, md)) {
-    //             width: 100%;
-    //             bottom: 0;
-    //             transform: translateX(-50%);
-    //         }
-    //     }
-    // }
 }
 
 #competences {
     position: relative;
     height: 100dvh;
     background: $black;
-
-    #competencesTitleList {
-        color: $darkWhite;
-
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(90deg, $black 0%, transparent 20%, transparent 80%, $black 100%)
-        }
-    }
 }

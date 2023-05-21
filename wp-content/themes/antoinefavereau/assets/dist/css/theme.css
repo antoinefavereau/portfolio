@@ -306,6 +306,19 @@
     transform: translate(-50%, -50%) rotate(0deg);
   }
 }
+@keyframes arrowDown {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0%);
+  }
+}
 * {
   cursor: none !important;
 }
@@ -377,7 +390,7 @@ body {
   overflow: hidden;
   font-family: "audiowide";
   font-weight: 700;
-  color: #EFEFEF;
+  color: #dddddd;
 }
 .hover_button span {
   position: relative;
@@ -407,11 +420,16 @@ body {
   top: min(30px, 5vw);
   left: min(30px, 5vw);
   z-index: 1000;
-  color: #EFEFEF;
+  color: #dddddd;
   opacity: 0.8;
+  width: 80px;
+  height: 80px;
 }
 .logo svg {
-  transform: scale(0.8);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .nav {
@@ -422,6 +440,8 @@ body {
   padding: 0;
   display: flex;
   align-items: center;
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 .nav .navList {
   transition: all 0.3s ease-in-out;
@@ -429,23 +449,32 @@ body {
   right: 0;
   max-width: 0;
   height: 60px;
-  padding-right: 90px;
+  padding-right: 70px;
   display: flex;
+  align-items: center;
   flex-wrap: nowrap;
   background-color: #FCA311;
   border-radius: 50px;
   overflow: hidden;
+  z-index: -2;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 .nav .navList a {
-  margin: 0.5rem;
+  margin: 0 0.5rem;
+  width: 40px;
+  height: 40px;
 }
 .nav .navList a:first-child {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
+}
+.nav .navList a:last-child {
+  margin-right: 1rem;
 }
 .nav .navList a svg {
   transition: transform 0.1s ease-in-out;
   height: 100%;
-  width: auto;
+  width: 100%;
+  object-fit: contain;
   stroke: #000;
 }
 .nav .navList a:hover svg {
@@ -521,10 +550,22 @@ body {
   position: relative;
   border-radius: 50px;
   background-color: #FCA311;
-  border: 10px solid #000;
+  border: none;
   outline: none;
-  height: 90px;
-  aspect-ratio: 1/1;
+  width: 65px;
+  height: 65px;
+}
+.nav .burger::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 50px;
+  background-color: #000;
 }
 .nav .burger div {
   position: absolute;
@@ -583,7 +624,7 @@ body {
   font-size: calc(32px + 4vw);
 }
 #home .description p {
-  color: #EFEFEF;
+  color: #dddddd;
   font-size: calc(16px + 0.5vw);
   font-weight: 100;
   max-width: 500px;
@@ -621,19 +662,6 @@ body {
   animation: arrowDown 2s ease infinite;
 }
 
-@keyframes arrowDown {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-50%);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(0%);
-  }
-}
 #parcours {
   position: relative;
 }
@@ -643,6 +671,7 @@ body {
   left: 0;
   width: 70%;
   min-width: 300px;
+  z-index: 100;
 }
 #parcours .parcoursTitle .shape {
   position: relative;
@@ -661,33 +690,59 @@ body {
   white-space: nowrap;
   margin: 0;
 }
+#parcours .verticalLine {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #dddddd;
+}
 #parcours .parcoursLIst {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex;
   align-items: stretch;
+  gap: 6rem;
 }
 #parcours .parcoursLIst .item {
   position: relative;
-  color: #ffffff;
+  color: #dddddd;
   display: flex;
+  align-items: center;
+}
+#parcours .parcoursLIst .item::after {
+  content: "";
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 35px;
+  background-color: #dddddd;
+  border: 15px solid #000;
+}
+#parcours .parcoursLIst .item .title {
+  width: 35%;
+  text-align: end;
+  color: inherit;
+}
+#parcours .parcoursLIst .item .text {
+  margin-left: 10%;
+  width: 55%;
+  color: inherit;
+}
+#parcours .parcoursLIst .item.active {
+  color: #ffffff;
 }
 
 #competences {
   position: relative;
   height: 100dvh;
   background: #000;
-}
-#competences #competencesTitleList {
-  color: #EFEFEF;
-}
-#competences #competencesTitleList::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #000 0%, transparent 20%, transparent 80%, #000 100%);
 }
 
 /*# sourceMappingURL=theme.css.map */

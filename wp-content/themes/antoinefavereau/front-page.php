@@ -41,6 +41,7 @@ get_header();
         </svg>
         <h2 class="title">Mon parcours</h2>
     </div>
+    <div class="verticalLine"></div>
     <div class="parcoursLIst">
         <?php
         query_posts(array(
@@ -55,34 +56,13 @@ get_header();
         endif;
         ?>
     </div>
-    <!-- <div class="parcoursContainer">
-        <div id="parcoursTitleList"><span>PARCOURS</span></div>
-        <div class="divParcours">
-            <div class="parcoursLeft">
-                <div class="barreVerticale"></div>
-                <div class="barreSelection" data-label=""></div>
-            </div>
-            <div class="parcoursRight">
-                <?php
-                query_posts(array(
-                    'category_name' => 'parcours'
-                ));
-                if (have_posts()) : while (have_posts()) : the_post(); ?>
-                        <div class="parcoursRightContainer" data-id="<?= get_the_ID() ?>" data-titre-cours="<?= get_the_title() ?>" data-date-debut="<?= get_field("date_debut") ?>" data-date-fin="<?= get_field("date_fin") ?>">
-                            <h2 class="titre"><?= get_field("titre_long") ?></h2>
-                            <p class="texte"><?= get_field("texte") ?></p>
-                        </div>
-                <?php endwhile;
-                endif;
-                ?>
-            </div>
-        </div>
-        <div class="progressBarContainer"><div class="progressBar"></div></div>
-    </div> -->
 </section>
-<!-- <section id="competences">
-    <div id="competencesTitleList"><span>COMPÉTENCES</span></div>
-</section> -->
+<section id="competences">
+    
+</section>
+<section id="portfolio">
+    
+</section>
 <!-- <svg class="toTop scrollToButton" data-target="#home" width="80px" height="80px" transform="rotate(-90)">
     <circle cx="40" cy="40" r="30" />
 </svg> -->
