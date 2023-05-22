@@ -50,7 +50,7 @@ get_header();
         if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="item">
                     <h2 class="title"><?= get_the_title() ?></h2>
-                    <p class="text"><?= get_field("texte") ?></p>
+                    <p class="text upAnimation"><?= get_field("texte") ?></p>
                 </div>
         <?php endwhile;
         endif;

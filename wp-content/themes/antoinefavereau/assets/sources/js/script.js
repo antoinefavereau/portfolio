@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
+    upAnimation()
+
     var cursor = document.querySelector("#cursor");
     document.addEventListener("mousemove", (event) => {
         cursor.classList.add("active")
@@ -46,7 +48,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
 
     document.addEventListener("scroll", function (event) {
-        document.querySelector(".toTop circle").style.strokeDashoffset = 1000 - Math.floor(window.scrollY / (document.body.scrollHeight - window.innerHeight) * 185)
+        // document.querySelector(".toTop circle").style.strokeDashoffset = 1000 - Math.floor(window.scrollY / (document.body.scrollHeight - window.innerHeight) * 185);
+
+        let lastActiveElement;
+        Array.from(document.querySelectorAll('#parcours .parcoursLIst .item')).forEach(element => {
+            if (getVerticalPosition(element) < 60) {
+                element.classList.add('active');
+                lastActiveElement = element;
+            } else {
+                element.classList.remove('active');
+            }
+        })
+        if (lastActiveElement) {
+            let height = lastActiveElement.getBoundingClientRect().top - document.querySelector('#parcours').getBoundingClientRect().top + lastActiveElement.offsetHeight / 2
+            document.querySelector('#parcours .verticalLine').style.setProperty('--height', height + 'px');
+        } else {
+            document.querySelector('#parcours .verticalLine').style.setProperty('--height', '0px');
+        }
+
+        upAnimation()
     })
 
     document.querySelector(".nav .burger").addEventListener("click", function () {
@@ -60,5 +80,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }, 300);
         })
     })
+
+    function getVerticalPosition(element) {
+        var rect = element.getBoundingClientRect();
+        var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+        var percent = 100 * (rect.top / windowHeight);
+        return percent;
+    }
+
+    function upAnimation() {
+        Array.from(document.querySelectorAll(".upAnimation")).forEach(element => {
+            if (element.getBoundingClientRect().top < window.screenY + window.innerHeight) {
+                element.classList.add("active");
+            } else {
+                element.classList.remove("active");
+            }
+        })
+    }
 
 });

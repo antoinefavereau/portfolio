@@ -415,6 +415,16 @@ body {
   width: 200%;
 }
 
+.upAnimation {
+  transition: transform 1s ease-in-out;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.upAnimation.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .logo {
   position: absolute;
   top: min(30px, 5vw);
@@ -449,7 +459,7 @@ body {
   right: 0;
   max-width: 0;
   height: 60px;
-  padding-right: 70px;
+  padding-right: 65px;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -697,7 +707,17 @@ body {
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
-  background-color: #dddddd;
+  background: linear-gradient(135deg, #dddddd, rgba(221, 221, 221, 0.2));
+}
+#parcours .verticalLine::after {
+  content: "";
+  transition: height 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--height);
+  background: #FCA311;
 }
 #parcours .parcoursLIst {
   position: relative;
@@ -709,12 +729,14 @@ body {
 }
 #parcours .parcoursLIst .item {
   position: relative;
-  color: #dddddd;
+  transition: color 0.3s ease-in-out;
+  color: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
 }
-#parcours .parcoursLIst .item::after {
+#parcours .parcoursLIst .item::before, #parcours .parcoursLIst .item::after {
   content: "";
+  transition: all 0.3s ease-in-out;
   position: absolute;
   left: 40%;
   top: 50%;
@@ -724,6 +746,12 @@ body {
   border-radius: 35px;
   background-color: #dddddd;
   border: 15px solid #000;
+}
+#parcours .parcoursLIst .item::after {
+  width: 0;
+  height: 0;
+  background-color: #FCA311;
+  border: none;
 }
 #parcours .parcoursLIst .item .title {
   width: 35%;
@@ -737,6 +765,11 @@ body {
 }
 #parcours .parcoursLIst .item.active {
   color: #ffffff;
+}
+#parcours .parcoursLIst .item.active::after {
+  transition-delay: 0.5s;
+  width: 20px;
+  height: 20px;
 }
 
 #competences {
