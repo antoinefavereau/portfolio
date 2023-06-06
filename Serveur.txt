@@ -1,3 +1,5 @@
-Serveur FTP : antoine-favereau.fr / antoi1888818 / Y6U5T3UV7N
+Serveur FTP : ftp.cluster029.hosting.ovh.net / antoivq / DXBkJUHhnEvF
 
 LWS : LWS-564128 / NUXhwQm2Sd
+
+SQL : antoivqantoine.mysql.db / antoivqantoine
