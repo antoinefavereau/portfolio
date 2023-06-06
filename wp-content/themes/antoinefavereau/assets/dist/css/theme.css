@@ -760,7 +760,7 @@ body {
 }
 #parcours .parcoursLIst .item .text {
   margin-left: 10%;
-  width: 55%;
+  width: 50%;
   color: inherit;
 }
 #parcours .parcoursLIst .item.active {

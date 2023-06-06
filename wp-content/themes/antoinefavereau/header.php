@@ -34,7 +34,7 @@
                     </defs>
                 </svg>
             </a>
-            <a class="scrollToButton" title="parcours" data-target="#parcours">
+            <a class="scrollToButton" title="cursus" data-target="#parcours">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_404_216)">
                         <path d="M15 50C17.7614 50 20 47.7614 20 45C20 42.2386 17.7614 40 15 40C12.2386 40 10 42.2386 10 45C10 47.7614 12.2386 50 15 50Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="parcours-1"></path>
@@ -48,7 +48,7 @@
                     </defs>
                 </svg>
             </a>
-            <a class="scrollToButton" title="compétences" data-target="#competences">
+            <a class="scrollToButton" title="skills" data-target="#competences">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_404_208)">
                         <path d="M7.5 52.5H17.5L50 20C51.3261 18.6739 52.0711 16.8754 52.0711 15C52.0711 13.1246 51.3261 11.3261 50 9.99999C48.6739 8.67391 46.8754 7.92892 45 7.92892C43.1246 7.92892 41.3261 8.67391 40 9.99999L7.5 42.5V52.5Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="competences-1"></path>

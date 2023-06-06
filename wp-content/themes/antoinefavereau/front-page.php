@@ -10,10 +10,11 @@ get_header();
             <span>FAVEREAU</span>
         </h1>
         <p>
-            Je suis étudiant en école d'ingénieur en informatique et freelance en développement web.
+            <!-- Je suis étudiant en école d'ingénieur en informatique et freelance en développement web. -->
+            I am a french student in computer engineering school and freelance in web development.
         </p>
         <button id="discoverButton" class="hover_button scrollToButton" data-target="#parcours">
-            <span>découvrir</span>
+            <span>discover</span>
         </button>
     </div>
     <svg class="arrowDown" width="50" height="50" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentcolor">
@@ -39,7 +40,7 @@ get_header();
                 </filter>
             </defs>
         </svg>
-        <h2 class="title">Mon parcours</h2>
+        <h2 class="title">My cursus</h2>
     </div>
     <div class="verticalLine"></div>
     <div class="parcoursLIst">
