@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         cursor.classList.remove("active")
     })
 
-    Array.from(document.querySelectorAll("button:not(.hover_button), a:not(.hover_button)")).map(function (element) {
+    Array.from(document.querySelectorAll("button:not(.hover_button), a:not(.hover_button), .swiper-button-next, .swiper-button-prev")).map(function (element) {
         element.addEventListener("mouseenter", function () {
             cursor.classList.add("hover")
             cursorWidth = Math.sqrt(Math.pow(element.offsetWidth, 2) + Math.pow(element.offsetHeight, 2)) + 10
