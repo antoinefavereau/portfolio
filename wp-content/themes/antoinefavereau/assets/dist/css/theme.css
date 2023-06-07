@@ -689,6 +689,9 @@ body {
   height: auto;
   object-fit: contain;
 }
+#parcours .parcoursTitle .shape.sm {
+  display: none;
+}
 #parcours .parcoursTitle .title {
   position: absolute;
   font-family: "audiowide";
@@ -700,10 +703,25 @@ body {
   white-space: nowrap;
   margin: 0;
 }
+@media screen and (max-width: 576px) {
+  #parcours .parcoursTitle {
+    width: 100%;
+  }
+  #parcours .parcoursTitle .shape {
+    display: none;
+  }
+  #parcours .parcoursTitle .shape.sm {
+    display: block;
+  }
+  #parcours .parcoursTitle .title {
+    left: 50%;
+    font-size: 40px;
+  }
+}
 #parcours .verticalLine {
   position: absolute;
   top: 0;
-  left: 40%;
+  left: 35%;
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
@@ -718,6 +736,11 @@ body {
   width: 100%;
   height: var(--height);
   background: #FCA311;
+}
+@media screen and (max-width: 576px) {
+  #parcours .verticalLine {
+    left: 35px;
+  }
 }
 #parcours .parcoursLIst {
   position: relative;
@@ -738,7 +761,7 @@ body {
   content: "";
   transition: all 0.3s ease-in-out;
   position: absolute;
-  left: 40%;
+  left: 35%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 20px;
@@ -754,7 +777,7 @@ body {
   border: none;
 }
 #parcours .parcoursLIst .item .title {
-  width: 35%;
+  width: 30%;
   text-align: end;
   color: inherit;
 }
@@ -771,11 +794,55 @@ body {
   width: 20px;
   height: 20px;
 }
+@media screen and (max-width: 576px) {
+  #parcours .parcoursLIst .item {
+    padding-left: 70px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #parcours .parcoursLIst .item::before, #parcours .parcoursLIst .item::after {
+    left: 35px;
+  }
+  #parcours .parcoursLIst .item .title {
+    width: calc(100% - 40px);
+    text-align: start;
+  }
+  #parcours .parcoursLIst .item .text {
+    margin-left: 0;
+    width: calc(100% - 40px);
+  }
+}
 
 #competences {
   position: relative;
-  height: 100dvh;
   background: #000;
+  padding: 6rem 0 4rem;
+}
+#competences h2 {
+  margin: 0;
+  color: #606060;
+  font-size: 100px;
+  text-align: center;
+}
+#competences .swiper {
+  margin-top: 2rem;
+  margin-inline: 5%;
+}
+#competences .swiper .swiper-wrapper {
+  align-items: center;
+}
+#competences .swiper .swiper-wrapper .swiper-slide {
+  text-align: center;
+}
+#competences .swiper .swiper-wrapper .swiper-slide img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+}
+#competences .swiper .swiper-button-next,
+#competences .swiper .swiper-button-prev {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=theme.css.map */

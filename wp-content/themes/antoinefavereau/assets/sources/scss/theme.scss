@@ -448,6 +448,10 @@ body {
             width: 100%;
             height: auto;
             object-fit: contain;
+
+            &.sm {
+                display: none;
+            }
         }
 
         .title {
@@ -461,12 +465,29 @@ body {
             white-space: nowrap;
             margin: 0;
         }
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 100%;
+
+            .shape {
+                display: none;
+
+                &.sm {
+                    display: block;
+                }
+            }
+
+            .title {
+                left: 50%;
+                font-size: 40px;
+            }
+        }
     }
 
     .verticalLine {
         position: absolute;
         top: 0;
-        left: 40%;
+        left: 35%;
         transform: translateX(-50%);
         width: 4px;
         height: 100%;
@@ -481,6 +502,10 @@ body {
             width: 100%;
             height: var(--height);
             background: $primary;
+        }
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            left: 35px;
         }
     }
 
@@ -504,7 +529,7 @@ body {
                 content: "";
                 transition: all .3s ease-in-out;
                 position: absolute;
-                left: 40%;
+                left: 35%;
                 top: 50%;
                 transform: translate(-50%, -50%);
                 width: 20px;
@@ -522,7 +547,7 @@ body {
             }
 
             .title {
-                width: 35%;
+                width: 30%;
                 text-align: end;
                 color: inherit;
             }
@@ -542,12 +567,65 @@ body {
                     height: 20px;
                 }
             }
+
+            @media screen and (max-width: map-get($breakpoints, sm)) {
+                padding-left: 70px;
+                flex-direction: column;
+                align-items: flex-start;
+
+                &::before,
+                &::after {
+                    left: 35px;
+                }
+
+                .title {
+                    width: calc(100% - 40px);
+                    text-align: start;
+                }
+
+                .text {
+                    margin-left: 0;
+                    width: calc(100% - 40px);
+                }
+            }
         }
     }
 }
 
 #competences {
     position: relative;
-    height: 100dvh;
     background: $black;
+    padding: 6rem 0 4rem;
+
+    h2 {
+        margin: 0;
+        color: #606060;
+        font-size: 100px;
+        text-align: center;
+    }
+
+    .swiper {
+        margin-top: 2rem;
+        margin-inline: 5%;
+
+        .swiper-wrapper {
+            align-items: center;
+
+            .swiper-slide {
+                text-align: center;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: $white;
+        }
+    }
 }

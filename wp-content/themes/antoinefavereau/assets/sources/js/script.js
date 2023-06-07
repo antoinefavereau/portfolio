@@ -2,6 +2,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     upAnimation()
 
+    var swiper = new Swiper(".swiperCompetences", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            992: {
+                slidesPerView: 5,
+            },
+            1200: {
+                slidesPerView: 6,
+            },
+        }
+    });
+
     var cursor = document.querySelector("#cursor");
     document.addEventListener("mousemove", (event) => {
         cursor.classList.add("active")

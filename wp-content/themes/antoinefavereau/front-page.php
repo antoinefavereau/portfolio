@@ -24,20 +24,45 @@ get_header();
 <section id="parcours">
     <div class="parcoursTitle">
         <svg class="shape" width="1450" height="414" viewBox="0 0 1450 414" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_348_143)">
-                <path d="M0 0H1400L1366.14 85.9782C1329.8 178.247 1241.36 239.453 1142.21 240.951L514.282 250.439C336.939 253.118 161.982 291.751 0 364V0Z" fill="#FCA311" />
+            <g filter="url(#filter0_d_404_346)">
+                <path d="M0 0H1400L1366.14 85.9782C1329.8 178.247 1241.36 239.453 1142.21 240.951L514.282 250.439C336.939 253.118 161.982 291.751 0 364V0Z" fill="url(#paint0_linear_404_346)" />
             </g>
             <defs>
-                <filter id="filter0_d_348_143" x="-50" y="-50" width="1500" height="464" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <filter id="filter0_d_404_346" x="-50" y="-50" width="1500" height="464" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset />
                     <feGaussianBlur stdDeviation="25" />
                     <feComposite in2="hardAlpha" operator="out" />
                     <feColorMatrix type="matrix" values="0 0 0 0 0.0635417 0 0 0 0 0.0635417 0 0 0 0 0.0635417 0 0 0 1 0" />
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_348_143" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_348_143" result="shape" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_404_346" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_404_346" result="shape" />
                 </filter>
+                <linearGradient id="paint0_linear_404_346" x1="1400" y1="0.000120356" x2="3.15929e-05" y2="364" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FCA311" />
+                    <stop offset="1" stop-color="#B0730E" />
+                </linearGradient>
+            </defs>
+        </svg>
+        <svg class="shape sm" width="360" height="153" viewBox="0 0 360 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_480_145)">
+                <path d="M0 0H360V83C240.877 103.516 119.123 103.516 0 83V0Z" fill="url(#paint0_linear_480_145)" />
+            </g>
+            <defs>
+                <filter id="filter0_d_480_145" x="-50" y="-46" width="460" height="198.387" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="25" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.0627451 0 0 0 0 0.0627451 0 0 0 0 0.0627451 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_480_145" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_480_145" result="shape" />
+                </filter>
+                <linearGradient id="paint0_linear_480_145" x1="360" y1="1.69403e-05" x2="-5.38826e-06" y2="114" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FCA311" />
+                    <stop offset="1" stop-color="#B4750F" />
+                </linearGradient>
             </defs>
         </svg>
         <h2 class="title">My cursus</h2>
@@ -59,7 +84,25 @@ get_header();
     </div>
 </section>
 <section id="competences">
-    
+    <h2>SKILLS</h2>
+
+    <div class="swiper swiperCompetences">
+        <div class="swiper-wrapper">
+            <?php
+            query_posts(array(
+                'category_name' => 'competences'
+            ));
+            if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    <div class="swiper-slide">
+                        <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>" title="<?= get_the_title() ?>">
+                    </div>
+            <?php endwhile;
+            endif;
+            ?>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
 </section>
 <section id="portfolio">
     
