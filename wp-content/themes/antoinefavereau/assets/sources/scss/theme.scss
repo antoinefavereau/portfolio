@@ -629,3 +629,85 @@ body {
         }
     }
 }
+
+#projects {
+    position: relative;
+    padding: 6rem 0 4rem;
+
+    h2 {
+        position: relative;
+        color: $white;
+        font-size: 64px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 2rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 10px;
+            background-color: $primary;
+            border-radius: 5px;
+        }
+    }
+
+    .projectList {
+        position: relative;
+        margin-top: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+
+        .item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            width: 80%;
+
+            img {
+                position: relative;
+                transition: all .3s ease-in-out;
+                border-radius: 20px;
+                max-width: 50%;
+            }
+
+            .content {
+                position: absolute;
+                transition: all .3s ease-in-out;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $white;
+                opacity: 0;
+
+                h3 {
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: normal;
+                }
+            }
+
+            &:hover {
+                img {
+                    transform: translateX(calc(-50% - 2rem));
+                }
+
+                .content {
+                    transform: translate(2rem, -50%);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

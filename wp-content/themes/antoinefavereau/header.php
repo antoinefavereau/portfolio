@@ -65,7 +65,7 @@
                     </defs>
                 </svg>
             </a>
-            <a class="scrollToButton" title="portfolio" data-target="#portfolio">
+            <a class="scrollToButton" title="projects" data-target="#projects">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_404_200)">
                         <path d="M22.5 12.5H17.5C16.1739 12.5 14.9021 13.0268 13.9645 13.9645C13.0268 14.9021 12.5 16.1739 12.5 17.5V47.5C12.5 48.8261 13.0268 50.0979 13.9645 51.0355C14.9021 51.9732 16.1739 52.5 17.5 52.5H42.5C43.8261 52.5 45.0979 51.9732 46.0355 51.0355C46.9732 50.0979 47.5 48.8261 47.5 47.5V17.5C47.5 16.1739 46.9732 14.9021 46.0355 13.9645C45.0979 13.0268 43.8261 12.5 42.5 12.5H37.5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="portfolio-1"></path>

@@ -845,4 +845,74 @@ body {
   color: #ffffff;
 }
 
+#projects {
+  position: relative;
+  padding: 6rem 0 4rem;
+}
+#projects h2 {
+  position: relative;
+  color: #ffffff;
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 2rem;
+}
+#projects h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 10px;
+  background-color: #FCA311;
+  border-radius: 5px;
+}
+#projects .projectList {
+  position: relative;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+#projects .projectList .item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 80%;
+}
+#projects .projectList .item img {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+  max-width: 50%;
+}
+#projects .projectList .item .content {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  opacity: 0;
+}
+#projects .projectList .item .content h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+#projects .projectList .item .content p {
+  font-size: 16px;
+  font-weight: normal;
+}
+#projects .projectList .item:hover img {
+  transform: translateX(calc(-50% - 2rem));
+}
+#projects .projectList .item:hover .content {
+  transform: translate(2rem, -50%);
+  opacity: 1;
+}
+
 /*# sourceMappingURL=theme.css.map */

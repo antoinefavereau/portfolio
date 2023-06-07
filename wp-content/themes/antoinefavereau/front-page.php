@@ -104,8 +104,25 @@ get_header();
         <div class="swiper-button-prev"></div>
     </div>
 </section>
-<section id="portfolio">
-    
+<section id="projects">
+    <h2>My projects</h2>
+    <div class="projectList">
+        <?php
+        query_posts(array(
+            'category_name' => 'projets'
+        ));
+        if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <div class="item">
+                    <div class="content">
+                        <h3><?= get_the_title() ?></h3>
+                        <p><?= get_field('texte') ?></p>
+                    </div>
+                    <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
+                </div>
+        <?php endwhile;
+        endif;
+        ?>
+    </div>
 </section>
 <!-- <svg class="toTop scrollToButton" data-target="#home" width="80px" height="80px" transform="rotate(-90)">
     <circle cx="40" cy="40" r="30" />
