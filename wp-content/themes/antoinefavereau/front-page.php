@@ -113,11 +113,13 @@ get_header();
         ));
         if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="item">
+                    <a class="" href="<?= esc_url(get_field('lien')) ?>" target="_blank">
+                        <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
+                    </a>
                     <div class="content">
                         <h3><?= get_the_title() ?></h3>
                         <p><?= get_field('texte') ?></p>
                     </div>
-                    <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
                 </div>
         <?php endwhile;
         endif;
