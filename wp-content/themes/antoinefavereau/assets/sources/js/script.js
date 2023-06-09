@@ -37,18 +37,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
         cursor.classList.remove("active")
     })
 
-    Array.from(document.querySelectorAll("button:not(.hover_button), a:not(.hover_button), .swiper-button-next, .swiper-button-prev")).map(function (element) {
+    Array.from(document.querySelectorAll(".hover:not(#cursor)")).map(function (element) {
         element.addEventListener("mouseenter", function () {
             cursor.classList.add("hover")
-            cursorWidth = Math.sqrt(Math.pow(element.offsetWidth, 2) + Math.pow(element.offsetHeight, 2)) + 10
-            cursor.style.width = cursorWidth + "px"
-            cursor.style.height = cursorWidth + "px"
+            if (element.classList.contains("link")) {
+                cursor.classList.add("link")
+                cursorWidth = 60
+                cursor.style.width = cursorWidth + "px"
+                cursor.style.height = cursorWidth + "px"
+            } else {
+                if (element.classList.contains("text")) {
+                    cursorWidth = Math.max(60, element.offsetHeight + 10)
+                } else {
+                    cursorWidth = Math.max(60, Math.sqrt(Math.pow(element.offsetWidth, 2) + Math.pow(element.offsetHeight, 2)) + 10)
+                }
+                cursor.style.width = cursorWidth + "px"
+                cursor.style.height = cursorWidth + "px"
+            }
         })
 
         element.addEventListener("mouseleave", function () {
+            cursor.classList.remove("link")
             cursor.classList.remove("hover")
-            cursor.style.width = "18px"
-            cursor.style.height = "18px"
+            cursor.style.width = "20px"
+            cursor.style.height = "20px"
         })
     })
 

@@ -270,6 +270,58 @@
     }
 }
 
+
+// contact
+
+@-webkit-keyframes animate-contact-1 {
+    0% {
+        stroke-dashoffset: 14.206555366516113px;
+        stroke-dasharray: 14.206555366516113px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 14.206555366516113px;
+    }
+}
+
+@keyframes animate-contact-1 {
+    0% {
+        stroke-dashoffset: 14.206555366516113px;
+        stroke-dasharray: 14.206555366516113px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 14.206555366516113px;
+    }
+}
+
+@-webkit-keyframes animate-contact-2 {
+    0% {
+        stroke-dashoffset: 66.56814575195312px;
+        stroke-dasharray: 66.56814575195312px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 66.56814575195312px;
+    }
+}
+
+@keyframes animate-contact-2 {
+    0% {
+        stroke-dashoffset: 66.56814575195312px;
+        stroke-dasharray: 66.56814575195312px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 66.56814575195312px;
+    }
+}
+
+
 // burger
 
 @keyframes burgerIn1 {
@@ -389,5 +441,26 @@
     100% {
         opacity: 0;
         transform: translateX(-50%) translateY(0%);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes centeredSlideUp {
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 }

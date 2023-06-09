@@ -222,6 +222,46 @@
     stroke-dasharray: 242px;
   }
 }
+@-webkit-keyframes animate-contact-1 {
+  0% {
+    stroke-dashoffset: 14.2065553665px;
+    stroke-dasharray: 14.2065553665px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 14.2065553665px;
+  }
+}
+@keyframes animate-contact-1 {
+  0% {
+    stroke-dashoffset: 14.2065553665px;
+    stroke-dasharray: 14.2065553665px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 14.2065553665px;
+  }
+}
+@-webkit-keyframes animate-contact-2 {
+  0% {
+    stroke-dashoffset: 66.568145752px;
+    stroke-dasharray: 66.568145752px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 66.568145752px;
+  }
+}
+@keyframes animate-contact-2 {
+  0% {
+    stroke-dashoffset: 66.568145752px;
+    stroke-dasharray: 66.568145752px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 66.568145752px;
+  }
+}
 @keyframes burgerIn1 {
   0% {
     top: 33%;
@@ -319,6 +359,24 @@
     transform: translateX(-50%) translateY(0%);
   }
 }
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes centeredSlideUp {
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+@keyframes popUp {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 * {
   cursor: none !important;
 }
@@ -326,7 +384,7 @@
 body {
   width: 100dvw;
   margin: 0;
-  background-color: #000;
+  background-color: #101010;
   overflow-x: hidden;
 }
 
@@ -336,8 +394,8 @@ body {
   pointer-events: none;
   -webkit-backdrop-filter: invert(1) grayscale(1);
   backdrop-filter: invert(1) grayscale(1);
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   display: block;
@@ -346,9 +404,16 @@ body {
 #cursor:not(.active) {
   display: none;
 }
-#cursor.hover {
-  width: 60px;
-  height: 60px;
+#cursor.link {
+  background-color: #FCA311;
+}
+#cursor.link::after {
+  content: "see";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #101010;
 }
 @media only screen and (hover: none) and (pointer: coarse) {
   #cursor {
@@ -408,7 +473,7 @@ body {
   border-radius: 50%;
 }
 .hover_button:hover {
-  color: #000;
+  color: #101010;
   outline-width: 0;
 }
 .hover_button:hover::before {
@@ -440,6 +505,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transform: scale(0);
+  opacity: 0;
+  animation-name: popUp;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
 }
 
 .nav {
@@ -452,6 +523,12 @@ body {
   align-items: center;
   border-radius: 50px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(0);
+  opacity: 0;
+  animation-name: popUp;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
 }
 .nav .navList {
   transition: all 0.3s ease-in-out;
@@ -485,7 +562,7 @@ body {
   height: 100%;
   width: 100%;
   object-fit: contain;
-  stroke: #000;
+  stroke: #101010;
 }
 .nav .navList a:hover svg {
   transform: scale(1.1);
@@ -556,6 +633,12 @@ body {
 .nav .navList a:hover svg .portfolio-7 {
   animation: animate-portfolio-7 0.3s ease-in-out 0.6s both;
 }
+.nav .navList a:hover svg .contact-1 {
+  animation: animate-contact-1 0.3s ease-in-out 0s both;
+}
+.nav .navList a:hover svg .contact-2 {
+  animation: animate-contact-2 0.3s ease-in-out 0.1s both;
+}
 .nav .burger {
   position: relative;
   border-radius: 50px;
@@ -575,7 +658,7 @@ body {
   width: calc(100% + 10px);
   height: calc(100% + 10px);
   border-radius: 50px;
-  background-color: #000;
+  background-color: #101010;
 }
 .nav .burger div {
   position: absolute;
@@ -583,7 +666,7 @@ body {
   height: 8%;
   left: 50%;
   border-radius: 10px;
-  background-color: #000;
+  background-color: #101010;
   transform: translate(-50%, -50%);
 }
 .nav .burger div:nth-child(1) {
@@ -611,7 +694,7 @@ body {
 #home {
   position: relative;
   height: 100dvh;
-  background: #000;
+  background: #101010;
 }
 #home .description {
   position: absolute;
@@ -626,6 +709,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transform: translateY(200px);
+  opacity: 0;
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
 }
 #home .description h1 span:first-child {
   font-size: calc(20px + 3vw);
@@ -639,10 +728,22 @@ body {
   font-weight: 100;
   max-width: 500px;
   margin-top: 3rem;
+  transform: translateY(200px);
+  opacity: 0;
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
 }
 #home .description button {
   margin-top: 1rem;
   font-size: 20px;
+  transform: translateY(200px);
+  opacity: 0;
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+  animation-fill-mode: forwards;
 }
 @media screen and (max-width: 576px) {
   #home .description button {
@@ -698,7 +799,7 @@ body {
   left: 40%;
   top: 30%;
   transform: translate(-50%, -50%);
-  color: #000;
+  color: #101010;
   font-size: 56px;
   white-space: nowrap;
   margin: 0;
@@ -768,7 +869,7 @@ body {
   height: 20px;
   border-radius: 35px;
   background-color: #dddddd;
-  border: 15px solid #000;
+  border: 15px solid #101010;
 }
 #parcours .parcoursLIst .item::after {
   width: 0;
@@ -815,7 +916,7 @@ body {
 
 #competences {
   position: relative;
-  background: #000;
+  background: #101010;
   padding: 6rem 0 4rem;
 }
 #competences h2 {
@@ -823,6 +924,11 @@ body {
   color: #606060;
   font-size: 100px;
   text-align: center;
+}
+@media screen and (max-width: 576px) {
+  #competences h2 {
+    font-size: 80px;
+  }
 }
 #competences .swiper {
   margin-top: 2rem;
@@ -849,6 +955,11 @@ body {
   position: relative;
   padding: 6rem 0 4rem;
 }
+@media screen and (max-width: 576px) {
+  #projects {
+    padding: 4rem 0 2rem;
+  }
+}
 #projects h2 {
   position: relative;
   color: #ffffff;
@@ -869,42 +980,68 @@ body {
   background-color: #FCA311;
   border-radius: 5px;
 }
+@media screen and (max-width: 576px) {
+  #projects h2 {
+    font-size: 48px;
+  }
+  #projects h2::after {
+    width: 100px;
+    height: 8px;
+  }
+}
 #projects .projectList {
   position: relative;
-  margin-top: 6rem;
+  margin-top: 7rem;
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
   align-items: center;
-  gap: 4rem;
+  gap: 6rem;
+}
+@media screen and (max-width: 576px) {
+  #projects .projectList {
+    margin-top: 5rem;
+  }
 }
 #projects .projectList .item {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 80%;
 }
 #projects .projectList .item img {
   position: relative;
   transition: all 0.3s ease-in-out;
-  border-radius: 20px;
-  max-width: 50%;
+  height: fit-content;
+  max-width: 40%;
   max-height: 40vw;
   transform: translateX(50%);
+  border-radius: 20px;
+  z-index: 1;
 }
 #projects .projectList .item .content {
   position: relative;
   transition: all 0.3s ease-in-out;
   transform: translateX(-50%);
+  width: 40%;
   color: #ffffff;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #projects .projectList .item .content h3 {
   font-size: 32px;
   font-weight: bold;
+  margin-top: 0;
+}
+#projects .projectList .item .content h3 a {
+  color: inherit;
+  text-decoration: none;
 }
 #projects .projectList .item .content p {
   font-size: 16px;
   font-weight: normal;
+  margin: 0;
 }
 #projects .projectList .item:hover img {
   transform: translateX(-2rem);
@@ -912,6 +1049,106 @@ body {
 #projects .projectList .item:hover .content {
   transform: translateX(2rem);
   opacity: 1;
+}
+@media screen and (max-width: 576px) {
+  #projects .projectList .item {
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects .projectList .item img {
+    max-width: 90%;
+    transform: none;
+    max-height: 60vw;
+  }
+  #projects .projectList .item .content {
+    transform: none;
+    width: 90%;
+    opacity: 1;
+    margin-top: 2rem;
+  }
+  #projects .projectList .item .content h3 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+  #projects .projectList .item .content p {
+    font-size: 14px;
+  }
+  #projects .projectList .item:hover img {
+    transform: none;
+  }
+  #projects .projectList .item:hover .content {
+    transform: none;
+  }
+}
+
+#contact {
+  position: relative;
+  background-color: #FCA311;
+  display: flex;
+}
+#contact .left {
+  position: relative;
+  width: 50%;
+  padding-block: 5rem;
+}
+#contact .left .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #101010;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 5rem 3rem;
+}
+#contact .left .content h2 {
+  position: relative;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+#contact .left .content h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 8px;
+  background-color: #FCA311;
+  border-radius: 5px;
+}
+@media screen and (max-width: 576px) {
+  #contact .left .content h2 {
+    font-size: 48px;
+  }
+}
+#contact .left .content ul {
+  margin-top: 2rem;
+}
+#contact .left .content ul li {
+  padding-block: 0.5rem;
+}
+#contact .left .content ul li a {
+  color: inherit;
+}
+#contact .left .content .links {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+#contact .map {
+  position: relative;
+  width: 50%;
+}
+#contact .map iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 
 /*# sourceMappingURL=theme.css.map */

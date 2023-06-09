@@ -1,4 +1,4 @@
-$black: #000;
+$black: #101010;
 $white: #ffffff;
 $darkWhite: #dddddd;
 $primary: #FCA311;
@@ -35,8 +35,8 @@ body {
     pointer-events: none;
     -webkit-backdrop-filter: invert(1) grayscale(1);
     backdrop-filter: invert(1) grayscale(1);
-    width: 20px;
-    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     display: block;
@@ -46,9 +46,17 @@ body {
         display: none;
     }
 
-    &.hover {
-        width: 60px;
-        height: 60px;
+    &.link {
+        background-color: $primary;
+
+        &::after {
+            content: "see";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $black;
+        }
     }
 
     @media only screen and (hover: none) and (pointer: coarse) {
@@ -145,6 +153,12 @@ body {
         width: 100%;
         height: 100%;
         object-fit: contain;
+        transform: scale(0);
+        opacity: 0;
+        animation-name: popUp;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
     }
 }
 
@@ -158,6 +172,12 @@ body {
     align-items: center;
     border-radius: 50px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+    transform: scale(0);
+    opacity: 0;
+    animation-name: popUp;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
 
     .navList {
         transition: all .3s ease-in-out;
@@ -272,7 +292,7 @@ body {
                 }
 
                 .portfolio-4 {
-                    animation: animate-portfolio-4 0.3s ease-in-out 0.30000000000000004s both;
+                    animation: animate-portfolio-4 0.3s ease-in-out 0.3s both;
                 }
 
                 .portfolio-5 {
@@ -284,7 +304,15 @@ body {
                 }
 
                 .portfolio-7 {
-                    animation: animate-portfolio-7 0.3s ease-in-out 0.6000000000000001s both;
+                    animation: animate-portfolio-7 0.3s ease-in-out 0.6s both;
+                }
+
+                .contact-1 {
+                    animation: animate-contact-1 0.3s ease-in-out 0s both;
+                }
+
+                .contact-2 {
+                    animation: animate-contact-2 0.3s ease-in-out 0.1s both;
                 }
             }
         }
@@ -376,6 +404,12 @@ body {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            transform: translateY(200px);
+            opacity: 0;
+            animation-name: slideUp;
+            animation-duration: 1s;
+            animation-delay: .3s;
+            animation-fill-mode: forwards;
 
             span:first-child {
                 font-size: calc(20px + 3vw);
@@ -396,11 +430,23 @@ body {
             font-weight: 100;
             max-width: 500px;
             margin-top: 3rem;
+            transform: translateY(200px);
+            opacity: 0;
+            animation-name: slideUp;
+            animation-duration: 1s;
+            animation-delay: .6s;
+            animation-fill-mode: forwards;
         }
 
         button {
             margin-top: 1rem;
             font-size: 20px;
+            transform: translateY(200px);
+            opacity: 0;
+            animation-name: slideUp;
+            animation-duration: 1s;
+            animation-delay: .9s;
+            animation-fill-mode: forwards;
 
             @media screen and (max-width: map-get($breakpoints, sm)) {
                 font-size: 20px;
@@ -602,6 +648,10 @@ body {
         color: #606060;
         font-size: 100px;
         text-align: center;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 80px;
+        }
     }
 
     .swiper {
@@ -634,6 +684,10 @@ body {
     position: relative;
     padding: 6rem 0 4rem;
 
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        padding: 4rem 0 2rem;
+    }
+
     h2 {
         position: relative;
         color: $white;
@@ -654,46 +708,72 @@ body {
             background-color: $primary;
             border-radius: 5px;
         }
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 48px;
+
+            &::after {
+                width: 100px;
+                height: 8px;
+            }
+        }
     }
 
     .projectList {
         position: relative;
-        margin-top: 6rem;
+        margin-top: 7rem;
         display: flex;
         flex-direction: column;
+        justify-content: stretch;
         align-items: center;
-        gap: 4rem;
+        gap: 6rem;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            margin-top: 5rem;
+        }
 
         .item {
             position: relative;
             display: flex;
             justify-content: center;
-            width: 80%;
 
             img {
                 position: relative;
                 transition: all .3s ease-in-out;
-                border-radius: 20px;
-                max-width: 50%;
+                height: fit-content;
+                max-width: 40%;
                 max-height: 40vw;
                 transform: translateX(50%);
+                border-radius: 20px;
+                z-index: 1;
             }
 
             .content {
                 position: relative;
                 transition: all .3s ease-in-out;
                 transform: translateX(-50%);
+                width: 40%;
                 color: $white;
                 opacity: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
 
                 h3 {
                     font-size: 32px;
                     font-weight: bold;
+                    margin-top: 0;
+
+                    a {
+                        color: inherit;
+                        text-decoration: none;
+                    }
                 }
 
                 p {
                     font-size: 16px;
                     font-weight: normal;
+                    margin: 0;
                 }
             }
 
@@ -707,6 +787,122 @@ body {
                     opacity: 1;
                 }
             }
+
+            @media screen and (max-width: map-get($breakpoints, sm)) {
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    max-width: 90%;
+                    transform: none;
+                    max-height: 60vw;
+                }
+
+                .content {
+                    transform: none;
+                    width: 90%;
+                    opacity: 1;
+                    margin-top: 2rem;
+
+                    h3 {
+                        font-size: 24px;
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                &:hover {
+                    img {
+                        transform: none;
+                    }
+
+                    .content {
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#contact {
+    position: relative;
+    background-color: $primary;
+    display: flex;
+
+    .left {
+        position: relative;
+        width: 50%;
+        padding-block: 5rem;
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $black;
+            color: $white;
+            border-radius: 20px;
+            padding: 2rem 5rem 3rem;
+
+            h2 {
+                position: relative;
+                font-size: 48px;
+                font-weight: bold;
+                text-align: center;
+                margin: 0;
+                padding-bottom: 1rem;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100px;
+                    height: 8px;
+                    background-color: $primary;
+                    border-radius: 5px;
+                }
+
+                @media screen and (max-width: map-get($breakpoints, sm)) {
+                    font-size: 48px;
+                }
+            }
+
+            ul {
+                margin-top: 2rem;
+
+                li {
+                    padding-block: .5rem;
+
+                    a {
+                        color: inherit;
+                    }
+                }
+            }
+
+            .links {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .map {
+        position: relative;
+        width: 50%;
+
+        iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
         }
     }
 }
