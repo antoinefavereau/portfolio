@@ -847,6 +847,7 @@ body {
             color: $white;
             border-radius: 20px;
             padding: 2rem 5rem 3rem;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, .3);
 
             h2 {
                 position: relative;
@@ -875,6 +876,7 @@ body {
 
             ul {
                 margin-top: 2rem;
+                padding: 0;
 
                 li {
                     padding-block: .5rem;

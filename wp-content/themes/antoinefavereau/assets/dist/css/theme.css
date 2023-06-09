@@ -1100,6 +1100,7 @@ body {
   color: #ffffff;
   border-radius: 20px;
   padding: 2rem 5rem 3rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
 }
 #contact .left .content h2 {
   position: relative;
@@ -1127,6 +1128,7 @@ body {
 }
 #contact .left .content ul {
   margin-top: 2rem;
+  padding: 0;
 }
 #contact .left .content ul li {
   padding-block: 0.5rem;
