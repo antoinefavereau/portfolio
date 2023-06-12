@@ -953,7 +953,7 @@ body {
 
 #projects {
   position: relative;
-  padding: 6rem 0 4rem;
+  padding: 6rem 0 6rem;
 }
 @media screen and (max-width: 576px) {
   #projects {
@@ -1089,18 +1089,28 @@ body {
 #contact .left {
   position: relative;
   width: 50%;
-  padding-block: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+@media screen and (max-width: 576px) {
+  #contact .left {
+    width: 100%;
+  }
 }
 #contact .left .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   background-color: #101010;
   color: #ffffff;
   border-radius: 20px;
   padding: 2rem 5rem 3rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 576px) {
+  #contact .left .content {
+    padding: 1rem 3rem 1rem;
+  }
 }
 #contact .left .content h2 {
   position: relative;
@@ -1121,9 +1131,18 @@ body {
   background-color: #FCA311;
   border-radius: 5px;
 }
+@media screen and (max-width: 768px) {
+  #contact .left .content h2 {
+    font-size: 40px;
+  }
+}
 @media screen and (max-width: 576px) {
   #contact .left .content h2 {
-    font-size: 48px;
+    font-size: 32px;
+  }
+  #contact .left .content h2::after {
+    width: 80px;
+    height: 6px;
   }
 }
 #contact .left .content ul {
@@ -1143,14 +1162,24 @@ body {
   gap: 1rem;
   margin-top: 2rem;
 }
+#contact .left .content .links a svg {
+  width: 40px;
+  height: 40px;
+  fill: #101010;
+  stroke: #ffffff;
+}
 #contact .map {
   position: relative;
   width: 50%;
 }
+@media screen and (max-width: 576px) {
+  #contact .map {
+    display: none;
+  }
+}
 #contact .map iframe {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
+  height: 100%;
 }
 
 /*# sourceMappingURL=theme.css.map */
