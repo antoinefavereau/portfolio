@@ -112,7 +112,7 @@ get_header();
             'category_name' => 'projets'
         ));
         if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <div class="item">
+                <div class="item upAnimation">
                     <img <?= get_field('lien') ? 'class="hover link" onclick="window.open(\'' . get_field('lien') . '\', \'_blank\')"' : ''; ?> src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
                     <div class="content">
                         <h3>
