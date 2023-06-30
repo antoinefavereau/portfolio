@@ -780,8 +780,8 @@ body {
   position: sticky;
   top: 0;
   left: 0;
-  width: 70%;
-  min-width: 300px;
+  width: 60%;
+  min-width: 500px;
   z-index: 100;
 }
 #parcours .parcoursTitle .shape {
@@ -807,6 +807,7 @@ body {
 @media screen and (max-width: 576px) {
   #parcours .parcoursTitle {
     width: 100%;
+    min-width: unset;
   }
   #parcours .parcoursTitle .shape {
     display: none;
