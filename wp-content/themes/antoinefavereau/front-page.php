@@ -65,7 +65,7 @@ get_header();
                 </linearGradient>
             </defs>
         </svg>
-        <h2 class="title">My cursus</h2>
+        <h2 class="title">Background</h2>
     </div>
     <div class="verticalLine"></div>
     <div class="parcoursLIst">
