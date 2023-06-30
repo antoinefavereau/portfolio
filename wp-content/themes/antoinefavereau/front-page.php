@@ -139,7 +139,7 @@ get_header();
 
 <section id="contact">
     <div class="left">
-        <div class="content">
+        <div class="content upAnimation">
             <h2>Contact me</h2>
             <ul>
                 <li><a class="hover text" href="mailto:antoinefavereau45@gmail.com">antoinefavereau45@gmail.com</a></li>
