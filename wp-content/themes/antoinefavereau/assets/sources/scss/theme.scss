@@ -27,6 +27,7 @@ body {
     margin: 0;
     background-color: $black;
     overflow-x: hidden;
+    font-family: sans-serif;
 }
 
 #cursor {
@@ -768,6 +769,16 @@ body {
                     a {
                         color: inherit;
                         text-decoration: none;
+                    }
+                }
+
+                .informations {
+                    list-style: none;
+                    padding-left: 0;
+
+                    .uppercase {
+                        text-transform: uppercase;
+                        color: $primary;
                     }
                 }
 

@@ -128,6 +128,12 @@ get_header();
                                 <?= get_the_title() ?>
                             <?php endif; ?>
                         </h3>
+                        <ul class="informations">
+                            <?php foreach (get_field('field_64c91dc61bfeb') as $key => $information) : if ($information) : ?>
+                                    <li class="information"><span class="uppercase"><?= $key ?> : </span><?= $information ?></li>
+                            <?php endif;
+                            endforeach; ?>
+                        </ul>
                         <p><?= get_field('texte') ?></p>
                     </div>
                 </div>
