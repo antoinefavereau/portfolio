@@ -183,7 +183,5 @@ get_header();
     </div>
 </section>
 
-<div id="cursor"></div>
-
 <?php
 get_footer();

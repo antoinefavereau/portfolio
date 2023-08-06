@@ -17,6 +17,7 @@ $breakpoints: (
 }
 
 @import "_animations.scss";
+@import "_games.scss";
 
 * {
     cursor: none !important;
@@ -384,6 +385,14 @@ body {
                 }
             }
         }
+    }
+
+    #gamesPage {
+        position: absolute;
+        color: $primary;
+        top: calc(100% + 1rem);
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
