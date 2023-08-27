@@ -1,0 +1,163 @@
+$white: #EEEEEE;
+$black: #222831;
+$whiteBlack: #888B8F;
+$dark: #393E46;
+$primary: #00ADB5;
+
+$breakpoints: (
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px
+);
+
+#cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: $primary;
+    pointer-events: none;
+    display: block;
+    z-index: 1000;
+
+    &.link {
+        background-color: $primary;
+
+        &::after {
+            content: "see";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $black;
+        }
+    }
+
+    @media only screen and (hover: none) and (pointer: coarse) {
+        display: none;
+    }
+}
+
+.hover,
+.cursorButton {
+    position: relative;
+    z-index: 2000;
+}
+
+.button {
+    position: relative;
+    border: none;
+    outline: none;
+    color: $black;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: bold;
+    padding: .8rem 3rem;
+    color: #fff;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        transition: all .2s ease-in-out;
+        position: absolute;
+        inset: 0;
+        transform: skew(-25deg);
+        background-color: $primary;
+        border-radius: 3px;
+        z-index: -1;
+    }
+
+    &::after {
+        content: "";
+        transition: all .2s ease-in-out;
+        position: absolute;
+        inset: 0;
+        transform: skew(-25deg);
+        border-radius: 3px;
+        z-index: -1;
+        background: linear-gradient(90deg, #fff3, #fff3);
+        background-size: 0% 100%;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: map-get($breakpoints, md)) {
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        font-size: 16px;
+    }
+
+    &:hover {
+
+        &::before {
+            transform: skew(-20deg);
+            border-radius: 6px;
+        }
+
+        &::after {
+            transform: skew(-20deg);
+            border-radius: 6px;
+            animation-name: buttonHover;
+            animation-duration: .4s;
+            animation-timing-function: ease-in-out;
+        }
+    }
+}
+
+.section {
+    .h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: $primary;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    .h1 {
+        font-size: 48px;
+        font-weight: 500;
+        color: $black;
+        text-align: center;
+        margin-top: 1rem;
+        max-width: 600px;
+        margin-inline: auto;
+    }
+
+    @media screen and (max-width: map-get($breakpoints, md)) {
+        .h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 5rem;
+        }
+    
+        .h1 {
+            font-size: 40px;
+            font-weight: 500;
+            margin-top: 1rem;
+            max-width: 500px;
+        }
+    }
+
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        .h2 {
+            font-size: 16px;
+            margin-top: 4rem;
+        }
+    
+        .h1 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-top: 1rem;
+            max-width: 400px;
+        }
+    }
+}
