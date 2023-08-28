@@ -20,28 +20,9 @@ get_header();
     <div class="content">
         <div class="verticalLine"></div>
         <div class="parcoursLIst">
-            <div class="item">
-                <h3 class="title">CESI</h3>
-                <p class="text">
-                    I am currently a third-year student at CESI, a recognized engineering school specializing in the field of computer science. Throughout my academic journey, I have had the opportunity to engage in a teaching method known as "problem-based learning". Problem-based learning is an educational approach that emphasizes the resolution of real-world problems. Instead of focusing solely on theory, students are exposed to real or simulated problems that require the application of acquired knowledge. These problems are often multidisciplinary and mirror the challenges that engineers encounter in their professional practice. Through this method, I have been able to work on actual computer science projects as part of a team, where I analyze complex problems, seek appropriate solutions, and implement them. This experience has allowed me to develop crucial skills such as problem-solving, critical thinking, collaboration, and communication.
-                </p>
-            </div>
-            <div class="item">
-                <h3 class="title">Xapiema</h3>
-                <p class="text">
-                    During my professional journey, I had the opportunity to actively participate in two four-month internships, as well as a two-month fixed-term contract at Xapiema. This company, specialized in web development, allowed me to enhance my skills and deepen my knowledge in this constantly evolving field. Throughout these experiences, I was fortunate to work on diverse projects, collaborating with a talented team, which enabled me to acquire valuable expertise in designing and implementing innovative and efficient web solutions. Thanks to these enriching opportunities, I have solidified my passion for web development, and I am eager to continue contributing to the success of exciting projects in the future.
-                </p>
-            </div>
-            <div class="item">
-                <h3 class="title">Freelance</h3>
-                <p class="text">
-                    As a freelance web developer, I have gained expertise in creating customized and high-performing websites. Working closely with diverse clients, I have developed a deep understanding of their specific needs, enabling me to design tailored solutions that meet their objectives. With flexibility and a passion for my craft, I create unique web experiences. My goal is to assist businesses in enhancing their online presence with aesthetically pleasing and intuitive websites.
-                </p>
-            </div>
-
             <?php
             query_posts(array(
-                'category_name' => 'parcours'
+                'category_name' => "parcours-" . pll_current_language()
             ));
             if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <div class="item">
@@ -64,7 +45,7 @@ get_header();
         <ul class="hexGrid">
             <?php
             query_posts(array(
-                'category_name' => 'competences'
+                'category_name' => "competences-" . pll_current_language()
             ));
             if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <li class="hex">
@@ -87,7 +68,7 @@ get_header();
 
         <?php
         query_posts(array(
-            'category_name' => 'projets'
+            'category_name' => "projets-" . pll_current_language()
         ));
         if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <li class="item">
