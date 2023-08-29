@@ -204,6 +204,9 @@ body.active #header #nav #language {
 body.active #header #nav #language a {
   color: rgba(34, 40, 49, 0.5);
 }
+body.active #header #nav #language a:not(:last-child)::after {
+  color: rgba(34, 40, 49, 0.5);
+}
 body.active #header #nav #language a.active {
   color: #222831;
 }

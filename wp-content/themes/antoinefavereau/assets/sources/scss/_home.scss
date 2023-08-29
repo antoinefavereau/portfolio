@@ -46,6 +46,10 @@ body {
                     a {
                         color: rgba($black, .5);
 
+                        &:not(:last-child)::after {
+                            color: rgba($black, .5);
+                        }
+
                         &.active {
                             color: $black;
                         }
