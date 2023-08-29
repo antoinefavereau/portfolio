@@ -65,11 +65,14 @@
             </svg>
         </a>
         <div id="nav">
-            <!--<div id="language">
-                <a href="" class="active hover">fr</a>
-                |
-                <a href="" class="hover">en</a>
-            </div>-->
+            <div id="language">
+                <?php $langs_array = pll_the_languages(array('dropdown' => 1, 'hide_current' => 0, 'raw' => 1)); ?>
+                <?php foreach ($langs_array as $lang) : ?>
+                    <a href="<?= $lang['url'] ?>" class="hover<?= ($lang['slug'] == pll_current_language()) ? " active" : "" ?>">
+                        <?= $lang['slug'] ?>
+                    </a>
+                <?php endforeach; ?>
+            </div>
             <?php if (is_front_page()) : ?>
                 <button id="menuButton" class="cursorButton" title="menu">
                     <div></div>

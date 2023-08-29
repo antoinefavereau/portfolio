@@ -342,6 +342,10 @@ body.active #header #nav #menuButton div {
   color: rgba(238, 238, 238, 0.5);
   text-decoration: none;
 }
+#header #nav #language a:not(:last-child)::after {
+  content: "|";
+  color: rgba(238, 238, 238, 0.5);
+}
 #header #nav #language a.active {
   color: #EEEEEE;
 }
