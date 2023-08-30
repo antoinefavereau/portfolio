@@ -1,8 +1,8 @@
 <section id="footer">
     <div class="container">
         <div class="informations">
-            <h2>Contact me</h2>
-            <p class="text">You have an interesting project and want to work with me ?</p>
+            <h2><?= pll_e("Contact me") ?></h2>
+            <p class="text"><?= pll_e("You have an interesting project and want to work with me ?") ?></p>
             <ul>
                 <li>
                     <a href="mailto:antoinefavereau45@gmail.com" class="hover">
@@ -35,11 +35,11 @@
         <form>
             <div class="field half">
                 <input type="text" name="name" id="inputName" required>
-                <label for="inputName">Name</label>
+                <label for="inputName"><?= pll_e("Name") ?></label>
             </div>
             <div class="field half">
                 <input type="email" name="mail" id="inputMail" required>
-                <label for="inputMail">Mail</label>
+                <label for="inputMail"><?= pll_e("Mail") ?></label>
             </div>
             <div class="field">
                 <input type="text" name="subject" id="inputSubject" list="subjectChoice" required>
@@ -48,14 +48,14 @@
                     <option value="Basic website">
                     <option value="E-commerce">
                 </datalist>
-                <label for="inputSubject">Subject</label>
+                <label for="inputSubject"><?= pll_e("Subject") ?></label>
             </div>
             <div class="field">
                 <textarea name="subject" id="inputMessage" cols="30" rows="10" required></textarea>
-                <label for="inputMessage">Message</label>
+                <label for="inputMessage"><?= pll_e("Message") ?></label>
             </div>
             <div class="field">
-                <input type="submit" value="send">
+                <input type="submit" value="<?= pll_e("send") ?>">
             </div>
         </form>
     </div>

@@ -21,11 +21,11 @@
                 </a>
 
                 <ul class="navList">
-                    <li class="item hover scrollToButton" data-target="#background">backgroud</li>
-                    <li class="item hover scrollToButton" data-target="#skills">skills</li>
-                    <li class="item hover scrollToButton" data-target="#projects">projects</li>
-                    <li class="item hover scrollToButton" data-target="#services">services</li>
-                    <li class="item hover scrollToButton" data-target="#footer">contact</li>
+                    <li class="item hover scrollToButton" data-target="#background"><?= pll_e("background") ?></li>
+                    <li class="item hover scrollToButton" data-target="#skills"><?= pll_e("skills") ?></li>
+                    <li class="item hover scrollToButton" data-target="#projects"><?= pll_e("projects") ?></li>
+                    <li class="item hover scrollToButton" data-target="#services"><?= pll_e("services") ?></li>
+                    <li class="item hover scrollToButton" data-target="#footer"><?= pll_e("contact") ?></li>
                 </ul>
                 <div class="links">
                     <a href="https://www.linkedin.com/in/antoine-favereau" class="cursorButton" title="linkedin" target="_blank">

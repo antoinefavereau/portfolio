@@ -5,9 +5,9 @@ get_header();
 <section id="top">
     <div class="text">
         <h1 class="topSectionUpElasticAnimation">Antoine<span class="underscore">_ </span>Favereau</h1>
-        <p class="topSectionUpElasticAnimation">French student in computer engineering school and freelance in web development.</p>
+        <p class="topSectionUpElasticAnimation"><?= pll_e("French student in computer engineering school and freelance in web development.") ?></p>
     </div>
-    <button class="discover button scrollToButton topSectionUpElasticAnimation" data-target="#background">discover</button>
+    <button class="discover button scrollToButton topSectionUpElasticAnimation" data-target="#background"><?= pll_e("discover") ?></button>
     <svg class="bottom" width="1920" height="100" viewBox="0 0 1920 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0.000183105C960 100 960 100 1920 0.000183105V100H0V0.000183105Z" fill="#EEEEEE" />
         <path d="M-2 23C963 113.5 966.5 114.5 1921 24.5" stroke="#222831" stroke-opacity="0.3" stroke-width="4" />
@@ -15,8 +15,8 @@ get_header();
 </section>
 
 <section id="background" class="section">
-    <h2 class="h2">background</h2>
-    <h1 class="h1">See my studies and experience</h1>
+    <h2 class="h2"><?= pll_e("background") ?></h2>
+    <h1 class="h1"><?= pll_e("See my studies and experience") ?></h1>
     <div class="content">
         <div class="verticalLine"></div>
         <div class="parcoursLIst">
@@ -39,8 +39,8 @@ get_header();
 </section>
 
 <section id="skills" class="section">
-    <h2 class="h2">skills</h2>
-    <h1 class="h1">All the technologies I am familiar with</h1>
+    <h2 class="h2"><?= pll_e("skills") ?></h2>
+    <h1 class="h1"><?= pll_e("All the technologies I am familiar with") ?></h1>
     <div class="skillsList">
         <ul class="hexGrid">
             <?php
@@ -62,8 +62,8 @@ get_header();
 </section>
 
 <section id="projects" class="section">
-    <h2 class="h2">projects</h2>
-    <h1 class="h1">The different projects I worked on</h1>
+    <h2 class="h2"><?= pll_e("projects") ?></h2>
+    <h1 class="h1"><?= pll_e("The different projects I worked on") ?></h1>
     <ul class="projectsList">
 
         <?php
@@ -94,40 +94,40 @@ get_header();
 </section>
 
 <section id="services" class="section">
-    <h2 class="h2">services</h2>
-    <h1 class="h1">You have a project ?</h1>
+    <h2 class="h2"><?= pll_e("services") ?></h2>
+    <h1 class="h1"><?= pll_e("You have a project ?") ?></h1>
     <div class="background"></div>
     <ul class="servicesList">
         <li class="item">
-            <h3>Front-end</h3>
+            <h3><?= pll_e("Front-end") ?></h3>
             <ul class="infoList">
-                <li>need your design</li>
-                <li>quick result</li>
+                <li><?= pll_e("need your design") ?></li>
+                <li><?= pll_e("quick result") ?></li>
             </ul>
             <button class="button" data-value="Front-end">
-                select
+                <?= pll_e("select") ?>
             </button>
         </li>
         <li class="item">
-            <h3>Basic website</h3>
+            <h3><?= pll_e("Basic website") ?></h3>
             <ul class="infoList">
-                <li>branding or biography</li>
-                <li>portfolio</li>
-                <li>blog</li>
-                <li>landing page or single page</li>
+                <li><?= pll_e("branding or biography") ?></li>
+                <li><?= pll_e("portfolio") ?></li>
+                <li><?= pll_e("blog") ?></li>
+                <li><?= pll_e("landing page or single page") ?></li>
             </ul>
             <button class="button" data-value="Basic website">
-                select
+                <?= pll_e("select") ?>
             </button>
         </li>
         <li class="item">
-            <h3>E-commerce</h3>
+            <h3><?= pll_e("E-commerce") ?></h3>
             <ul class="infoList">
-                <li>content management system</li>
-                <li>online sales</li>
+                <li><?= pll_e("content management system") ?></li>
+                <li><?= pll_e("online sales") ?></li>
             </ul>
             <button class="button" data-value="E-commerce">
-                select
+                <?= pll_e("select") ?>
             </button>
         </li>
     </ul>

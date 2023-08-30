@@ -23,3 +23,44 @@ function add_defer_attribute($tag, $handle)
 }
 
 add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
+
+
+// tranlations
+
+// actions
+pll_register_string("antoinefavereau", "discover");
+
+// sections
+pll_register_string("antoinefavereau", "background");
+pll_register_string("antoinefavereau", "skills");
+pll_register_string("antoinefavereau", "projects");
+pll_register_string("antoinefavereau", "services");
+pll_register_string("antoinefavereau", "contact");
+
+// front page
+pll_register_string("antoinefavereau", "French student in computer engineering school and freelance in web development.");
+pll_register_string("antoinefavereau", "See my studies and experience");
+pll_register_string("antoinefavereau", "All the technologies I am familiar with");
+pll_register_string("antoinefavereau", "The different projects I worked on");
+pll_register_string("antoinefavereau", "You have a project ?");
+pll_register_string("antoinefavereau", "Front-end");
+pll_register_string("antoinefavereau", "need your design");
+pll_register_string("antoinefavereau", "quick result");
+pll_register_string("antoinefavereau", "select");
+pll_register_string("antoinefavereau", "Basic website");
+pll_register_string("antoinefavereau", "branding or biography");
+pll_register_string("antoinefavereau", "portfolio");
+pll_register_string("antoinefavereau", "blog");
+pll_register_string("antoinefavereau", "landing page or single page");
+pll_register_string("antoinefavereau", "E-commerce");
+pll_register_string("antoinefavereau", "content management system");
+pll_register_string("antoinefavereau", "online sales");
+
+// footer
+pll_register_string("antoinefavereau", "Contact me");
+pll_register_string("antoinefavereau", "You have an interesting project and want to work with me ?");
+pll_register_string("antoinefavereau", "Name");
+pll_register_string("antoinefavereau", "Mail");
+pll_register_string("antoinefavereau", "Subject");
+pll_register_string("antoinefavereau", "Message");
+pll_register_string("antoinefavereau", "send");
