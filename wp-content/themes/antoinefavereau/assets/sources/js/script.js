@@ -46,3 +46,8 @@ document.querySelectorAll("#services .servicesList .item .button").forEach(eleme
         document.querySelector("#footer #inputSubject").value = element.dataset.value + " : ";
     });
 });
+
+document.querySelector("#footer form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("Not available yet, please use my email address instead.");
+});

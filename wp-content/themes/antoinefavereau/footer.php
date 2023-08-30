@@ -32,7 +32,7 @@
                 </li>
             </ul>
         </div>
-        <form>
+        <form action="" method="post">
             <div class="field half">
                 <input type="text" name="name" id="inputName" required>
                 <label for="inputName"><?= pll_e("Name") ?></label>
@@ -51,7 +51,7 @@
                 <label for="inputSubject"><?= pll_e("Subject") ?></label>
             </div>
             <div class="field">
-                <textarea name="subject" id="inputMessage" cols="30" rows="10" required></textarea>
+                <textarea name="message" id="inputMessage" cols="30" rows="10" required></textarea>
                 <label for="inputMessage"><?= pll_e("Message") ?></label>
             </div>
             <div class="field">
