@@ -76,7 +76,7 @@
   outline: none;
   color: #222831;
   background-color: transparent;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   padding: 0.8rem 3rem;
   color: #fff;
@@ -106,14 +106,10 @@
   background-position-y: 0%;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 768px) {
-  .button {
-    font-size: 20px;
-  }
-}
 @media screen and (max-width: 576px) {
   .button {
     font-size: 16px;
+    padding: 0.8rem 2rem;
   }
 }
 .button:hover::before {
@@ -973,7 +969,6 @@ body.active #header #nav #menuButton div {
 #services .servicesList .item .button {
   margin-top: 2rem;
   color: #EEEEEE;
-  font-size: 20px;
   z-index: 100;
   left: 50%;
   transform: translateX(-50%);

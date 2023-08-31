@@ -55,7 +55,7 @@ $breakpoints: (
     outline: none;
     color: $black;
     background-color: transparent;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     padding: .8rem 3rem;
     color: #fff;
@@ -87,12 +87,9 @@ $breakpoints: (
         background-repeat: no-repeat;
     }
 
-    @media screen and (max-width: map-get($breakpoints, md)) {
-        font-size: 20px;
-    }
-
     @media screen and (max-width: map-get($breakpoints, sm)) {
         font-size: 16px;
+        padding: .8rem 2rem;
     }
 
     &:hover {
