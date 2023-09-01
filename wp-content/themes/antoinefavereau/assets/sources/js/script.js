@@ -47,7 +47,7 @@ document.querySelectorAll("#services .servicesList .item .button").forEach(eleme
     });
 });
 
-document.querySelector("#footer form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    alert("Not available yet, please use my email address instead.");
-});
+// document.querySelector("#footer form").addEventListener("submit", (event) => {
+//     event.preventDefault();
+//     alert("Not available yet, please use my email address instead.");
+// });
