@@ -34,6 +34,17 @@
     background-size: 100% 1.5px;
   }
 }
+::-moz-selection {
+  /* Firefox */
+  color: #EEEEEE;
+  background: #00ADB5;
+}
+
+::selection {
+  color: #EEEEEE;
+  background: #00ADB5;
+}
+
 #cursor {
   position: fixed;
   width: 10px;
