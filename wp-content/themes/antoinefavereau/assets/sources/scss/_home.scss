@@ -349,6 +349,27 @@ body {
         left: 0;
         bottom: 0;
     }
+
+    .backgroundContainer {
+        position: absolute;
+        inset: 0;
+        color: $primary;
+
+        .backgroundSvg {
+            position: absolute;
+            width: 300px;
+            height: auto;
+            stroke-width: 1px;
+            opacity: .3;
+            display: none;
+
+            path {
+                stroke-dasharray: 1;
+                stroke-dashoffset: 1;
+                animation: dash 4s ease-in-out alternate;
+            }
+        }
+    }
 }
 
 #background {

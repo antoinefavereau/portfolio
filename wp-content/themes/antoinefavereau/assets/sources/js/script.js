@@ -61,3 +61,21 @@ document.querySelector("#footer form").addEventListener("submit", (event) => {
     event.preventDefault();
     alert("Not available yet, please use my email address instead.");
 });
+
+
+// background svg animation
+
+setInterval(() => {
+    backgroundSvgAnimation();
+}, 6000);
+
+function backgroundSvgAnimation() {
+    const randomSvg = document.querySelector('.backgroundContainer').children[Math.floor(Math.random() * document.querySelector('.backgroundContainer').children.length)];
+    randomSvg.style.display = 'block';
+    randomSvg.style.left = Math.random() * (document.querySelector('.backgroundContainer').getBoundingClientRect().width - randomSvg.getBoundingClientRect().width) + 'px';
+    randomSvg.style.top = Math.random() * (document.querySelector('.backgroundContainer').getBoundingClientRect().height - randomSvg.getBoundingClientRect().height) + 'px';
+
+    setTimeout(() => {
+        randomSvg.style.display = 'none';
+    }, 4000);
+}

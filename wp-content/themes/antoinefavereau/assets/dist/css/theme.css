@@ -34,6 +34,20 @@
     background-size: 100% 1.5px;
   }
 }
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  40% {
+    stroke-dashoffset: 0;
+  }
+  60% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
 ::-moz-selection {
   /* Firefox */
   color: #EEEEEE;
@@ -464,6 +478,24 @@ body.active #header #nav #menuButton div {
   height: auto;
   left: 0;
   bottom: 0;
+}
+#top .backgroundContainer {
+  position: absolute;
+  inset: 0;
+  color: #00ADB5;
+}
+#top .backgroundContainer .backgroundSvg {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  stroke-width: 1px;
+  opacity: 0.3;
+  display: none;
+}
+#top .backgroundContainer .backgroundSvg path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 4s ease-in-out alternate;
 }
 
 #background {

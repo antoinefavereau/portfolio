@@ -3,6 +3,21 @@ get_header();
 ?>
 
 <section id="top">
+    <div class="backgroundContainer">
+        <svg class="backgroundSvg" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" pathLength="1" />
+            <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z" pathLength="1" />
+            <path d="M7 20h10" pathLength="1" />
+            <path d="M9 16v4" pathLength="1" />
+            <path d="M15 16v4" pathLength="1" />
+        </svg>
+        <svg class="backgroundSvg" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" pathLength="1" />
+            <path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" pathLength="1" />
+            <path d="M11 4h2" pathLength="1" />
+            <path d="M12 17v.01" pathLength="1" />
+        </svg>
+    </div>
     <div class="text">
         <h1 class="topSectionUpElasticAnimation">Antoine<span class="underscore">_ </span>Favereau</h1>
         <p class="topSectionUpElasticAnimation"><?= pll_e("French student in computer engineering school and freelance in web development.") ?></p>
