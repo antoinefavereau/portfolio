@@ -17,6 +17,12 @@ get_header();
             <path d="M11 4h2" pathLength="1" />
             <path d="M12 17v.01" pathLength="1" />
         </svg>
+        <svg class="backgroundSvg" width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5 6L10 18.5M6.5 8.5L3 12l3.5 3.5M17.5 8.5L21 12l-3.5 3.5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"></path>
+        </svg>
+        <svg class="backgroundSvg" width="24px" stroke-width="1.5" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 21H8c-1.105 0-2-.894-2-1.999V14c0-1-1.5-2-1.5-2S6 11 6 10V5a2 2 0 012-2h1M15 21h1c1.105 0 2-.894 2-1.999V14c0-1 1.5-2 1.5-2S18 11 18 10V5a2 2 0 00-2-2h-1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"></path>
+        </svg>
     </div>
     <div class="text">
         <h1 class="topSectionUpElasticAnimation">Antoine<span class="underscore">_ </span>Favereau</h1>
