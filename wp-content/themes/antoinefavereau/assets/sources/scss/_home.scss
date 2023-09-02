@@ -66,6 +66,25 @@ body {
     }
 }
 
+.progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-color: rgba($dark, .5);
+    z-index: 100;
+
+    .progressBarInner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        background-color: $primary;
+    }
+}
+
 #menu {
     #gamesButton {
         position: absolute;

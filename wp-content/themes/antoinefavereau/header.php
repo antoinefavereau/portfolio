@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <div class="progressBar">
+        <div class="progressBarInner"></div>
+    </div>
     <?php if (is_front_page()) : ?>
         <div id="menu">
             <div class="background"></div>

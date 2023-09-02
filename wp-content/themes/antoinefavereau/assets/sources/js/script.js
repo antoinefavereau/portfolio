@@ -1,4 +1,9 @@
 document.addEventListener("scroll", function (event) {
+    // document.querySelector('.progressBarInner').style.width = getVerticalScrollPercentage(document.body) + '%';
+    gsap.to(document.querySelector('.progressBarInner'), 0.2, {
+        width: getVerticalScrollPercentage(document.body) + '%',
+    });
+
     let lastActiveElement;
     Array.from(document.querySelectorAll('#background .parcoursLIst .item')).forEach(element => {
         if (getVerticalPosition(element) < 70) {
@@ -15,6 +20,11 @@ document.addEventListener("scroll", function (event) {
         document.querySelector('#background .verticalLine').style.setProperty('--height', '0px');
     }
 })
+
+function getVerticalScrollPercentage(elm) {
+    var p = elm.parentNode
+    return (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight) * 100
+}
 
 function getVerticalPosition(element) {
     var rect = element.getBoundingClientRect();

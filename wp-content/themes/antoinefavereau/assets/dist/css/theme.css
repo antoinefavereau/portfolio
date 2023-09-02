@@ -221,6 +221,24 @@ body.active #header #nav #menuButton div {
   background-color: #222831;
 }
 
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-color: rgba(57, 62, 70, 0.5);
+  z-index: 100;
+}
+.progressBar .progressBarInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background-color: #00ADB5;
+}
+
 #menu #gamesButton {
   position: absolute;
   left: 4rem;
