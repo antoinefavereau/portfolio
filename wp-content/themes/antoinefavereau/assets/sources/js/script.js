@@ -3,8 +3,6 @@ document.addEventListener("scroll", function (event) {
         width: getVerticalScrollPercentage(document.body) + '%',
     });
 
-    console.log((window.innerHeight || document.documentElement.clientHeight));
-
     if (window.scrollY > (window.innerHeight || document.documentElement.clientHeight)) {
         document.querySelector('.toTopButton').classList.add('active');
     } else {
