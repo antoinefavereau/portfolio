@@ -79,6 +79,9 @@ document.querySelectorAll(".cursorButton").forEach((button) => {
 });
 
 function handleMouseEnter(e) {
+    gsap.to(cursor, 0.15, {
+        scale: 1,
+    });
     isStuck = true;
     const targetBox = e.currentTarget.getBoundingClientRect();
     gsap.to(cursor, 0.2, {
