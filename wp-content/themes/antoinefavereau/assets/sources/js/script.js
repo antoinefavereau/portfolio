@@ -1,8 +1,15 @@
 document.addEventListener("scroll", function (event) {
-    // document.querySelector('.progressBarInner').style.width = getVerticalScrollPercentage(document.body) + '%';
     gsap.to(document.querySelector('.progressBarInner'), 0.2, {
         width: getVerticalScrollPercentage(document.body) + '%',
     });
+
+    console.log((window.innerHeight || document.documentElement.clientHeight));
+
+    if (window.scrollY > (window.innerHeight || document.documentElement.clientHeight)) {
+        document.querySelector('.toTopButton').classList.add('active');
+    } else {
+        document.querySelector('.toTopButton').classList.remove('active');
+    }
 
     let lastActiveElement;
     Array.from(document.querySelectorAll('#background .parcoursLIst .item')).forEach(element => {

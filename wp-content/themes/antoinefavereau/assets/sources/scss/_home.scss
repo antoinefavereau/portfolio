@@ -85,6 +85,30 @@ body {
     }
 }
 
+.toTopButton {
+    transition: all .3s ease-in-out;
+    position: fixed;
+    z-index: 100;
+    right: 4rem;
+    bottom: 3rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: $white;
+    background-color: $primary;
+    cursor: pointer;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+}
+
 #menu {
     #gamesButton {
         position: absolute;
