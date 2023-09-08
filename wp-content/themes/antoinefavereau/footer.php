@@ -56,7 +56,7 @@ if (isset($_POST['name'])) {
                 </li>
             </ul>
         </div>
-        <form action="" method="post">
+        <form action="<?= get_home_url() ?>" method="post"> <!-- get_template_directory_uri() . '/send-mail.php' -->
             <div class="field half">
                 <input type="text" name="name" id="inputName" required>
                 <label for="inputName"><?= pll_e("Name") ?></label>
