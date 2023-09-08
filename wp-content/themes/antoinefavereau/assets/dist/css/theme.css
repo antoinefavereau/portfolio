@@ -859,6 +859,10 @@ body.active #header #nav #menuButton div {
   color: #222831;
   text-decoration: none;
 }
+#projects .projectsList .item .responsiveTitle a svg {
+  display: inline;
+  color: #00ADB5;
+}
 #projects .projectsList .item .responsiveTitle::after {
   content: "";
   position: absolute;

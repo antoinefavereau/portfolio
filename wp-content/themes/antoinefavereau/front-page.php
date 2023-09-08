@@ -91,15 +91,22 @@ get_header();
         query_posts(array(
             'category_name' => "projets-" . pll_current_language()
         ));
-        if (have_posts()) : while (have_posts()) : the_post(); ?>
+        $numberCount = 0;
+        if (have_posts()) : while (have_posts()) : the_post();
+                $numberCount++; ?>
                 <li class="item">
-                    <p class="number">01</p>
-                    <h3 class="responsiveTitle"><a href="" target="_blank"><?= get_the_title() ?></a></h3>
+                    <p class="number"><?= sprintf("%02d", $numberCount) ?></p>
+                    <h3 class="responsiveTitle"><a href="" target="_blank">
+                            <?= get_the_title() ?>
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" stroke-width="3" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentcolor">
+                                <path d="M21 3h-6m6 0l-9 9m9-9v6" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M21 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h6" stroke="currentcolor" stroke-width="3" stroke-linecap="round"></path>
+                            </svg></a></h3>
                     <a href="<?= esc_url(get_field('lien')) ?>" class="imgContainer" target="_blank">
-                        <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
+                        <img class="hover" src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
                     </a>
                     <div class="description">
-                        <h3 class="title"><a href="<?= esc_url(get_field('lien')) ?>" target="_blank"><?= get_the_title() ?></a></h3>
+                        <h3 class="title hover"><a href="<?= esc_url(get_field('lien')) ?>" target="_blank"><?= get_the_title() ?></a></h3>
                         <p class="text">
                             <?= get_field('texte') ?>
                         </p>

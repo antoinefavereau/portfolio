@@ -781,6 +781,11 @@ body {
                 a {
                     color: $black;
                     text-decoration: none;
+
+                    svg {
+                        display: inline;
+                        color: $primary;
+                    }
                 }
 
                 &::after {
