@@ -22,6 +22,8 @@ body {
     }
 
     &.active {
+        overflow-y: hidden;
+
         #cursor {
             z-index: 11000;
         }

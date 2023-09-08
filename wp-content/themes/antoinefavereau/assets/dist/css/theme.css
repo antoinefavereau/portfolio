@@ -209,6 +209,9 @@ body:not(.active) #menu .background::after {
 body:not(.active) #menu .content {
   transform: translateX(100%);
 }
+body.active {
+  overflow-y: hidden;
+}
 body.active #cursor {
   z-index: 11000;
 }
