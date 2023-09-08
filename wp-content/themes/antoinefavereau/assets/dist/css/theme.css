@@ -357,6 +357,12 @@ body.active #header #nav #menuButton div {
   object-position: center;
 }
 @media screen and (max-width: 768px) {
+  #menu .background::after {
+    width: 100%;
+  }
+  #menu .content {
+    width: 100%;
+  }
   #menu .content .navList .item {
     font-size: 20px;
   }

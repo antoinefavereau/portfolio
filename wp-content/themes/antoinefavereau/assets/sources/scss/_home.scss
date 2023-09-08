@@ -198,8 +198,17 @@ body {
                 }
             }
         }
+    }
 
-        @media screen and (max-width: map-get($breakpoints, md)) {
+    @media screen and (max-width: map-get($breakpoints, md)) {
+        .background {
+            &::after {
+                width: 100%;
+            }
+        }
+
+        .content {
+            width: 100%;
 
             .navList {
                 .item {
