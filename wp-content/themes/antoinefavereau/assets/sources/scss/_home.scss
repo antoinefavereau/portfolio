@@ -107,6 +107,16 @@ body {
     &.active {
         opacity: 1;
     }
+
+    @media screen and (max-width: map-get($breakpoints, md)) {
+        right: 3rem;
+        bottom: 2rem;
+    }
+
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        right: 2rem;
+        bottom: 1rem;
+    }
 }
 
 #menu {

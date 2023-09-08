@@ -275,6 +275,18 @@ body.active #header #nav #menuButton div {
 .toTopButton.active {
   opacity: 1;
 }
+@media screen and (max-width: 768px) {
+  .toTopButton {
+    right: 3rem;
+    bottom: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .toTopButton {
+    right: 2rem;
+    bottom: 1rem;
+  }
+}
 
 #menu #gamesButton {
   position: absolute;
