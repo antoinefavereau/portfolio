@@ -273,10 +273,12 @@ body.active #header #nav #menuButton div {
   color: #EEEEEE;
   background-color: #00ADB5;
   cursor: pointer;
-  opacity: 0;
 }
-.toTopButton.active {
-  opacity: 1;
+.toTopButton:not(.active) {
+  opacity: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 @media screen and (max-width: 768px) {
   .toTopButton {

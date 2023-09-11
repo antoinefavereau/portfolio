@@ -104,10 +104,12 @@ body {
     color: $white;
     background-color: $primary;
     cursor: pointer;
-    opacity: 0;
 
-    &.active {
-        opacity: 1;
+    &:not(.active) {
+        opacity: 0;
+        -webkit-user-select: none;
+        user-select: none;
+        pointer-events: none;
     }
 
     @media screen and (max-width: map-get($breakpoints, md)) {
