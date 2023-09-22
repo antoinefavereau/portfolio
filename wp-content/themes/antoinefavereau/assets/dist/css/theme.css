@@ -259,7 +259,7 @@ body.active #header #nav #menuButton div {
 .toTopButton {
   transition: all 0.3s ease-in-out;
   position: fixed;
-  z-index: 100;
+  z-index: 10000;
   right: 4rem;
   bottom: 3rem;
   width: 60px;
