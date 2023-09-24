@@ -211,6 +211,7 @@ body:not(.active) #menu .content {
 }
 body.active {
   overflow-y: hidden;
+  max-height: 100vh;
 }
 body.active #cursor {
   z-index: 11000;
@@ -463,7 +464,6 @@ body.active #header #nav #menuButton div {
 #top {
   position: relative;
   width: 100%;
-  height: 100dvh;
   height: 100vh;
   background-color: #222831;
 }
