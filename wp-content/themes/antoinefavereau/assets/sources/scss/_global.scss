@@ -1,15 +1,15 @@
-$white: #EEEEEE;
+$white: #eeeeee;
 $black: #222831;
-$whiteBlack: #888B8F;
-$dark: #393E46;
-$primary: #00ADB5;
+$whiteBlack: #888b8f;
+$dark: #393e46;
+$primary: #00adb5;
 
 $breakpoints: (
     xxl: 1400px,
     xl: 1200px,
     lg: 992px,
     md: 768px,
-    sm: 576px
+    sm: 576px,
 );
 
 ::-moz-selection {
@@ -68,13 +68,13 @@ $breakpoints: (
     background-color: transparent;
     font-size: 20px;
     font-weight: bold;
-    padding: .8rem 3rem;
+    padding: 0.8rem 3rem;
     color: #fff;
     cursor: pointer;
 
     &::before {
         content: "";
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         position: absolute;
         inset: 0;
         transform: skew(-25deg);
@@ -85,7 +85,7 @@ $breakpoints: (
 
     &::after {
         content: "";
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         position: absolute;
         inset: 0;
         transform: skew(-25deg);
@@ -100,11 +100,10 @@ $breakpoints: (
 
     @media screen and (max-width: map-get($breakpoints, sm)) {
         font-size: 16px;
-        padding: .8rem 2rem;
+        padding: 0.8rem 2rem;
     }
 
     &:hover {
-
         &::before {
             transform: skew(-20deg);
             border-radius: 6px;
@@ -114,7 +113,7 @@ $breakpoints: (
             transform: skew(-20deg);
             border-radius: 6px;
             animation-name: buttonHover;
-            animation-duration: .4s;
+            animation-duration: 0.4s;
             animation-timing-function: ease-in-out;
         }
     }
@@ -138,6 +137,10 @@ $breakpoints: (
         margin-top: 1rem;
         max-width: 600px;
         margin-inline: auto;
+        
+        div {
+            display: inline-block;
+        }
     }
 
     @media screen and (max-width: map-get($breakpoints, md)) {

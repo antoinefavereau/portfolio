@@ -9,6 +9,8 @@ add_action('wp_enqueue_scripts', 'my_theme_styles');
 function my_theme_scripts()
 {
     wp_enqueue_script('gsap-js', get_template_directory_uri() . '/assets/dist/js/gsap.min.js');
+    wp_enqueue_script('gsap-scroll-trigger-js', get_template_directory_uri() . '/assets/dist/js/ScrollTrigger.min.js');
+    wp_enqueue_script('gsap-text-js', get_template_directory_uri() . '/assets/dist/js/TextPlugin.min.js');
     wp_enqueue_script('animations-js', get_template_directory_uri() . '/assets/sources/js/animations.js');
     wp_enqueue_script('cursor-js', get_template_directory_uri() . '/assets/sources/js/cursor.js');
     wp_enqueue_script('script-js', get_template_directory_uri() . '/assets/sources/js/script.js');

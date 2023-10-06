@@ -50,13 +50,13 @@
 }
 ::-moz-selection {
   /* Firefox */
-  color: #EEEEEE;
-  background: #00ADB5;
+  color: #eeeeee;
+  background: #00adb5;
 }
 
 ::selection {
-  color: #EEEEEE;
-  background: #00ADB5;
+  color: #eeeeee;
+  background: #00adb5;
 }
 
 #cursor {
@@ -67,13 +67,13 @@
   top: 0;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background-color: #00ADB5;
+  background-color: #00adb5;
   pointer-events: none;
   display: block;
   z-index: 1000;
 }
 #cursor.link {
-  background-color: #00ADB5;
+  background-color: #00adb5;
 }
 #cursor.link::after {
   content: "see";
@@ -113,7 +113,7 @@
   position: absolute;
   inset: 0;
   transform: skew(-25deg);
-  background-color: #00ADB5;
+  background-color: #00adb5;
   border-radius: 3px;
   z-index: -1;
 }
@@ -152,7 +152,7 @@
 .section .h2 {
   font-size: 24px;
   font-weight: 600;
-  color: #00ADB5;
+  color: #00adb5;
   text-transform: uppercase;
   text-align: center;
   margin-top: 5rem;
@@ -165,6 +165,9 @@
   margin-top: 1rem;
   max-width: 600px;
   margin-inline: auto;
+}
+.section .h1 div {
+  display: inline-block;
 }
 @media screen and (max-width: 768px) {
   .section .h2 {
@@ -193,7 +196,7 @@
 }
 
 body {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   margin: 0;
   font-family: sans-serif;
 }
@@ -254,7 +257,7 @@ body.active #header #nav #menuButton div {
   left: 0;
   bottom: 0;
   width: 0;
-  background-color: #00ADB5;
+  background-color: #00adb5;
 }
 
 .toTopButton {
@@ -271,8 +274,8 @@ body.active #header #nav #menuButton div {
   border: none;
   outline: none;
   border-radius: 30px;
-  color: #EEEEEE;
-  background-color: #00ADB5;
+  color: #eeeeee;
+  background-color: #00adb5;
   cursor: pointer;
 }
 .toTopButton:not(.active) {
@@ -316,7 +319,7 @@ body.active #header #nav #menuButton div {
   width: 400px;
   max-width: 100%;
   margin-left: auto;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.2666666667);
 }
 #menu .content {
@@ -416,7 +419,7 @@ body.active #header #nav #menuButton div {
 #header #logo svg {
   width: 50px;
   height: auto;
-  fill: #EEEEEE;
+  fill: #eeeeee;
 }
 #header #nav {
   display: flex;
@@ -436,7 +439,7 @@ body.active #header #nav #menuButton div {
   color: rgba(238, 238, 238, 0.5);
 }
 #header #nav #language a.active {
-  color: #EEEEEE;
+  color: #eeeeee;
 }
 #header #nav #menuButton {
   position: relative;
@@ -452,7 +455,7 @@ body.active #header #nav #menuButton div {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 #header #nav #menuButton div:nth-child(1) {
   top: 30%;
@@ -476,7 +479,7 @@ body.active #header #nav #menuButton div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
 #top .text h1 {
   font-size: 96px;
@@ -484,7 +487,7 @@ body.active #header #nav #menuButton div {
   text-align: center;
 }
 #top .text h1 .underscore {
-  color: #00ADB5;
+  color: #00adb5;
 }
 #top .text p {
   font-size: 24px;
@@ -528,7 +531,7 @@ body.active #header #nav #menuButton div {
 #top .backgroundContainer {
   position: absolute;
   inset: 0;
-  color: #00ADB5;
+  color: #00adb5;
 }
 #top .backgroundContainer .backgroundSvg {
   position: absolute;
@@ -578,7 +581,7 @@ body.active #header #nav #menuButton div {
   left: 0;
   width: 100%;
   height: var(--height);
-  background: #00ADB5;
+  background: #00adb5;
 }
 @media screen and (max-width: 576px) {
   #background .content .verticalLine {
@@ -620,13 +623,13 @@ body.active #header #nav #menuButton div {
   width: 20px;
   height: 20px;
   border-radius: 35px;
-  background-color: #888B8F;
-  border: 15px solid #EEEEEE;
+  background-color: #888b8f;
+  border: 15px solid #eeeeee;
 }
 #background .content .parcoursLIst .item::after {
   width: 0;
   height: 0;
-  background-color: #00ADB5;
+  background-color: #00adb5;
   border: none;
   margin-top: 15px;
 }
@@ -701,7 +704,7 @@ body.active #header #nav #menuButton div {
   }
 }
 #skills .h1 {
-  color: #EEEEEE;
+  color: #eeeeee;
 }
 #skills .skillsList {
   margin-block: 6rem;
@@ -709,7 +712,6 @@ body.active #header #nav #menuButton div {
   /* SPACING AND SIZING */
 }
 #skills .skillsList .hexGrid {
-  overflow: hidden;
   width: 60%;
   max-width: 600px;
   margin: 0 auto;
@@ -746,7 +748,7 @@ body.active #header #nav #menuButton div {
   transform: skewY(-30deg) rotate(60deg);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 #skills .skillsList .hexGrid .hex .hexIn img {
   left: 50%;
@@ -768,7 +770,7 @@ body.active #header #nav #menuButton div {
   opacity: 0;
 }
 #skills .skillsList .hexGrid .hex .hexIn:hover {
-  background-color: #00ADB5;
+  background-color: #00adb5;
 }
 #skills .skillsList .hexGrid .hex .hexIn:hover img {
   opacity: 0;
@@ -884,7 +886,7 @@ body.active #header #nav #menuButton div {
 }
 #projects .projectsList .item .responsiveTitle a svg {
   display: inline;
-  color: #00ADB5;
+  color: #00adb5;
 }
 #projects .projectsList .item .responsiveTitle::after {
   content: "";
@@ -895,7 +897,7 @@ body.active #header #nav #menuButton div {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  background-color: #00ADB5;
+  background-color: #00adb5;
 }
 #projects .projectsList .item .imgContainer {
   transition: all 0.3s ease-in-out;
@@ -941,7 +943,7 @@ body.active #header #nav #menuButton div {
   width: 30px;
   height: 8px;
   margin-left: 10px;
-  background-color: #00ADB5;
+  background-color: #00adb5;
 }
 #projects .projectsList .item .description .text {
   margin: 0;
@@ -1040,14 +1042,14 @@ body.active #header #nav #menuButton div {
 #services .servicesList .item {
   position: relative;
   padding: 1rem 3% 2rem;
-  background-color: #393E46;
-  color: #EEEEEE;
+  background-color: #393e46;
+  color: #eeeeee;
   border-radius: 1rem;
   width: 20%;
   box-shadow: 0px 0px 10px rgba(34, 40, 49, 0.4);
 }
 #services .servicesList .item:nth-child(2) {
-  border: solid 6px #00ADB5;
+  border: solid 6px #00adb5;
   transform: translateY(0.5rem);
 }
 #services .servicesList .item h3 {
@@ -1066,7 +1068,7 @@ body.active #header #nav #menuButton div {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #00ADB5;
+  background-color: #00adb5;
   border-radius: 4px;
 }
 #services .servicesList .item .infoList {
@@ -1079,7 +1081,7 @@ body.active #header #nav #menuButton div {
 }
 #services .servicesList .item .button {
   margin-top: 2rem;
-  color: #EEEEEE;
+  color: #eeeeee;
   z-index: 100;
   left: 50%;
   transform: translateX(-50%);
@@ -1131,7 +1133,7 @@ body.active #header #nav #menuButton div {
   background-color: #222831;
   padding-top: 4rem;
   padding-bottom: 2rem;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
 #footer .container {
   display: flex;
@@ -1147,7 +1149,7 @@ body.active #header #nav #menuButton div {
 #footer .container .informations h2 {
   font-size: 64px;
   font-weight: bold;
-  color: #00ADB5;
+  color: #00adb5;
   margin: 0;
   margin-bottom: 3rem;
 }
@@ -1171,7 +1173,7 @@ body.active #header #nav #menuButton div {
 #footer .container .informations ul li a span {
   margin-left: 1rem;
   padding-bottom: 3px;
-  background: linear-gradient(90deg, #EEEEEE, #EEEEEE);
+  background: linear-gradient(90deg, #eeeeee, #eeeeee);
   background-size: 100% 1.5px;
   background-position-x: 0%;
   background-position-y: calc(100% - 2px);
@@ -1216,7 +1218,7 @@ body.active #header #nav #menuButton div {
   border: none;
   outline: none;
   background-color: transparent;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
 #footer .container form .field input:focus ~ label, #footer .container form .field input:valid ~ label,
 #footer .container form .field textarea:focus ~ label,
@@ -1226,7 +1228,7 @@ body.active #header #nav #menuButton div {
 }
 #footer .container form .field input[type=submit],
 #footer .container form .field textarea[type=submit] {
-  background-color: #00ADB5;
+  background-color: #00adb5;
   border-radius: 0.5rem;
   font-size: 20px;
   cursor: pointer;
@@ -1245,7 +1247,7 @@ body.active #header #nav #menuButton div {
 }
 #footer .links a {
   position: relative;
-  color: #EEEEEE;
+  color: #eeeeee;
   text-decoration: none;
 }
 #footer .links a svg {
@@ -1290,7 +1292,7 @@ body.active #header #nav #menuButton div {
 #games h1 {
   position: relative;
   font-size: 64px;
-  color: #00ADB5;
+  color: #00adb5;
   text-align: center;
 }
 #games #gameList {
@@ -1340,7 +1342,7 @@ body.active #header #nav #menuButton div {
   left: 50%;
   transform: translate(-50%, calc(-50% + 1rem));
   margin: 0;
-  color: #00ADB5;
+  color: #00adb5;
   font-size: 40px;
   font-weight: bold;
   opacity: 0;
