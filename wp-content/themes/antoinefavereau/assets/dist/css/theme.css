@@ -347,7 +347,6 @@ body.active #header #nav #menuButton div {
   padding-left: 0;
 }
 #menu .content .navList .item {
-  transition: all 0.3s ease-in-out;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 600;
@@ -355,8 +354,11 @@ body.active #header #nav #menuButton div {
   padding: 1rem;
   cursor: pointer;
 }
+#menu .content .navList .item.animationFinished {
+  transition: all 0.2s ease-in-out;
+}
 #menu .content .navList .item:hover {
-  letter-spacing: 6px;
+  letter-spacing: 6px !important;
 }
 #menu .content .links {
   position: relative;
@@ -851,6 +853,7 @@ body.active #header #nav #menuButton div {
 
 #projects {
   position: relative;
+  overflow: hidden;
 }
 #projects .projectsList {
   position: relative;
@@ -1017,6 +1020,7 @@ body.active #header #nav #menuButton div {
 #services {
   position: relative;
   padding-bottom: 6rem;
+  overflow: hidden;
 }
 #services .background {
   position: absolute;
@@ -1134,6 +1138,7 @@ body.active #header #nav #menuButton div {
   padding-top: 4rem;
   padding-bottom: 2rem;
   color: #eeeeee;
+  overflow: hidden;
 }
 #footer .container {
   display: flex;

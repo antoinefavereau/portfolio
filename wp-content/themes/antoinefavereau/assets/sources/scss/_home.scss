@@ -178,7 +178,6 @@ body {
             padding-left: 0;
 
             .item {
-                transition: all .3s ease-in-out;
                 text-transform: uppercase;
                 font-size: 24px;
                 font-weight: 600;
@@ -186,8 +185,12 @@ body {
                 padding: 1rem;
                 cursor: pointer;
 
+                &.animationFinished {
+                    transition: all .2s ease-in-out;
+                }
+
                 &:hover {
-                    letter-spacing: 6px;
+                    letter-spacing: 6px !important;
                 }
             }
         }
@@ -771,6 +774,7 @@ body {
 
 #projects {
     position: relative;
+    overflow: hidden;
 
     .projectsList {
         position: relative;
@@ -968,6 +972,7 @@ body {
 #services {
     position: relative;
     padding-bottom: 6rem;
+    overflow: hidden;
 
     .background {
         position: absolute;
@@ -1104,6 +1109,7 @@ body {
     padding-top: 4rem;
     padding-bottom: 2rem;
     color: $white;
+    overflow: hidden;
 
     .container {
         display: flex;
