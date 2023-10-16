@@ -74,7 +74,7 @@
         </a>
         <div id="nav">
             <div id="language">
-                <?php $langs_array = pll_the_languages(array('dropdown' => 1, 'hide_current' => 0, 'raw' => 1)); ?>
+                <?php $langs_array = pll_the_languages(array('raw' => 1)); ?>
                 <?php foreach ($langs_array as $lang) : ?>
                     <a href="<?= $lang['url'] ?>" class="hover<?= ($lang['slug'] == pll_current_language()) ? " active" : "" ?>">
                         <?= $lang['slug'] ?>
