@@ -63,7 +63,7 @@
         </div>
     <?php endif; ?>
     <header id="header">
-        <a href="<?= get_home_url() ?>" id="logo" class="cursorButton">
+        <a href="<?= pll_home_url($lang = '') ?>" id="logo" class="cursorButton">
             <svg width="100" height="88" viewBox="0 0 100 88" xmlns="http://www.w3.org/2000/svg">
                 <g>
                     <path d="M57.0532 0H42.9431L0 74.1673L7.66775 87.4438H92.3286L100.002 74.1562L57.0532 0ZM16.5794 72.9642L49.9981 15.0384L83.4169 72.9642H16.5794Z" />
