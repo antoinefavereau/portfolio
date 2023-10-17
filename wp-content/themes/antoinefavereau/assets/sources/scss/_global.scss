@@ -146,10 +146,12 @@ $breakpoints: (
     }
 
     @media screen and (max-width: map-get($breakpoints, md)) {
+        padding-top: 5rem;
+
         .h2 {
             font-size: 20px;
             font-weight: 600;
-            margin-top: 5rem;
+            margin-top: 0;
         }
 
         .h1 {
@@ -161,9 +163,11 @@ $breakpoints: (
     }
 
     @media screen and (max-width: map-get($breakpoints, sm)) {
+        padding-top: 4rem;
+        
         .h2 {
             font-size: 16px;
-            margin-top: 4rem;
+            margin-top: 0;
         }
 
         .h1 {

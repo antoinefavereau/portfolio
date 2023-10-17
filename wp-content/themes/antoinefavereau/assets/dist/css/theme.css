@@ -173,10 +173,13 @@
   display: inline-block;
 }
 @media screen and (max-width: 768px) {
+  .section {
+    padding-top: 5rem;
+  }
   .section .h2 {
     font-size: 20px;
     font-weight: 600;
-    margin-top: 5rem;
+    margin-top: 0;
   }
   .section .h1 {
     font-size: 40px;
@@ -186,9 +189,12 @@
   }
 }
 @media screen and (max-width: 576px) {
+  .section {
+    padding-top: 4rem;
+  }
   .section .h2 {
     font-size: 16px;
-    margin-top: 4rem;
+    margin-top: 0;
   }
   .section .h1 {
     font-size: 32px;
