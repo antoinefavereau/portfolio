@@ -556,6 +556,16 @@ body.active #header #nav #menuButton div {
   opacity: 0.3;
   display: none;
 }
+@media screen and (max-width: 768px) {
+  #top .backgroundContainer .backgroundSvg {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #top .backgroundContainer .backgroundSvg {
+    width: 200px;
+  }
+}
 #top .backgroundContainer .backgroundSvg path {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;

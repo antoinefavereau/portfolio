@@ -420,6 +420,14 @@ body {
             opacity: 0.3;
             display: none;
 
+            @media screen and (max-width: map-get($breakpoints, md)) {
+                width: 250px;
+            }
+
+            @media screen and (max-width: map-get($breakpoints, sm)) {
+                width: 200px;
+            }
+
             path {
                 stroke-dasharray: 1;
                 stroke-dashoffset: 1;
