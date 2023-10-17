@@ -236,3 +236,12 @@ ScrollTrigger.create({
         );
     },
 });
+
+let elementTopPosition = document.querySelector("#top .topContent").getBoundingClientRect().top;
+document.addEventListener("scroll", () => {
+    let scrollTop = window.scrollY;
+    gsap.to("#top .topContent", {
+        y: scrollTop * 0.2,
+        duration: 0,
+    });
+});

@@ -149,13 +149,16 @@
   animation-timing-function: ease-in-out;
 }
 
+.section {
+  padding-top: 5rem;
+}
 .section .h2 {
   font-size: 24px;
   font-weight: 600;
   color: #00adb5;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 0;
 }
 .section .h1 {
   font-size: 48px;
@@ -472,56 +475,66 @@ body.active #header #nav #menuButton div {
   height: 100vh;
   background-color: #222831;
 }
-#top .text {
+#top .topContent {
   position: absolute;
   width: 90%;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#top .topContent .text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #eeeeee;
 }
-#top .text h1 {
+#top .topContent .text h1 {
   font-size: 96px;
-  margin-bottom: 3rem;
   text-align: center;
+  margin: 0;
 }
-#top .text h1 .underscore {
+#top .topContent .text h1 .underscore {
   color: #00adb5;
 }
-#top .text p {
+#top .topContent .text p {
   font-size: 24px;
   text-align: center;
   max-width: 600px;
   font-weight: light;
+  margin-top: 3rem;
 }
 @media screen and (max-width: 768px) {
-  #top .text h1 {
+  #top .topContent .text h1 {
     font-size: 80px;
-    margin-bottom: 2rem;
   }
-  #top .text p {
+  #top .topContent .text p {
     font-size: 20px;
     max-width: 500px;
+    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 576px) {
-  #top .text h1 {
+  #top .topContent .text h1 {
     font-size: 64px;
-    margin-bottom: 2rem;
   }
-  #top .text p {
+  #top .topContent .text p {
     font-size: 16px;
     max-width: 400px;
+    margin-top: 2rem;
   }
 }
-#top .discover {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#top .topContent .discover {
+  position: relative;
+  margin-top: 3rem;
+}
+@media screen and (max-width: 768px) {
+  #top .topContent .discover {
+    margin-top: 2rem;
+  }
 }
 #top .bottom {
   position: absolute;
@@ -551,6 +564,7 @@ body.active #header #nav #menuButton div {
 
 #background {
   position: relative;
+  background-color: #eeeeee;
 }
 #background .content {
   position: relative;
@@ -689,7 +703,8 @@ body.active #header #nav #menuButton div {
 #skills {
   position: relative;
   margin: 2rem;
-  padding: 1px;
+  padding-inline: 1px;
+  padding-bottom: 1px;
   background-color: #222831;
   border-radius: 4rem;
   overflow: hidden;

@@ -31,7 +31,6 @@ body {
 
         #menu {
             .content {
-
                 .hover,
                 .cursorButton {
                     z-index: 12000;
@@ -44,13 +43,13 @@ body {
                 z-index: 12000;
 
                 #language {
-                    color: rgba($black, .5);
+                    color: rgba($black, 0.5);
 
                     a {
-                        color: rgba($black, .5);
+                        color: rgba($black, 0.5);
 
                         &:not(:last-child)::after {
-                            color: rgba($black, .5);
+                            color: rgba($black, 0.5);
                         }
 
                         &.active {
@@ -75,7 +74,7 @@ body {
     left: 0;
     right: 0;
     height: 6px;
-    background-color: rgba($dark, .5);
+    background-color: rgba($dark, 0.5);
     z-index: 100;
 
     .progressBarInner {
@@ -89,7 +88,7 @@ body {
 }
 
 .toTopButton {
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     position: fixed;
     z-index: 10000;
     right: 4rem;
@@ -132,15 +131,15 @@ body {
     }
 
     .background {
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         position: fixed;
         inset: 0;
         z-index: 10000;
-        background-color: rgba($black, .5);
+        background-color: rgba($black, 0.5);
 
         &::after {
             content: "";
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             position: absolute;
             top: 0;
             right: 0;
@@ -154,7 +153,7 @@ body {
     }
 
     .content {
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         position: fixed;
         z-index: 12000;
         top: 0;
@@ -186,7 +185,7 @@ body {
                 cursor: pointer;
 
                 &.animationFinished {
-                    transition: all .2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
                 }
 
                 &:hover {
@@ -277,17 +276,17 @@ body {
         align-items: center;
 
         #language {
-            color: rgba($white, .5);
+            color: rgba($white, 0.5);
             font-size: 20px;
             margin-right: 1.5rem;
 
             a {
-                color: rgba($white, .5);
+                color: rgba($white, 0.5);
                 text-decoration: none;
 
                 &:not(:last-child)::after {
                     content: "|";
-                    color: rgba($white, .5);
+                    color: rgba($white, 0.5);
                 }
 
                 &.active {
@@ -330,66 +329,74 @@ body {
     height: 100vh;
     background-color: $black;
 
-    .text {
+    .topContent {
         position: absolute;
         width: 90%;
-        top: 40%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: $white;
 
-        h1 {
-            font-size: 96px;
-            margin-bottom: 3rem;
-            text-align: center;
-
-            .underscore {
-                color: $primary;
-            }
-        }
-
-        p {
-            font-size: 24px;
-            text-align: center;
-            max-width: 600px;
-            font-weight: light;
-        }
-
-        @media screen and (max-width: map-get($breakpoints, md)) {
+        .text {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $white;
 
             h1 {
-                font-size: 80px;
-                margin-bottom: 2rem;
+                font-size: 96px;
+                text-align: center;
+                margin: 0;
+
+                .underscore {
+                    color: $primary;
+                }
             }
 
             p {
-                font-size: 20px;
-                max-width: 500px;
+                font-size: 24px;
+                text-align: center;
+                max-width: 600px;
+                font-weight: light;
+                margin-top: 3rem;
+            }
+
+            @media screen and (max-width: map-get($breakpoints, md)) {
+                h1 {
+                    font-size: 80px;
+                }
+
+                p {
+                    font-size: 20px;
+                    max-width: 500px;
+                    margin-top: 2rem;
+                }
+            }
+
+            @media screen and (max-width: map-get($breakpoints, sm)) {
+                h1 {
+                    font-size: 64px;
+                }
+
+                p {
+                    font-size: 16px;
+                    max-width: 400px;
+                    margin-top: 2rem;
+                }
             }
         }
 
-        @media screen and (max-width: map-get($breakpoints, sm)) {
+        .discover {
+            position: relative;
+            margin-top: 3rem;
 
-            h1 {
-                font-size: 64px;
-                margin-bottom: 2rem;
-            }
-
-            p {
-                font-size: 16px;
-                max-width: 400px;
+            @media screen and (max-width: map-get($breakpoints, md)) {
+                margin-top: 2rem;
             }
         }
-    }
-
-    .discover {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .bottom {
@@ -410,7 +417,7 @@ body {
             width: 300px;
             height: auto;
             stroke-width: 1px;
-            opacity: .3;
+            opacity: 0.3;
             display: none;
 
             path {
@@ -424,6 +431,7 @@ body {
 
 #background {
     position: relative;
+    background-color: $white;
 
     .content {
         position: relative;
@@ -444,11 +452,11 @@ body {
             transform: translateX(-50%);
             width: 4px;
             height: 100%;
-            background: rgba($black, .3);
+            background: rgba($black, 0.3);
 
             &::after {
                 content: "";
-                transition: height .5s ease-in-out;
+                transition: height 0.5s ease-in-out;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -480,15 +488,15 @@ body {
 
             .item {
                 position: relative;
-                transition: color .3s ease-in-out;
-                color: rgba($black, .5);
+                transition: color 0.3s ease-in-out;
+                color: rgba($black, 0.5);
                 display: flex;
                 align-items: flex-start;
 
                 &::before,
                 &::after {
                     content: "";
-                    transition: all .3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                     position: absolute;
                     left: 30%;
                     top: 0;
@@ -527,7 +535,7 @@ body {
                     color: $black;
 
                     &::after {
-                        transition-delay: .5s;
+                        transition-delay: 0.5s;
                         width: 20px;
                         height: 20px;
                     }
@@ -574,7 +582,8 @@ body {
 #skills {
     position: relative;
     margin: 2rem;
-    padding: 1px;
+    padding-inline: 1px;
+    padding-bottom: 1px;
     background-color: $black;
     border-radius: 4rem;
     overflow: hidden;
@@ -698,9 +707,9 @@ body {
                 width: 24.25%;
                 padding-bottom: 28.001%;
 
-                &:nth-child(7n+5),
-                &:nth-child(7n+6),
-                &:nth-child(7n+7) {
+                &:nth-child(7n + 5),
+                &:nth-child(7n + 6),
+                &:nth-child(7n + 7) {
                     margin-top: -6.134%;
                     margin-bottom: -6.134%;
                     -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -708,27 +717,27 @@ body {
                     transform: translateX(50%) rotate(-60deg) skewY(30deg);
                 }
 
-                &:nth-child(7n+5):last-child,
-                &:nth-child(7n+6):last-child,
-                &:nth-child(7n+7):last-child {
+                &:nth-child(7n + 5):last-child,
+                &:nth-child(7n + 6):last-child,
+                &:nth-child(7n + 7):last-child {
                     margin-bottom: 0;
                 }
 
-                &:nth-child(7n+2),
-                &:nth-child(7n+6) {
+                &:nth-child(7n + 2),
+                &:nth-child(7n + 6) {
                     margin-left: 1%;
                     margin-right: 1%;
                 }
 
-                &:nth-child(7n+3) {
+                &:nth-child(7n + 3) {
                     margin-right: 1%;
                 }
 
-                &:nth-child(7n+8) {
+                &:nth-child(7n + 8) {
                     clear: left;
                 }
 
-                &:nth-child(7n+5) {
+                &:nth-child(7n + 5) {
                     clear: left;
                     margin-left: 0.5%;
                 }
@@ -738,10 +747,10 @@ body {
         @media screen and (max-width: map-get($breakpoints, sm)) {
             .hex {
                 width: 32.666%;
-                padding-bottom: 37.720%;
+                padding-bottom: 37.72%;
 
-                &:nth-child(5n+4),
-                &:nth-child(5n+5) {
+                &:nth-child(5n + 4),
+                &:nth-child(5n + 5) {
                     margin-top: -8.564%;
                     margin-bottom: -8.564%;
                     -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -749,22 +758,22 @@ body {
                     transform: translateX(50%) rotate(-60deg) skewY(30deg);
                 }
 
-                &:nth-child(5n+4):last-child,
-                &:nth-child(5n+5):last-child {
+                &:nth-child(5n + 4):last-child,
+                &:nth-child(5n + 5):last-child {
                     margin-bottom: 0;
                 }
 
-                &:nth-child(5n+4) {
+                &:nth-child(5n + 4) {
                     margin-right: 1%;
                     margin-left: 0.5%;
                 }
 
-                &:nth-child(5n+2) {
+                &:nth-child(5n + 2) {
                     margin-left: 1%;
                     margin-right: 1%;
                 }
 
-                &:nth-child(5n+6) {
+                &:nth-child(5n + 6) {
                     clear: left;
                 }
             }
@@ -828,7 +837,7 @@ body {
             }
 
             .imgContainer {
-                transition: all .3s ease-in-out;
+                transition: all 0.3s ease-in-out;
                 position: absolute;
                 align-self: center;
                 width: 45%;
@@ -898,7 +907,6 @@ body {
                 padding-block: 3rem;
 
                 .description {
-
                     .title {
                         font-size: 40px;
                         margin-bottom: 1rem;
@@ -1003,11 +1011,11 @@ body {
             color: $white;
             border-radius: 1rem;
             width: 20%;
-            box-shadow: 0px 0px 10px rgba($black, .4);
+            box-shadow: 0px 0px 10px rgba($black, 0.4);
 
             &:nth-child(2) {
                 border: solid 6px $primary;
-                transform: translateY(.5rem);
+                transform: translateY(0.5rem);
             }
 
             h3 {
@@ -1037,7 +1045,7 @@ body {
                 padding-left: 1rem;
 
                 li {
-                    margin-top: .8rem;
+                    margin-top: 0.8rem;
                 }
             }
 
@@ -1058,7 +1066,7 @@ body {
 
                 h3 {
                     font-size: 20px;
-                    margin-top: .8rem;
+                    margin-top: 0.8rem;
                 }
 
                 .infoList {
@@ -1066,7 +1074,7 @@ body {
                     margin-top: 1.5rem;
 
                     li {
-                        margin-top: .6rem;
+                        margin-top: 0.6rem;
                     }
                 }
 
@@ -1140,7 +1148,7 @@ body {
                 padding-left: 0;
 
                 li {
-                    margin-bottom: .5rem;
+                    margin-bottom: 0.5rem;
 
                     a {
                         color: inherit;
@@ -1160,7 +1168,7 @@ body {
 
                         &:hover span {
                             animation-name: underlineHover;
-                            animation-duration: .6s;
+                            animation-duration: 0.6s;
                             animation-timing-function: ease-in-out;
                         }
                     }
@@ -1178,8 +1186,8 @@ body {
 
             .field {
                 position: relative;
-                background-color: rgba($white, .1);
-                border-radius: .5rem;
+                background-color: rgba($white, 0.1);
+                border-radius: 0.5rem;
                 grid-column: span 2;
                 min-width: 0;
 
@@ -1188,7 +1196,7 @@ body {
                 }
 
                 label {
-                    transition: all .3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                     position: absolute;
                     left: 1rem;
                     top: 1rem;
@@ -1206,20 +1214,20 @@ body {
                     background-color: transparent;
                     color: $white;
 
-                    &:focus~label,
-                    &:valid~label {
+                    &:focus ~ label,
+                    &:valid ~ label {
                         transform: translateY(calc(-1rem - 50%));
                         font-size: 14px;
                     }
 
-                    &[type=submit] {
+                    &[type="submit"] {
                         background-color: $primary;
-                        border-radius: .5rem;
+                        border-radius: 0.5rem;
                         font-size: 20px;
                         cursor: pointer;
 
                         &:hover {
-                            filter: brightness(.9);
+                            filter: brightness(0.9);
                         }
                     }
                 }

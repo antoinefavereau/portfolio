@@ -24,11 +24,13 @@ get_header();
             <path d="M9 21H8c-1.105 0-2-.894-2-1.999V14c0-1-1.5-2-1.5-2S6 11 6 10V5a2 2 0 012-2h1M15 21h1c1.105 0 2-.894 2-1.999V14c0-1 1.5-2 1.5-2S18 11 18 10V5a2 2 0 00-2-2h-1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"></path>
         </svg>
     </div>
-    <div class="text">
-        <h1 class="topSectionUpElasticAnimation">Antoine<span class="underscore">_ </span>Favereau</h1>
-        <p class="topSectionUpElasticAnimation"><?= pll_e("French student in computer engineering school and freelance in web development.") ?></p>
+    <div class="topContent">
+        <div class="text">
+            <h1 class="topSectionUpElasticAnimation">Antoine<span class="underscore">_ </span>Favereau</h1>
+            <p class="topSectionUpElasticAnimation"><?= pll_e("French student in computer engineering school and freelance in web development.") ?></p>
+        </div>
+        <button class="discover button scrollToButton topSectionUpElasticAnimation" data-target="#background"><?= pll_e("discover") ?></button>
     </div>
-    <button class="discover button scrollToButton topSectionUpElasticAnimation" data-target="#background"><?= pll_e("discover") ?></button>
     <svg class="bottom" width="1920" height="100" viewBox="0 0 1920 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0.000183105C960 100 960 100 1920 0.000183105V100H0V0.000183105Z" fill="#EEEEEE" />
         <path d="M-2 23C963 113.5 966.5 114.5 1921 24.5" stroke="#222831" stroke-opacity="0.3" stroke-width="4" />
