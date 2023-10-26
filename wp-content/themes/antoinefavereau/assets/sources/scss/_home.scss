@@ -634,6 +634,7 @@ body {
                 -webkit-transform: rotate(-60deg) skewY(30deg);
                 -ms-transform: rotate(-60deg) skewY(30deg);
                 transform: rotate(-60deg) skewY(30deg);
+                pointer-events: none;
 
                 * {
                     position: absolute;
@@ -653,6 +654,7 @@ body {
                     -webkit-backface-visibility: hidden;
                     backface-visibility: hidden;
                     background-color: $white;
+                    pointer-events: all;
 
                     img {
                         left: 50%;

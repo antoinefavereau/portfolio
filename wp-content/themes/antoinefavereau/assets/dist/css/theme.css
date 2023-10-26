@@ -764,6 +764,7 @@ body.active #header #nav #menuButton div {
   -webkit-transform: rotate(-60deg) skewY(30deg);
   -ms-transform: rotate(-60deg) skewY(30deg);
   transform: rotate(-60deg) skewY(30deg);
+  pointer-events: none;
 }
 #skills .skillsList .hexGrid .hex * {
   position: absolute;
@@ -782,6 +783,7 @@ body.active #header #nav #menuButton div {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #eeeeee;
+  pointer-events: all;
 }
 #skills .skillsList .hexGrid .hex .hexIn img {
   left: 50%;
