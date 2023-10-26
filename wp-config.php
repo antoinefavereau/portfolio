@@ -1,5 +1,5 @@
 <?php
-define( 'WP_CACHE', true );
+
 
 //Begin Really Simple SSL session cookie settings
 @ini_set('session.cookie_httponly', true);
