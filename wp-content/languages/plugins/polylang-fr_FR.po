@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-02 10:54:05+0000\n"
+"PO-Revision-Date: 2023-10-30 12:41:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.9\n"
+"X-Generator: GlotPress/4.0.0-alpha.11\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - Polylang - Stable (latest release)\n"
 
@@ -36,7 +36,7 @@ msgstr "Les médias ne sont pas traduits"
 
 #: modules/site-health/admin-site-health.php:163
 msgid "The front page URL contains the page name or page id instead of the language code"
-msgstr "L’URL de la page d'accueil contient le nom ou l’ID de la page au lieu du code de langue."
+msgstr "L’URL de la page d’accueil contient le nom ou l’ID de la page au lieu du code de langue."
 
 #: modules/site-health/admin-site-health.php:140
 msgid "Display URL language information for default language"
@@ -131,7 +131,7 @@ msgstr "Indéfini"
 #. translators: placeholder is the flag image
 #: modules/site-health/admin-site-health.php:297
 msgid "Flag used in the language switcher: %s"
-msgstr "Drapeau utilisé dans la liste des langue : %s"
+msgstr "Drapeau utilisé dans la liste des langues : %s"
 
 #. translators: placeholder is the language name
 #: modules/site-health/admin-site-health.php:295
@@ -1892,11 +1892,11 @@ msgstr "L’URL de la page d’accueil contient le code de la langue au lieu du 
 
 #: modules/site-health/admin-site-health.php:133 settings/settings-url.php:161
 msgid "Keep /language/ in pretty permalinks"
-msgstr "Conserver /language/ dans les permaliens"
+msgstr "Conserver /langage/ dans les permaliens"
 
 #: modules/site-health/admin-site-health.php:130 settings/settings-url.php:150
 msgid "Remove /language/ in pretty permalinks"
-msgstr "Supprimer /language/ dans les permaliens"
+msgstr "Retirer /langage/ dans les permaliens"
 
 #: modules/site-health/admin-site-health.php:137 settings/settings-url.php:128
 msgid "Hide URL language information for default language"
