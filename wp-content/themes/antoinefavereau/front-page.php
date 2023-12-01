@@ -108,7 +108,7 @@ get_header();
                         <img class="hover" src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
                     </a>
                     <div class="description">
-                        <h3 class="title hover"><a href="<?= esc_url(get_field('lien')) ?>" target="_blank"><?= get_the_title() ?></a></h3>
+                        <h3 class="title"><a class="hover" href="<?= esc_url(get_field('lien')) ?>" target="_blank"><?= get_the_title() ?></a></h3>
                         <p class="text">
                             <?= get_field('texte') ?>
                         </p>

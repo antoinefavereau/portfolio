@@ -55,7 +55,9 @@ $breakpoints: (
 }
 
 .hover,
-.cursorButton {
+.cursorButton,
+.hoverIndex,
+.button {
     position: relative;
     z-index: 2000;
 }
@@ -164,7 +166,7 @@ $breakpoints: (
 
     @media screen and (max-width: map-get($breakpoints, sm)) {
         padding-top: 4rem;
-        
+
         .h2 {
             font-size: 16px;
             margin-top: 0;

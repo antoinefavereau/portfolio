@@ -28,7 +28,7 @@ if (isset($_POST['name'])) {
             <h2><?= pll_e("Contact me") ?></h2>
             <p class="text"><?= pll_e("You have an interesting project and want to work with me ?") ?></p>
             <ul>
-                <li>
+                <li class="hoverIndex">
                     <a href="mailto:antoinefavereau45@gmail.com" class="hover">
                         <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.6666 15L20 20.8333L28.3333 15" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -37,7 +37,7 @@ if (isset($_POST['name'])) {
                         <span>antoinefavereau45@gmail.com</span>
                     </a>
                 </li>
-                <li>
+                <li class="hoverIndex">
                     <a href="tel:+33677455362" class="hover">
                         <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M30.1967 24.5035L23.3334 25.8335C18.6967 23.5068 15.8334 20.8335 14.1667 16.6668L15.45 9.7835L13.025 3.3335H6.77336C4.89336 3.3335 3.41336 4.88683 3.69503 6.74516C4.39503 11.3835 6.4617 19.7952 12.5 25.8335C18.8417 32.1752 27.9767 34.9268 33.0034 36.0218C34.945 36.4435 36.6667 34.9302 36.6667 32.9418V26.9685L30.1967 24.5035Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -45,7 +45,7 @@ if (isset($_POST['name'])) {
                         <span>+33 6 77 45 53 62</span>
                     </a>
                 </li>
-                <li>
+                <li class="hoverIndex">
                     <a href="https://goo.gl/maps/kectoAHXbPVfRFMw7" class="hover" target="_blank">
                         <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M33.3333 16.6668C33.3333 24.0302 20 36.6668 20 36.6668C20 36.6668 6.66663 24.0302 6.66663 16.6668C6.66663 13.1306 8.07138 9.73922 10.5719 7.23874C13.0724 4.73825 16.4637 3.3335 20 3.3335C23.5362 3.3335 26.9276 4.73825 29.428 7.23874C31.9285 9.73922 33.3333 13.1306 33.3333 16.6668Z" stroke="currentcolor" stroke-width="1.5" />
@@ -79,7 +79,7 @@ if (isset($_POST['name'])) {
                 <label for="inputMessage"><?= pll_e("Message") ?></label>
             </div>
             <div class="field">
-                <input type="submit" value="<?= pll_e("send") ?>">
+                <input class="hoverIndex" type="submit" value="<?= pll_e("send") ?>">
             </div>
         </form>
     </div>

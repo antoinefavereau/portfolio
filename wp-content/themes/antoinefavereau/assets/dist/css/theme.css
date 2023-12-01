@@ -90,7 +90,9 @@
 }
 
 .hover,
-.cursorButton {
+.cursorButton,
+.hoverIndex,
+.button {
   position: relative;
   z-index: 2000;
 }
