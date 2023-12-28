@@ -72,10 +72,10 @@ get_header();
             ));
             if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <li class="hex">
-                        <div class="hexIn">
+                        <a <?= get_field('lien') ? 'href="' . esc_url(get_field('lien')) . '"' : '' ?> class="hexIn">
                             <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
                             <p><?= get_the_title() ?></p>
-                        </div>
+                        </a>
                     </li>
             <?php endwhile;
             endif;
