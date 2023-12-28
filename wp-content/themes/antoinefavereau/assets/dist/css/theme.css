@@ -296,6 +296,9 @@ body.active #header #nav #menuButton div {
   user-select: none;
   pointer-events: none;
 }
+.toTopButton:hover {
+  transform: scale(1.1);
+}
 @media screen and (max-width: 768px) {
   .toTopButton {
     right: 3rem;
