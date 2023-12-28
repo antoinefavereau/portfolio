@@ -24,6 +24,7 @@ body {
     &.active {
         overflow-y: hidden;
         max-height: 100vh;
+        max-height: 100svh;
 
         #cursor {
             z-index: 11000;
@@ -327,6 +328,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
+    height: 100svh;
     background-color: $black;
 
     .topContent {
