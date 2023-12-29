@@ -554,7 +554,7 @@ body.active #header #nav #menuButton div {
   width: 100%;
   height: auto;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
 }
 #top .backgroundContainer {
   position: absolute;
