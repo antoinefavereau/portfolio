@@ -65,11 +65,6 @@ document.querySelectorAll("#services .servicesList .item .button").forEach((elem
     });
 });
 
-document.querySelector("#footer form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    alert("Not available yet, please use my email address instead.");
-});
-
 function menuAnitmation() {
     document.querySelectorAll("#menu .navList .item").forEach((element) => {
         element.classList.remove("animationFinished");
@@ -126,3 +121,29 @@ function backgroundSvgAnimation() {
         randomSvg.style.display = "none";
     }, 4000);
 }
+
+const contactForm = document.querySelector("#contactForm");
+contactForm?.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let action = this.action;
+    let method = this.method;
+    let data = new FormData(this);
+    data.append("action", "contact_form");
+
+    fetch(action, {
+        method: method,
+        body: data,
+    })
+        .then(async (response) => {
+            if (response.ok) {
+                contactForm.reset();
+                alert(this.validationText.value);
+            } else {
+                console.log("error");
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+});

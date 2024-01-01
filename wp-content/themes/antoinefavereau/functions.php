@@ -26,6 +26,36 @@ function add_defer_attribute($tag, $handle)
 
 add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
 
+function handle_contact_form()
+{
+    if (!isset($_POST['name']) || !isset($_POST['mail']) || !isset($_POST['subject']) || !isset($_POST['message'])) {
+        exit;
+    }
+
+    $name = $_POST['name'];
+    $email = $_POST['mail'];
+    $subject = "SITE : " . $_POST['subject'];
+    $message = $_POST['message'];
+
+    //php mailer variables
+    $to = "antoinefavereau45@gmail.com"; //get_option('admin_email');
+    $headers = 'From: ' . $email . "\r\n" .
+        'Reply-To: ' . $email . "\r\n";
+
+    try {
+        $sent = wp_mail($to, $subject, strip_tags($message), $headers);
+    } catch (\Throwable $th) {
+        wp_send_json_error($th);
+    }
+
+    if ($sent) {
+        wp_send_json_success();
+    } else {
+        wp_send_json_error();
+    }
+}
+add_action('wp_ajax_contact_form', 'handle_contact_form');
+add_action('wp_ajax_nopriv_contact_form', 'handle_contact_form');
 
 // tranlations
 
@@ -66,3 +96,4 @@ pll_register_string("antoinefavereau", "Mail");
 pll_register_string("antoinefavereau", "Subject");
 pll_register_string("antoinefavereau", "Message");
 pll_register_string("antoinefavereau", "send");
+pll_register_string("antoinefavereau", "Mail sent successfully");

@@ -56,7 +56,8 @@ if (isset($_POST['name'])) {
                 </li>
             </ul>
         </div>
-        <form action="<?= get_home_url() ?>" method="post"> <!-- get_template_directory_uri() . '/send-mail.php' -->
+        <form id="contactForm" action="<?php echo esc_url(admin_url('admin-ajax.php')); ?>" method="post">
+        <input type="hidden" name="validationText" value="<?= pll_e("Mail sent successfully") ?>">
             <div class="field half">
                 <input type="text" name="name" id="inputName" required>
                 <label for="inputName"><?= pll_e("Name") ?></label>
