@@ -1222,7 +1222,8 @@ body {
                 }
 
                 input,
-                textarea {
+                textarea,
+                button[type="submit"] {
                     width: -webkit-fill-available;
                     padding: 1rem;
                     border: none;
@@ -1244,6 +1245,19 @@ body {
 
                         &:hover {
                             filter: brightness(0.9);
+                        }
+                    }
+                }
+
+                button[type="submit"] {
+                    &:not(.loading) {
+                        .loadingIcon {
+                            display: none;
+                        }
+                    }
+                    &.loading {
+                        .text {
+                            display: none;
                         }
                     }
                 }

@@ -126,6 +126,9 @@ const contactForm = document.querySelector("#contactForm");
 contactForm?.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    contactForm.querySelector(".submit").classList.add("loading");
+    contactForm.querySelector(".submit").setAttribute("disabled", "disabled");
+
     let action = this.action;
     let method = this.method;
     let data = new FormData(this);
@@ -137,13 +140,26 @@ contactForm?.addEventListener("submit", function (event) {
     })
         .then(async (response) => {
             if (response.ok) {
-                contactForm.reset();
-                alert(this.validationText.value);
+                const json = await response.json();
+                if (json.success) {
+                    contactForm.reset();
+                    contactForm.querySelector(".submit").classList.remove("loading");
+                    contactForm.querySelector(".submit").removeAttribute("disabled");
+                    alert(this.validationText.value);
+                } else {
+                    console.log(json.data.message);
+                    contactForm.querySelector(".submit").classList.remove("loading");
+                    contactForm.querySelector(".submit").removeAttribute("disabled");
+                }
             } else {
                 console.log("error");
+                contactForm.querySelector(".submit").classList.remove("loading");
+                contactForm.querySelector(".submit").removeAttribute("disabled");
             }
         })
         .catch((error) => {
             console.log(error);
+            contactForm.querySelector(".submit").classList.remove("loading");
+            contactForm.querySelector(".submit").removeAttribute("disabled");
         });
 });

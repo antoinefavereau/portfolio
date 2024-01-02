@@ -1257,7 +1257,8 @@ body.active #header #nav #menuButton div {
   pointer-events: none;
 }
 #footer .container form .field input,
-#footer .container form .field textarea {
+#footer .container form .field textarea,
+#footer .container form .field button[type=submit] {
   width: -webkit-fill-available;
   padding: 1rem;
   border: none;
@@ -1267,20 +1268,30 @@ body.active #header #nav #menuButton div {
 }
 #footer .container form .field input:focus ~ label, #footer .container form .field input:valid ~ label,
 #footer .container form .field textarea:focus ~ label,
-#footer .container form .field textarea:valid ~ label {
+#footer .container form .field textarea:valid ~ label,
+#footer .container form .field button[type=submit]:focus ~ label,
+#footer .container form .field button[type=submit]:valid ~ label {
   transform: translateY(calc(-1rem - 50%));
   font-size: 14px;
 }
 #footer .container form .field input[type=submit],
-#footer .container form .field textarea[type=submit] {
+#footer .container form .field textarea[type=submit],
+#footer .container form .field button[type=submit][type=submit] {
   background-color: #00adb5;
   border-radius: 0.5rem;
   font-size: 20px;
   cursor: pointer;
 }
 #footer .container form .field input[type=submit]:hover,
-#footer .container form .field textarea[type=submit]:hover {
+#footer .container form .field textarea[type=submit]:hover,
+#footer .container form .field button[type=submit][type=submit]:hover {
   filter: brightness(0.9);
+}
+#footer .container form .field button[type=submit]:not(.loading) .loadingIcon {
+  display: none;
+}
+#footer .container form .field button[type=submit].loading .text {
+  display: none;
 }
 #footer .links {
   position: relative;

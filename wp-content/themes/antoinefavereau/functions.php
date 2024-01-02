@@ -1,5 +1,13 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/librairies/PHPMailer/src/Exception.php';
+require __DIR__ . '/librairies/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/librairies/PHPMailer/src/SMTP.php';
+
+
 function my_theme_styles()
 {
     wp_enqueue_style('theme-css', get_template_directory_uri() . '/assets/dist/css/theme.css');
@@ -29,6 +37,7 @@ add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
 function handle_contact_form()
 {
     if (!isset($_POST['name']) || !isset($_POST['mail']) || !isset($_POST['subject']) || !isset($_POST['message'])) {
+        wp_send_json_error(["message" => "Missing data"]);
         exit;
     }
 
@@ -37,22 +46,29 @@ function handle_contact_form()
     $subject = "SITE : " . $_POST['subject'];
     $message = $_POST['message'];
 
-    //php mailer variables
-    $to = "antoinefavereau45@gmail.com"; //get_option('admin_email');
-    $headers = 'From: ' . $email . "\r\n" .
-        'Reply-To: ' . $email . "\r\n";
-
     try {
-        $sent = wp_mail($to, $subject, strip_tags($message), $headers);
-    } catch (\Throwable $th) {
-        wp_send_json_error($th);
-    }
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'antoinefavereau45@gmail.com';
+        $mail->Password   = 'obia uxye uuzz lsjv';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
 
-    if ($sent) {
-        wp_send_json_success();
-    } else {
-        wp_send_json_error();
+        $mail->setFrom($email, $name);
+        $mail->addAddress('antoinefavereau45@gmail.com');
+        $mail->Subject = "PORTFOLIO: ".$subject;
+        $mail->Body = $message;
+
+        if (!$mail->send()) {
+            wp_send_json_error(["message" => $mail->ErrorInfo]);
+        }
+    } catch (Exception $e) {
+        wp_send_json_error(["message" => $e->getMessage()]);
     }
+    wp_send_json_success();
+    exit;
 }
 add_action('wp_ajax_contact_form', 'handle_contact_form');
 add_action('wp_ajax_nopriv_contact_form', 'handle_contact_form');
