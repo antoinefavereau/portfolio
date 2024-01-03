@@ -1367,11 +1367,11 @@ msgstr "Non sembra esserci un file %s. È necessario perché l'installazione pos
 msgid "The date and time the preferences were updated."
 msgstr "Le preferenze di data e ora sono state aggiornate."
 
-#: wp-includes/theme.php:4141
+#: wp-includes/theme.php:4104
 msgid "Whether the theme disables generated layout styles."
 msgstr "Se il tema disabilita gli stili di layout generati."
 
-#: wp-includes/theme.php:3951
+#: wp-includes/theme.php:3914
 msgid "Whether a theme uses block-based template parts."
 msgstr "Se un tema utilizza parti di template basate su blocchi."
 
@@ -1569,7 +1569,7 @@ msgstr "Errore nell'evento Cron non programmato per l'hook: %1$s, codice di erro
 msgid "Cron reschedule event error for hook: %1$s, Error code: %2$s, Error message: %3$s, Data: %4$s"
 msgstr "Errore nell'evento Cron di riprogrammazione per l'hook: %1$s, codice di errore: %2$s, messaggio di errore: %3$s, dati: %4$s"
 
-#: wp-includes/theme.php:3944
+#: wp-includes/theme.php:3907
 msgid "Whether a theme uses block-based templates."
 msgstr "Se un tema utilizza template basati sui blocchi."
 
@@ -5194,11 +5194,11 @@ msgstr "Versione dell'API del blocco."
 msgid "Invalid parameters."
 msgstr "Parametri non validi."
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1668
+#: wp-includes/rest-api/class-wp-rest-server.php:1675
 msgid "The requested route does not support batch requests."
 msgstr "Il percorso richiesto non supporta richieste in batch."
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1618
+#: wp-includes/rest-api/class-wp-rest-server.php:1625
 msgid "Could not parse the path."
 msgstr "Impossibile analizzare il percorso."
 
@@ -5206,7 +5206,7 @@ msgstr "Impossibile analizzare il percorso."
 msgid "The handler for the route is invalid."
 msgstr "Il gestore del percorso non è valido."
 
-#: wp-includes/theme.php:2717
+#: wp-includes/theme.php:2680
 msgid "You need to pass an array of post formats."
 msgstr "Devi passare un array di formati degli articoli."
 
@@ -5335,7 +5335,7 @@ msgid "Please use %s to add new schema properties."
 msgstr "Usa %s per aggiungere nuove proprietà dello schema."
 
 #. translators: %s: prepare_callback
-#: wp-includes/theme.php:3352
+#: wp-includes/theme.php:3315
 msgid "The \"%s\" must be a callable function."
 msgstr "\"%s\" deve essere una funzione richiamabile."
 
@@ -6140,44 +6140,44 @@ msgstr "Quando si registra un valore meta predefinito, i dati devono corrisponde
 msgid "RSS Feed"
 msgstr "Feed RSS"
 
-#: wp-includes/theme.php:4277
+#: wp-includes/theme.php:4240
 msgid "The post types that support thumbnails or true if all post types are supported."
 msgstr "Il tipo di articolo che supporta le miniature oppure il valore true se tutti i tipi di articolo sono supportati."
 
-#: wp-includes/theme.php:3339
+#: wp-includes/theme.php:3302
 msgid "When registering an \"object\" feature, the feature's schema must include the \"properties\" keyword."
 msgstr "Quando si registra una caratteristica \"object\", lo schema della caratteristica deve includere la parola chiave \"properties\"."
 
-#: wp-includes/theme.php:3332
+#: wp-includes/theme.php:3295
 msgid "When registering an \"array\" feature, the feature's schema must include the \"items\" keyword."
 msgstr "Quando si registra una caratteristica \"array\", lo schema della caratteristica deve includere la parola chiave \"items\"."
 
-#: wp-includes/theme.php:3325
+#: wp-includes/theme.php:3288
 msgid "When registering an \"array\" or \"object\" feature to show in the REST API, the feature's schema must also be defined."
 msgstr "Quando si registra una caratteristica \"array\" o \"object\" da visualizzare nella REST API, lo schema della caratteristica deve essere definito."
 
-#: wp-includes/theme.php:3317
+#: wp-includes/theme.php:3280
 msgid "When registering a \"variadic\" theme feature, the \"type\" must be an \"array\"."
 msgstr "Quando si registra una caratteristica del tema \"variadic\", il \"type\" deve essere un \"array\"."
 
-#: wp-includes/theme.php:3310
+#: wp-includes/theme.php:3273
 msgid "The feature \"type\" is not valid JSON Schema type."
 msgstr "La caratteristica \"type\", non è un tipo di schema JSON valido."
 
 #. translators: %s: Theme name.
-#: wp-includes/theme.php:1013
+#: wp-includes/theme.php:976
 msgctxt "theme"
 msgid "<strong>Error:</strong> Current WordPress version does not meet minimum requirements for %s."
 msgstr "<strong>Errore:</strong> la versione attuale di WordPress non possiede i requisiti minimi per %s."
 
 #. translators: %s: Theme name.
-#: wp-includes/theme.php:1004
+#: wp-includes/theme.php:967
 msgctxt "theme"
 msgid "<strong>Error:</strong> Current PHP version does not meet minimum requirements for %s."
 msgstr "<strong>Errore:</strong> la versione attuale di PHP non possiede i requisiti minimi per %s."
 
 #. translators: %s: Theme name.
-#: wp-includes/theme.php:995
+#: wp-includes/theme.php:958
 msgctxt "theme"
 msgid "<strong>Error:</strong> Current WordPress and PHP versions do not meet minimum requirements for %s."
 msgstr "<strong>Errore:</strong> le versioni attuali di WordPress e di PHP non possiedono i requisiti minimi per %s."
@@ -6420,71 +6420,71 @@ msgstr "Limita i risultati basati sulle relazioni tra tassonomie multiple."
 msgid "The \"%1$s\" taxonomy \"%2$s\" property (%3$s) conflicts with an existing property on the REST API Posts Controller. Specify a custom \"rest_base\" when registering the taxonomy to avoid this error."
 msgstr "La proprietà \"%2$s\" della tassonomia \"%1$s\" (%3$s) va in conflitto con una proprietà già esistente nel REST API Posts Controller. Per evitare questo errore, specifica una \"rest_base\" personalizzata durante la registrazione della tassonomia."
 
-#: wp-includes/theme.php:4305
+#: wp-includes/theme.php:4268
 msgid "Whether theme opts in to default WordPress block styles for viewing."
 msgstr "Se il tema utilizza o meno gli stili dei blocchi predefiniti di WordPress per la visualizzazione."
 
-#: wp-includes/theme.php:4298
+#: wp-includes/theme.php:4261
 msgid "Whether the theme can manage the document title tag."
 msgstr "Se il tema può gestire o meno il tag title del documento."
 
-#: wp-includes/theme.php:4231
+#: wp-includes/theme.php:4194
 msgid "Allows use of HTML5 markup for search forms, comment forms, comment lists, gallery, and caption."
 msgstr "Permette l'uso di markup HTML5 per moduli di ricerca, moduli di commento, liste dei commenti, gallerie e didascalie."
 
-#: wp-includes/theme.php:4223
+#: wp-includes/theme.php:4186
 msgid "Whether theme opts in to the editor styles CSS wrapper."
 msgstr "Se il tema opta per l'editor del wrapper degli stili CSS."
 
-#: wp-includes/theme.php:4199
+#: wp-includes/theme.php:4162
 msgid "Custom gradient presets if defined by the theme."
 msgstr "Impostazioni predefinite personalizzate per il gradiente, se definite dal tema."
 
-#: wp-includes/theme.php:4174
+#: wp-includes/theme.php:4137
 msgid "Custom font sizes if defined by the theme."
 msgstr "Dimensioni personalizzate del font, se definita dal tema."
 
-#: wp-includes/theme.php:4149
+#: wp-includes/theme.php:4112
 msgid "Custom color palette if defined by the theme."
 msgstr "Palette dei colori personalizzata, se definita dal tema."
 
-#: wp-includes/theme.php:4134
+#: wp-includes/theme.php:4097
 msgid "Whether the theme disables custom gradients."
 msgstr "Se il tema disabilita i gradienti personalizzati."
 
-#: wp-includes/theme.php:4127
+#: wp-includes/theme.php:4090
 msgid "Whether the theme disables custom font sizes."
 msgstr "Se il tema disabilita le dimensioni personalizzate del font."
 
-#: wp-includes/theme.php:4120
+#: wp-includes/theme.php:4083
 msgid "Whether the theme disables custom colors."
 msgstr "Se il tema disabilita i colori personalizzati."
 
-#: wp-includes/theme.php:4113
+#: wp-includes/theme.php:4076
 msgid "Whether theme opts in to the dark editor style UI."
 msgstr "Se il tema opta per lo stile UI scuro dell'editor."
 
-#: wp-includes/theme.php:4106
+#: wp-includes/theme.php:4069
 msgid "Whether the theme enables Selective Refresh for Widgets being managed with the Customizer."
 msgstr "Se il tema abilita il ricaricamento selettivo per i widget gestito in personalizza."
 
-#: wp-includes/theme.php:4073
+#: wp-includes/theme.php:4036
 msgid "Custom logo if defined by the theme."
 msgstr "Logo personalizzato, se definito dal tema."
 
-#: wp-includes/theme.php:3958
+#: wp-includes/theme.php:3921
 msgid "Custom background if defined by the theme."
 msgstr "Sfondo personalizzato, se definito dal tema."
 
-#: wp-includes/theme.php:4028
+#: wp-includes/theme.php:3991
 msgid "Custom header if defined by the theme."
 msgstr "Header personalizzato, se definito dal tema."
 
-#: wp-includes/theme.php:3937
+#: wp-includes/theme.php:3900
 msgid "Whether posts and comments RSS feed links are added to head."
 msgstr "Se i link ai feed RSS di articoli e commenti vengono aggiunti nell'head."
 
-#: wp-includes/theme.php:3930
+#: wp-includes/theme.php:3893
 msgid "Whether theme opts in to wide alignment CSS class."
 msgstr "Indica se il tema sceglie una classe CSS con ampio allineamento."
 
@@ -7615,7 +7615,7 @@ msgstr "Attributi del blocco."
 msgid "Unique registered name for the block."
 msgstr "Nome univoco registrato per il blocco."
 
-#: wp-includes/theme.php:4291
+#: wp-includes/theme.php:4254
 msgid "Whether the theme supports responsive embedded content."
 msgstr "Se il tema supporta contenuti incorporati responsive."
 
@@ -7628,7 +7628,7 @@ msgstr "%s da ora"
 msgid "Limit result set to themes assigned one or more statuses."
 msgstr "Limita il risultato impostato sui temi assegnati ad uno o più stati."
 
-#: wp-includes/theme.php:4254
+#: wp-includes/theme.php:4217
 msgid "Post formats supported."
 msgstr "Formati articolo supportati."
 
@@ -9981,60 +9981,60 @@ msgstr "Template di pagina non valido."
 msgid "Invalid date."
 msgstr "Data non valida."
 
-#: wp-includes/theme.php:1732
+#: wp-includes/theme.php:1695
 msgid "Video is playing."
 msgstr "Il video è in riproduzione."
 
-#: wp-includes/theme.php:1731
+#: wp-includes/theme.php:1694
 msgid "Video is paused."
 msgstr "Il video è in pausa."
 
-#: wp-includes/theme.php:2334
+#: wp-includes/theme.php:2297
 msgctxt "Theme starter content"
 msgid "Archives"
 msgstr "Archivi"
 
-#: wp-includes/theme.php:2486
+#: wp-includes/theme.php:2449
 msgctxt "Theme starter content"
 msgid "This is an example of a homepage section. Homepage sections can be any page other than the homepage itself, including the page that shows your latest blog posts."
 msgstr "Questo è un esempio di una sezione della homepage. Le sezioni della homepage possono essere pagine qualsiasi diverse dalla homepage stessa, compresa la pagina che mostra i tuoi ultimi articoli del blog."
 
-#: wp-includes/theme.php:2478
+#: wp-includes/theme.php:2441
 msgctxt "Theme starter content"
 msgid "News"
 msgstr "News"
 
-#: wp-includes/theme.php:2469
+#: wp-includes/theme.php:2432
 msgctxt "Theme starter content"
 msgid "This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form."
 msgstr "Questa è una pagina con alcune informazioni di base per un contatto, quali un indirizzo ed un n numero di telefono. Puoi anche provare un plugin per aggiungere modulo di contatto."
 
-#: wp-includes/theme.php:2461
+#: wp-includes/theme.php:2424
 msgctxt "Theme starter content"
 msgid "You might be an artist who would like to introduce yourself and your work here or maybe you are a business with a mission to describe."
 msgstr "Potresti essere un artista che vorrebbe presentare sé e il suo lavoro oppure sei una azienda con un'attività da descrivere."
 
-#: wp-includes/theme.php:2453
+#: wp-includes/theme.php:2416
 msgctxt "Theme starter content"
 msgid "Welcome to your site! This is your homepage, which is what most visitors will see when they come to your site for the first time."
 msgstr "Benvenuto nel tuo sito! Questa è la tua pagina home, quella che la maggioranza dei visitatori vede quando arrivano per la prima volta sul tuo sito."
 
-#: wp-includes/theme.php:2364
+#: wp-includes/theme.php:2327
 msgctxt "Theme starter content"
 msgid "Recent Posts"
 msgstr "Articoli recenti"
 
-#: wp-includes/theme.php:2358
+#: wp-includes/theme.php:2321
 msgctxt "Theme starter content"
 msgid "Recent Comments"
 msgstr "Commenti recenti"
 
-#: wp-includes/theme.php:2352
+#: wp-includes/theme.php:2315
 msgctxt "Theme starter content"
 msgid "Meta"
 msgstr "Meta"
 
-#: wp-includes/theme.php:2340
+#: wp-includes/theme.php:2303
 msgctxt "Theme starter content"
 msgid "Calendar"
 msgstr "Calendario"
@@ -10102,37 +10102,37 @@ msgstr "Non hai i permessi per leggere questo commento."
 msgid "Sorry, you are not allowed to read comments without a post."
 msgstr "Non hai i permessi per leggere i commenti senza un articolo."
 
-#: wp-includes/theme.php:2443
+#: wp-includes/theme.php:2406
 msgctxt "Theme starter content"
 msgid "YouTube"
 msgstr "YouTube"
 
-#: wp-includes/theme.php:2431
+#: wp-includes/theme.php:2394
 msgctxt "Theme starter content"
 msgid "Pinterest"
 msgstr "Pinterest"
 
-#: wp-includes/theme.php:2427
+#: wp-includes/theme.php:2390
 msgctxt "Theme starter content"
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: wp-includes/theme.php:2419
+#: wp-includes/theme.php:2382
 msgctxt "Theme starter content"
 msgid "GitHub"
 msgstr "GitHub"
 
-#: wp-includes/theme.php:2415
+#: wp-includes/theme.php:2378
 msgctxt "Theme starter content"
 msgid "Foursquare"
 msgstr "Foursquare"
 
-#: wp-includes/theme.php:2326
+#: wp-includes/theme.php:2289
 msgctxt "Theme starter content"
 msgid "This may be a good place to introduce yourself and your site or include some credits."
 msgstr "Questo può essere un buon posto per presentare te stesso ed il tuo sito o per includere alcuni crediti."
 
-#: wp-includes/theme.php:2325
+#: wp-includes/theme.php:2288
 msgctxt "Theme starter content"
 msgid "About This Site"
 msgstr "Informazioni su questo sito"
@@ -10182,97 +10182,97 @@ msgstr "Cambia il video"
 msgid "Select video"
 msgstr "Seleziona un video"
 
-#: wp-includes/theme.php:2483
+#: wp-includes/theme.php:2446
 msgctxt "Theme starter content"
 msgid "A homepage section"
 msgstr "Una sezione della homepage"
 
-#: wp-includes/theme.php:2474
+#: wp-includes/theme.php:2437
 msgctxt "Theme starter content"
 msgid "Blog"
 msgstr "Blog"
 
-#: wp-includes/theme.php:2466
+#: wp-includes/theme.php:2429
 msgctxt "Theme starter content"
 msgid "Contact"
 msgstr "Contatti"
 
-#: wp-includes/theme.php:2458
+#: wp-includes/theme.php:2421
 msgctxt "Theme starter content"
 msgid "About"
 msgstr "Chi siamo"
 
-#: wp-includes/theme.php:2377 wp-includes/theme.php:2450
+#: wp-includes/theme.php:2340 wp-includes/theme.php:2413
 msgctxt "Theme starter content"
 msgid "Home"
 msgstr "Homepage"
 
-#: wp-includes/theme.php:2407
+#: wp-includes/theme.php:2370
 msgctxt "Theme starter content"
 msgid "Email"
 msgstr "Email"
 
-#: wp-includes/theme.php:2423
+#: wp-includes/theme.php:2386
 msgctxt "Theme starter content"
 msgid "Instagram"
 msgstr "Instagram"
 
-#: wp-includes/theme.php:2435
+#: wp-includes/theme.php:2398
 msgctxt "Theme starter content"
 msgid "Twitter"
 msgstr "Twitter"
 
-#: wp-includes/theme.php:2411
+#: wp-includes/theme.php:2374
 msgctxt "Theme starter content"
 msgid "Facebook"
 msgstr "Facebook"
 
-#: wp-includes/theme.php:2439
+#: wp-includes/theme.php:2402
 msgctxt "Theme starter content"
 msgid "Yelp"
 msgstr "Yelp"
 
-#: wp-includes/theme.php:2346
+#: wp-includes/theme.php:2309
 msgctxt "Theme starter content"
 msgid "Categories"
 msgstr "Categorie"
 
-#: wp-includes/theme.php:2370
+#: wp-includes/theme.php:2333
 msgctxt "Theme starter content"
 msgid "Search"
 msgstr "Ricerca"
 
-#: wp-includes/theme.php:2315
+#: wp-includes/theme.php:2278
 msgctxt "Theme starter content"
 msgid "Saturday &amp; Sunday: 11:00AM&ndash;3:00PM"
 msgstr "Sabato e Domenica: 11:00&ndash;15:00"
 
-#: wp-includes/theme.php:2314
+#: wp-includes/theme.php:2277
 msgctxt "Theme starter content"
 msgid "Monday&ndash;Friday: 9:00AM&ndash;5:00PM"
 msgstr "Lunedì&mdash;Venerdì: 09:00&ndash;17:00"
 
-#: wp-includes/theme.php:2313
+#: wp-includes/theme.php:2276
 msgctxt "Theme starter content"
 msgid "Hours"
 msgstr "Orari"
 
-#: wp-includes/theme.php:2312
+#: wp-includes/theme.php:2275
 msgctxt "Theme starter content"
 msgid "New York, NY 10001"
 msgstr "20100 Milano (MI)"
 
-#: wp-includes/theme.php:2311
+#: wp-includes/theme.php:2274
 msgctxt "Theme starter content"
 msgid "123 Main Street"
 msgstr "P.zza Duomo 123"
 
-#: wp-includes/theme.php:2310
+#: wp-includes/theme.php:2273
 msgctxt "Theme starter content"
 msgid "Address"
 msgstr "Indirizzo"
 
-#: wp-includes/theme.php:2306
+#: wp-includes/theme.php:2269
 msgctxt "Theme starter content"
 msgid "Find Us"
 msgstr "Come trovarci"
@@ -11643,11 +11643,11 @@ msgstr "Video Player"
 msgid "Time Slider"
 msgstr "Time Slider"
 
-#: wp-includes/script-loader.php:1080 wp-includes/theme.php:1729
+#: wp-includes/script-loader.php:1080 wp-includes/theme.php:1692
 msgid "Pause"
 msgstr "Pausa"
 
-#: wp-includes/script-loader.php:1079 wp-includes/theme.php:1730
+#: wp-includes/script-loader.php:1079 wp-includes/theme.php:1693
 msgid "Play"
 msgstr "Play"
 
@@ -12400,7 +12400,7 @@ msgstr "%1$s (da %2$s; nessuna alternativa disponibile)"
 msgid "%1$s (since %2$s; use %3$s instead)"
 msgstr "%1$s (da %2$s; utilizza invece %3$s)"
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1418
+#: wp-includes/rest-api/class-wp-rest-server.php:1425
 msgid "The specified namespace could not be found."
 msgstr "Il namespace specificato non è stato trovato."
 
@@ -12408,7 +12408,7 @@ msgstr "Il namespace specificato non è stato trovato."
 msgid "No route was found matching the URL and request method."
 msgstr "Nessun percorso fornisce una corrispondenza tra l'URL ed il metodo richiesto."
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1741
+#: wp-includes/rest-api/class-wp-rest-server.php:1748
 msgid "The handler for the route is invalid"
 msgstr "Il gestore del percorso non è valido"
 
@@ -13372,7 +13372,7 @@ msgid_plural "%1$s responses to %2$s"
 msgstr[0] "%1$s risposta a %2$s"
 msgstr[1] "%1$s risposte a %2$s"
 
-#: wp-includes/theme.php:3736
+#: wp-includes/theme.php:3699
 msgid "Customizer"
 msgstr "Personalizza"
 
@@ -13582,7 +13582,7 @@ msgid "Distraction-free writing mode"
 msgstr "Modalità di scrittura senza distrazioni"
 
 #. translators: 1: title-tag, 2: wp_loaded
-#: wp-includes/theme.php:2922
+#: wp-includes/theme.php:2885
 msgid "Theme support for %1$s should be registered before the %2$s hook."
 msgstr "Il supporto del tema a %1$s deve essere registrato prima dell'hook %2$s."
 
@@ -13629,7 +13629,7 @@ msgstr "I seguenti valori non descrivono una data valida: giorno %2$s, mese %1$s
 msgid "%s must set a database connection for use with escaping."
 msgstr "%s deve impostare una connessione ad un database da utilizzare per l'escaping."
 
-#: wp-includes/theme.php:2729
+#: wp-includes/theme.php:2692
 msgid "You need to pass an array of types."
 msgstr "Occorre passare un array di tipi."
 
@@ -18367,7 +18367,7 @@ msgid "Document properties"
 msgstr "Proprietà documento"
 
 #: wp-includes/class-wp-editor.php:1370 wp-includes/script-loader.php:1293
-#: wp-includes/theme.php:3735 wp-admin/js/nav-menu.js:1260
+#: wp-includes/theme.php:3698 wp-admin/js/nav-menu.js:1260
 #: wp-admin/js/post.js:512 wp-admin/js/theme-plugin-editor.js:71
 #: wp-admin/js/widgets.js:98
 msgid "The changes you made will be lost if you navigate away from this page."
