@@ -2,7 +2,7 @@
 get_header();
 ?>
 <main id="games">
-    <h1>Mes jeux</h1>
+    <h1><?= pll_e("My games") ?></h1>
 
     <div id="gameList">
         <?php

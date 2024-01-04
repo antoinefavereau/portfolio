@@ -58,7 +58,7 @@ function handle_contact_form()
 
         $mail->setFrom($email, $name);
         $mail->addAddress('antoinefavereau45@gmail.com');
-        $mail->Subject = "PORTFOLIO: ".$subject;
+        $mail->Subject = "PORTFOLIO: " . $subject;
         $mail->Body = $message;
 
         if (!$mail->send()) {
@@ -103,6 +103,9 @@ pll_register_string("antoinefavereau", "landing page or single page");
 pll_register_string("antoinefavereau", "E-commerce");
 pll_register_string("antoinefavereau", "content management system");
 pll_register_string("antoinefavereau", "online sales");
+
+// games
+pll_register_string("antoinefavereau", "My games");
 
 // footer
 pll_register_string("antoinefavereau", "Contact me");
