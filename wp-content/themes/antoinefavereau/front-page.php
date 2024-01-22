@@ -96,7 +96,7 @@ get_header();
         <?php
         query_posts(array(
             'post_type' => "project",
-            "order" => "ASC",
+            "order" => "DESC",
             "posts_per_page" => -1
         ));
         $numberCount = 0;
