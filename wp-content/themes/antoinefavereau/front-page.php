@@ -45,7 +45,9 @@ get_header();
         <div class="parcoursLIst">
             <?php
             query_posts(array(
-                'category_name' => "parcours-" . pll_current_language()
+                'post_type' => "background",
+                "order" => "ASC",
+                "posts_per_page" => -1
             ));
             if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <div class="item">
@@ -68,11 +70,13 @@ get_header();
         <ul class="hexGrid">
             <?php
             query_posts(array(
-                'category_name' => "competences-" . pll_current_language()
+                'post_type' => "skill",
+                "order" => "ASC",
+                "posts_per_page" => -1
             ));
             if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <li class="hex">
-                        <a <?= get_field('lien') ? 'href="' . esc_url(get_field('lien')) . '"' : '' ?> class="hexIn">
+                        <a <?= get_field('Link') ? 'href="' . esc_url(get_field('Link')) . '"' : '' ?> target="_blank" class="hexIn">
                             <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
                             <p><?= get_the_title() ?></p>
                         </a>
@@ -91,26 +95,31 @@ get_header();
 
         <?php
         query_posts(array(
-            'category_name' => "projets-" . pll_current_language()
+            'post_type' => "project",
+            "order" => "ASC",
+            "posts_per_page" => -1
         ));
         $numberCount = 0;
         if (have_posts()) : while (have_posts()) : the_post();
                 $numberCount++; ?>
                 <li class="item">
                     <p class="number"><?= sprintf("%02d", $numberCount) ?></p>
-                    <h3 class="responsiveTitle"><a href="" target="_blank">
+                    <h3 class="responsiveTitle">
+                        <a href="<?= esc_url(get_field('link')) ?>" target="_blank">
                             <?= get_the_title() ?>
                             <svg width="20px" height="20px" viewBox="0 0 24 24" stroke-width="3" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentcolor">
                                 <path d="M21 3h-6m6 0l-9 9m9-9v6" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M21 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h6" stroke="currentcolor" stroke-width="3" stroke-linecap="round"></path>
-                            </svg></a></h3>
-                    <a href="<?= esc_url(get_field('lien')) ?>" class="imgContainer" target="_blank">
+                            </svg>
+                        </a>
+                    </h3>
+                    <a href="<?= esc_url(get_field('link')) ?>" class="imgContainer" target="_blank">
                         <img class="hover" src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
                     </a>
                     <div class="description">
-                        <h3 class="title"><a class="hover" href="<?= esc_url(get_field('lien')) ?>" target="_blank"><?= get_the_title() ?></a></h3>
+                        <h3 class="title"><a class="hover" href="<?= esc_url(get_field('link')) ?>" target="_blank"><?= get_the_title() ?></a></h3>
                         <p class="text">
-                            <?= get_field('texte') ?>
+                            <?= get_field('text') ?>
                         </p>
                     </div>
                 </li>
