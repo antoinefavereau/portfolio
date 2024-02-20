@@ -58,7 +58,7 @@ function handle_contact_form()
 
         $mail->setFrom($email, $name);
         $mail->addAddress('antoinefavereau45@gmail.com');
-        $mail->Subject = "PORTFOLIO: " . $subject;
+        $mail->Subject = $subject;
         $mail->Body = $message;
 
         if (!$mail->send()) {
