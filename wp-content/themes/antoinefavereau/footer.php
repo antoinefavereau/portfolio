@@ -57,6 +57,7 @@ if (isset($_POST['name'])) {
             </ul>
         </div>
         <form id="contactForm" action="<?php echo esc_url(admin_url('admin-ajax.php')); ?>" method="post">
+            <?php wp_nonce_field('contact_form', 'contact_form_nonce'); ?>
             <input type="hidden" name="validationText" value="<?= pll_e("Mail sent successfully") ?>">
             <div class="field half">
                 <input type="text" name="name" id="inputName" required>

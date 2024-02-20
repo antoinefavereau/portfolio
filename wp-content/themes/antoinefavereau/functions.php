@@ -41,6 +41,11 @@ function handle_contact_form()
         exit;
     }
 
+    if (!(isset($_POST['contact_form_nonce']) && wp_verify_nonce($_POST['contact_form_nonce'], 'contact_form'))) {
+        wp_send_json_error(["message" => "Raté :/"]);
+        exit;
+    }
+
     $name = $_POST['name'];
     $email = $_POST['mail'];
     $subject = "SITE : " . $_POST['subject'];
