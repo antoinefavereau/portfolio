@@ -31,23 +31,10 @@ $breakpoints: (
     top: 0;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-color: $primary;
+    background-color: rgba($primary, 1);
     pointer-events: none;
     display: block;
     z-index: 1000;
-
-    &.link {
-        background-color: $primary;
-
-        &::after {
-            content: "see";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: $black;
-        }
-    }
 
     @media only screen and (hover: none) and (pointer: coarse) {
         display: none;

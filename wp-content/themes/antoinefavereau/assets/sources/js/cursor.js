@@ -33,12 +33,12 @@ document.body.addEventListener("mouseleave", (event) => {
     gsap.to(cursor, 0.15, {
         scale: 0,
     });
-})
+});
 document.body.addEventListener("mouseenter", (event) => {
     gsap.to(cursor, 0.15, {
         scale: 1,
     });
-})
+});
 
 function updateCursorPosition(e) {
     mouse.x = e.pageX - window.scrollX;
@@ -63,15 +63,17 @@ document.querySelectorAll(".hover").forEach((element) => {
     element.addEventListener("mouseenter", function () {
         gsap.to(cursor, 0.15, {
             scale: 4,
+            opacity: 0.8,
         });
-    })
+    });
 
     element.addEventListener("mouseleave", function () {
         gsap.to(cursor, 0.15, {
             scale: 1,
+            opacity: 1,
         });
-    })
-})
+    });
+});
 
 document.querySelectorAll(".cursorButton").forEach((button) => {
     button.addEventListener("pointerenter", handleMouseEnter);
