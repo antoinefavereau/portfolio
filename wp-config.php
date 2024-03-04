@@ -1,5 +1,6 @@
 <?php
 
+define( 'ITSEC_ENCRYPTION_KEY', 'eVJLeEF2c0ZiYSQsXT9+IFcwdnVqXzVCZTwsfGFRMk59JUJQTk9VYTQ+aEQ4cisyL2VQbDBdZ1YwamUzYFctJQ==' );
 
 //Begin Really Simple SSL session cookie settings
 @ini_set('session.cookie_httponly', true);

@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the WordPress - 6.4.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-07 09:00:09+0000\n"
+"PO-Revision-Date: 2024-01-30 17:11:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.11\n"
+"X-Generator: GlotPress/4.0.0-beta.2\n"
 "Language: pt\n"
 "Project-Id-Version: WordPress - 6.4.x - Development - Administration\n"
 
@@ -36,6 +36,10 @@ msgstr "1"
 msgctxt "default GMT offset or timezone string"
 msgid "0"
 msgstr "0"
+
+#: wp-admin/update.php:158 wp-admin/update.php:310
+msgid "Only .zip archives may be uploaded."
+msgstr "Apenas podem ser carregados ficheiros .zip."
 
 #. translators: %s: Link to activate the Classic Widgets plugin.
 #: wp-admin/widgets-form-blocks.php:87
@@ -102,119 +106,119 @@ msgid "When using Bulk Edit, you can change the metadata (categories, author, et
 msgstr "Ao usar acções por lotes, pode mudar os dados (categorias, autor, etc.) dos artigos seleccionados, de uma só vez. Para remover um artigo do lote, clique no botão %s<span class=\"screen-reader-text\">remover</span> junto ao respectivo nome, na área de acções por lote que aparece."
 
 #. translators: 1: WordPress Release Notes link, 2: WordPress version number.
-#: wp-admin/about.php:295
+#: wp-admin/about.php:347
 msgid "<a href=\"%1$s\">Read the WordPress %2$s Release Notes</a> for information on installation, enhancements, fixed issues, release contributors, learning resources, and the list of file changes."
 msgstr "<a href=\"%1$s\">Leia as notas de lançamento do WordPress %2$s</a> para saber mais informações sobre a instalação, melhorias, correcções, contribuidores, recursos de aprendizagem e a lista de ficheiros alterados nesta versão."
 
-#. translators: %s: WordPress Field Guide link.
-#: wp-admin/about.php:276
+#. translators: 1: WordPress Field Guide link, 2: WordPress version number.
+#: wp-admin/about.php:328
 msgid "Explore the <a href=\"%1$s\">WordPress %2$s Field Guide</a>. Learn about the changes in this release with detailed developer notes to help you build with WordPress."
 msgstr "Consulte o <a href=\"%1$s\">Guia do WordPress %2$s</a>. Saiba mais sobre as alterações desta versão, com notas detalhadas para programadores com tudo o que precisa de saber para criar com o WordPress."
 
-#: wp-admin/about.php:233
+#: wp-admin/about.php:285
 msgid "Every release is committed to making WordPress accessible to everyone. 6.4 brings List View improvements and aria-label support for the Navigation block, among other highlights. The admin user interface (UI) includes enhancements to button placements, \"Add New\" menu items context, and Site Health spoken messages."
 msgstr "Em cada versão empenhamo-nos em tornar o WordPress acessível a todos. A versão 6.4 traz melhorias na vista de lista e suporte para aria-label no bloco de navegação, entre outros destaques. A interface de utilizador da administração (UI) inclui melhorias na colocação de botões, no contexto dos itens de menu \"Adicionar novo\" e nas mensagens faladas sobre do diagnóstico do site."
 
-#: wp-admin/about.php:223
+#: wp-admin/about.php:275
 msgid "WordPress 6.4 includes more than 100 performance updates for a faster and more efficient experience. Enhancements focus on template loading performance for Block Themes and Classic Themes, usage of the script loading strategies “defer” and “async” in core, blocks, and themes, and optimization of autoloaded options."
 msgstr "O WordPress 6.4 inclui mais de 100 actualizações de desempenho para uma experiência mais rápida e eficiente. As melhorias centram-se no desempenho do carregamento de modelos para temas de blocos e temas clássicos, na utilização das estratégias de carregamento de scripts \"defer\" e \"async\" no core, nos blocos e nos temas, e na optimização das opções de carregamento automático."
 
-#: wp-admin/about.php:210
+#: wp-admin/about.php:262
 msgid "Block Hooks is a new powerful feature that enables plugins to auto-insert blocks into content relative to another block. Think of it as recommendations to make your work with blocks more intuitive. A new \"Plugins\" panel gives you complete control to match them to your needs—add, dismiss, and rearrange Block Hooks as desired."
 msgstr "Os hooks dos blocos são uma nova e poderosa funcionalidade que permite que os plugins insiram automaticamente blocos em conteúdos relativos a outro bloco. Pense nisto como recomendações para tornar o seu trabalho com blocos mais intuitivo. Um novo painel \"Plugins\" dá-lhe controlo total para os adequar às suas necessidades - adicione, ignore ou reorganize os hooks dos blocos como desejar."
 
-#: wp-admin/about.php:209
+#: wp-admin/about.php:261
 msgid "Introducing Block Hooks"
 msgstr "Introdução aos hooks dos blocos"
 
-#: wp-admin/about.php:193
+#: wp-admin/about.php:245
 msgid "Get creative with new background images in Group blocks and ensure consistent image dimensions with placeholder aspect ratios. Do you want to add buttons to your Navigation block? You can now do it conveniently without custom CSS. If you're working with synced patterns, alignment settings stay intact for a seamless pattern creation experience."
 msgstr "Dê asas à sua criatividade com novas imagens de fundo nos blocos de Grupo e garanta dimensões de imagem consistentes com placeholders com rácio largura:altura. Quer adicionar botões ao seu bloco de navegação? Agora pode fazê-lo convenientemente sem CSS personalizado. Se estiver a trabalhar com padrões sincronizados, as opções de alinhamento permanecem intactas para uma experiência de criação de padrões perfeita."
 
-#: wp-admin/about.php:192
+#: wp-admin/about.php:244
 msgid "Build your creative vision with more design tools"
 msgstr "Desenvolva a sua visão criativa com mais ferramentas de design"
 
-#: wp-admin/about.php:183
+#: wp-admin/about.php:235
 msgid "https://make.wordpress.org/core/2023/10/05/core-editor-improvement-ensuring-excellence-in-the-writing-experience/"
 msgstr "https://make.wordpress.org/core/2023/10/05/core-editor-improvement-ensuring-excellence-in-the-writing-experience/"
 
 #. translators: %s: New enhancements link.
-#: wp-admin/about.php:182
+#: wp-admin/about.php:234
 msgid "<a href=\"%s\">New enhancements</a> ensure your content creation journey is smooth. Find new keyboard shortcuts in List View, refined list merging, and enhanced control over link settings. A revamped and cohesive toolbar experience for Navigation, List, and Quote blocks lets you efficiently work with the tooling options you need."
 msgstr "<a href=\"%s\">Novas melhorias</a> garantem que a sua jornada de criação de conteúdo seja tranquila. Encontre novos atalhos de teclado na Vista de lista, fusão de listas refinada e controlo melhorado sobre as opções das ligações. Uma experiência renovada e coesa da barra de ferramentas para os blocos de navegação, lista e citação, permite-lhe trabalhar eficientemente com as opções das ferramentas de que necessita."
 
-#: wp-admin/about.php:177
+#: wp-admin/about.php:229
 msgid "Enjoy new writing improvements"
 msgstr "Desfrute de novas melhorias na escrita"
 
-#: wp-admin/about.php:166
+#: wp-admin/about.php:218
 msgid "Need to use your custom patterns on another site? It's simple! Import and export them as JSON files from the Site Editor's patterns view."
 msgstr "Precisa de utilizar os seus modelos personalizados noutro site? É simples! Importe-os e exporte-os como ficheiros JSON a partir da vista dos padrões no editor do site."
 
-#: wp-admin/about.php:165
+#: wp-admin/about.php:217
 msgid "Share patterns across sites"
 msgstr "Partilhe padrões entre sites"
 
-#: wp-admin/about.php:159
+#: wp-admin/about.php:211
 msgid "New media previews for Gallery and Image blocks in List View let you visualize and locate at a glance where images on your content are."
 msgstr "As novas pré-visualizações multimédia para os blocos de galeria e imagem na Vista de lista permitem-lhe visualizar e localizar rapidamente onde estão as imagens no seu conteúdo."
 
-#: wp-admin/about.php:158
+#: wp-admin/about.php:210
 msgid "Image previews in List View"
 msgstr "Pré-visualização de imagens na Vista de lista"
 
-#: wp-admin/about.php:152
+#: wp-admin/about.php:204
 msgid "Set custom names for Group blocks to easily organize and differentiate parts of your content. These names will be visible in List View."
 msgstr "Defina nomes personalizados para os blocos de grupo para organizar e diferenciar facilmente partes do seu conteúdo. Estes nomes serão visíveis na Vista de lista."
 
-#: wp-admin/about.php:151
+#: wp-admin/about.php:203
 msgid "Rename Group blocks"
 msgstr "Renomear blocos de grupo"
 
-#: wp-admin/about.php:139
+#: wp-admin/about.php:191
 msgid "https://make.wordpress.org/core/2023/09/12/core-editor-improvement-commanding-the-command-palette/"
 msgstr "https://make.wordpress.org/core/2023/09/12/core-editor-improvement-commanding-the-command-palette/"
 
 #. translators: %s: Command palette improvement link.
-#: wp-admin/about.php:138
+#: wp-admin/about.php:190
 msgid "Enjoy <a href=\"%s\">a refreshed design and more commands</a> to find what you're looking for, perform tasks efficiently, and save time as you create."
 msgstr "Desfrute de <a href=\"%s\">um design renovado e mais comandos</a> para encontrar o que procura, executar tarefas de forma eficiente e poupar tempo enquanto cria."
 
-#: wp-admin/about.php:133
+#: wp-admin/about.php:185
 msgid "Get more done with the Command Palette"
 msgstr "Faça mais com a paleta de comandos"
 
-#: wp-admin/about.php:127
+#: wp-admin/about.php:179
 msgid "Organize your synced and unsynced patterns with categories. Explore advanced filtering in the Patterns section of the inserter to find them all more intuitively."
 msgstr "Organize os seus padrões sincronizados e não sincronizados com categorias. Explore a filtragem avançada na secção Padrões do painel de inserir, para os encontrar de forma mais intuitiva."
 
-#: wp-admin/about.php:126
+#: wp-admin/about.php:178
 msgid "Categorize and filter patterns"
 msgstr "Categorize e filtre padrões"
 
-#: wp-admin/about.php:120
+#: wp-admin/about.php:172
 msgid "Turn lightbox functionality on for interactive, full-screen images with a simple click. Apply it globally or to specific images to customize the viewing experience."
 msgstr "Active a funcionalidade lightbox para imagens interactivas em ecrã inteiro com um simples clique. Aplique-a globalmente ou a imagens específicas para personalizar a experiência de visualização."
 
-#: wp-admin/about.php:119
+#: wp-admin/about.php:171
 msgid "Add a lightbox effect to images"
 msgstr "Adicione um efeito de lightbox às imagens"
 
-#: wp-admin/about.php:102
+#: wp-admin/about.php:154
 msgid "https://make.wordpress.org/core/2023/08/24/introducing-twenty-twenty-four/"
 msgstr "https://make.wordpress.org/core/2023/08/24/introducing-twenty-twenty-four/"
 
 #. translators: %s: Introduction to Twenty Twenty-Four link.
-#: wp-admin/about.php:101
+#: wp-admin/about.php:153
 msgid "Experience the latest advancements in site editing with <a href=\"%s\">Twenty Twenty-Four</a>. Built with three distinct use cases in mind, the versatility of the new default theme makes it an ideal choice for almost any type of website. Dive into its collection of templates and patterns and unlock a world of creative possibilities with just a few tweaks."
 msgstr "Experimente os mais recentes avanços na edição de sites com o <a href=\"%s\">Twenty Twenty-Four</a>. Criado com três casos de uso distintos em mente, a versatilidade do novo tema por omissão torna-o a escolha ideal para quase todos os tipos de site. Conheça a sua colecção de modelos e padrões e desbloqueie um mundo de possibilidades criativas com apenas alguns ajustes."
 
-#: wp-admin/about.php:96
+#: wp-admin/about.php:148
 msgid "Say hello to<br>Twenty Twenty-Four"
 msgstr "Diga olá ao<br>Twenty Twenty-Four"
 
-#: wp-admin/about.php:89
+#: wp-admin/about.php:141
 msgid "Every version of WordPress empowers your creative freedom, and WordPress 6.4 is no different. New features and upgrades to your site editing, design, and writing experience allow your ideas to take shape seamlessly. Elevate your site-building journey with the flexibility and power of WordPress 6.4."
 msgstr "Cada versão do WordPress aumenta a sua liberdade criativa, e o WordPress 6.4 não é diferente. Novas funcionalidades e actualizações para a sua experiência de edição, design e escrita de sites, permitem que as suas ideias tomem forma sem dificuldades. Melhore a sua experiência de criação de sites com a flexibilidade e o poder do WordPress 6.4."
 
@@ -235,7 +239,7 @@ msgid "Your WordPress version is %1$s, however the new plugin version requires %
 msgstr "A sua versão do WordPress é %1$s, no entanto a nova versão do plugin requer a versão %2$s."
 
 #. translators: %s: WordPress version.
-#: wp-admin/about.php:68
+#: wp-admin/about.php:68 wp-admin/about.php:94 wp-admin/about.php:120
 msgid "https://wordpress.org/support/wordpress-version/version-%s/"
 msgstr "https://wordpress.org/support/wordpress-version/version-%s/"
 
@@ -700,7 +704,7 @@ msgid "Do you use WordPress for work, for personal projects, or even just for fu
 msgstr "Utiliza o WordPress no trabalho, em projectos pessoais ou apenas por diversão? Pode ajudar a moldar o sucesso a longo prazo do projecto de código aberto que alimenta milhões de sites em todo o mundo."
 
 #. translators: 1: Learn WordPress link, 2: Workshops link.
-#: wp-admin/about.php:255
+#: wp-admin/about.php:307
 msgid "<a href=\"%1$s\">Learn WordPress</a> is a free resource for new and experienced WordPress users. Learn is stocked with how-to videos on using various features in WordPress, <a href=\"%2$s\">interactive workshops</a> for exploring topics in-depth, and lesson plans for diving deep into specific areas of WordPress."
 msgstr "<a href=\"%1$s\">Learn WordPress</a> é um recurso gratuito para utilizadores novos e experientes em WordPress. A plataforma Learn inclui muitos vídeos com tutoriais sobre a utilização de várias funcionalidades do WordPress, <a href=\"%2$s\">workshops interactivos</a> para explorar tópicos, e planos de lições para aprofundar o seu conhecimento em áreas específicas do WordPress."
 
@@ -852,12 +856,12 @@ msgid "<a href=\"https://wordpress.org/documentation/article/customizer/\">Docum
 msgstr "<a href=\"https://wordpress.org/documentation/article/customizer/\">Documentação sobre o Personalizador</a>"
 
 #. translators: The localized WordPress download URL.
-#: wp-admin/about.php:381
+#: wp-admin/about.php:433
 msgid "https://wordpress.org/download/"
 msgstr "https://pt.wordpress.org/download/"
 
 #. translators: %s: The major version of WordPress for this branch.
-#: wp-admin/about.php:378
+#: wp-admin/about.php:430
 msgid "This is the final release of WordPress %s"
 msgstr "Esta é a versão final do WordPress %s"
 
@@ -1193,21 +1197,21 @@ msgid "Reach out to WordPress Core developers to ensure you'll never have this p
 msgstr "Entre em contacto com programadores do core do WordPress para garantir que nunca mais terá este problema."
 
 #. translators: 1: WordPress version number, 2: Link to update WordPress
-#: wp-admin/about.php:375
+#: wp-admin/about.php:427
 msgid "Important! Your version of WordPress (%1$s) will stop receiving security updates in the near future. To keep your site secure, please <a href=\"%2$s\">update to the latest version of WordPress</a>."
 msgstr "Importante! A sua versão do WordPress (%1$s) deixará de receber actualizações de segurança num futuro próximo. Para manter o seu site seguro, por favor <a href=\"%2$s\">actualize para a versão mais recente do WordPress</a>."
 
 #. translators: 1: WordPress version number, 2: Link to update WordPress
-#: wp-admin/about.php:372
+#: wp-admin/about.php:424
 msgid "Important! Your version of WordPress (%1$s) is no longer supported, you will not receive any security updates for your website. To keep your site secure, please <a href=\"%2$s\">update to the latest version of WordPress</a>."
 msgstr "Importante! A sua versão do WordPress (%1$s) já não é suportada, não receberá quaisquer actualizações de segurança para o seu site. Para manter o seu site seguro, por favor <a href=\"%2$s\">actualize para a versão mais recente do WordPress</a>."
 
-#: wp-admin/about.php:277
+#: wp-admin/about.php:329
 msgid "https://make.wordpress.org/core/2023/10/23/wordpress-6-4-field-guide/"
 msgstr "https://make.wordpress.org/core/2023/10/23/wordpress-6-4-field-guide/"
 
 #. translators: %s: Version number.
-#: wp-admin/about.php:246
+#: wp-admin/about.php:298
 msgid "Learn more about WordPress %s"
 msgstr "Saiba mais sobre o WordPress %s"
 
@@ -2119,7 +2123,7 @@ msgstr "Adicionar nova senha de aplicação"
 msgid "Required to create an Application Password, but not to update the user."
 msgstr "Necessário para criar uma senha de aplicação, mas não para actualizar o utilizador."
 
-#: wp-admin/about.php:316
+#: wp-admin/about.php:368
 msgid "Go to Updates"
 msgstr "Ir para as actualizações"
 
@@ -2452,7 +2456,7 @@ msgstr "O valor de \"%1$s\" é inferior ao de \"%2$s\""
 msgid "Environment type"
 msgstr "Tipo de ambiente"
 
-#: wp-admin/about.php:232
+#: wp-admin/about.php:284
 msgid "Accessibility"
 msgstr "Acessibilidade"
 
@@ -4096,7 +4100,7 @@ msgstr "https://make.wordpress.org/hosting/handbook/handbook/server-environment/
 msgid "The WordPress Hosting Team maintains a list of those modules, both recommended and required, in <a href=\"%1$s\" %2$s>the team handbook%3$s</a>."
 msgstr "A Equipa de Alojamento do WordPress mantém uma lista destes módulos, tanto dos obrigatórios como dos recomendados, no <a href=\"%1$s\" %2$s>manual da equipa%3$s</a> ."
 
-#: wp-admin/about.php:222 wp-admin/includes/class-wp-site-health.php:259
+#: wp-admin/about.php:274 wp-admin/includes/class-wp-site-health.php:259
 #: wp-admin/includes/class-wp-site-health.php:737
 #: wp-admin/includes/class-wp-site-health.php:884
 #: wp-admin/includes/class-wp-site-health.php:1122
@@ -5364,7 +5368,7 @@ msgstr "Adicionar a: %s"
 msgid "Track %s."
 msgstr "Faixa %s."
 
-#: wp-admin/includes/schema.php:1282
+#: wp-admin/includes/schema.php:1280
 msgid "My Network"
 msgstr "A minha rede"
 
@@ -5391,7 +5395,7 @@ msgstr "Não é possível instalar"
 
 #. translators: %s: WordPress version number.
 #. translators: %s: WordPress version.
-#: wp-admin/about.php:298 wp-admin/includes/update.php:323
+#: wp-admin/about.php:350 wp-admin/includes/update.php:323
 #: wp-admin/index.php:119 wp-admin/install.php:249 wp-admin/update-core.php:94
 #: wp-admin/upgrade.php:81
 msgid "https://wordpress.org/documentation/wordpress-version/version-%s/"
@@ -7006,8 +7010,8 @@ msgstr "Não tem permissão para adicionar utilizadores nesta rede."
 msgid "Sorry, you are not allowed to edit this changeset."
 msgstr "Não tem permissão para editar este conjunto de alterações."
 
-#: wp-admin/includes/ajax-actions.php:4329 wp-admin/update.php:207
-#: wp-admin/update.php:230
+#: wp-admin/includes/ajax-actions.php:4329 wp-admin/update.php:211
+#: wp-admin/update.php:234
 msgid "Sorry, you are not allowed to update themes for this site."
 msgstr "Não tem permissão para actualizar temas neste site."
 
@@ -7251,7 +7255,7 @@ msgid "Sorry, you are not allowed to delete themes on this site."
 msgstr "Não tem permissão para eliminar temas neste site."
 
 #: wp-admin/includes/ajax-actions.php:4202 wp-admin/theme-install.php:16
-#: wp-admin/update.php:258 wp-admin/update.php:300 wp-admin/update.php:334
+#: wp-admin/update.php:262 wp-admin/update.php:304 wp-admin/update.php:342
 msgid "Sorry, you are not allowed to install themes on this site."
 msgstr "Não tem permissão para instalar temas neste site."
 
@@ -7729,7 +7733,7 @@ msgid "(Currently set to: %s)"
 msgstr "(De momento definido como: %s)"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:346
+#: wp-admin/about.php:398
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "A <strong>versão %s</strong> corrigiu um problema de segurança."
 
@@ -7741,15 +7745,15 @@ msgstr "https://pt.gravatar.com/"
 msgid "Profile Picture"
 msgstr "Imagem de perfil"
 
-#: wp-admin/about.php:343
+#: wp-admin/about.php:48 wp-admin/about.php:395
 msgid "Maintenance and Security Releases"
 msgstr "Actualizações de manutenção e segurança"
 
-#: wp-admin/about.php:340
+#: wp-admin/about.php:392
 msgid "Security Releases"
 msgstr "Actualizações de segurança"
 
-#: wp-admin/about.php:337
+#: wp-admin/about.php:389
 msgid "Maintenance Releases"
 msgstr "Actualizações de manutenção"
 
@@ -11065,47 +11069,50 @@ msgstr "Mostrar a barra de ferramentas ao visualizar o site"
 
 #. translators: %s: HelpHub URL.
 #. translators: %s: Documentation URL.
-#: wp-admin/about.php:65 wp-admin/about.php:369
+#: wp-admin/about.php:65 wp-admin/about.php:91 wp-admin/about.php:117
+#: wp-admin/about.php:421
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "Para mais informações, consulte as <a href=\"%s\">notas sobre esta actualização</a>."
 
+#. translators: 1: WordPress version number, 2: Plural number of bugs.
 #. translators: 1: WordPress version number, 2: Plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:363
+#: wp-admin/about.php:53 wp-admin/about.php:415
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "A <strong>versão %1$s</strong> corrigiu alguns problemas de segurança e %2$s bug."
 msgstr[1] "A <strong>versão %1$s</strong> corrigiu alguns problemas de segurança e %2$s bugs."
 
+#. translators: 1: WordPress version number, 2: Plural number of bugs.
 #. translators: 1: WordPress version number, 2: Plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:357
+#: wp-admin/about.php:79 wp-admin/about.php:409
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "A <strong>versão %1$s</strong> corrigiu um problema de segurança e %2$s bug."
 msgstr[1] "A <strong>versão %1$s</strong> corrigiu um problema de segurança e %2$s bugs."
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs.
-#: wp-admin/about.php:53 wp-admin/about.php:351
+#: wp-admin/about.php:105 wp-admin/about.php:403
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "A <strong>versão %1$s</strong> corrigiu %2$s bug."
 msgstr[1] "A <strong>versão %1$s</strong> corrigiu %2$s bugs."
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:348
+#: wp-admin/about.php:400
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "A <strong>versão %s</strong> corrigiu alguns problemas de segurança."
 
-#: wp-admin/about.php:342
+#: wp-admin/about.php:394
 msgid "Maintenance and Security Release"
 msgstr "Actualização de manutenção e segurança"
 
-#: wp-admin/about.php:339
+#: wp-admin/about.php:391
 msgid "Security Release"
 msgstr "Actualização de segurança"
 
-#: wp-admin/about.php:48 wp-admin/about.php:336
+#: wp-admin/about.php:388
 msgid "Maintenance Release"
 msgstr "Actualização de manutenção"
 
@@ -11379,15 +11386,15 @@ msgid "Because this is a multisite installation, you may add accounts that alrea
 msgstr "Porque esta é uma instalação multissite, pode adicionar contas que já existem na rede, especificando um nome de utilizador ou email, e definir o respectivo papel. Para mais opções, tais como especificar uma senha, tem de ser um administrador de rede e passar o rato sobre o nome de um utilizador existente, para editar o papel do utilizador em Administração da rede > Todos os utilizadores."
 
 #. translators: %s: Version number.
-#: wp-admin/about.php:83
+#: wp-admin/about.php:135
 msgid "Welcome to WordPress %s"
 msgstr "Boas-vindas ao WordPress %s"
 
-#: wp-admin/about.php:323
+#: wp-admin/about.php:375
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Ir para o painel &rarr; Início"
 
-#: wp-admin/about.php:316
+#: wp-admin/about.php:368
 msgid "Go to Dashboard &rarr; Updates"
 msgstr "Ir para o painel &rarr; Actualizações"
 
@@ -12052,7 +12059,7 @@ msgstr "Está prestes a instalar o WordPress %s <strong>em Inglês (EUA)</strong
 msgid "There is a new version of %1$s available. <a href=\"%2$s\" %3$s>View version %4$s details</a>. <em>Automatic update is unavailable for this plugin.</em>"
 msgstr "Está disponível uma nova versão de %1$s. <a href=\"%2$s\" %3$s>Ver detalhes da versão %4$s</a>. <em>A actualização automática não está disponível para este plugin.</em>"
 
-#: wp-admin/includes/class-theme-upgrader-skin.php:44 wp-admin/update.php:215
+#: wp-admin/includes/class-theme-upgrader-skin.php:44 wp-admin/update.php:219
 msgid "Update Theme"
 msgstr "Actualizar tema"
 
@@ -12833,12 +12840,12 @@ msgid "No items."
 msgstr "Não existem items."
 
 #. translators: %s: Asterisk symbol (*).
-#: wp-admin/includes/schema.php:1143
+#: wp-admin/includes/schema.php:1141
 msgid "To use a subdomain configuration, you must have a wildcard entry in your DNS. This usually means adding a %s hostname record pointing at your web server in your DNS configuration tool."
 msgstr "Para usar uma configuração de subdomínios, tem de criar uma registo wildcard no seu DNS. Isto geralmente significa adicionar um registo de subdomínio %s que aponta para o seu servidor, na ferramenta de edição de DNS."
 
 #. translators: %s: Host name.
-#: wp-admin/includes/schema.php:1132
+#: wp-admin/includes/schema.php:1130
 msgid "The installer attempted to contact a random hostname (%s) on your domain."
 msgstr "O instalador tentou contactar um nome de servidor aleatório (%s) no seu domínio."
 
@@ -13042,28 +13049,28 @@ msgstr "Guardar menu"
 msgid "Updating Theme %1$s (%2$d/%3$d)"
 msgstr "A actualizar o tema %1$s (%2$d/%3$d)"
 
-#: wp-admin/includes/schema.php:1147
+#: wp-admin/includes/schema.php:1145
 msgid "You can still use your site but any subdomain you create may not be accessible. If you know your DNS is correct, ignore this message."
 msgstr "Ainda pode usar o site, mas qualquer subdomínio que criar pode não ser acessível. Se sabe que o seu DNS está correcto, ignore esta mensagem."
 
 #. translators: %s: Error message.
-#: wp-admin/includes/schema.php:1137
+#: wp-admin/includes/schema.php:1135
 msgid "This resulted in an error message: %s"
 msgstr "Isto resultou numa mensagem de erro: %s"
 
-#: wp-admin/includes/schema.php:1016
+#: wp-admin/includes/schema.php:1014
 msgid "You must provide a valid email address."
 msgstr "Deve indicar um endereço de email válido."
 
-#: wp-admin/includes/schema.php:1005 wp-admin/includes/schema.php:1011
+#: wp-admin/includes/schema.php:1003 wp-admin/includes/schema.php:1009
 msgid "The network already exists."
 msgstr "A rede já existe."
 
-#: wp-admin/includes/schema.php:998
+#: wp-admin/includes/schema.php:996
 msgid "You must provide a name for your network of sites."
 msgstr "Deve indicar um nome para a sua r5ede de sites."
 
-#: wp-admin/includes/schema.php:995
+#: wp-admin/includes/schema.php:993
 msgid "You must provide a domain name."
 msgstr "Deve indicar um nome de domínio."
 
@@ -13124,7 +13131,7 @@ msgstr "Actualizações do WordPress"
 msgid "Edit menu item"
 msgstr "Editar item de menu"
 
-#: wp-admin/about.php:323 wp-admin/includes/network.php:166
+#: wp-admin/about.php:375 wp-admin/includes/network.php:166
 msgid "Go to Dashboard"
 msgstr "Ir para o painel"
 
@@ -13462,27 +13469,27 @@ msgid "Your WordPress database is already up to date!"
 msgstr "A sua base de dados do WordPress já está actualizada!"
 
 #. translators: %s: File name.
-#: wp-admin/update.php:315
+#: wp-admin/update.php:323
 msgid "Installing theme from uploaded file: %s"
 msgstr "A instalar tema a partir do ficheiro: %s"
 
 #: wp-admin/theme-install.php:60 wp-admin/theme-install.php:178
-#: wp-admin/theme-install.php:180 wp-admin/update.php:308
+#: wp-admin/theme-install.php:180 wp-admin/update.php:316
 msgid "Upload Theme"
 msgstr "Carregar tema"
 
 #. translators: %s: Theme name and version.
-#: wp-admin/update.php:287
+#: wp-admin/update.php:291
 msgid "Installing Theme: %s"
 msgstr "A instalar tema: %s"
 
 #. translators: %s: File name.
-#: wp-admin/update.php:167
+#: wp-admin/update.php:171
 msgid "Installing plugin from uploaded file: %s"
 msgstr "A instalar plugin a partir do ficheiro: %s"
 
 #: wp-admin/includes/class-wp-plugin-install-list-table.php:122
-#: wp-admin/plugin-install.php:150 wp-admin/update.php:160
+#: wp-admin/plugin-install.php:150 wp-admin/update.php:164
 msgid "Upload Plugin"
 msgstr "Carregar plugin"
 
@@ -14272,7 +14279,7 @@ msgstr "Olá, mundo!"
 
 #. translators: %s: Site link.
 #. translators: First post content. %s: Site link.
-#: wp-admin/includes/schema.php:1295 wp-admin/includes/upgrade.php:196
+#: wp-admin/includes/schema.php:1293 wp-admin/includes/upgrade.php:196
 msgid "Welcome to %s. This is your first post. Edit or delete it, then start writing!"
 msgstr "Boas-vindas ao %s. Este é o seu primeiro artigo. Edite-o ou elimine-o e dê vida ao seu site!"
 
@@ -14433,7 +14440,7 @@ msgstr "Desligar modo de acessibilidade"
 msgid "Enable accessibility mode"
 msgstr "Ligar modo de acessibilidade"
 
-#: wp-admin/update.php:280
+#: wp-admin/update.php:284
 msgid "Install Themes"
 msgstr "Instalar temas"
 
@@ -14591,7 +14598,7 @@ msgstr "Edição&nbsp;rápida"
 msgid "Quick Edit"
 msgstr "Edição rápida"
 
-#: wp-admin/includes/schema.php:1128
+#: wp-admin/includes/schema.php:1126
 msgid "Warning! Wildcard DNS may not be configured correctly!"
 msgstr "Atenção! Os <em>wildcard DNS</em> podem não estar configurados correctamente!"
 
@@ -14656,7 +14663,7 @@ msgstr "Classificação média"
 
 #: wp-admin/includes/plugin-install.php:715
 msgid "WordPress.org Plugin Page &#187;"
-msgstr "Página do plugin em WordPress.org &#187;"
+msgstr "Plugin em WordPress.org &#187;"
 
 #: wp-admin/includes/plugin-install.php:688
 msgid "Compatible up to:"
@@ -15499,8 +15506,8 @@ msgid "The uploaded file could not be moved to %s."
 msgstr "O ficheiro enviado não pôde ser movido para %s."
 
 #: wp-admin/includes/class-file-upload-upgrader.php:57
-#: wp-admin/includes/class-file-upload-upgrader.php:96
-#: wp-admin/includes/class-file-upload-upgrader.php:112
+#: wp-admin/includes/class-file-upload-upgrader.php:120
+#: wp-admin/includes/class-file-upload-upgrader.php:136
 msgid "Please select a file"
 msgstr "Por favor seleccione um ficheiro"
 
@@ -15603,6 +15610,7 @@ msgstr "A desactivar o modo de manutenção&#8230;"
 msgid "Enabling Maintenance mode&#8230;"
 msgstr "A activar o modo de manutenção&#8230;"
 
+#: wp-admin/includes/class-file-upload-upgrader.php:92
 #: wp-admin/includes/file.php:1666 wp-admin/includes/file.php:1864
 msgid "Incompatible Archive."
 msgstr "Ficheiro de arquivo incompatível."

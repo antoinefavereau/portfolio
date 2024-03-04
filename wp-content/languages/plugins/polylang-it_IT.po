@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-05-26 10:14:50+0000\n"
+"PO-Revision-Date: 2024-02-05 18:01:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.9\n"
+"X-Generator: GlotPress/4.0.0-beta.2\n"
 "Language: it\n"
 "Project-Id-Version: Plugins - Polylang - Stable (latest release)\n"
 
@@ -867,7 +867,7 @@ msgstr "Togo"
 
 #: settings/flags.php:231
 msgid "French Southern Territories"
-msgstr "Terre Australi Francesi"
+msgstr "Terre Australi e Antartiche Francesi"
 
 #: settings/flags.php:230
 msgid "Chad"
@@ -1299,7 +1299,7 @@ msgstr "Iraq"
 
 #: settings/flags.php:122
 msgid "British Indian Ocean Territory"
-msgstr "Territori Inglesi dell Oceano Indiano"
+msgstr "Territorio britannico dell'Oceano Indiano"
 
 #: settings/flags.php:121
 msgid "India"

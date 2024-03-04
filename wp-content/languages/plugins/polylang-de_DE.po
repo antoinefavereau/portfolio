@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-02 10:55:09+0000\n"
+"PO-Revision-Date: 2024-03-02 15:47:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.9\n"
+"X-Generator: GlotPress/4.0.0-beta.3\n"
 "Language: de\n"
 "Project-Id-Version: Plugins - Polylang - Stable (latest release)\n"
 
@@ -77,7 +77,7 @@ msgstr "%1$sDetails der Version %2$s anzeigen%3$s oder %4$sjetzt aktualisieren%5
 #. version 3. closing anchor tag, do not translate.
 #: install/plugin-updater.php:236
 msgid "%1$sView version %2$s details%3$s."
-msgstr "%1$sDetails der Version %2$s anzeigen %3$s."
+msgstr "%1$sDetails der Version %2$s anzeigen%3$s."
 
 #: install/plugin-updater.php:231
 msgid "Contact your network administrator to install the update."
@@ -512,6 +512,7 @@ msgid "Before upgrading to %2$s, please upgrade to %1$s."
 msgstr "Bitte aktualisiere zuerst auf %1$s bevor du ein Upgrade auf %2$s durchführst."
 
 #. Author of the plugin
+#: polylang.php
 msgid "WP SYNTEX"
 msgstr "WP SYNTEX"
 
@@ -541,6 +542,7 @@ msgstr "Tibet"
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
+#: polylang.php
 msgid "https://polylang.pro"
 msgstr "https://polylang.pro"
 
@@ -879,7 +881,7 @@ msgstr "Turks- und Caicosinseln"
 
 #: settings/flags.php:228
 msgid "Swaziland"
-msgstr "Swasiland"
+msgstr "Eswatini"
 
 #: settings/flags.php:227
 msgid "Syria"
@@ -1395,7 +1397,7 @@ msgstr "Ghana"
 
 #: settings/flags.php:98
 msgid "Georgia"
-msgstr "Georgia"
+msgstr "Georgien"
 
 #: settings/flags.php:97
 msgid "Grenada"
@@ -1760,10 +1762,12 @@ msgid "Edit this item in %s"
 msgstr "Bearbeite diesen Eintrag in %s"
 
 #. Description of the plugin
+#: polylang.php
 msgid "Adds multilingual capability to WordPress"
 msgstr "Ergänzt WordPress um Mehrsprachigkeit"
 
 #. Plugin Name of the plugin
+#: polylang.php
 msgid "Polylang"
 msgstr "Polylang"
 
@@ -2036,7 +2040,7 @@ msgstr "Zeichenfolge"
 
 #: settings/table-languages.php:155
 msgid "Posts"
-msgstr "Artikel"
+msgstr "Beiträge"
 
 #: settings/table-languages.php:154 settings/view-tab-lang.php:124
 msgid "Flag"
@@ -2092,7 +2096,7 @@ msgstr "Veröffentlichungsdatum"
 
 #: modules/sync/settings-sync.php:106
 msgid "Sticky posts"
-msgstr "Oben gehaltene Artikel"
+msgstr "Oben gehaltene Beiträge"
 
 #: modules/sync/settings-sync.php:105
 msgid "Ping status"

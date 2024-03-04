@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - Polylang - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-30 12:41:12+0000\n"
+"PO-Revision-Date: 2024-02-28 14:47:57+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.11\n"
+"X-Generator: GlotPress/4.0.0-beta.3\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - Polylang - Stable (latest release)\n"
 
@@ -512,6 +512,7 @@ msgid "Before upgrading to %2$s, please upgrade to %1$s."
 msgstr "Veuillez d’abord mettre à niveau vers %1$s avant de mettre à niveau vers %2$s."
 
 #. Author of the plugin
+#: polylang.php
 msgid "WP SYNTEX"
 msgstr "WP SYNTEX"
 
@@ -541,6 +542,7 @@ msgstr "Tibet"
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
+#: polylang.php
 msgid "https://polylang.pro"
 msgstr "https://polylang.pro"
 
@@ -1760,10 +1762,12 @@ msgid "Edit this item in %s"
 msgstr "Modifier cet élément en %s"
 
 #. Description of the plugin
+#: polylang.php
 msgid "Adds multilingual capability to WordPress"
 msgstr "Ajoute la gestion multilingue à WordPress"
 
 #. Plugin Name of the plugin
+#: polylang.php
 msgid "Polylang"
 msgstr "Polylang"
 

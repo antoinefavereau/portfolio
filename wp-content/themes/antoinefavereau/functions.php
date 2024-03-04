@@ -57,7 +57,7 @@ function handle_contact_form()
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'antoinefavereau45@gmail.com';
-        $mail->Password   = 'obia uxye uuzz lsjv';
+        $mail->Password   = 'umfp tzis afij ewui';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
