@@ -1,2 +1,0 @@
-<?php
-return ['x-generator'=>'GlotPress/4.0.0-beta.3','translation-revision-date'=>'2021-03-17 00:38:42+0000','plural-forms'=>'nplurals=2; plural=n > 1;','project-id-version'=>'Plugins - Big File Uploads &#8211; Increase Maximum File Upload Size - Stable (latest release)','language'=>'fr','messages'=>['&#8220;%s&#8221; has failed to upload.'=>'« %s » n’a pas pu être téléversé.','Dismiss'=>'Ignorer','The file size has exceeded the maximum file size setting.'=>'La taille du fichier a dépassé le réglage de la taille maximale de fichier.']];

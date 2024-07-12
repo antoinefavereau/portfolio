@@ -1,7 +1,0 @@
-
-
-#Begin Really Simple Security
-<Files *.php>
-	Require all denied
-</Files>
-#End Really Simple Security
