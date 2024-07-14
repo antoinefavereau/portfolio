@@ -904,7 +904,8 @@ body.active #header #nav #menuButton div {
 #projects .projectsList .item .responsiveTitle {
   display: none;
   position: relative;
-  font-size: 32px;
+  font-size: 24px;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
@@ -917,15 +918,17 @@ body.active #header #nav #menuButton div {
   text-decoration: none;
 }
 #projects .projectsList .item .responsiveTitle a svg {
+  position: absolute;
   display: inline;
   color: #00adb5;
+  margin-left: 0.5rem;
 }
 #projects .projectsList .item .responsiveTitle::after {
   content: "";
   position: absolute;
   display: block;
   width: 30%;
-  height: 6px;
+  height: 5px;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
