@@ -92,7 +92,6 @@ get_header();
     <h2 class="h2"><?= pll_e("projects") ?></h2>
     <h1 class="h1"><?= pll_e("The different projects I worked on") ?></h1>
     <ul class="projectsList">
-
         <?php
         query_posts(array(
             'post_type' => "project",
@@ -105,19 +104,21 @@ get_header();
                 <li class="item">
                     <p class="number"><?= sprintf("%02d", $numberCount) ?></p>
                     <h3 class="responsiveTitle">
-                        <a href="<?= esc_url(get_field('link')) ?>" target="_blank">
+                        <a <?= get_field('link') ? 'href="' . esc_url(get_field('link')) . '"' : '' ?> target="_blank">
                             <?= get_the_title() ?>
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" stroke-width="3" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentcolor">
-                                <path d="M21 3h-6m6 0l-9 9m9-9v6" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M21 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h6" stroke="currentcolor" stroke-width="3" stroke-linecap="round"></path>
-                            </svg>
+                            <?php if (get_field('link')) : ?>
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" stroke-width="3" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentcolor">
+                                    <path d="M21 3h-6m6 0l-9 9m9-9v6" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M21 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h6" stroke="currentcolor" stroke-width="3" stroke-linecap="round"></path>
+                                </svg>
+                            <?php endif; ?>
                         </a>
                     </h3>
-                    <a href="<?= esc_url(get_field('link')) ?>" class="imgContainer" target="_blank">
-                        <img class="hover" src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
+                    <a <?= get_field('link') ? 'href="' . esc_url(get_field('link')) . '"' : '' ?> class="imgContainer" target="_blank">
+                        <img class="<?= get_field('link') ? 'hover' : '' ?>" src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= get_the_title() ?>">
                     </a>
                     <div class="description">
-                        <h3 class="title"><a class="hover" href="<?= esc_url(get_field('link')) ?>" target="_blank"><?= get_the_title() ?></a></h3>
+                        <h3 class="title"><a class="<?= get_field('link') ? 'hover' : '' ?>" <?= get_field('link') ? 'href="' . esc_url(get_field('link')) . '"' : '' ?> target="_blank"><?= get_the_title() ?></a></h3>
                         <p class="text">
                             <?= get_field('text') ?>
                         </p>
