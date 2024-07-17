@@ -1,6 +1,12 @@
 <?php
 
-define( 'ITSEC_ENCRYPTION_KEY', 'eVJLeEF2c0ZiYSQsXT9+IFcwdnVqXzVCZTwsfGFRMk59JUJQTk9VYTQ+aEQ4cisyL2VQbDBdZ1YwamUzYFctJQ==' );
+define('FORCE_SSL_ADMIN', true);
+
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+}
+
+define('ITSEC_ENCRYPTION_KEY', 'eVJLeEF2c0ZiYSQsXT9+IFcwdnVqXzVCZTwsfGFRMk59JUJQTk9VYTQ+aEQ4cisyL2VQbDBdZ1YwamUzYFctJQ==');
 
 //Begin Really Simple SSL session cookie settings
 @ini_set('session.cookie_httponly', true);
@@ -104,12 +110,12 @@ $table_prefix  = 'wp_';
  * Il est fortemment recommandé que les développeurs d'extensions et
  * de thèmes se servent de WP_DEBUG dans leur environnement de 
  * développement.
- */ 
-define('WP_DEBUG', false); 
+ */
+define('WP_DEBUG', false);
 /* C'est tout, ne touchez pas à ce qui suit ! Bon blogging ! */
 /** Chemin absolu vers le dossier de WordPress. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+if (!defined('ABSPATH'))
+    define('ABSPATH', dirname(__FILE__) . '/');
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
 require_once(ABSPATH . 'wp-settings.php');
 
