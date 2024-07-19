@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.6.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-17 07:49:39+0000\n"
+"PO-Revision-Date: 2024-07-18 15:55:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1008,7 +1008,7 @@ msgid "sub item"
 msgstr "subitem"
 
 #. translators: 1: theme.json, 2: settings.spacing.spacingScale
-#: wp-includes/class-wp-theme-json.php:3876
+#: wp-includes/class-wp-theme-json.php:3891
 msgid "Some of the %1$s %2$s values are invalid"
 msgstr "Alguns dos valores de %2$s do %1$s são inválidos"
 
@@ -2303,12 +2303,12 @@ msgid "Logged in as %1$s. <a href=\"%2$s\">Edit your profile</a>. <a href=\"%3$s
 msgstr "Sessão iniciada como %1$s. <a href=\"%2$s\">Editar perfil</a>. <a href=\"%3$s\">Sair?</a>"
 
 #. translators: %s: Digit to indicate multiple of sizing, eg. 2X-Large.
-#: wp-includes/class-wp-theme-json.php:4045
+#: wp-includes/class-wp-theme-json.php:4060
 msgid "%sX-Large"
 msgstr "%sX-Grande"
 
 #. translators: %s: Digit to indicate multiple of sizing, eg. 2X-Small.
-#: wp-includes/class-wp-theme-json.php:4008
+#: wp-includes/class-wp-theme-json.php:4023
 msgid "%sX-Small"
 msgstr "%sX-Pequeno"
 
@@ -5918,7 +5918,7 @@ msgstr "Este tema não funciona com a sua versão do WordPress."
 #: wp-admin/includes/class-wp-plugins-list-table.php:1453
 #: wp-admin/includes/plugin.php:1153 wp-admin/includes/theme.php:931
 #: wp-admin/includes/theme.php:962 wp-admin/includes/theme.php:1008
-#: wp-admin/includes/theme.php:1031 wp-admin/includes/update-core.php:1066
+#: wp-admin/includes/theme.php:1031 wp-admin/includes/update-core.php:1071
 #: wp-admin/includes/update.php:789 wp-admin/includes/update.php:816
 #: wp-admin/install.php:255 wp-admin/theme-install.php:358
 #: wp-admin/theme-install.php:381 wp-admin/theme-install.php:563
@@ -6970,7 +6970,7 @@ msgid "Slug"
 msgstr "Slug"
 
 #. translators: %s: Digit to indicate multiple of sizing, eg. 2X-Small.
-#: wp-includes/class-wp-theme-json.php:4008
+#: wp-includes/class-wp-theme-json.php:4023
 #: wp-includes/js/dist/block-library.js:55604
 #: wp-includes/js/dist/components.js:59580
 msgid "Small"
@@ -16002,7 +16002,7 @@ msgid "Attachment Details"
 msgstr "Detalhes do anexo"
 
 #. translators: %s: Digit to indicate multiple of sizing, eg. 2X-Large.
-#: wp-includes/block-editor.php:173 wp-includes/class-wp-theme-json.php:4045
+#: wp-includes/block-editor.php:173 wp-includes/class-wp-theme-json.php:4060
 #: wp-includes/media-template.php:914 wp-includes/media-template.php:994
 #: wp-includes/media-template.php:1185 wp-includes/media.php:4422
 #: wp-includes/js/dist/block-editor.js:8354
@@ -20300,7 +20300,7 @@ msgstr "Tamanho"
 msgid "Full Size"
 msgstr "Tamanho original"
 
-#: wp-includes/block-editor.php:172 wp-includes/class-wp-theme-json.php:4027
+#: wp-includes/block-editor.php:172 wp-includes/class-wp-theme-json.php:4042
 #: wp-includes/media-template.php:913 wp-includes/media-template.php:993
 #: wp-includes/media-template.php:1184 wp-includes/media.php:4421
 #: wp-includes/js/dist/block-editor.js:8351
