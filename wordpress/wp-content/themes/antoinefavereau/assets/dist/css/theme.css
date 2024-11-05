@@ -1308,6 +1308,10 @@ body.active #header #nav #menuButton div {
 #footer .container form .field button[type=submit].loading .text {
   display: none;
 }
+#footer .container form .field textarea {
+  resize: vertical;
+  min-height: 200px;
+}
 #footer .links {
   position: relative;
   margin-inline: auto;
