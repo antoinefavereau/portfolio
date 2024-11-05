@@ -1310,7 +1310,7 @@ body.active #header #nav #menuButton div {
 }
 #footer .container form .field textarea {
   resize: vertical;
-  min-height: 200px;
+  min-height: 3rem;
 }
 #footer .links {
   position: relative;
