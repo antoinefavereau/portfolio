@@ -45,15 +45,6 @@ if (isset($_POST['name'])) {
                         <span>+33 6 77 45 53 62</span>
                     </a>
                 </li>
-                <li class="hoverIndex">
-                    <a href="https://goo.gl/maps/kectoAHXbPVfRFMw7" class="hover" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M33.3333 16.6668C33.3333 24.0302 20 36.6668 20 36.6668C20 36.6668 6.66663 24.0302 6.66663 16.6668C6.66663 13.1306 8.07138 9.73922 10.5719 7.23874C13.0724 4.73825 16.4637 3.3335 20 3.3335C23.5362 3.3335 26.9276 4.73825 29.428 7.23874C31.9285 9.73922 33.3333 13.1306 33.3333 16.6668Z" stroke="currentcolor" stroke-width="1.5" />
-                            <path d="M20 18.3333C20.4421 18.3333 20.866 18.1577 21.1786 17.8452C21.4911 17.5326 21.6667 17.1087 21.6667 16.6667C21.6667 16.2246 21.4911 15.8007 21.1786 15.4882C20.866 15.1756 20.4421 15 20 15C19.558 15 19.1341 15.1756 18.8215 15.4882C18.509 15.8007 18.3334 16.2246 18.3334 16.6667C18.3334 17.1087 18.509 17.5326 18.8215 17.8452C19.1341 18.1577 19.558 18.3333 20 18.3333Z" fill="currentcolor" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span>D207, 2 rue de la Folie 45000 Orléans</span>
-                    </a>
-                </li>
             </ul>
         </div>
         <form id="contactForm" action="<?php echo esc_url(admin_url('admin-ajax.php')); ?>" method="post">
