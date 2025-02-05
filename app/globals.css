@@ -3,19 +3,38 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #eeeeee;
+  --foreground: #222831;
+  --white: #eeeeee;
+  --black: #222831;
+  --whiteBlack: #888b8f;
+  --dark: #393e46;
+  --primary: #00adb5;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes buttonHover {
+  0% {
+    background-position-x: 0%;
+    background-size: 0% 100%;
+  }
+
+  50% {
+    background-position-x: 0%;
+    background-size: 100% 100%;
+  }
+
+  51% {
+    background-position-x: 100%;
+    background-size: 100% 100%;
+  }
+
+  100% {
+    background-position-x: 100%;
+    background-size: 0% 100%;
+  }
 }

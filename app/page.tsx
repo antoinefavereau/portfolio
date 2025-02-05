@@ -1,5 +1,6 @@
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
+import Button from "./components/ui/button";
 
 interface Project {
   title: string;
@@ -11,6 +12,7 @@ interface Project {
 interface Texts {
   hero_section: {
     about: string;
+    cta: string;
   };
 }
 
@@ -27,9 +29,10 @@ export default async function Home() {
 
     return (
       <main>
-        <section>
+        <section className="bg-black text-white min-h-screen flex flex-col justify-center items-center text-center p-2">
           <h1>Antoine Favereau</h1>
           <p>{texts.hero_section.about}</p>
+          <Button type="button">{texts.hero_section.cta}</Button>
         </section>
         <section>
           <h2>Projects</h2>
