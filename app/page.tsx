@@ -18,7 +18,7 @@ interface Texts {
 
 export default async function Home() {
   const headersData = await headers();
-  const locale = headersData.get("x-nextjs-locale") || "en";
+  const locale = headersData.get("x-nextjs-locale") ?? "fr";
 
   try {
     const projectsModule = await import(`../data/${locale}/projects.json`);
@@ -29,23 +29,10 @@ export default async function Home() {
 
     return (
       <main>
-        <section className="bg-black text-white min-h-screen flex flex-col justify-center items-center text-center p-2">
-          <h1>Antoine Favereau</h1>
-          <p>{texts.hero_section.about}</p>
+        <section className="bg-black text-white min-h-screen flex flex-col justify-center items-center gap-12 text-center p-2">
+          <h1 className="text-8xl font-bold text-center">Antoine<span className="text-primary">_</span> Favereau</h1>
+          <p className="max-w-lg text-lg">{texts.hero_section.about}</p>
           <Button type="button">{texts.hero_section.cta}</Button>
-        </section>
-        <section>
-          <h2>Projects</h2>
-          <ul>
-            {projects.map((project) => (
-              <li key={project.title}>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <img src={project.image} alt={project.title} />
-                <a href={project.link}>Link</a>
-              </li>
-            ))}
-          </ul>
         </section>
       </main>
     );
