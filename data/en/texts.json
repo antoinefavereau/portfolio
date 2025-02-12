@@ -1,6 +1,10 @@
 {
   "hero_section": {
-    "about": "Junior Fullstack Developer / Fifth year engineering student at CESI",
+    "about": "I am a passionate web and mobile development student, proficient in a wide range of technologies. Always curious to learn and explore new solutions, I strive to create intuitive and effective websites.",
     "cta": "discover"
+  },
+  "journey_section": {
+    "title": "My Journey",
+    "subtitle": "From my studies to my professional experiences."
   }
 }

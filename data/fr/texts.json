@@ -2,5 +2,9 @@
   "hero_section": {
     "about": "Étudiant passionné en développement web et mobile, je maitrise de nombreuses technologies. Toujours curieux d'apprendre et d'explorer de nouvelles solutions, je m'efforce de créer des sites web intuitifs et efficaces.",
     "cta": "découvrir"
+  },
+  "journey_section": {
+    "title": "Mon parcours",
+    "subtitle": "De mes études à mes expériences professionnelles."
   }
 }

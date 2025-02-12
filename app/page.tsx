@@ -2,6 +2,23 @@ import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import Button from "./components/ui/button";
 
+interface Texts {
+  hero_section: {
+    about: string;
+    cta: string;
+  };
+  journey_section: {
+    title: string;
+    subtitle: string;
+  };
+}
+
+interface Journey {
+  title: string;
+  dates: string;
+  description: string;
+}
+
 interface Project {
   title: string;
   description: string;
@@ -9,34 +26,27 @@ interface Project {
   link: string;
 }
 
-interface Texts {
-  hero_section: {
-    about: string;
-    cta: string;
-  };
-}
-
 export default async function Home() {
   const headersData = await headers();
   const locale = headersData.get("x-nextjs-locale") ?? "fr";
 
   try {
-    const projectsModule = await import(`../data/${locale}/projects.json`);
     const textsModule = await import(`../data/${locale}/texts.json`);
+    const journeyModule = await import(`../data/${locale}/journey.json`);
 
-    const projects: Project[] = projectsModule.default;
     const texts: Texts = textsModule.default;
+    const journey: Journey[] = journeyModule.default;
 
     return (
       <main>
-        <section className="relative bg-black text-white min-h-screen flex flex-col justify-center items-center gap-12 text-center p-2">
+        <section className="relative bg-black text-white min-h-screen flex flex-col justify-center items-center gap-12 text-center">
           <h1 className="text-8xl font-bold text-center">
             Antoine<span className="text-primary">_</span> Favereau
           </h1>
-          <p className="max-w-xl text-lg">{texts.hero_section.about}</p>
+          <p className="max-w-2xl text-lg">{texts.hero_section.about}</p>
           <Button type="button">{texts.hero_section.cta}</Button>
           <svg
-            className="absolute bottom-0 left-0 w-full"
+            className="absolute bottom-0 left-0 w-full h-auto"
             width="1920"
             height="100"
             viewBox="0 0 1920 100"
@@ -54,6 +64,14 @@ export default async function Home() {
               strokeWidth="4"
             />
           </svg>
+        </section>
+        <section className="bg-white text-black flex flex-col justify-center items-center gap-12 text-center py-16 px-2">
+          <div className="max-w-2xl flex flex-col items-center gap-4">
+            <h2 className="text-primary text-2xl font-bold uppercase">
+              {texts.journey_section.title}
+            </h2>
+            <p className="text-4xl font-medium">{texts.journey_section.subtitle}</p>
+          </div>
         </section>
       </main>
     );
