@@ -46,7 +46,7 @@ export default async function Home() {
           <p className="max-w-2xl text-lg">{texts.hero_section.about}</p>
           <Button type="button">{texts.hero_section.cta}</Button>
           <svg
-            className="absolute bottom-0 left-0 w-full h-auto"
+            className="absolute bottom-[-1px] left-0 w-full h-auto"
             width="1920"
             height="100"
             viewBox="0 0 1920 100"
@@ -71,6 +71,17 @@ export default async function Home() {
               {texts.journey_section.title}
             </h2>
             <p className="text-4xl font-medium">{texts.journey_section.subtitle}</p>
+          </div>
+          <div className="flex flex-col">
+            {journey.map((item, index) => (
+              <div
+                key={index}
+              >
+                <h3 className="text-2xl font-bold">{item.title}</h3>
+                <p className="text-lg">{item.dates}</p>
+                <p>{item.description}</p>
+              </div>
+            ))}
           </div>
         </section>
       </main>
