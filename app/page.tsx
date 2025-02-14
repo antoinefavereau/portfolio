@@ -19,12 +19,12 @@ interface Journey {
   description: string;
 }
 
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  link: string;
-}
+// interface Project {
+//   title: string;
+//   description: string;
+//   image: string;
+//   link: string;
+// }
 
 export default async function Home() {
   const headersData = await headers();
