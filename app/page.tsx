@@ -67,7 +67,7 @@ export default async function Home() {
         </section>
         <section className="bg-white text-black flex flex-col justify-center items-center gap-12 text-center py-16 px-2">
           <div className="max-w-2xl flex flex-col items-center gap-4">
-            <h2 className="text-primary text-2xl font-bold uppercase">
+            <h2 className="text-primary text-2xl font-medium uppercase">
               {texts.journey_section.title}
             </h2>
             <p className="text-4xl font-medium">{texts.journey_section.subtitle}</p>
@@ -76,9 +76,12 @@ export default async function Home() {
             {journey.map((item, index) => (
               <div
                 key={index}
+                className="flex"
               >
-                <h3 className="text-2xl font-bold">{item.title}</h3>
-                <p className="text-lg">{item.dates}</p>
+                <div className="flex flex-col items-end gap-2">
+                  <h3 className="text-2xl font-bold">{item.title}</h3>
+                  <p className="text-lg">{item.dates}</p>
+                </div>
                 <p>{item.description}</p>
               </div>
             ))}
