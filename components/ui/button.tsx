@@ -8,7 +8,7 @@ export default function Button({
 }: ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button
-      className={`group relative py-3 px-12 text-xl font-semibold -skew-x-24 bg-primary rounded-sm hover:-skew-x-20 hover:rounded-md transition duration-200 ease-in-out ${props.className}`}
+      className={`group relative py-3 px-12 text-xl font-semibold cursor-pointer -skew-x-24 bg-primary rounded-sm hover:-skew-x-20 hover:rounded-md transition duration-200 ease-in-out ${props.className}`}
       {...props}
     >
       <div

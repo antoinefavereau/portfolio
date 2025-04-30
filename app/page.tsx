@@ -1,27 +1,17 @@
 import { headers } from "next/headers";
-import { notFound } from "next/navigation";
-import Hero from "./components/Hero";
-import Journey from "./components/Journey";
+import { redirect } from "next/navigation";
+import Negotiator from "negotiator";
+import { match } from "@formatjs/intl-localematcher";
 
-export default async function Home() {
-  const headersData = await headers();
-  const locale = headersData.get("x-nextjs-locale") ?? "fr";
+const locales = ["en", "fr"];
+const defaultLocale = "en";
 
-  try {
-    const textsModule = await import(`../data/${locale}/texts.json`);
-    const journeyModule = await import(`../data/${locale}/journey.json`);
+export default async function RootPage() {
+  const acceptLang = (await headers()).get("accept-language") || "";
+  const languages = new Negotiator({
+    headers: { "accept-language": acceptLang },
+  }).languages();
+  const locale = match(languages, locales, defaultLocale);
 
-    const texts = textsModule.default;
-    const journey = journeyModule.default;
-
-    return (
-      <main>
-        <Hero texts={texts.hero_section} />
-        <Journey texts={texts.journey_section} journey={journey} />
-      </main>
-    );
-  } catch (error) {
-    console.error(error);
-    return notFound();
-  }
+  redirect(`/${locale}`);
 }
