@@ -31,5 +31,5 @@
 
 body {
   color: var(--color-foreground);
-  background: var(--color-background);
+  background: var(--color-foreground);
 }
