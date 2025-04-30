@@ -1,21 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-background: #eeeeee;
+  --color-foreground: #222831;
+  --color-white: #eeeeee;
+  --color-black: #222831;
+  --color-white-black: #888b8f;
+  --color-dark: #393e46;
+  --color-primary: #00adb5;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @keyframes buttonHover {
+    0% {
+      background-position-x: 0%;
+      background-size: 0% 100%;
+    }
+    50% {
+      background-position-x: 0%;
+      background-size: 100% 100%;
+    }
+    51% {
+      background-position-x: 100%;
+      background-size: 100% 100%;
+    }
+    100% {
+      background-position-x: 100%;
+      background-size: 0% 100%;
+    }
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-foreground);
+  background: var(--color-background);
 }

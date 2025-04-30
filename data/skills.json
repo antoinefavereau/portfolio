@@ -1,0 +1,112 @@
+[
+  {
+    "title": "HTML",
+    "image": "html.png",
+    "link": "https://developer.mozilla.org/docs/Web/HTML"
+  },
+  {
+    "title": "CSS",
+    "image": "css.png",
+    "link": "https://developer.mozilla.org/docs/Web/CSS"
+  },
+  {
+    "title": "JavaScript",
+    "image": "javascript.png",
+    "link": "https://developer.mozilla.org/docs/Web/JavaScript"
+  },
+  {
+    "title": "PHP",
+    "image": "php.png",
+    "link": "https://www.php.net/"
+  },
+  {
+    "title": "MySQL",
+    "image": "mysql.png",
+    "link": "https://www.mysql.com/"
+  },
+  {
+    "title": "Bootstrap",
+    "image": "bootstrap.png",
+    "link": "https://getbootstrap.com/"
+  },
+  {
+    "title": "jQuery",
+    "image": "jquery.png",
+    "link": "https://jquery.com/"
+  },
+  {
+    "title": "Sass",
+    "image": "sass.png",
+    "link": "https://sass-lang.com/"
+  },
+  {
+    "title": "WordPress",
+    "image": "wordpress.png",
+    "link": "https://wordpress.org/"
+  },
+  {
+    "title": "Git",
+    "image": "git.png",
+    "link": "https://git-scm.com/"
+  },
+  {
+    "title": "Github",
+    "image": "github.png",
+    "link": "https://github.com/"
+  },
+  {
+    "title": "Figma",
+    "image": "figma.png",
+    "link": "https://www.figma.com/"
+  },
+  {
+    "title": "React",
+    "image": "react.png",
+    "link": "https://reactjs.org/"
+  },
+  {
+    "title": "gsap",
+    "image": "gsap.png",
+    "link": "https://gsap.com/"
+  },
+  {
+    "title": "Spline",
+    "image": "spline.png",
+    "link": "https://spline.design/"
+  },
+  {
+    "title": "Next.js",
+    "image": "nextjs.png",
+    "link": "https://nextjs.org/"
+  },
+  {
+    "title": "Vercel",
+    "image": "vercel.png",
+    "link": "https://vercel.com/home"
+  },
+  {
+    "title": "Node.js",
+    "image": "nodejs.png",
+    "link": "https://nodejs.org/"
+  },
+  {
+    "title": "Express",
+    "image": "express.png",
+    "link": "https://expressjs.com/"
+  },
+  {
+    "title": "MongoDB",
+    "image": "mongodb.png",
+    "link": "https://www.mongodb.com/"
+  },
+  {
+    "title": "Strapi",
+    "image": "strapi.png",
+    "link": "https://strapi.io/"
+  },
+  {
+    "title": "Angular",
+    "image": "angular.png",
+    "link": "https://angular.io/"
+  }
+]
