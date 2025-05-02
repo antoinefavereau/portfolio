@@ -1,3 +1,5 @@
+import SectionHeader from "./ui/section-header";
+
 interface JourneyProps {
   texts: {
     title: string;
@@ -13,12 +15,7 @@ interface JourneyProps {
 export default function Journey({ texts, journey }: JourneyProps) {
   return (
     <section className="bg-white text-black flex flex-col justify-center items-center gap-24 py-16 px-8 md:px-16">
-      <div className="max-w-xl flex flex-col items-center gap-4 text-center">
-        <h2 className="text-primary text-2xl font-medium uppercase">
-          {texts.title}
-        </h2>
-        <p className="text-4xl font-medium">{texts.subtitle}</p>
-      </div>
+      <SectionHeader title={texts.title} subtitle={texts.subtitle} />
       <div className="flex flex-col gap-2">
         {journey.map((item, index) => (
           <div key={index} className="group flex gap-8">

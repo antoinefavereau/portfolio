@@ -6,5 +6,9 @@
   "journey_section": {
     "title": "Mon parcours",
     "subtitle": "De mes études à mes expériences professionnelles."
+  },
+  "skills_section": {
+    "title": "Mes compétences",
+    "subtitle": "Un aperçu de mes compétences techniques."
   }
 }
