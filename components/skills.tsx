@@ -1,4 +1,5 @@
 import SectionHeader from "./ui/section-header";
+import Image from "next/image";
 
 interface SkillsProps {
   texts: {
@@ -20,16 +21,18 @@ export default function Skills({ texts, skills }: SkillsProps) {
         <ul className="flex flex-wrap gap-16">
           {skills.map((skill, index) => (
             <li key={index} className="flex gap-8 items-center">
-              <img
-                src={skill.image}
+              <Image
+                className="w-16 h-16 object-contain rounded-full"
+                src={"/skills/" + skill.image}
                 alt={skill.title}
-                className="w-16 h-16 rounded-full"
+                width={64}
+                height={64}
               />
               <a
+                className="text-2xl font-bold text-primary hover:underline"
                 href={skill.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl font-bold text-primary hover:underline"
               >
                 {skill.title}
               </a>
