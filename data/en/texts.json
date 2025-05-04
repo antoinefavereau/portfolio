@@ -10,5 +10,9 @@
   "skills_section": {
     "title": "My Skills",
     "subtitle": "An overview of my technical skills."
+  },
+  "projects_section": {
+    "title": "My Projects",
+    "subtitle": "An overview of my projects."
   }
 }
