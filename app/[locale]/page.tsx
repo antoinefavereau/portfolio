@@ -1,3 +1,5 @@
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Journey from "@/components/journey";
 import Projects from "@/components/projects";
@@ -20,11 +22,15 @@ export default async function Page({ params }: PageProps) {
   const { default: projects } = await import(`@/data/${locale}/projects.json`);
 
   return (
-    <main>
-      <Hero texts={texts.hero_section} />
-      <Journey texts={texts.journey_section} journey={journey} />
-      <Skills texts={texts.skills_section} skills={skills} />
-      <Projects texts={texts.projects_section} projects={projects} />
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero texts={texts.hero_section} />
+        <Journey texts={texts.journey_section} journey={journey} />
+        <Skills texts={texts.skills_section} skills={skills} />
+        <Projects texts={texts.projects_section} projects={projects} />
+      </main>
+      <Footer texts={texts.footer_section} />
+    </>
   );
 }
