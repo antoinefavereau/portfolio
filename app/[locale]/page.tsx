@@ -30,7 +30,7 @@ export default async function Page({ params }: PageProps) {
         <Skills texts={texts.skills_section} skills={skills} />
         <Projects texts={texts.projects_section} projects={projects} />
       </main>
-      <Footer texts={texts.footer_section} />
+      <Footer />
     </>
   );
 }
