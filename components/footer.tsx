@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Socials from "./socials";
 
 interface FooterProps {
   texts: {
@@ -21,7 +22,7 @@ interface FooterProps {
 
 export default function Footer({ texts, socials }: FooterProps) {
   return (
-    <footer className="grid gap-24 pt-24 pb-16 px-32">
+    <footer id="contact" className="grid gap-24 pt-24 pb-16 px-32">
       <div className="grid lg:grid-cols-[1fr_450px] gap-16">
         <div className="flex flex-col gap-10 text-background">
           <h2 className="text-7xl font-bold text-primary">{texts.title}</h2>
@@ -103,24 +104,7 @@ export default function Footer({ texts, socials }: FooterProps) {
           </button>
         </form>
       </div>
-      <div className="flex justify-center items-center gap-8">
-        {socials.map((social) => (
-          <a
-            key={social.name}
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={social.name}
-          >
-            <Image
-              src={`/socials/${social.icon}`}
-              alt={social.name}
-              width={64}
-              height={64}
-            />
-          </a>
-        ))}
-      </div>
+      <Socials className="text-white" socials={socials} />
     </footer>
   );
 }

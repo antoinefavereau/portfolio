@@ -1,4 +1,8 @@
 {
+  "header": {
+    "open_menu": "Ouvrir le menu",
+    "close_menu": "Fermer le menu"
+  },
   "hero_section": {
     "about": "Étudiant passionné en développement web et mobile, je maitrise de nombreuses technologies. Toujours curieux d'apprendre et d'explorer de nouvelles solutions, je m'efforce de créer des sites web intuitifs et efficaces.",
     "cta": "découvrir"
@@ -15,7 +19,7 @@
     "title": "Mes projets",
     "subtitle": "Un aperçu de mes projets."
   },
-  "footer_section": {
+  "footer": {
     "title": "Me contacter",
     "subtitle": "N'hésitez pas à me contacter pour toute demande ou collaboration.",
     "form": {

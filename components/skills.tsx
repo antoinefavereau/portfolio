@@ -15,7 +15,7 @@ interface SkillsProps {
 
 export default function Skills({ texts, skills }: SkillsProps) {
   return (
-    <section className="grid bg-background py-16 px-8">
+    <section id="skills" className="grid bg-background py-16 px-8">
       <div className="flex flex-col items-center gap-24 bg-foreground text-background py-16 px-8 rounded-[3rem] overflow-hidden">
         <SectionHeader title={texts.title} subtitle={texts.subtitle} />
         <div className="@container w-full max-w-5xl transform-3d perspective-distant">

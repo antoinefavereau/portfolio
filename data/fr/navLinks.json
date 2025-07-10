@@ -1,0 +1,6 @@
+[
+  { "href": "#journey", "label": "Parcours" },
+  { "href": "#skills", "label": "Compétences" },
+  { "href": "#projects", "label": "Projets" },
+  { "href": "#contact", "label": "Contact" }
+]

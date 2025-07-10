@@ -1,15 +1,17 @@
 import clsx from "clsx";
 
+interface SectionHeaderProps {
+  title: string;
+  subtitle: string;
+  className?: string;
+}
+
 export default function SectionHeader({
   title,
   subtitle,
   className,
   ...props
-}: {
-  title: string;
-  subtitle: string;
-  className?: string;
-} & React.HTMLAttributes<HTMLDivElement>) {
+}: SectionHeaderProps & React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={clsx(
