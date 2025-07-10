@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Socials from "./socials";
+import Link from "next/link";
 
 interface HeaderProps {
   texts: {
@@ -48,7 +49,11 @@ export default function Header({
 
   return (
     <header className="absolute top-0 left-0 w-full z-50 flex justify-between items-center py-12 px-20 text-white">
-      <a href="/" title="Antoine Favereau" aria-label="Antoine Favereau">
+      <Link
+        href={`/${locale}`}
+        title="Antoine Favereau"
+        aria-label="Antoine Favereau"
+      >
         <svg
           className="h-auto hover:text-light transition-colors duration-200"
           width="50"
@@ -68,7 +73,7 @@ export default function Header({
             d="M73.2316 5.38783C74.0188 3.87656 76.8687 3.79302 77.6875 5.38783L84.1336 16.5033C84.3568 16.9185 84.4737 17.3825 84.4737 17.8539C84.4737 18.3254 84.3568 18.7894 84.1336 19.2046L79.6072 27.097C78.8478 28.2592 76.1223 28.1868 75.4113 27.097L68.7275 15.5546C68.3729 14.9307 68.3562 13.9505 68.7275 13.3508L73.2316 5.38783Z"
           ></path>
         </svg>
-      </a>
+      </Link>
       <div className="flex items-center gap-8">
         <div className="text-lg text-light">
           <button
