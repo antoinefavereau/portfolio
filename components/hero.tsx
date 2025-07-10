@@ -9,11 +9,11 @@ interface HeroProps {
 
 export default function Hero({ texts }: HeroProps) {
   return (
-    <section className="relative bg-black text-white min-h-screen flex flex-col justify-center items-center gap-12 text-center">
-      <h1 className="text-8xl font-bold text-center">
+    <section className="relative bg-black text-white min-h-screen flex flex-col justify-center items-center gap-12 text-center px-8">
+      <h1 className="text-6xl sm:text-8xl font-bold text-center">
         Antoine<span className="text-primary">_</span> Favereau
       </h1>
-      <p className="max-w-2xl text-lg">{texts.about}</p>
+      <p className="max-w-2xl text-md sm:text-lg">{texts.about}</p>
       <Button type="button">{texts.cta}</Button>
       <svg
         className="absolute bottom-[-1px] left-0 w-full h-auto"

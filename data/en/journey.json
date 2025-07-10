@@ -1,8 +1,8 @@
 [
   {
-    "title": "Freelance",
-    "dates": "2022 - Today",
-    "description": "Alongside my studies, I have also worked as a freelance web developer. This experience allowed me to work on various projects, ranging from showcase websites to more complex platforms, adapting to clients' specific needs. I strengthened my skills in both front-end and back-end development, while also learning to manage projects independently, from requirement analysis to final delivery. This journey has given me great versatility and the ability to provide tailored solutions for modern web challenges."
+    "title": "François Villon",
+    "dates": "2016 - 3 years",
+    "description": "I obtained a Scientific Baccalaureate with an Engineering Sciences specialization at Lycée François Villon in Beaugency. This program provided me with a strong foundation in mathematics, physics, and engineering, as well as analytical and problem-solving skills essential for my engineering studies."
   },
   {
     "title": "CESI",
@@ -10,18 +10,23 @@
     "description": "Currently in my fifth year at CESI, an engineering school recognized for its professional approach and academic excellence, I am pursuing a specialized degree in computer science. Throughout my studies, I have had the opportunity to participate in various practical projects, allowing me to develop both my technical skills (programming, project management, etc.) and my ability to collaborate in a team and innovate. CESI's educational approach, centered on project-based learning and close collaboration with industry, has provided me with valuable hands-on experience. As I near the completion of my engineering degree, I am now ready to take on new challenges and apply my skills to ambitious projects."
   },
   {
+    "title": "Xapiema",
+    "dates": "2022 - 10 months",
+    "description": "Xapiema is a web agency base d in Orléans, specializing in the design and development of custom websites and mobile applications. I had the opportunity to complete two internships there, as well as a short fixed-term contract (CDD) of two months during the holidays. This agency provided me with my first experience in web development, allowing me to work on various projects for clients from both the public and private sectors. I contributed to the improvement and maintenance of websites developed with WordPress, PrestaShop, and Magento, responding to client requests by fixing issues and adding new features. This experience allowed me to gain a solid foundation in web development, familiarize myself with agency workflows, and learn how to collaborate effectively within a technical team."
+  },
+  {
     "title": "Lifekeys",
     "dates": "2023 - 5 months",
     "description": "Lifekeys is a Norwegian company specializing in developing innovative technological solutions to improve mental health. During my multi-month internship at the company, I worked as a web developer, contributing to the development and enhancement of various features for their online platforms. I was involved in the maintenance and deployment of new functionalities for UserWeb, a mental well-being tool, as well as optimizing the interface and user experience for several other company applications. My work included using Next.js, Styled Components, Material-UI, and other modern technologies while collaborating with an experienced team of developers. This internship provided me with valuable experience in web development, agile project management, and international teamwork."
   },
   {
-    "title": "Xapiema",
-    "dates": "2022 - 10 months",
-    "description": "Xapiema is a web agency based in Orléans, specializing in the design and development of custom websites and mobile applications. I had the opportunity to complete two internships there, as well as a short fixed-term contract (CDD) of two months during the holidays. This agency provided me with my first experience in web development, allowing me to work on various projects for clients from both the public and private sectors. I contributed to the improvement and maintenance of websites developed with WordPress, PrestaShop, and Magento, responding to client requests by fixing issues and adding new features. This experience allowed me to gain a solid foundation in web development, familiarize myself with agency workflows, and learn how to collaborate effectively within a technical team."
+    "title": "Evermaps",
+    "dates": "2024 - 12 months",
+    "description": "Evermaps is a French company specializing in boosting the digital visibility of retail networks—Store Locators, Google Business Profile management, local SEO, review management, and more. With over ten years of expertise and a team of around thirty people, the company offers a modular platform that lets brands monitor and analyze their local performance from a single console.\n\nFor my fifth and final year at CESI, I joined Evermaps on a professional apprenticeship contract as a front-end developer. I worked on the platform's edition (Angular), adding new interface components and improving rendering performance. This experience strengthened my modern front-end skills and allowed me to contribute to a solution deployed across thousands of retail locations."
   },
   {
-    "title": "Lycée François Villon",
-    "dates": "2016 - 3 years",
-    "description": "I obtained a Scientific Baccalaureate with an Engineering Sciences specialization at Lycée François Villon in Beaugency. This program provided me with a strong foundation in mathematics, physics, and engineering, as well as analytical and problem-solving skills essential for my engineering studies."
+    "title": "Freelance",
+    "dates": "2022 - Today",
+    "description": "Alongside my studies, I have also worked as a freelance web developer. This experience allowed me to work on various projects, ranging from showcase websites to more complex platforms, adapting to clients' specific needs. I strengthened my skills in both front-end and back-end development, while also learning to manage projects independently, from requirement analysis to final delivery. This journey has given me great versatility and the ability to provide tailored solutions for modern web challenges."
   }
 ]

@@ -1,8 +1,8 @@
 [
   {
-    "title": "Freelance",
-    "dates": "2022 - Aujourd'hui",
-    "description": "En parallèle de mes études, j'ai également exercé en tant que développeur web freelance. Cette expérience m'a permis de travailler sur divers projets, allant de la conception de sites vitrines à des plateformes plus complexes, en m'adaptant aux besoins spécifiques des clients. J'ai ainsi renforcé mes compétences en développement front-end et back-end, tout en apprenant à gérer des projets de manière autonome, de l'analyse des besoins à la livraison du produit final. Ce parcours m'a offert une grande polyvalence et une capacité à proposer des solutions adaptées aux enjeux du web moderne."
+    "title": "François Villon",
+    "dates": "2016 - 3 ans",
+    "description": "J'ai obtenu un baccalauréat scientifique option Sciences de l'Ingénieur au Lycée François Villon à Beaugency. Cette formation m'a permis d'acquérir des bases solides en mathématiques, physique et ingénierie, ainsi qu'un esprit d'analyse et de résolution de problèmes, compétences essentielles pour la suite de mon parcours en école d'ingénieur."
   },
   {
     "title": "CESI",
@@ -10,18 +10,23 @@
     "description": "Actuellement en cinquième année à CESI, une école d'ingénieurs reconnue pour son approche professionnalisante et son excellence académique, je poursuis un cursus spécialisé en informatique. Au fil de mes études, j'ai eu l'opportunité de participer à divers projets concrets, me permettant de développer tant mes compétences techniques (en programmation, gestion de projets, etc.) que ma capacité à travailler en équipe et à innover. L'approche pédagogique de CESI, axée sur l'apprentissage par projets et la collaboration avec le monde professionnel, m'a aidé à acquérir une solide expérience terrain. Sur le point d'obtenir mon diplôme d'ingénieur, je suis désormais prêt à relever de nouveaux défis et à mettre mes compétences au service de projets ambitieux."
   },
   {
-    "title": "Lifekeys",
-    "dates": "2023 - 5 mois",
-    "description": "Lifekeys est une entreprise norvégienne spécialisée dans le développement de solutions technologiques innovantes pour améliorer la santé mentale. Lors de mon stage de plusieurs mois au sein de cette entreprise, j'ai occupé le poste de développeur web, où j'ai travaillé sur le développement et l'amélioration de diverses fonctionnalités pour leurs plateformes en ligne. J'ai notamment contribué à la maintenance et au déploiement de nouvelles fonctionnalités sur UserWeb, un outil dédié au bien-être mental, ainsi qu'à l'optimisation de l'interface et de l'expérience utilisateur sur plusieurs autres applications de l'entreprise. Mon travail a impliqué l'utilisation de Next.js, Styled Components, Material-UI et d'autres technologies modernes, tout en collaborant avec une équipe de développeurs expérimentés. Ce stage m'a permis d'acquérir une précieuse expérience en développement web, en gestion de projet agile et en collaboration internationale."
-  },
-  {
     "title": "Xapiema",
     "dates": "2022 - 10 mois",
     "description": "Xapiema est une agence web orléanaise spécialisée dans la conception et le développement de sites internet et d'applications mobiles sur mesure. J'ai eu l'opportunité d'y effectuer deux stages ainsi qu'un court CDD de deux mois durant les vacances. C'est au sein de cette agence que j'ai découvert le développement web, en travaillant sur des projets variés pour des clients issus aussi bien du secteur public que privé. J'ai notamment contribué à l'amélioration et à la maintenance de sites développés sous WordPress, PrestaShop et Magento, répondant aux demandes des clients en apportant des corrections et en ajoutant de nouvelles fonctionnalités. Cette expérience m'a permis d'acquérir des bases solides en développement web, de me familiariser avec les méthodes de travail en agence, et d'apprendre à collaborer efficacement au sein d'une équipe technique."
   },
   {
-    "title": "Lycée François Villon",
-    "dates": "2016 - 3 ans",
-    "description": "J'ai obtenu un baccalauréat scientifique option Sciences de l'Ingénieur au Lycée François Villon à Beaugency. Cette formation m'a permis d'acquérir des bases solides en mathématiques, physique et ingénierie, ainsi qu'un esprit d'analyse et de résolution de problèmes, compétences essentielles pour la suite de mon parcours en école d'ingénieur."
+    "title": "Lifekeys",
+    "dates": "2023 - 5 mois",
+    "description": "Lifekeys est une entreprise norvégienne spécialisée dans le développement de solutions technologiques innovantes pour améliorer la santé mentale. Lors de mon stage de plusieurs mois au sein de cette entreprise, j'ai occupé le poste de développeur web, où j'ai travaillé sur le développement et l'amélioration de diverses fonctionnalités pour leurs plateformes en ligne. J'ai notamment contribué à la maintenance et au déploiement de nouvelles fonctionnalités sur UserWeb, un outil dédié au bien-être mental, ainsi qu'à l'optimisation de l'interface et de l'expérience utilisateur sur plusieurs autres applications de l'entreprise. Mon travail a impliqué l'utilisation de Next.js, Styled Components, Material-UI et d'autres technologies modernes, tout en collaborant avec une équipe de développeurs expérimentés. Ce stage m'a permis d'acquérir une précieuse expérience en développement web, en gestion de projet agile et en collaboration internationale."
+  },
+  {
+    "title": "Evermaps",
+    "dates": "2024 - 12 mois",
+    "description": "Evermaps est une entreprise française spécialisée dans l'optimisation de la visibilité digitale des réseaux de points de vente : Store Locator, gestion des fiches Google My Business, SEO local, gestion des avis clients, etc. Forte de plus de dix ans d'expertise et d'une équipe d'une trentaine de collaborateurs, la société propose une plateforme modulaire qui permet aux enseignes de piloter et d'analyser leurs performances locales depuis une console unique.\n\nPour ma cinquième et dernière année à CESI, j'ai rejoint Evermaps en contrat de professionnalisation en tant que développeur front-end. J'y ai travaillé sur l'édition de la plateforme (Angular), enrichissant l'interface de nouveaux composants et améliorant les performances d'affichage. Cette expérience a consolidé mes compétences en développement front-end moderne et m'a permis de contribuer à une solution déployée auprès de milliers de points de vente."
+  },
+  {
+    "title": "Freelance",
+    "dates": "2022 - Aujourd'hui",
+    "description": "En parallèle de mes études, j'ai également exercé en tant que développeur web freelance. Cette expérience m'a permis de travailler sur divers projets, allant de la conception de sites vitrines à des plateformes plus complexes, en m'adaptant aux besoins spécifiques des clients. J'ai ainsi renforcé mes compétences en développement front-end et back-end, tout en apprenant à gérer des projets de manière autonome, de l'analyse des besoins à la livraison du produit final. Ce parcours m'a offert une grande polyvalence et une capacité à proposer des solutions adaptées aux enjeux du web moderne."
   }
 ]

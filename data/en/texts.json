@@ -6,5 +6,24 @@
   "journey_section": {
     "title": "My Journey",
     "subtitle": "From my studies to my professional experiences."
+  },
+  "skills_section": {
+    "title": "My Skills",
+    "subtitle": "An overview of my technical skills."
+  },
+  "projects_section": {
+    "title": "My Projects",
+    "subtitle": "An overview of my projects."
+  },
+  "footer_section": {
+    "title": "Contact me",
+    "subtitle": "Feel free to reach out for any inquiries or collaborations.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Submit"
+    }
   }
 }

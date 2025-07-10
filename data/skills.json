@@ -1,7 +1,7 @@
 [
   {
     "title": "HTML",
-    "image": "html.png",
+    "image": "html5.png",
     "link": "https://developer.mozilla.org/docs/Web/HTML"
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "title": "JavaScript",
-    "image": "javascript.png",
+    "image": "js.png",
     "link": "https://developer.mozilla.org/docs/Web/JavaScript"
   },
   {
@@ -76,7 +76,7 @@
   },
   {
     "title": "Next.js",
-    "image": "nextjs.png",
+    "image": "next-js.png",
     "link": "https://nextjs.org/"
   },
   {
@@ -86,22 +86,22 @@
   },
   {
     "title": "Node.js",
-    "image": "nodejs.png",
+    "image": "node.png",
     "link": "https://nodejs.org/"
   },
   {
     "title": "Express",
-    "image": "express.png",
+    "image": "express-js.png",
     "link": "https://expressjs.com/"
   },
   {
     "title": "MongoDB",
-    "image": "mongodb.png",
+    "image": "mongodb.svg",
     "link": "https://www.mongodb.com/"
   },
   {
     "title": "Strapi",
-    "image": "strapi.png",
+    "image": "strapi.svg",
     "link": "https://strapi.io/"
   },
   {
