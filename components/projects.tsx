@@ -22,7 +22,7 @@ export default function Projects({ texts, projects }: ProjectsProps) {
         {projects.map((item, index) => (
           <div
             key={index}
-            className="group w-full grid grid-cols-[auto_3fr_4fr] gap-8 border-b-1 border-foreground py-12"
+            className="group w-full grid grid-cols-[auto_3fr_4fr] gap-8 border-b-1 border-foreground py-16"
           >
             <span>{String(index + 1).padStart(2, "0")}</span>
             <div className="relative">
