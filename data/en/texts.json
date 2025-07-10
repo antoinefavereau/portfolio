@@ -14,5 +14,16 @@
   "projects_section": {
     "title": "My Projects",
     "subtitle": "An overview of my projects."
+  },
+  "footer_section": {
+    "title": "Contact me",
+    "subtitle": "Feel free to reach out for any inquiries or collaborations.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Submit"
+    }
   }
 }

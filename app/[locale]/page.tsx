@@ -20,6 +20,7 @@ export default async function Page({ params }: PageProps) {
   const { default: journey } = await import(`@/data/${locale}/journey.json`);
   const { default: skills } = await import(`@/data/skills.json`);
   const { default: projects } = await import(`@/data/${locale}/projects.json`);
+  const { default: socials } = await import(`@/data/socials.json`);
 
   return (
     <>
@@ -30,7 +31,7 @@ export default async function Page({ params }: PageProps) {
         <Skills texts={texts.skills_section} skills={skills} />
         <Projects texts={texts.projects_section} projects={projects} />
       </main>
-      <Footer />
+      <Footer texts={texts.footer_section} socials={socials} />
     </>
   );
 }

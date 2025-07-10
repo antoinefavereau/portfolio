@@ -14,5 +14,16 @@
   "projects_section": {
     "title": "Mes projets",
     "subtitle": "Un aperçu de mes projets."
+  },
+  "footer_section": {
+    "title": "Me contacter",
+    "subtitle": "N'hésitez pas à me contacter pour toute demande ou collaboration.",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Soumettre"
+    }
   }
 }

@@ -6,8 +6,10 @@
   --color-white: #eeeeee;
   --color-black: #222831;
   --color-white-black: #888b8f;
+  --color-light: #cccccc;
   --color-dark: #393e46;
   --color-primary: #00adb5;
+  --color-primary-dark: #008b8f;
 
   @keyframes buttonHover {
     0% {
@@ -32,4 +34,33 @@
 body {
   color: var(--color-foreground);
   background: var(--color-foreground);
+}
+
+.form-control {
+  position: relative;
+  display: grid;
+
+  .input {
+    min-width: 0;
+    padding: 1rem;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: var(--radius-xl);
+    outline: none;
+  }
+
+  label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: var(--color-white);
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+  }
+
+  .input:focus + label {
+    top: -0.625rem;
+    left: 0.75rem;
+    font-size: 0.75rem;
+  }
 }
