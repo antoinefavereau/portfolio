@@ -39,6 +39,8 @@ function SvgIcon({
     <div
       className={className}
       dangerouslySetInnerHTML={{ __html: svgContent }}
+      role="img"
+      aria-label={alt}
     />
   );
 }
