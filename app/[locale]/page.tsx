@@ -17,6 +17,7 @@ export default async function Page({ params }: PageProps) {
   const { locale } = await params;
 
   const { default: texts } = await import(`@/data/${locale}/texts.json`);
+  const { default: navLinks } = await import(`@/data/${locale}/navLinks.json`);
   const { default: journey } = await import(`@/data/${locale}/journey.json`);
   const { default: skills } = await import(`@/data/skills.json`);
   const { default: projects } = await import(`@/data/${locale}/projects.json`);
@@ -24,14 +25,19 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
-      <Header />
+      <Header
+        texts={texts.header}
+        navLinks={navLinks}
+        socials={socials}
+        locale={locale}
+      />
       <main>
         <Hero texts={texts.hero_section} />
         <Journey texts={texts.journey_section} journey={journey} />
         <Skills texts={texts.skills_section} skills={skills} />
         <Projects texts={texts.projects_section} projects={projects} />
       </main>
-      <Footer texts={texts.footer_section} socials={socials} />
+      <Footer texts={texts.footer} socials={socials} />
     </>
   );
 }

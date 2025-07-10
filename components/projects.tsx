@@ -16,7 +16,10 @@ interface ProjectsProps {
 
 export default function Projects({ texts, projects }: ProjectsProps) {
   return (
-    <section className="bg-white text-black flex flex-col justify-center items-center gap-24 py-16">
+    <section
+      id="projects"
+      className="bg-white text-black flex flex-col justify-center items-center gap-24 py-16 pb-32"
+    >
       <SectionHeader
         className="px-8 md:px-16"
         title={texts.title}
@@ -25,7 +28,7 @@ export default function Projects({ texts, projects }: ProjectsProps) {
       <div className="grid w-full">
         {projects.map((item, index) => (
           <div className="group grid px-24 md:px-32" key={index}>
-            <div className="grid grid-cols-[auto_3fr_4fr] gap-8 border-b-1 border-foreground py-16">
+            <div className="grid grid-cols-[auto_3fr_4fr] gap-8 border-t-1 group-last:border-b-1 border-foreground py-16">
               <span>{String(index + 1).padStart(2, "0")}</span>
               <div className="relative">
                 <Image
