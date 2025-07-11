@@ -52,7 +52,7 @@ export default function Socials({
 }: SocialProps & React.HTMLAttributes<HTMLUListElement>) {
   return (
     <ul
-      className={clsx("flex justify-center items-center gap-8", className)}
+      className={clsx("flex justify-center items-center gap-6 md:gap-8", className)}
       {...props}
     >
       {socials.map((social) => (
@@ -67,7 +67,7 @@ export default function Socials({
             <SvgIcon
               src={`/socials/${social.icon}`}
               alt={social.name}
-              className="w-16 h-16 [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-current"
+              className="w-12 md:w-16 h-12 md:h-16 [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-current"
             />
           </a>
         </li>
