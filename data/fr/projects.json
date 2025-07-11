@@ -1,19 +1,38 @@
 [
   {
-    "title": "Yeu-milano",
-    "description": "Description Yeu-milano",
+    "title": "Cécile Lochus",
+    "description": "Portfolio d'une designeuse web, conçu pour refléter son univers créatif tout en offrant une navigation fluide. J'ai géré l'intégration complète sous Next.js et Tailwind CSS, orchestré les animations GSAP et coordonné le projet via Trello, avant un déploiement sur Vercel.\nRôles & technologies : développement Next.js • Tailwind CSS • GSAP • Figma • Trello • Vercel",
+    "image": "cecile-lochus.png",
+    "url": "https://cecile-lochus.fr/"
+  },
+  {
+    "title": "Audio-to-Text",
+    "description": "Audio-to-Text est un service en ligne qui convertit vos fichiers audio et vidéo en texte, grâce à un simple glisser-déposer ou à l'import d'une URL. Vous pouvez ainsi capturer rapidement l'essentiel de vos réunions, interviews ou podcasts sans rien manquer. J'ai pris en charge tout le développement, à l'exception du design.\nRôles & technologies : Next.js • Tailwind CSS • IA • Node.js • Figma",
+    "image": "audio-to-text.png",
+    "url": "https://audio-to-text.antoinefavereau.fr/"
+  },
+  {
+    "title": "Yeu-Milano",
+    "description": "Portfolio en ligne pour un artiste, pensé pour valoriser ses œuvres par des animations subtiles et une mise en page moderne. J'ai implémenté l'ensemble du site en Next.js, enrichi par GSAP pour les interactions et Tailwind CSS pour un design épuré, puis déployé sur Vercel.\nRôles & technologies : développement Next.js • Tailwind CSS • GSAP • Vercel • ShadCN/UI",
     "image": "yeu-milano.png",
-    "link": "https://yeu-milano.fr/"
+    "url": "https://www.yeu-milano.fr/"
   },
   {
     "title": "Histofy",
-    "description": "Description Histofy",
+    "description": "Projet personnel d'automatisation de playlists Spotify : chaque mois, Histofy regroupe tous les titres « likés » en une playlist unique, pour revivre facilement son histoire musicale. J'ai conçu le design avec un artiste, assuré l'intégration native (sans framework) et développé le script de communication avec l'API Spotify, déployé via Docker puis Vercel.\nRôles & technologies : design UX/UI • intégration HTML/CSS/JS • API Spotify • DevOps (Docker, Vercel) • Figma • Trello",
     "image": "histofy.jpg",
-    "link": "https://histofy.fr/"
+    "url": "https://www.histofy.fr/"
   },
   {
-    "title": "Cesi jpo",
-    "description": "Description Cesi jpo",
-    "image": "cesi-jpo.jpg"
+    "title": "SRMA",
+    "description": "Site vitrine du Salon Régional des Métiers d'Arts de Centre-Val de Loire, l'application met en avant les exposants, les temps forts et les informations pratiques (accès, hébergement, workshops). J'ai pris en charge l'intégration fidèle de la maquette, garantissant une navigation claire et responsive sur tous les supports.\nRôles & technologies : intégration (sans back-end) • HTML, CSS, JavaScript • Figma • Trello",
+    "image": "srma.png",
+    "url": "https://salon-metiersdart.centre-valdeloire.fr/"
+  },
+  {
+    "title": "Les Échappées à vélo",
+    "description": "Plateforme de cyclotourisme en Centre-Val de Loire, Les Échappées à vélo propose de mai à octobre un agenda interactif d'une soixantaine de balades festives et d'itinéraires à vélo. J'ai réalisé l'intégration complète de la maquette sous WordPress et développé toutes les fonctionnalités dynamiques (filtrage des balades, gestion de l'agenda, formulaires d'inscription).\nRôles & technologies : intégration, PHP, HTML, CSS, JavaScript, jQuery, WordPress, Figma, Trello",
+    "image": "echappees-a-velo.jpg",
+    "url": "https://www.echappeesavelo.fr/"
   }
 ]
