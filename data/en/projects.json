@@ -1,19 +1,38 @@
 [
   {
-    "title": "Yeu-milano",
-    "description": "Description Yeu-milano",
+    "title": "Cécile Lochus",
+    "description": "Web designer's portfolio, crafted to reflect her creative universe while ensuring smooth navigation. I managed the full integration using Next.js and Tailwind CSS, orchestrated GSAP animations, and coordinated the project via Trello before deploying on Vercel.\nRoles & technologies: Next.js development • Tailwind CSS • GSAP • Figma • Trello • Vercel",
+    "image": "cecile-lochus.png",
+    "url": "https://cecile-lochus.fr/"
+  },
+  {
+    "title": "Audio-to-Text",
+    "description": "Online service that converts your audio and video files into text via simple drag-and-drop or URL import. Capture the essence of your meetings, interviews, or podcasts quickly and accurately. I handled all development except for the design.\nRoles & technologies: Next.js • Tailwind CSS • AI integration • Node.js • Figma",
+    "image": "audio-to-text.png",
+    "url": "https://audio-to-text.antoinefavereau.fr/"
+  },
+  {
+    "title": "Yeu-Milano",
+    "description": "Online portfolio for an artist, designed to showcase their work with subtle animations and a modern layout. I implemented the entire site in Next.js, enhanced interactions with GSAP, styled components with Tailwind CSS, and deployed on Vercel.\nRoles & technologies: Next.js development • Tailwind CSS • GSAP • Vercel • ShadCN/UI",
     "image": "yeu-milano.png",
-    "link": "https://yeu-milano.fr/"
+    "url": "https://www.yeu-milano.fr/"
   },
   {
     "title": "Histofy",
-    "description": "Description Histofy",
+    "description": "Personal project automating Spotify playlist creation: each month, Histofy gathers every track you've liked into a single playlist, so you can relive your musical journey without searching for each song. I designed the UI with an artist, built the integration natively (no framework), and developed the script interacting with the Spotify API, deployed via Docker then Vercel.\nRoles & technologies: UX/UI design • HTML/CSS/JS integration • Spotify API • DevOps (Docker, Vercel) • Figma • Trello",
     "image": "histofy.jpg",
-    "link": "https://histofy.fr/"
+    "url": "https://www.histofy.fr/"
   },
   {
-    "title": "Cesi jpo",
-    "description": "Description Cesi jpo",
-    "image": "cesi-jpo.jpg"
+    "title": "SRMA",
+    "description": "Showcase site for the Salon Régional des Métiers d'Arts in Centre-Val de Loire, highlighting exhibitors, key events, and practical information (access, accommodation, workshops). I handled pixel-perfect integration of the design, ensuring clear, responsive navigation across all devices.\nRoles & technologies: integration (front-end only) • HTML • CSS • JavaScript • Figma • Trello",
+    "image": "srma.png",
+    "url": "https://salon-metiersdart.centre-valdeloire.fr/"
+  },
+  {
+    "title": "Les Échappées à vélo",
+    "description": "Cyclotourism platform in Centre-Val de Loire, offering from May to October an interactive calendar of around sixty festive rides and bike routes. I performed the full design integration in WordPress and developed all dynamic features (ride filtering, calendar management, registration forms).\nRoles & technologies: integration • PHP • HTML • CSS • JavaScript • jQuery • WordPress • Figma • Trello",
+    "image": "echappees-a-velo.jpg",
+    "url": "https://www.echappeesavelo.fr/"
   }
 ]

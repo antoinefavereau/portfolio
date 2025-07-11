@@ -10,7 +10,7 @@ interface ProjectsProps {
     title: string;
     description: string;
     image: string;
-    link?: string;
+    url?: string;
   }[];
 }
 
@@ -39,12 +39,19 @@ export default function Projects({ texts, projects }: ProjectsProps) {
                   height={300}
                 />
               </div>
-              <div className="flex flex-col gap-4">
-                <h3 className="text-4xl font-bold uppercase">
-                  {item.title}
-                  <span className="inline-block h-[6px] w-6 bg-primary ml-2"></span>
-                </h3>
-                <p className="">{item.description}</p>
+              <div className="flex flex-col items-start gap-4">
+                <a
+                  className="hover:underline"
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="text-4xl font-bold uppercase">
+                    {item.title}
+                    <span className="inline-block h-[6px] w-6 bg-primary ml-2"></span>
+                  </h3>
+                </a>
+                <p className="whitespace-pre-line">{item.description}</p>
               </div>
             </div>
           </div>
