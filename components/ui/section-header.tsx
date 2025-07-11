@@ -20,8 +20,8 @@ export default function SectionHeader({
       )}
       {...props}
     >
-      <h2 className="text-primary text-2xl font-medium uppercase">{title}</h2>
-      <p className="text-4xl font-medium">{subtitle}</p>
+      <h2 className="text-primary text-xl md:text-2xl font-medium uppercase">{title}</h2>
+      <p className="text-3xl md:text-4xl font-medium">{subtitle}</p>
     </div>
   );
 }

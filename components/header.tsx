@@ -48,7 +48,7 @@ export default function Header({
   }
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50 flex justify-between items-center py-12 px-20 text-white">
+    <header className="absolute top-0 left-0 w-full z-50 flex justify-between items-center py-8 md:py-12 px-12 md:px-20 text-white">
       <Link
         href={`/${locale}`}
         title="Antoine Favereau"
@@ -122,7 +122,7 @@ export default function Header({
 
       <nav
         id="navigation-menu"
-        className={`fixed top-0 right-0 h-full w-max flex flex-col gap-8 py-12 px-16 pt-32 z-40 bg-white text-black transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-full md:w-max flex flex-col gap-8 py-12 px-16 pt-32 z-40 bg-white text-black transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         aria-hidden={!isMenuOpen}

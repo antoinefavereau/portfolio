@@ -15,11 +15,11 @@ interface SkillsProps {
 
 export default function Skills({ texts, skills }: SkillsProps) {
   return (
-    <section id="skills" className="grid bg-background py-16 px-8">
-      <div className="flex flex-col items-center gap-24 bg-foreground text-background py-16 px-8 rounded-[3rem] overflow-hidden">
+    <section id="skills" className="grid bg-background py-16 md:px-8">
+      <div className="flex flex-col items-center gap-24 bg-foreground text-background py-16 px-8 md:rounded-[3rem] overflow-hidden">
         <SectionHeader title={texts.title} subtitle={texts.subtitle} />
         <div className="@container w-full max-w-5xl transform-3d perspective-distant">
-          <ul className="flex flex-wrap @max-sm:[&>li:nth-child(5n-4)]:ml-[16.25%] @sm:@max-xl:[&>li:nth-child(7n-6)]:ml-[12.5%] @xl:[&>li:nth-child(9n-8)]:ml-[10%] rotate-x-30 -translate-y-1/8 px-16 pb-8">
+          <ul className="flex flex-wrap @max-sm:[&>li:nth-child(5n-4)]:ml-[16.25%] @sm:@max-xl:[&>li:nth-child(7n-6)]:ml-[12.5%] @xl:[&>li:nth-child(9n-8)]:ml-[10%] rotate-x-30 -translate-y-1/8 px-8 md:px-16 pb-8">
             {skills.map((skill, index) => (
               <li
                 key={index}

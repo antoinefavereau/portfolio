@@ -27,10 +27,12 @@ export default function Projects({ texts, projects }: ProjectsProps) {
       />
       <div className="grid w-full">
         {projects.map((item, index) => (
-          <div className="group grid px-24 md:px-32" key={index}>
-            <div className="grid grid-cols-[auto_3fr_4fr] gap-8 border-t-1 group-last:border-b-1 border-foreground py-16">
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <div className="relative">
+          <div className="group grid px-8 md:px-24 lg:px-32" key={index}>
+            <div className="grid lg:grid-cols-[auto_1fr_1fr] gap-8 border-t-1 group-last:border-b-1 border-foreground py-8 md:py-16">
+              <span className="max-lg:hidden">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div className="relative max-lg:hidden">
                 <Image
                   className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full h-auto aspect-square scale-0 group-hover:scale-100 transition-all duration-300 object-contain object-center"
                   src={"/projects/" + item.image}
@@ -51,6 +53,13 @@ export default function Projects({ texts, projects }: ProjectsProps) {
                     <span className="inline-block h-[6px] w-6 bg-primary ml-2"></span>
                   </h3>
                 </a>
+                <Image
+                  className="lg:hidden w-full h-auto rounded"
+                  src={"/projects/" + item.image}
+                  alt={item.title}
+                  width={500}
+                  height={300}
+                />
                 <p className="whitespace-pre-line">{item.description}</p>
               </div>
             </div>
