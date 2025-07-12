@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "./ui/button";
 
 interface HeroProps {
@@ -14,7 +16,14 @@ export default function Hero({ texts }: HeroProps) {
         Antoine<span className="text-primary">_</span>&#8203;Favereau
       </h1>
       <p className="max-w-2xl text-md sm:text-lg">{texts.about}</p>
-      <Button type="button">{texts.cta}</Button>
+      <Button
+        type="button"
+        onClick={() => {
+          window.location.href = "#journey";
+        }}
+      >
+        {texts.cta}
+      </Button>
       <svg
         className="absolute bottom-[-1px] left-0 w-full h-auto"
         width="1920"
