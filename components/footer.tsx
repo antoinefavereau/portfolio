@@ -22,10 +22,15 @@ interface FooterProps {
 
 export default function Footer({ texts, socials }: FooterProps) {
   return (
-    <footer id="contact" className="grid gap-24 pt-24 pb-16 px-16 md:px-32">
+    <footer
+      id="contact"
+      className="grid gap-24 pt-24 pb-16 px-8 sm:px-16 md:px-32"
+    >
       <div className="grid lg:grid-cols-[1fr_450px] gap-16">
         <div className="flex flex-col gap-10 text-background">
-          <h2 className="text-6xl md:text-7xl font-bold text-primary">{texts.title}</h2>
+          <h2 className="text-6xl md:text-7xl font-bold text-primary">
+            {texts.title}
+          </h2>
           <p>{texts.subtitle}</p>
           <ul className="flex flex-col items-start gap-4">
             <li>

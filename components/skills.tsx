@@ -25,21 +25,19 @@ export default function Skills({ texts, skills }: SkillsProps) {
                 key={index}
                 className="w-1/3 @sm:w-1/4 @xl:w-1/5 h-[-webkit-fill-available] p-1 aspect-[5/4]"
               >
-                <div
-                  className="group relative w-full aspect-square hover:scale-95 duration-200 ease-in-out"
+                <a
+                  className="group relative block w-full aspect-square hover:scale-95 duration-200 ease-in-out"
                   style={{
                     clipPath:
                       "polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%)",
                   }}
+                  href={skill.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <a
-                    className="absolute inset-0 grid place-content-center -z-10 group-hover:z-10 bg-primary text-xl"
-                    href={skill.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <div className="absolute inset-0 grid place-content-center -z-10 group-hover:z-10 bg-primary text-xl">
                     {skill.title}
-                  </a>
+                  </div>
                   <div className="h-full bg-white">
                     <Image
                       className="relative w-full h-full object-contain object-center p-[20%]"
@@ -49,7 +47,7 @@ export default function Skills({ texts, skills }: SkillsProps) {
                       height={64}
                     />
                   </div>
-                </div>
+                </a>
               </li>
             ))}
           </ul>

@@ -33,13 +33,22 @@ export default function Projects({ texts, projects }: ProjectsProps) {
                 {String(index + 1).padStart(2, "0")}
               </span>
               <div className="relative max-lg:hidden">
-                <Image
-                  className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full h-auto aspect-square scale-0 group-hover:scale-100 transition-all duration-300 object-contain object-center"
-                  src={"/projects/" + item.image}
-                  alt={item.title}
-                  width={500}
-                  height={300}
-                />
+                <div className="absolute top-1/2 start-0 -translate-y-1/2 block w-full aspect-square pointer-events-none">
+                  <a
+                    className="contents pointer-events-auto"
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full h-auto rounded-xl scale-0 group-hover:scale-100 transition-all duration-300"
+                      src={"/projects/" + item.image}
+                      alt={item.title}
+                      width={500}
+                      height={300}
+                    />
+                  </a>
+                </div>
               </div>
               <div className="flex flex-col items-start gap-4">
                 <a
@@ -53,13 +62,20 @@ export default function Projects({ texts, projects }: ProjectsProps) {
                     <span className="inline-block h-[6px] w-6 bg-primary ml-2"></span>
                   </h3>
                 </a>
-                <Image
-                  className="lg:hidden w-full h-auto rounded"
-                  src={"/projects/" + item.image}
-                  alt={item.title}
-                  width={500}
-                  height={300}
-                />
+                <a
+                  className="contents"
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    className="lg:hidden w-full h-auto rounded-xl"
+                    src={"/projects/" + item.image}
+                    alt={item.title}
+                    width={500}
+                    height={300}
+                  />
+                </a>
                 <p className="whitespace-pre-line">{item.description}</p>
               </div>
             </div>
