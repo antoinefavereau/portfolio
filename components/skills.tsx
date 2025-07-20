@@ -1,5 +1,13 @@
+"use client";
+
 import SectionHeader from "./ui/section-header";
 import Image from "next/image";
+import { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface SkillsProps {
   texts: {
@@ -14,12 +22,41 @@ interface SkillsProps {
 }
 
 export default function Skills({ texts, skills }: SkillsProps) {
+  const skillsRef = useRef<HTMLUListElement>(null);
+
+  useGSAP(
+    () => {
+      if (!skillsRef.current) return;
+
+      const skillItems = skillsRef.current.querySelectorAll("li");
+
+      gsap.from(skillItems, {
+        opacity: 0,
+        y: 50,
+        scale: 0.8,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: skillsRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+          markers: true,
+        },
+      });
+    },
+    { scope: skillsRef }
+  );
+
   return (
     <section id="skills" className="relative grid bg-background py-16 md:px-8">
       <div className="flex flex-col items-center gap-24 bg-foreground text-background py-16 px-8 md:rounded-[3rem] overflow-hidden">
         <SectionHeader title={texts.title} subtitle={texts.subtitle} />
         <div className="@container w-full max-w-5xl transform-3d perspective-distant">
-          <ul className="flex flex-wrap @max-sm:[&>li:nth-child(5n-4)]:ml-[16.25%] @sm:@max-xl:[&>li:nth-child(7n-6)]:ml-[12.5%] @xl:[&>li:nth-child(9n-8)]:ml-[10%] rotate-x-30 -translate-y-1/8 px-8 md:px-16 pb-8">
+          <ul
+            ref={skillsRef}
+            className="flex flex-wrap @max-sm:[&>li:nth-child(5n-4)]:ml-[16.25%] @sm:@max-xl:[&>li:nth-child(7n-6)]:ml-[12.5%] @xl:[&>li:nth-child(9n-8)]:ml-[10%] rotate-x-30 -translate-y-1/8 px-8 md:px-16 pb-8"
+          >
             {skills.map((skill, index) => (
               <li
                 key={index}
