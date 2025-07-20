@@ -45,7 +45,7 @@ export default function Journey({ texts, journey }: JourneyProps) {
         });
       });
 
-      lines.forEach((line, index) => {
+      lines.forEach((line) => {
         const parentGroup = line.closest(".group");
         gsap.from(line, {
           opacity: 0,
