@@ -51,12 +51,7 @@ export default function Projects({ texts, projects }: ProjectsProps) {
                 </div>
               </div>
               <div className="flex flex-col items-start gap-4">
-                <a
-                  className="hover:underline"
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
                   <h3 className="text-4xl font-bold uppercase">
                     {item.title}
                     <span className="inline-block h-[6px] w-6 bg-primary ml-2"></span>
