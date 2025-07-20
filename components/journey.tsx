@@ -31,28 +31,30 @@ export default function Journey({ texts, journey }: JourneyProps) {
       const lines = containerRef.current.querySelectorAll(".line");
 
       circles.forEach((circle) => {
+        const parentGroup = circle.closest(".group");
         gsap.from(circle, {
           opacity: 0,
           scale: 0.2,
           duration: 0.6,
           ease: "back.out(1.7)",
           scrollTrigger: {
-            trigger: circle,
-            start: "top 80%",
+            trigger: parentGroup,
+            start: "top 70%",
             toggleActions: "play none none reverse",
           },
         });
       });
 
-      lines.forEach((line) => {
+      lines.forEach((line, index) => {
+        const parentGroup = line.closest(".group");
         gsap.from(line, {
           opacity: 0,
           height: 0,
           duration: 0.6,
           ease: "ease.inOut",
           scrollTrigger: {
-            trigger: line,
-            start: "top 80%",
+            trigger: parentGroup,
+            start: "center 70%",
             toggleActions: "play none none reverse",
           },
         });
