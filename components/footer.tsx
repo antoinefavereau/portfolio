@@ -104,6 +104,7 @@ export default function Footer({ texts, socials }: FooterProps) {
           <button
             className="col-span-2 bg-primary text-white text-xl font-semibold rounded-xl py-4 px-8 cursor-pointer hover:bg-primary-dark hover:text-light transition-colors duration-200"
             type="submit"
+            disabled
           >
             {texts.form.submit}
           </button>

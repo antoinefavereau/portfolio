@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import LenisProvider from "@/components/LenisProvider";
 
 export const metadata: Metadata = {
   title: "Portfolio Antoine Favereau",
@@ -20,8 +21,10 @@ export default async function RootLayout({
   const { locale } = await params;
 
   return (
-    <html lang={locale}>
-      <body className="antialiased">{children}</body>
+    <html lang={locale} data-scroll-behavior="smooth">
+      <body className="antialiased">
+        <LenisProvider>{children}</LenisProvider>
+      </body>
     </html>
   );
 }
