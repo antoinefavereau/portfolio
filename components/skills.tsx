@@ -41,7 +41,6 @@ export default function Skills({ texts, skills }: SkillsProps) {
           trigger: skillsRef.current,
           start: "top 80%",
           toggleActions: "play none none reverse",
-          markers: true,
         },
       });
     },
