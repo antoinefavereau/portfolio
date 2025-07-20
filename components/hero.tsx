@@ -30,7 +30,6 @@ export default function Hero({ texts }: HeroProps) {
           start: "top top",
           end: "bottom top",
           scrub: true,
-          markers: true,
         },
       });
     },
