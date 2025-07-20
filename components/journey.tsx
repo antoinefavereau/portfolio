@@ -16,7 +16,7 @@ export default function Journey({ texts, journey }: JourneyProps) {
   return (
     <section
       id="journey"
-      className="bg-white text-black flex flex-col justify-center items-center gap-24 py-16 px-8 md:px-16"
+      className="relative bg-white text-black flex flex-col justify-center items-center gap-24 py-16 px-8 md:px-16"
     >
       <SectionHeader title={texts.title} subtitle={texts.subtitle} />
       <div className="grid gap-2 w-full max-w-6xl">

@@ -18,7 +18,7 @@ export default function Projects({ texts, projects }: ProjectsProps) {
   return (
     <section
       id="projects"
-      className="bg-white text-black flex flex-col justify-center items-center gap-24 py-16 pb-32"
+      className="relative bg-white text-black flex flex-col justify-center items-center gap-24 py-16 pb-32"
     >
       <SectionHeader
         className="px-8 md:px-16"
