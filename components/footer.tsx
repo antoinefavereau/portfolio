@@ -58,7 +58,11 @@ export default function Footer({ texts, socials }: FooterProps) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-    res.ok ? setStatus("sent") : setStatus("error");
+    if (res.ok) {
+      setStatus("sent");
+    } else {
+      setStatus("error");
+    }
     if (res.ok && formRef.current) {
       formRef.current.reset();
     }
