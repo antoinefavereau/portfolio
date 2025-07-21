@@ -79,7 +79,8 @@ export default function Header({
           <button
             type="button"
             className={
-              "cursor-pointer " + (locale === "en" ? "text-white" : "")
+              "cursor-pointer " +
+              (locale === "en" ? "text-white font-bold" : "")
             }
             onClick={() => handleLocaleChange("en")}
           >
@@ -89,7 +90,8 @@ export default function Header({
           <button
             type="button"
             className={
-              "cursor-pointer " + (locale === "fr" ? "text-white" : "")
+              "cursor-pointer " +
+              (locale === "fr" ? "text-white font-bold" : "")
             }
             onClick={() => handleLocaleChange("fr")}
           >
