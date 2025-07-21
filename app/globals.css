@@ -35,6 +35,11 @@
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
 body {
   color: var(--color-foreground);
   background: var(--color-foreground);
@@ -43,15 +48,6 @@ body {
 .form-control {
   position: relative;
   display: grid;
-
-  .input {
-    min-width: 0;
-    padding: 1rem;
-    background-color: var(--color-dark);
-    color: var(--color-white);
-    border-radius: var(--radius-xl);
-    outline: none;
-  }
 
   label {
     position: absolute;
@@ -62,9 +58,19 @@ body {
     pointer-events: none;
   }
 
-  .input:focus + label {
-    top: -0.625rem;
-    left: 0.75rem;
-    font-size: 0.75rem;
+  .input {
+    min-width: 0;
+    padding: 1rem;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: var(--radius-xl);
+    outline: none;
+
+    &:focus + label,
+    &:valid + label {
+      top: -0.625rem;
+      left: 0.75rem;
+      font-size: 0.75rem;
+    }
   }
 }
