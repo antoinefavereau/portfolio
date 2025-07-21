@@ -27,7 +27,9 @@
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
-      "submit": "Submit"
+      "submit": "Submit",
+      "success": "Message sent successfully!",
+      "error": "An error occurred while sending the message."
     }
   }
 }
