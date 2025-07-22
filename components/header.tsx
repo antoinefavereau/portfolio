@@ -50,6 +50,7 @@ export default function Header({
   return (
     <header className="absolute top-0 left-0 w-full z-50 flex justify-between items-center py-8 md:py-12 px-12 md:px-20 text-white">
       <Link
+        className="icon"
         href={`/${locale}`}
         title="Antoine Favereau"
         aria-label="Antoine Favereau"
@@ -100,7 +101,7 @@ export default function Header({
         </div>
         <button
           type="button"
-          className={`relative w-10 h-10 cursor-pointer z-50 ${
+          className={`icon relative w-10 h-10 cursor-pointer z-50 ${
             isMenuOpen ? "text-black" : "text-white"
           } transition-colors duration-300`}
           onClick={toggleMenu}
