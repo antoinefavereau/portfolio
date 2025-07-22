@@ -66,8 +66,9 @@ export default function Journey({ texts, journey }: JourneyProps) {
   return (
     <section
       id="journey"
-      className="relative bg-white text-black flex flex-col justify-center items-center gap-24 py-16 px-8 md:px-16"
+      className="relative text-foreground flex flex-col justify-center items-center gap-24 py-16 px-8 md:px-16"
     >
+      <div className="absolute -z-1 inset-0 bg-background"></div>
       <SectionHeader title={texts.title} subtitle={texts.subtitle} />
       <div ref={containerRef} className="grid gap-2 w-full max-w-6xl">
         {journey.map((item, index) => (

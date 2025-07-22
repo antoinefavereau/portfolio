@@ -18,8 +18,9 @@ export default function Projects({ texts, projects }: ProjectsProps) {
   return (
     <section
       id="projects"
-      className="relative bg-white text-black flex flex-col justify-center items-center gap-24 py-16 pb-32"
+      className="relative text-foreground flex flex-col justify-center items-center gap-24 py-16 pb-32"
     >
+      <div className="absolute -z-1 inset-0 bg-background"></div>
       <SectionHeader
         className="px-8 md:px-16"
         title={texts.title}
