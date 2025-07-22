@@ -48,8 +48,10 @@ export default function Skills({ texts, skills }: SkillsProps) {
   );
 
   return (
-    <section id="skills" className="relative grid bg-background py-16 md:px-8">
-      <div className="flex flex-col items-center gap-24 bg-foreground text-background py-16 px-8 md:rounded-[3rem] overflow-hidden">
+    <section id="skills" className="relative grid py-16 md:px-8">
+      <div className="absolute -z-1 inset-0 bg-background"></div>
+      <div className="relative flex flex-col items-center gap-24 text-background py-16 px-8 md:rounded-[3rem] overflow-hidden">
+        <div className="absolute -z-1 inset-0 bg-foreground"></div>
         <SectionHeader title={texts.title} subtitle={texts.subtitle} />
         <div className="@container w-full max-w-5xl transform-3d perspective-distant">
           <ul

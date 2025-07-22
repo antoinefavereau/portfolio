@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import LenisProvider from "@/components/LenisProvider";
+import CustomCursor from "@/components/custom-cursor";
 
 export const metadata: Metadata = {
   title: "Portfolio Antoine Favereau",
@@ -23,6 +24,9 @@ export default async function RootLayout({
   return (
     <html lang={locale} data-scroll-behavior="smooth">
       <body className="antialiased">
+        <div className="max-md:hidden">
+          <CustomCursor />
+        </div>
         <LenisProvider>{children}</LenisProvider>
       </body>
     </html>

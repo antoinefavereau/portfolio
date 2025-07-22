@@ -39,7 +39,7 @@ export default function Hero({ texts }: HeroProps) {
   return (
     <section
       ref={containerRef}
-      className="relative bg-black text-white min-h-screen grid content-center px-8"
+      className="relative min-h-screen grid content-center px-8"
     >
       <div
         ref={contentRef}
@@ -59,7 +59,7 @@ export default function Hero({ texts }: HeroProps) {
         </Button>
       </div>
       <svg
-        className="absolute bottom-[-1px] left-0 w-full h-auto"
+        className="absolute -z-1 bottom-[-1px] left-0 w-full h-auto"
         width="1920"
         height="100"
         viewBox="0 0 1920 100"

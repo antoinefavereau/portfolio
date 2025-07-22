@@ -52,13 +52,16 @@ export default function Socials({
 }: SocialProps & React.HTMLAttributes<HTMLUListElement>) {
   return (
     <ul
-      className={clsx("flex justify-center items-center gap-6 md:gap-8", className)}
+      className={clsx(
+        "flex justify-center items-center gap-6 md:gap-8",
+        className
+      )}
       {...props}
     >
       {socials.map((social) => (
         <li key={social.name}>
           <a
-            className="text-current"
+            className="icon text-current"
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"

@@ -71,7 +71,7 @@ export default function Footer({ texts, socials }: FooterProps) {
   return (
     <footer
       id="contact"
-      className="grid gap-24 pt-24 pb-16 px-8 sm:px-16 md:px-32"
+      className="relative grid gap-24 pt-24 pb-16 px-8 sm:px-16 md:px-32"
     >
       <div className="grid lg:grid-cols-[1fr_450px] gap-16">
         <div className="flex flex-col gap-10 text-background">
