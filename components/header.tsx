@@ -56,7 +56,7 @@ export default function Header({
         aria-label="Antoine Favereau"
       >
         <svg
-          className="h-auto hover:text-light transition-colors duration-200"
+          className="h-auto transition-colors duration-200"
           width="50"
           viewBox="0 0 100 88"
           xmlns="http://www.w3.org/2000/svg"

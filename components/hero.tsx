@@ -1,10 +1,17 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Button from "./ui/button";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import {
+  type ISourceOptions,
+  MoveDirection,
+  OutMode,
+} from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,6 +25,12 @@ interface HeroProps {
 export default function Hero({ texts }: HeroProps) {
   const containerRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    });
+  }, []);
 
   useGSAP(
     () => {
@@ -36,11 +49,75 @@ export default function Hero({ texts }: HeroProps) {
     { scope: containerRef }
   );
 
+  const options: ISourceOptions = useMemo(
+    () => ({
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onHover: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
+        modes: {
+          repulse: {
+            distance: 100,
+            duration: 1,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "#00adb5",
+        },
+        links: {
+          color: "#00adb5",
+          distance: 150,
+          enable: true,
+          opacity: 0.5,
+          width: 1,
+        },
+        move: {
+          direction: MoveDirection.none,
+          enable: true,
+          outModes: {
+            default: OutMode.out,
+          },
+          random: false,
+          speed: 2,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 80,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: { min: 1, max: 5 },
+        },
+      },
+      detectRetina: true,
+    }),
+    []
+  );
+
   return (
     <section
       ref={containerRef}
       className="relative min-h-screen grid content-center px-8"
     >
+      <Particles
+        id="tsparticles"
+        options={options}
+        className="absolute inset-0 -z-10"
+      />
       <div
         ref={contentRef}
         className="relative flex flex-col justify-center items-center gap-8 sm:gap-12 text-center"
