@@ -28,7 +28,6 @@ export default function SectionHeader({
     const scrambleText = (element: HTMLElement, originalText: string) => {
       // Caractères monospace plus dynamiques
       const chars = "!@#$%^&*()_+-=[]{}|;:,.<>?/~`";
-      let finalText = originalText;
 
       // Animation de scramble
       gsap.to(element, {
@@ -38,12 +37,12 @@ export default function SectionHeader({
           const progress = this.progress();
           let scrambledText = "";
 
-          for (let i = 0; i < finalText.length; i++) {
-            if (progress * finalText.length > i) {
-              scrambledText += finalText[i];
+          for (let i = 0; i < originalText.length; i++) {
+            if (progress * originalText.length > i) {
+              scrambledText += originalText[i];
             } else {
               // Préserver les espaces
-              if (finalText[i] === " ") {
+              if (originalText[i] === " ") {
                 scrambledText += " ";
               } else {
                 scrambledText +=
@@ -55,7 +54,7 @@ export default function SectionHeader({
           element.textContent = scrambledText;
         },
         onComplete: function () {
-          element.textContent = finalText;
+          element.textContent = originalText;
         },
       });
     };
