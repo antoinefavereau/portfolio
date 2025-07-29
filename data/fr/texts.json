@@ -9,19 +9,19 @@
   },
   "journey_section": {
     "title": "Mon parcours",
-    "subtitle": "De mes études à mes expériences professionnelles."
+    "subtitle": "De mes études à mes expériences professionnelles"
   },
   "skills_section": {
     "title": "Mes compétences",
-    "subtitle": "Un aperçu de mes compétences techniques."
+    "subtitle": "Un aperçu de mes compétences techniques"
   },
   "projects_section": {
     "title": "Mes projets",
-    "subtitle": "Mes principales réalisations."
+    "subtitle": "Mes principales réalisations"
   },
   "footer": {
     "title": "Me contacter",
-    "subtitle": "N'hésitez pas à me contacter pour toute demande ou collaboration.",
+    "subtitle": "N'hésitez pas à me contacter pour toute demande ou collaboration",
     "form": {
       "name": "Nom",
       "email": "Email",
