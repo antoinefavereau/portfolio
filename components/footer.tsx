@@ -1,8 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Socials from "./socials";
 import { useState, useRef } from "react";
+import { useEasterEgg } from "@/hooks/useEasterEgg";
+import { useEasterEggContext } from "@/contexts/EasterEggContext";
 
 type FormData = {
   name: string;
@@ -36,7 +37,26 @@ export default function Footer({ texts, socials }: FooterProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
+  const [secretDiscovered, setSecretDiscovered] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const { discoverEasterEgg } = useEasterEggContext();
+
+  const footerEasterEgg = useEasterEgg("footer-surprise", {
+    clickThreshold: 3,
+    resetDelay: 500,
+  });
+
+  function handleMessageChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
+    const message = e.target.value.toLowerCase();
+    if (message.includes("secret")) {
+      if (!secretDiscovered) {
+        discoverEasterEgg("secret-message");
+        setSecretDiscovered(true);
+      }
+    } else {
+      setSecretDiscovered(false);
+    }
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -74,8 +94,11 @@ export default function Footer({ texts, socials }: FooterProps) {
       className="relative grid gap-24 pt-24 pb-16 px-8 sm:px-16 md:px-32"
     >
       <div className="grid lg:grid-cols-[1fr_450px] gap-16">
-        <div className="flex flex-col gap-10 text-background">
-          <h2 className="text-6xl md:text-7xl font-bold text-primary">
+        <div className="flex flex-col items-start gap-10 text-background">
+          <h2
+            className="text-6xl md:text-7xl font-bold text-primary text-matrix-black easter-egg"
+            onClick={footerEasterEgg}
+          >
             {texts.title}
           </h2>
           <p>{texts.subtitle}</p>
@@ -172,11 +195,17 @@ export default function Footer({ texts, socials }: FooterProps) {
               name="message"
               rows={4}
               required
+              onChange={handleMessageChange}
             ></textarea>
-            <label htmlFor="message">{texts.form.message}</label>
+            <label htmlFor="message">
+              {texts.form.message}
+              <span className="ml-2 text-xs opacity-50 font-normal">
+                (psst, trouvez le mot secret 🤫)
+              </span>
+            </label>
           </div>
           <button
-            className="col-span-2 flex justify-center items-center gap-2 bg-primary text-white text-xl font-semibold rounded-xl py-4 px-8 cursor-pointer hover:bg-primary-dark hover:text-light transition-colors duration-200"
+            className="col-span-2 flex justify-center items-center gap-2 bg-primary text-background text-xl font-semibold rounded-xl py-4 px-8 cursor-pointer hover:bg-primary-dark hover:text-light transition-colors duration-200"
             type="submit"
             disabled={status === "sending"}
           >

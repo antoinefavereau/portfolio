@@ -31,5 +31,49 @@
       "success": "Message envoyé avec succès !",
       "error": "Une erreur s'est produite lors de l'envoi du message."
     }
+  },
+  "easter_eggs": {
+    "logo-spin": {
+      "name": "Logo Magique",
+      "description": "Vous avez fait tourner tout le site !"
+    },
+    "name-spin": {
+      "name": "Nom Tournoyant",
+      "description": "Mon nom peut danser !"
+    },
+    "skill-master": {
+      "name": "Maître des Compétences",
+      "description": "Vous avez survolé toutes les compétences !"
+    },
+    "footer-surprise": {
+      "name": "Footer Fun",
+      "description": "Le footer cache des surprises !"
+    },
+    "konami-code": {
+      "name": "Code Konami",
+      "description": "Vous connaissez les codes classiques !"
+    },
+    "scroll-detective": {
+      "name": "Détective du Scroll",
+      "description": "Vous explorez tout !"
+    },
+    "ninja-stealth": {
+      "name": "Ninja Furtif",
+      "description": "Vous avez trouvé le ninja caché !"
+    },
+    "secret-message": {
+      "name": "Message Secret",
+      "description": "Vous connaissez le mot de passe secret !"
+    },
+    "screensaver": {
+      "name": "Économiseur d'Écran",
+      "description": "Repos bien mérité, réveil en douceur !"
+    }
+  },
+  "easter_eggs_completion": {
+    "title": "🎉 Félicitations ! 🎉",
+    "message": "Vous avez découvert tous les easter eggs cachés sur ce site !",
+    "subtitle": "Vous êtes un vrai explorateur ! Merci d'avoir pris le temps de découvrir toutes ces petites surprises.",
+    "close": "Fermer"
   }
 }

@@ -31,5 +31,49 @@
       "success": "Message sent successfully!",
       "error": "An error occurred while sending the message."
     }
+  },
+  "easter_eggs": {
+    "logo-spin": {
+      "name": "Magic Logo",
+      "description": "You made the whole site spin!"
+    },
+    "name-spin": {
+      "name": "Dancing Name",
+      "description": "My name can dance!"
+    },
+    "skill-master": {
+      "name": "Skill Master",
+      "description": "You hovered over all skills!"
+    },
+    "footer-surprise": {
+      "name": "Footer Fun",
+      "description": "The footer hides surprises!"
+    },
+    "konami-code": {
+      "name": "Konami Code",
+      "description": "You know the classic codes!"
+    },
+    "scroll-detective": {
+      "name": "Scroll Detective",
+      "description": "You explore everything!"
+    },
+    "ninja-stealth": {
+      "name": "Stealth Ninja",
+      "description": "You found the hidden ninja!"
+    },
+    "secret-message": {
+      "name": "Secret Message",
+      "description": "You know the secret password!"
+    },
+    "screensaver": {
+      "name": "Screensaver",
+      "description": "Well-deserved rest, gentle awakening!"
+    }
+  },
+  "easter_eggs_completion": {
+    "title": "🎉 Congratulations! 🎉",
+    "message": "You have discovered all the easter eggs hidden on this site!",
+    "subtitle": "You are a true explorer! Thanks for taking the time to discover all these little surprises.",
+    "close": "Close"
   }
 }

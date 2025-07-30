@@ -1,9 +1,11 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Socials from "./socials";
 import Link from "next/link";
+import { useEasterEgg } from "@/hooks/useEasterEgg";
+import { useEasterEggContext } from "@/contexts/EasterEggContext";
 
 interface HeaderProps {
   texts: {
@@ -30,6 +32,20 @@ export default function Header({
 }: HeaderProps) {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { discoverEasterEgg } = useEasterEggContext();
+
+  const handleLogoClick = useEasterEgg("logo-spin", {
+    onTrigger: useCallback(() => {
+      // D'abord faire tourner le site
+      document.body.classList.add("site-spin");
+
+      setTimeout(() => {
+        document.body.classList.remove("site-spin");
+        // Déclencher l'easter egg APRÈS la rotation pour voir le toast
+        discoverEasterEgg("logo-spin");
+      }, 4000);
+    }, [locale]),
+  });
 
   function handleLocaleChange(newLocale: string) {
     if (newLocale !== locale) {
@@ -48,12 +64,13 @@ export default function Header({
   }
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50 flex justify-between items-center py-8 md:py-12 px-12 md:px-20 text-white">
+    <header className="absolute top-0 left-0 w-full z-50 flex justify-between items-center py-8 md:py-12 px-12 md:px-20 text-background">
       <Link
-        className="icon"
+        className="icon easter-egg"
         href={`/${locale}`}
         title="Antoine Favereau"
         aria-label="Antoine Favereau"
+        onClick={handleLogoClick}
       >
         <svg
           className="h-auto transition-colors duration-200"
@@ -81,7 +98,7 @@ export default function Header({
             type="button"
             className={
               "cursor-pointer " +
-              (locale === "en" ? "text-white font-bold" : "")
+              (locale === "en" ? "text-background font-bold" : "")
             }
             onClick={() => handleLocaleChange("en")}
           >
@@ -92,7 +109,7 @@ export default function Header({
             type="button"
             className={
               "cursor-pointer " +
-              (locale === "fr" ? "text-white font-bold" : "")
+              (locale === "fr" ? "text-background font-bold" : "")
             }
             onClick={() => handleLocaleChange("fr")}
           >
@@ -102,7 +119,7 @@ export default function Header({
         <button
           type="button"
           className={`icon relative w-10 h-10 cursor-pointer z-50 ${
-            isMenuOpen ? "text-black" : "text-white"
+            isMenuOpen ? "text-foreground" : "text-background"
           } transition-colors duration-300`}
           onClick={toggleMenu}
           aria-expanded={isMenuOpen}
@@ -125,7 +142,7 @@ export default function Header({
 
       <nav
         id="navigation-menu"
-        className={`fixed top-0 right-0 h-full w-full md:w-max flex flex-col gap-8 py-12 px-16 pt-32 z-40 bg-white text-black transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-full md:w-max flex flex-col gap-8 py-12 px-16 pt-32 z-40 bg-background text-foreground transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         aria-hidden={!isMenuOpen}
@@ -143,13 +160,13 @@ export default function Header({
             </li>
           ))}
         </ul>
-        <Socials className="text-black" socials={socials} />
+        <Socials className="text-foreground" socials={socials} />
       </nav>
 
       {/* Overlay */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-30"
+          className="fixed inset-0 bg-foreground/50 z-30"
           onClick={closeMenu}
           aria-hidden="true"
         />
