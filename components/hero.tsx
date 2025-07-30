@@ -12,6 +12,7 @@ import {
   OutMode,
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import { useEasterEgg } from "@/hooks/useEasterEgg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +26,7 @@ interface HeroProps {
 export default function Hero({ texts }: HeroProps) {
   const containerRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const handleEasterEggClick = useEasterEgg("name-spin");
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -122,7 +124,10 @@ export default function Hero({ texts }: HeroProps) {
         ref={contentRef}
         className="relative flex flex-col justify-center items-center gap-8 sm:gap-12 text-center"
       >
-        <h1 className="text-6xl sm:text-8xl font-bold text-center">
+        <h1
+          className="text-6xl sm:text-8xl font-bold text-center easter-egg"
+          onClick={handleEasterEggClick}
+        >
           Antoine<span className="text-primary">_</span>&#8203;Favereau
         </h1>
         <p className="max-w-2xl text-md sm:text-lg">{texts.about}</p>

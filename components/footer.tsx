@@ -1,8 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Socials from "./socials";
 import { useState, useRef } from "react";
+import { useEasterEgg } from "@/hooks/useEasterEgg";
+import { useEasterEggContext } from "@/contexts/EasterEggContext";
 
 type FormData = {
   name: string;
@@ -36,7 +37,26 @@ export default function Footer({ texts, socials }: FooterProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
+  const [secretDiscovered, setSecretDiscovered] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const { discoverEasterEgg } = useEasterEggContext();
+
+  const footerEasterEgg = useEasterEgg("footer-surprise", {
+    clickThreshold: 3,
+    resetDelay: 500,
+  });
+
+  function handleMessageChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
+    const message = e.target.value.toLowerCase();
+    if (message.includes("secret")) {
+      if (!secretDiscovered) {
+        discoverEasterEgg("secret-message");
+        setSecretDiscovered(true);
+      }
+    } else {
+      setSecretDiscovered(false);
+    }
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -74,8 +94,11 @@ export default function Footer({ texts, socials }: FooterProps) {
       className="relative grid gap-24 pt-24 pb-16 px-8 sm:px-16 md:px-32"
     >
       <div className="grid lg:grid-cols-[1fr_450px] gap-16">
-        <div className="flex flex-col gap-10 text-background">
-          <h2 className="text-6xl md:text-7xl font-bold text-primary">
+        <div className="flex flex-col items-start gap-10 text-background">
+          <h2
+            className="text-6xl md:text-7xl font-bold text-primary text-matrix-black easter-egg"
+            onClick={footerEasterEgg}
+          >
             {texts.title}
           </h2>
           <p>{texts.subtitle}</p>
@@ -85,23 +108,46 @@ export default function Footer({ texts, socials }: FooterProps) {
                 className="flex items-center gap-4"
                 href="mailto:antoinefavereau45@gmail.com"
               >
-                <Image
-                  src="/contacts/Mail.svg"
-                  alt="Mail"
-                  width={32}
-                  height={32}
-                />
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.6666 15L20 20.8333L28.3333 15"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M3.33337 28.3335V11.6668C3.33337 10.7828 3.68456 9.93493 4.30968 9.30981C4.93481 8.68469 5.78265 8.3335 6.66671 8.3335H33.3334C34.2174 8.3335 35.0653 8.68469 35.6904 9.30981C36.3155 9.93493 36.6667 10.7828 36.6667 11.6668V28.3335C36.6667 29.2176 36.3155 30.0654 35.6904 30.6905C35.0653 31.3156 34.2174 31.6668 33.3334 31.6668H6.66671C5.78265 31.6668 4.93481 31.3156 4.30968 30.6905C3.68456 30.0654 3.33337 29.2176 3.33337 28.3335Z"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                </svg>
                 <span>antoinefavereau45@gmail.com</span>
               </a>
             </li>
             <li>
               <a className="flex items-center gap-4" href="tel:+33677455362">
-                <Image
-                  src="/contacts/Phone.svg"
-                  alt="Phone"
-                  width={32}
-                  height={32}
-                />
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M30.1967 24.5035L23.3334 25.8335C18.6967 23.5068 15.8334 20.8335 14.1667 16.6668L15.45 9.7835L13.025 3.3335H6.77336C4.89336 3.3335 3.41336 4.88683 3.69503 6.74516C4.39503 11.3835 6.4617 19.7952 12.5 25.8335C18.8417 32.1752 27.9767 34.9268 33.0034 36.0218C34.945 36.4435 36.6667 34.9302 36.6667 32.9418V26.9685L30.1967 24.5035Z"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
                 <span>+33677455362</span>
               </a>
             </li>
@@ -149,11 +195,17 @@ export default function Footer({ texts, socials }: FooterProps) {
               name="message"
               rows={4}
               required
+              onChange={handleMessageChange}
             ></textarea>
-            <label htmlFor="message">{texts.form.message}</label>
+            <label htmlFor="message">
+              {texts.form.message}
+              <span className="ml-2 text-xs opacity-50 font-normal">
+                (psst, trouvez le mot secret 🤫)
+              </span>
+            </label>
           </div>
           <button
-            className="col-span-2 flex justify-center items-center gap-2 bg-primary text-white text-xl font-semibold rounded-xl py-4 px-8 cursor-pointer hover:bg-primary-dark hover:text-light transition-colors duration-200"
+            className="col-span-2 flex justify-center items-center gap-2 bg-primary text-background text-xl font-semibold rounded-xl py-4 px-8 cursor-pointer hover:bg-primary-dark hover:text-light transition-colors duration-200"
             type="submit"
             disabled={status === "sending"}
           >

@@ -4,24 +4,24 @@
     "close_menu": "Fermer le menu"
   },
   "hero_section": {
-    "about": "Étudiant passionné en développement web et mobile, je maitrise de nombreuses technologies. Toujours curieux d'apprendre et d'explorer de nouvelles solutions, je m'efforce de créer des sites web intuitifs et efficaces.",
+    "about": "Ingénieur passionné en développement web et mobile, je maitrise de nombreuses technologies. Toujours curieux d'apprendre et d'explorer de nouvelles solutions, je m'efforce de créer des sites web intuitifs et efficaces.",
     "cta": "découvrir"
   },
   "journey_section": {
     "title": "Mon parcours",
-    "subtitle": "De mes études à mes expériences professionnelles."
+    "subtitle": "De mes études à mes expériences professionnelles"
   },
   "skills_section": {
     "title": "Mes compétences",
-    "subtitle": "Un aperçu de mes compétences techniques."
+    "subtitle": "Un aperçu de mes compétences techniques"
   },
   "projects_section": {
     "title": "Mes projets",
-    "subtitle": "Mes principales réalisations."
+    "subtitle": "Mes principales réalisations"
   },
   "footer": {
     "title": "Me contacter",
-    "subtitle": "N'hésitez pas à me contacter pour toute demande ou collaboration.",
+    "subtitle": "N'hésitez pas à me contacter pour toute demande ou collaboration",
     "form": {
       "name": "Nom",
       "email": "Email",
@@ -31,5 +31,49 @@
       "success": "Message envoyé avec succès !",
       "error": "Une erreur s'est produite lors de l'envoi du message."
     }
+  },
+  "easter_eggs": {
+    "logo-spin": {
+      "name": "Logo Magique",
+      "description": "Vous avez fait tourner tout le site !"
+    },
+    "name-spin": {
+      "name": "Nom Tournoyant",
+      "description": "Mon nom peut danser !"
+    },
+    "skill-master": {
+      "name": "Maître des Compétences",
+      "description": "Vous avez survolé toutes les compétences !"
+    },
+    "footer-surprise": {
+      "name": "Footer Fun",
+      "description": "Le footer cache des surprises !"
+    },
+    "konami-code": {
+      "name": "Code Konami",
+      "description": "Vous connaissez les codes classiques !"
+    },
+    "scroll-detective": {
+      "name": "Détective du Scroll",
+      "description": "Vous explorez tout !"
+    },
+    "ninja-stealth": {
+      "name": "Ninja Furtif",
+      "description": "Vous avez trouvé le ninja caché !"
+    },
+    "secret-message": {
+      "name": "Message Secret",
+      "description": "Vous connaissez le mot de passe secret !"
+    },
+    "screensaver": {
+      "name": "Économiseur d'Écran",
+      "description": "Repos bien mérité, réveil en douceur !"
+    }
+  },
+  "easter_eggs_completion": {
+    "title": "🎉 Félicitations ! 🎉",
+    "message": "Vous avez découvert tous les easter eggs cachés sur ce site !",
+    "subtitle": "Vous êtes un vrai explorateur ! Merci d'avoir pris le temps de découvrir toutes ces petites surprises.",
+    "close": "Fermer"
   }
 }

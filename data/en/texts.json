@@ -4,24 +4,24 @@
     "close_menu": "Close menu"
   },
   "hero_section": {
-    "about": "I am a passionate web and mobile development student, proficient in a wide range of technologies. Always curious to learn and explore new solutions, I strive to create intuitive and effective websites.",
+    "about": "I am a passionate web and mobile development engineer, proficient in a wide range of technologies. Always curious to learn and explore new solutions, I strive to create intuitive and effective websites.",
     "cta": "discover"
   },
   "journey_section": {
     "title": "My Journey",
-    "subtitle": "From my studies to my professional experiences."
+    "subtitle": "From my studies to my professional experiences"
   },
   "skills_section": {
     "title": "My Skills",
-    "subtitle": "An overview of my technical skills."
+    "subtitle": "An overview of my technical skills"
   },
   "projects_section": {
     "title": "My Projects",
-    "subtitle": "My main achievements."
+    "subtitle": "My main achievements"
   },
   "footer": {
     "title": "Contact me",
-    "subtitle": "Feel free to reach out for any inquiries or collaborations.",
+    "subtitle": "Feel free to reach out for any inquiries or collaborations",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -31,5 +31,49 @@
       "success": "Message sent successfully!",
       "error": "An error occurred while sending the message."
     }
+  },
+  "easter_eggs": {
+    "logo-spin": {
+      "name": "Magic Logo",
+      "description": "You made the whole site spin!"
+    },
+    "name-spin": {
+      "name": "Dancing Name",
+      "description": "My name can dance!"
+    },
+    "skill-master": {
+      "name": "Skill Master",
+      "description": "You hovered over all skills!"
+    },
+    "footer-surprise": {
+      "name": "Footer Fun",
+      "description": "The footer hides surprises!"
+    },
+    "konami-code": {
+      "name": "Konami Code",
+      "description": "You know the classic codes!"
+    },
+    "scroll-detective": {
+      "name": "Scroll Detective",
+      "description": "You explore everything!"
+    },
+    "ninja-stealth": {
+      "name": "Stealth Ninja",
+      "description": "You found the hidden ninja!"
+    },
+    "secret-message": {
+      "name": "Secret Message",
+      "description": "You know the secret password!"
+    },
+    "screensaver": {
+      "name": "Screensaver",
+      "description": "Well-deserved rest, gentle awakening!"
+    }
+  },
+  "easter_eggs_completion": {
+    "title": "🎉 Congratulations! 🎉",
+    "message": "You have discovered all the easter eggs hidden on this site!",
+    "subtitle": "You are a true explorer! Thanks for taking the time to discover all these little surprises.",
+    "close": "Close"
   }
 }

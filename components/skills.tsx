@@ -2,10 +2,11 @@
 
 import SectionHeader from "./ui/section-header";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useEasterEggContext } from "@/contexts/EasterEggContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,6 +24,37 @@ interface SkillsProps {
 
 export default function Skills({ texts, skills }: SkillsProps) {
   const skillsRef = useRef<HTMLUListElement>(null);
+  const [, setHoveredSkills] = useState<Set<number>>(new Set());
+  const [triggerEasterEgg, setTriggerEasterEgg] = useState(false);
+
+  const { discoverEasterEgg } = useEasterEggContext();
+
+  // Effet pour déclencher l'easter egg
+  useEffect(() => {
+    if (triggerEasterEgg) {
+      discoverEasterEgg("skill-master");
+      setTriggerEasterEgg(false);
+      setHoveredSkills(new Set());
+    }
+  }, [triggerEasterEgg, discoverEasterEgg]);
+
+  // Fonction pour gérer le hover de toutes les compétences
+  const handleSkillHover = useCallback(
+    (skillIndex: number) => {
+      setHoveredSkills((prev) => {
+        const newSet = new Set(prev);
+        newSet.add(skillIndex);
+
+        // Vérifier si toutes les compétences ont été survolées
+        if (newSet.size === skills.length) {
+          setTriggerEasterEgg(true);
+        }
+
+        return newSet;
+      });
+    },
+    [skills.length]
+  );
 
   useGSAP(
     () => {
@@ -72,11 +104,12 @@ export default function Skills({ texts, skills }: SkillsProps) {
                   href={skill.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onMouseEnter={() => handleSkillHover(index)}
                 >
                   <div className="absolute inset-0 grid place-content-center -z-10 group-hover:z-10 bg-primary text-xl">
                     {skill.title}
                   </div>
-                  <div className="h-full bg-white">
+                  <div className="h-full bg-background">
                     <Image
                       className="relative w-full h-full object-contain object-center p-[20%]"
                       src={`/skills/${skill.image}`}
