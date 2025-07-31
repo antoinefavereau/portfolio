@@ -157,25 +157,37 @@ export const useAutoEasterEggs = () => {
     };
   }, [discoverEasterEgg, enterMatrixMode]);
 
-  // Scroll detective
+  // Scroll detective - Il faut aller en bas puis remonter en haut
   useEffect(() => {
-    let scrollCount = 0;
-    let lastScroll = 0;
+    let hasReachedBottom = false;
+    let hasReturnedToTop = false;
 
     const handleScroll = () => {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
 
-      if (Math.abs(scrollTop - lastScroll) > 100) {
-        scrollCount += 1;
+      // Vérifier si on est en bas de la page (avec une marge de 50px)
+      const isAtBottom = scrollTop + windowHeight >= documentHeight - 50;
 
-        if (scrollCount >= 10) {
-          const result = discoverEasterEgg("scroll-detective");
-          scrollCount = 0;
-        }
+      // Vérifier si on est en haut de la page (avec une marge de 50px)
+      const isAtTop = scrollTop <= 50;
+
+      // Première étape : atteindre le bas
+      if (isAtBottom && !hasReachedBottom) {
+        hasReachedBottom = true;
       }
 
-      lastScroll = scrollTop;
+      // Deuxième étape : retourner en haut après avoir atteint le bas
+      if (hasReachedBottom && isAtTop && !hasReturnedToTop) {
+        hasReturnedToTop = true;
+        discoverEasterEgg("scroll-detective");
+
+        // Reset pour permettre de refaire l'easter egg
+        hasReachedBottom = false;
+        hasReturnedToTop = false;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
