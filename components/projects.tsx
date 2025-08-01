@@ -38,6 +38,7 @@ export default function Projects({ texts, projects }: ProjectsProps) {
                   <a
                     className="contents pointer-events-auto"
                     href={item.url}
+                    title={item.title}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -61,6 +62,7 @@ export default function Projects({ texts, projects }: ProjectsProps) {
                 <a
                   className="lg:hidden contents"
                   href={item.url}
+                  title={item.title}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
