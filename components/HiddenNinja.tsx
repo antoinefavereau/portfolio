@@ -16,7 +16,7 @@ export default function HiddenNinja() {
   const handleNinjaClick = useCallback(() => {
     discoverEasterEgg("ninja-stealth");
 
-    document.body.style.filter = "grayscale(100%)";
+    document.body.classList.add("ninja-active");
 
     // Repositionner le ninja aléatoirement
     const newRandomTop = Math.random() * 60 + 20; // Entre 20% et 80% de la hauteur
@@ -24,7 +24,7 @@ export default function HiddenNinja() {
 
     // Désactiver après 5 secondes
     setTimeout(() => {
-      document.body.style.filter = "";
+      document.body.classList.remove("ninja-active");
     }, 5000);
   }, [discoverEasterEgg]);
 
