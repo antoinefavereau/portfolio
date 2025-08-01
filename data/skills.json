@@ -1,72 +1,67 @@
 [
   {
     "title": "HTML",
-    "image": "html5.png",
+    "image": "html5.svg",
     "link": "https://developer.mozilla.org/docs/Web/HTML"
   },
   {
     "title": "CSS",
-    "image": "css.png",
+    "image": "css3.svg",
     "link": "https://developer.mozilla.org/docs/Web/CSS"
   },
   {
     "title": "JavaScript",
-    "image": "js.png",
+    "image": "javascript.svg",
     "link": "https://developer.mozilla.org/docs/Web/JavaScript"
   },
   {
     "title": "PHP",
-    "image": "php.png",
+    "image": "php.svg",
     "link": "https://www.php.net/"
   },
   {
     "title": "MySQL",
-    "image": "mysql.png",
+    "image": "mysql.svg",
     "link": "https://www.mysql.com/"
   },
   {
     "title": "Bootstrap",
-    "image": "bootstrap.png",
+    "image": "bootstrap.svg",
     "link": "https://getbootstrap.com/"
   },
   {
-    "title": "jQuery",
-    "image": "jquery.png",
-    "link": "https://jquery.com/"
-  },
-  {
     "title": "Sass",
-    "image": "sass.png",
+    "image": "sass.svg",
     "link": "https://sass-lang.com/"
   },
   {
     "title": "WordPress",
-    "image": "wordpress.png",
+    "image": "wordpress.svg",
     "link": "https://wordpress.org/"
   },
   {
     "title": "Git",
-    "image": "git.png",
+    "image": "git.svg",
     "link": "https://git-scm.com/"
   },
   {
     "title": "Github",
-    "image": "github.png",
+    "image": "github.svg",
     "link": "https://github.com/"
   },
   {
     "title": "Figma",
-    "image": "figma.png",
+    "image": "figma.svg",
     "link": "https://www.figma.com/"
   },
   {
     "title": "React",
-    "image": "react.png",
+    "image": "react.svg",
     "link": "https://reactjs.org/"
   },
   {
-    "title": "gsap",
-    "image": "gsap.png",
+    "title": "GSAP",
+    "image": "gsap.svg",
     "link": "https://gsap.com/"
   },
   {
@@ -76,22 +71,22 @@
   },
   {
     "title": "Next.js",
-    "image": "next-js.png",
+    "image": "nextjs.svg",
     "link": "https://nextjs.org/"
   },
   {
     "title": "Vercel",
-    "image": "vercel.png",
+    "image": "vercel.svg",
     "link": "https://vercel.com/home"
   },
   {
     "title": "Node.js",
-    "image": "node.png",
+    "image": "nodejs.svg",
     "link": "https://nodejs.org/"
   },
   {
     "title": "Express",
-    "image": "express-js.png",
+    "image": "expressjs.svg",
     "link": "https://expressjs.com/"
   },
   {
@@ -106,7 +101,7 @@
   },
   {
     "title": "Angular",
-    "image": "angular.png",
+    "image": "angular.svg",
     "link": "https://angular.io/"
   }
 ]
