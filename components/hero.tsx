@@ -24,7 +24,7 @@ interface HeroProps {
 }
 
 export default function Hero({ texts }: HeroProps) {
-  const containerRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const handleEasterEggClick = useEasterEgg("name-spin");
 
@@ -111,7 +111,7 @@ export default function Hero({ texts }: HeroProps) {
   );
 
   return (
-    <section
+    <div
       ref={containerRef}
       className="relative min-h-screen grid content-center px-8"
     >
@@ -159,6 +159,6 @@ export default function Hero({ texts }: HeroProps) {
           strokeWidth="4"
         />
       </svg>
-    </section>
+    </div>
   );
 }
