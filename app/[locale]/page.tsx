@@ -4,23 +4,46 @@ import Hero from "@/components/hero";
 import Journey from "@/components/journey";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
+import { notFound } from "next/navigation";
+import { SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/constants";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
 }
 
 export async function generateStaticParams() {
-  return ["en", "fr"].map((locale) => ({ locale }));
+  return SUPPORTED_LOCALES.map((locale) => ({ locale }));
 }
 
 export default async function Page({ params }: PageProps) {
   const { locale } = await params;
 
-  const { default: texts } = await import(`@/data/${locale}/texts.json`);
-  const { default: navLinks } = await import(`@/data/${locale}/navLinks.json`);
-  const { default: journey } = await import(`@/data/${locale}/journey.json`);
+  // Validation de la locale
+  if (!SUPPORTED_LOCALES.includes(locale as SupportedLocale)) {
+    notFound();
+  }
+
+  // Import sécurisé avec gestion d'erreur
+  let texts, navLinks, journey, projects;
+  try {
+    const [textsModule, navLinksModule, journeyModule, projectsModule] =
+      await Promise.all([
+        import(`@/data/${locale}/texts.json`),
+        import(`@/data/${locale}/navLinks.json`),
+        import(`@/data/${locale}/journey.json`),
+        import(`@/data/${locale}/projects.json`),
+      ]);
+
+    texts = textsModule.default;
+    navLinks = navLinksModule.default;
+    journey = journeyModule.default;
+    projects = projectsModule.default;
+  } catch (error) {
+    console.error(`Failed to load data for locale: ${locale}`, error);
+    notFound();
+  }
+
   const { default: skills } = await import(`@/data/skills.json`);
-  const { default: projects } = await import(`@/data/${locale}/projects.json`);
   const { default: socials } = await import(`@/data/socials.json`);
 
   return (
