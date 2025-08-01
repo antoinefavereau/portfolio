@@ -1,11 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import Socials from "./socials";
 import Link from "next/link";
 import { useEasterEgg } from "@/hooks/useEasterEgg";
-import { useEasterEggContext } from "@/contexts/EasterEggContext";
 
 interface HeaderProps {
   texts: {
@@ -32,19 +31,10 @@ export default function Header({
 }: HeaderProps) {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { discoverEasterEgg } = useEasterEggContext();
 
   const handleLogoClick = useEasterEgg("logo-spin", {
-    onTrigger: useCallback(() => {
-      // D'abord faire tourner le site
-      document.body.classList.add("site-spin");
-
-      setTimeout(() => {
-        document.body.classList.remove("site-spin");
-        // Déclencher l'easter egg APRÈS la rotation pour voir le toast
-        discoverEasterEgg("logo-spin");
-      }, 4000);
-    }, [locale]),
+    clickThreshold: 5,
+    resetDelay: 500,
   });
 
   function handleLocaleChange(newLocale: string) {

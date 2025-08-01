@@ -83,24 +83,6 @@
     }
   }
 
-  @keyframes rainbow {
-    0% {
-      filter: hue-rotate(0deg);
-    }
-    25% {
-      filter: hue-rotate(90deg);
-    }
-    50% {
-      filter: hue-rotate(180deg);
-    }
-    75% {
-      filter: hue-rotate(270deg);
-    }
-    100% {
-      filter: hue-rotate(360deg);
-    }
-  }
-
   @keyframes pulse-glow {
     0%,
     100% {
@@ -146,6 +128,15 @@ body {
   color: var(--color-background);
   background: var(--color-foreground);
   transition: filter 0.5s ease;
+
+  &.ninja-active {
+    main,
+    header,
+    footer {
+      filter: grayscale(100%);
+      transition: filter 0.5s ease;
+    }
+  }
 }
 
 .custom-cursor {

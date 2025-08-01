@@ -144,6 +144,7 @@ export default async function LocaleLayout({
         <EasterEggProvider
           easterEggTexts={texts.easter_eggs}
           completionTexts={texts.easter_eggs_completion}
+          easterEggMessages={texts.easter_eggs_messages}
         >
           <MatrixModeProvider>
             <div className="max-md:hidden">

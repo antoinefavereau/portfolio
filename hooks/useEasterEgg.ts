@@ -16,10 +16,6 @@ type EasterEggId =
 interface EasterEggOptions {
   clickThreshold?: number;
   resetDelay?: number;
-  onTrigger?: (
-    event: React.MouseEvent<HTMLElement>,
-    discoverEasterEgg: (eggId: EasterEggId) => { isNew: boolean; count: number }
-  ) => void;
 }
 
 // Hook principal pour les easter eggs par clic
@@ -27,7 +23,7 @@ export const useEasterEgg = (
   eggId: EasterEggId,
   options: EasterEggOptions = {}
 ) => {
-  const { clickThreshold = 5, resetDelay = 2000, onTrigger } = options;
+  const { clickThreshold = 5, resetDelay = 2000 } = options;
   const clickCountRef = useRef(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const elementRef = useRef<HTMLElement | null>(null);
@@ -56,9 +52,12 @@ export const useEasterEgg = (
         // Remettre immédiatement le compteur à zéro pour éviter les doubles déclenchements
         clickCountRef.current = 0;
 
-        if (onTrigger) {
-          // Utiliser le callback personnalisé
-          onTrigger(event, discoverEasterEgg);
+        if (eggId === "logo-spin") {
+          document.body.classList.add("site-spin");
+          setTimeout(() => {
+            document.body.classList.remove("site-spin");
+            discoverEasterEgg(eggId);
+          }, 4000);
         } else {
           // Comportement par défaut
           target.classList.add("easter-egg-spin");

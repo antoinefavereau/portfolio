@@ -23,6 +23,11 @@ interface CompletionTexts {
   close: string;
 }
 
+interface EasterEggMessages {
+  already_discovered: string;
+  prefix: string;
+}
+
 interface EasterEggTexts {
   [key: string]: EasterEggItem;
 }
@@ -47,10 +52,12 @@ export function EasterEggProvider({
   children,
   easterEggTexts,
   completionTexts,
+  easterEggMessages,
 }: {
   children: React.ReactNode;
   easterEggTexts: EasterEggTexts;
   completionTexts: CompletionTexts;
+  easterEggMessages: EasterEggMessages;
 }) {
   const [discoveredEggs, setDiscoveredEggs] = useState<EasterEgg[]>([]);
   const [showCompletionModal, setShowCompletionModal] = useState(false);
@@ -84,9 +91,9 @@ export function EasterEggProvider({
           easterEgg.description,
           "success",
           10000,
-          `Easter Egg : ${easterEgg.name} (${newDiscoveredEggs.length}/${
-            Object.keys(easterEggTexts).length
-          })`
+          `${easterEggMessages.prefix} ${easterEgg.name} (${
+            newDiscoveredEggs.length
+          }/${Object.keys(easterEggTexts).length})`
         );
 
         // Vérifier si tous les easter eggs sont découverts
@@ -105,15 +112,15 @@ export function EasterEggProvider({
       const easterEgg = easterEggTexts[eggId];
       if (easterEgg) {
         showToast(
-          "Cet easter egg a déjà été découvert !",
+          easterEggMessages.already_discovered,
           "info",
           5000,
-          `Easter Egg : ${easterEgg.name}`
+          `${easterEggMessages.prefix} ${easterEgg.name}`
         );
       }
       return { isNew: false, count: discoveredEggs.length };
     },
-    [discoveredEggs, showToast, easterEggTexts]
+    [discoveredEggs, showToast, easterEggTexts, easterEggMessages]
   );
 
   const isDiscovered = useCallback(
