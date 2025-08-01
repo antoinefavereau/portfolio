@@ -75,5 +75,9 @@
     "message": "You have discovered all the easter eggs hidden on this site!",
     "subtitle": "You are a true explorer! Thanks for taking the time to discover all these little surprises.",
     "close": "Close"
+  },
+  "easter_eggs_messages": {
+    "already_discovered": "This easter egg has already been discovered!",
+    "prefix": "Easter Egg:"
   }
 }
