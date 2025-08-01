@@ -59,13 +59,13 @@ export default function Projects({ texts, projects }: ProjectsProps) {
                   </h3>
                 </a>
                 <a
-                  className="contents"
+                  className="lg:hidden contents"
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Image
-                    className="lg:hidden w-full h-auto rounded-xl"
+                    className="w-full h-auto rounded-xl"
                     src={"/projects/" + item.image}
                     alt={item.title}
                     width={500}
