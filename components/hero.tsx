@@ -118,7 +118,7 @@ export default function Hero({ texts }: HeroProps) {
       <Particles
         id="tsparticles"
         options={options}
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-1"
       />
       <div
         ref={contentRef}
@@ -141,7 +141,7 @@ export default function Hero({ texts }: HeroProps) {
         </Button>
       </div>
       <svg
-        className="absolute -z-1 bottom-[-1px] left-0 w-full h-auto"
+        className="absolute bottom-[-1px] left-0 w-full h-auto"
         width="1920"
         height="100"
         viewBox="0 0 1920 100"
