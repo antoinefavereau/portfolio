@@ -6,12 +6,6 @@
     "url": "https://cecile-lochus.fr/"
   },
   {
-    "title": "Audio-to-Text",
-    "description": "Audio-to-Text est un service en ligne qui convertit vos fichiers audio et vidéo en texte, grâce à un simple glisser-déposer ou à l'import d'une URL. Vous pouvez ainsi capturer rapidement l'essentiel de vos réunions, interviews ou podcasts sans rien manquer. J'ai pris en charge tout le développement, à l'exception du design.\nRôles & technologies : Next.js • Tailwind CSS • IA • Node.js • Figma",
-    "image": "audio-to-text.png",
-    "url": "https://audio-to-text.antoinefavereau.fr/"
-  },
-  {
     "title": "Yeu-Milano",
     "description": "Portfolio en ligne pour un artiste, pensé pour valoriser ses œuvres par des animations subtiles et une mise en page moderne. J'ai implémenté l'ensemble du site en Next.js, enrichi par GSAP pour les interactions et Tailwind CSS pour un design épuré, puis déployé sur Vercel.\nRôles & technologies : développement Next.js • Tailwind CSS • GSAP • Vercel • ShadCN/UI",
     "image": "yeu-milano.png",
