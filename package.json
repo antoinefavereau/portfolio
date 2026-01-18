@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.6.1",
+    "@formatjs/intl-localematcher": "^0.7.3",
     "@gsap/react": "^2.1.2",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
