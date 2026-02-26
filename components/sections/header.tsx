@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import Socials from "./socials";
+import Socials from "@/components/socials";
 import Link from "next/link";
 import { useEasterEgg } from "@/hooks/useEasterEgg";
 

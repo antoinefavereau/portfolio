@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Button from "./ui/button";
+import Button from "@/components/ui/button";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type ISourceOptions,
