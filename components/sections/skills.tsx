@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeader from "./ui/section-header";
+import SectionHeader from "@/components/ui/section-header";
 import Image from "next/image";
 import { useRef, useState, useCallback, useEffect } from "react";
 import { gsap } from "gsap";

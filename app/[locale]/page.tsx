@@ -1,9 +1,9 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import Hero from "@/components/hero";
-import Journey from "@/components/journey";
-import Projects from "@/components/projects";
-import Skills from "@/components/skills";
+import Footer from "@/components/sections/footer";
+import Header from "@/components/sections/header";
+import Hero from "@/components/sections/hero";
+import Journey from "@/components/sections/journey";
+import Projects from "@/components/sections/projects";
+import Skills from "@/components/sections/skills";
 import { notFound } from "next/navigation";
 import { SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/constants";
 

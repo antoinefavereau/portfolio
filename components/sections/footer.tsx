@@ -1,6 +1,6 @@
 "use client";
 
-import Socials from "./socials";
+import Socials from "@/components/socials";
 import { useState, useRef } from "react";
 import { useEasterEgg } from "@/hooks/useEasterEgg";
 import { useEasterEggContext } from "@/contexts/EasterEggContext";

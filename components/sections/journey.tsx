@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeader from "./ui/section-header";
+import SectionHeader from "@/components/ui/section-header";
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -60,13 +60,13 @@ export default function Journey({ texts, journey }: JourneyProps) {
         });
       });
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (
     <section
       id="journey"
-      className="relative bg-background text-foreground flex flex-col justify-center items-center gap-24 py-16 px-8 md:px-16"
+      className="bg-background text-foreground flex flex-col justify-center items-center gap-24 py-16 px-8 md:px-16"
     >
       <SectionHeader title={texts.title} subtitle={texts.subtitle} />
       <div ref={containerRef} className="grid gap-2 w-full max-w-6xl">
