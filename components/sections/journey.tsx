@@ -121,9 +121,10 @@ export default function Journey({ texts, journey }: JourneyProps) {
                 <h3 className="text-2xl font-bold">{item.title}</h3>
                 <p className="text-lg">{item.dates}</p>
               </div>
-              <p className="mb-16 md:mb-24 group-last:mb-0">
-                {item.description}
-              </p>
+              <p
+                className="mb-16 md:mb-24 group-last:mb-0"
+                dangerouslySetInnerHTML={{ __html: item.description }}
+              />
             </div>
           </div>
         ))}
