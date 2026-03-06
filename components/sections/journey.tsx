@@ -17,6 +17,7 @@ interface JourneyProps {
     title: string;
     dates: string;
     description: string;
+    url?: string;
   }[];
 }
 
@@ -105,7 +106,16 @@ export default function Journey({ texts, journey }: JourneyProps) {
         {journey.map((item, index) => (
           <div key={index} className="group flex gap-[5%]">
             <div className="title w-1/4 flex-col items-end gap-2 shrink-0 hidden md:flex -mt-3">
-              <h3 className="text-3xl font-bold text-end">{item.title}</h3>
+              {item.url ? (
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  <h3 className="text-3xl font-bold text-end">
+                    {item.title}
+                    <span className="inline-block h-[5px] w-4 bg-primary ml-2"></span>
+                  </h3>
+                </a>
+              ) : (
+                <h3 className="text-3xl font-bold text-end">{item.title}</h3>
+              )}
               <p className="text-lg">{item.dates}</p>
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -118,7 +128,16 @@ export default function Journey({ texts, journey }: JourneyProps) {
             </div>
             <div className="content flex flex-col gap-2 -mt-2">
               <div className="flex flex-col gap-2 md:hidden">
-                <h3 className="text-2xl font-bold">{item.title}</h3>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-2xl font-bold">
+                      {item.title}
+                      <span className="inline-block h-[5px] w-4 bg-primary ml-2"></span>
+                    </h3>
+                  </a>
+                ) : (
+                  <h3 className="text-2xl font-bold">{item.title}</h3>
+                )}
                 <p className="text-lg">{item.dates}</p>
               </div>
               <p
