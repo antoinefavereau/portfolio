@@ -2,36 +2,36 @@
   {
     "title": "CESI",
     "dates": "2019 - 5 years",
-    "description": "Graduated from the CESI engineering school (computer science major). Vocational curriculum based on project-based learning. Developed technical (programming) and project management skills, providing me with solid practical experience and great adaptability."
+    "description": "Graduated from the CESI engineering school (<strong>computer science major</strong>). Vocational curriculum based on <strong>project-based learning</strong>. Developed technical (programming) and project management skills, providing me with solid practical experience and great adaptability."
   },
   {
     "title": "Xapiema",
     "dates": "2022 - 10 months",
-    "description": "Web agency based in Orléans. Design, development, and maintenance of custom websites (WordPress, PrestaShop, Magento) for public and private sector clients. This experience allowed me to learn agency workflows and collaborate effectively within a technical team."
+    "description": "Web agency based in Orléans. Design, development, and maintenance of custom websites (<strong>WordPress, PrestaShop, Magento</strong>) for public and private sector clients. This experience allowed me to learn agency workflows and collaborate effectively within a technical team."
   },
   {
     "title": "Lifekeys",
     "dates": "2023 - 5 months",
-    "description": "Norwegian company specializing in mental health. Front-end developer on the company's web platforms. Developed new features and optimized the user experience (Next.js, Styled Components, Material-UI) using agile methodology within an international team."
+    "description": "Norwegian company specializing in mental health. <strong>Front-end developer</strong> on the company's web platforms. Developed new features and optimized the user experience (<strong>Next.js, Styled Components, Material-UI</strong>) using agile methodology within an international team."
   },
   {
     "title": "Evermaps",
     "dates": "2024 - 12 months",
-    "description": "Specialist in local digital visibility (Store Locator, SEO). Front-end developer (Angular) on a work-study contract. Enriched their SaaS platform interface with new components and optimized the rendering performance of a solution used by thousands of retail locations."
+    "description": "Specialist in local digital visibility (<strong>Store Locator, SEO</strong>). <strong>Front-end developer (Angular)</strong> on a work-study contract. Enriched their SaaS platform interface with new components and optimized the rendering performance of a solution used by thousands of retail locations."
   },
   {
     "title": "Selenium Studio",
     "dates": "2025 - Present",
-    "description": "Web agency combining design and development. As co-director of the studio, I directly contribute to front-end development: fast, responsive, and accessible interfaces (pixel-perfect, animations, technical SEO). Building custom solutions (B2B/B2C tools, landing pages, CRM/ERP) in close collaboration with UX/UI and back-end experts."
+    "description": "Web agency combining design and development. As <strong>co-director</strong> of the studio, I directly contribute to front-end development: fast, responsive, and accessible interfaces (<strong>pixel-perfect, animations, technical SEO</strong>). Building custom solutions (<strong>B2B/B2C tools, landing pages, CRM/ERP</strong>) in close collaboration with UX/UI and back-end experts."
   },
   {
     "title": "BIKEFLEET",
     "dates": "2025 - Present",
-    "description": "Lead front-end developer (React Native). In charge of the end-to-end development of the iOS/Android mobile app. My work involves strict Design System integration, building pixel-perfect UI components, state management, and implementing core features like maintenance tracking and secure document storage."
+    "description": "<strong>Lead front-end developer (React Native)</strong>. In charge of the end-to-end development of the <strong>iOS/Android</strong> mobile app. My work involves strict Design System integration, building pixel-perfect UI components, state management, and implementing core features like maintenance tracking and secure document storage."
   },
   {
     "title": "Freelance",
     "dates": "2022 - Present",
-    "description": "Freelance web developer. End-to-end management of diverse projects (showcase websites, complex platforms), from requirements analysis to delivery. This activity has given me great autonomy and solid versatility in both front-end and back-end architectures."
+    "description": "<strong>Freelance web developer</strong>. End-to-end management of diverse projects (showcase websites, complex platforms), from requirements analysis to delivery. This activity has given me great autonomy and solid versatility in both <strong>front-end and back-end</strong> architectures."
   }
 ]

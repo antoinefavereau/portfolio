@@ -2,36 +2,36 @@
   {
     "title": "CESI",
     "dates": "2019 - 5 ans",
-    "description": "Diplômé de l'école d'ingénieurs CESI (spécialité informatique). Cursus professionnalisant basé sur la pédagogie par projets. Développement de mes compétences techniques (programmation) et de ma capacité à gérer des projets, m'apportant une solide expérience terrain et une grande adaptabilité."
+    "description": "Diplômé de l'école d'ingénieurs CESI (<strong>spécialité informatique</strong>). Cursus professionnalisant basé sur la <strong>pédagogie par projets</strong>. Développement de mes compétences techniques (programmation) et de ma capacité à gérer des projets, m'apportant une solide expérience terrain et une grande adaptabilité."
   },
   {
     "title": "Xapiema",
     "dates": "2022 - 10 mois",
-    "description": "Agence web orléanaise. Conception, développement et maintenance de sites web sur mesure (WordPress, PrestaShop, Magento) pour des clients publics et privés. Cette expérience m'a permis d'assimiler les méthodes de travail en agence et de collaborer efficacement au sein d'une équipe technique."
+    "description": "Agence web orléanaise. Conception, développement et maintenance de sites web sur mesure (<strong>WordPress, PrestaShop, Magento</strong>) pour des clients publics et privés. Cette expérience m'a permis d'assimiler les méthodes de travail en agence et de collaborer efficacement au sein d'une équipe technique."
   },
   {
     "title": "Lifekeys",
     "dates": "2023 - 5 mois",
-    "description": "Entreprise norvégienne spécialisée dans la santé mentale. Développeur front-end sur les plateformes web de l'entreprise. J'ai développé de nouvelles fonctionnalités et optimisé l'expérience utilisateur (Next.js, Styled Components, Material-UI) en méthodologie agile au sein d'une équipe internationale."
+    "description": "Entreprise norvégienne spécialisée dans la santé mentale. <strong>Développeur front-end</strong> sur les plateformes web de l'entreprise. J'ai développé de nouvelles fonctionnalités et optimisé l'expérience utilisateur (<strong>Next.js, Styled Components, Material-UI</strong>) en méthodologie agile au sein d'une équipe internationale."
   },
   {
     "title": "Evermaps",
     "dates": "2024 - 12 mois",
-    "description": "Spécialiste de la visibilité digitale locale (Store Locator, SEO). Développeur front-end (Angular) en contrat de professionnalisation. J'ai enrichi l'interface de leur plateforme SaaS avec de nouveaux composants et optimisé les performances d'affichage d'une solution utilisée par des milliers de points de vente."
+    "description": "Spécialiste de la visibilité digitale locale (<strong>Store Locator, SEO</strong>). <strong>Développeur front-end (Angular)</strong> en contrat de professionnalisation. J'ai enrichi l'interface de leur plateforme SaaS avec de nouveaux composants et optimisé les performances d'affichage d'une solution utilisée par des milliers de points de vente."
   },
   {
     "title": "Selenium Studio",
     "dates": "2025 - Aujourd'hui",
-    "description": "Agence web alliant design et développement. Co-dirigeant de la structure, je contribue directement au développement front-end : interfaces rapides, responsives et accessibles (pixel-perfect, animations, SEO technique). Conception de solutions sur mesure (outils B2B/B2C, landing pages, CRM/ERP) en étroite collaboration avec des experts UX/UI et back-end."
+    "description": "Agence web alliant design et développement. <strong>Co-dirigeant</strong> de la structure, je contribue directement au développement front-end : interfaces rapides, responsives et accessibles (<strong>pixel-perfect, animations, SEO technique</strong>). Conception de solutions sur mesure (<strong>outils B2B/B2C, landing pages, CRM/ERP</strong>) en étroite collaboration avec des experts UX/UI et back-end."
   },
   {
     "title": "BIKEFLEET",
     "dates": "2025 - Aujourd'hui",
-    "description": "Développeur front-end (React Native). En charge du développement de bout en bout de l'application mobile iOS/Android. Mon travail implique l'intégration stricte du Design System, la création de composants UI pixel-perfect, la gestion de l'état (state management) et l'implémentation de fonctionnalités clés comme le suivi d'entretien et le stockage sécurisé de documents."
+    "description": "<strong>Développeur front-end (React Native)</strong>. En charge du développement de bout en bout de l'application mobile <strong>iOS/Android</strong>. Mon travail implique l'intégration stricte du Design System, la création de composants UI pixel-perfect, la gestion de l'état (state management) et l'implémentation de fonctionnalités clés comme le suivi d'entretien et le stockage sécurisé de documents."
   },
   {
     "title": "Freelance",
     "dates": "2022 - Aujourd'hui",
-    "description": "Développeur web indépendant. Gestion complète de projets variés (sites vitrines, plateformes complexes), de l'analyse des besoins à la livraison. Cette activité m'a apporté une grande autonomie et une solide polyvalence sur les architectures front-end et back-end."
+    "description": "<strong>Développeur web indépendant</strong>. Gestion complète de projets variés (sites vitrines, plateformes complexes), de l'analyse des besoins à la livraison. Cette activité m'a apporté une grande autonomie et une solide polyvalence sur les architectures <strong>front-end et back-end</strong>."
   }
 ]
