@@ -30,17 +30,22 @@ export default function HiddenNinja() {
 
   return (
     <div
-      className="absolute -right-4 cursor-pointer hover:-translate-x-2 transition-transform duration-300 z-50 select-none"
-      onClick={handleNinjaClick}
-      title="🥷"
+      className="absolute right-0 z-50 select-none overflow-hidden"
       style={{
         top: `${ninjaTop}%`,
-        transform: "rotate(-30deg)",
-        fontSize: "32px",
-        textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
       }}
     >
-      🥷
+      <div
+        className="cursor-pointer hover:-translate-x-2 transition-transform duration-300"
+        onClick={handleNinjaClick}
+        style={{
+          transform: "translateX(1rem) rotate(-30deg)",
+          fontSize: "32px",
+          textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+        }}
+      >
+        🥷
+      </div>
     </div>
   );
 }
