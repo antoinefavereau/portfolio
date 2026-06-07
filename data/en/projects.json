@@ -1,5 +1,23 @@
 [
   {
+    "title": "Graine2Pain",
+    "description": "Premium portfolio for Athéna Moreau, UX/UI designer and co-associate at Selenium Studio. A technically ambitious site built with Awwwards submission in mind: advanced animations, smooth transitions, refined interactions, and polished visual effects. I handled the entire front-end development and advised on design decisions to ensure both creative excellence and technical feasibility.\n\nRoles & technologies: full front-end development • design consulting • Next.js • Three.js • GSAP • Tailwind CSS • Figma",
+    "image": "graine2pain.png",
+    "url": "https://graine2pain.fr/"
+  },
+  {
+    "title": "Selenium Studio",
+    "description": "Premium web agency combining design and development, founded and co-directed alongside two partners. Selenium Studio supports its clients from strategy to launch: custom landing pages, B2B/B2C tools, rebranding, and data automation. I act as creator and co-director, driving the product vision and directly contributing to front-end development (fast, responsive, and accessible interfaces).\n\nRoles & technologies: co-founder & co-director • front-end development • Next.js • React • GSAP • Figma • Technical SEO",
+    "image": "selenium-studio.png",
+    "url": "https://selenium-studio.com/"
+  },
+  {
+    "title": "BikeFleet",
+    "description": "Mobile app for motorcycle enthusiasts to manage their garage. BikeFleet lets you track maintenance, store key documents (insurance, invoices, registration), and keep a full history for every bike. Available on App Store and Google Play. As lead front-end developer (React Native), I handled end-to-end development of the iOS/Android app, from Design System integration to core features.\n\nRoles & technologies: React Native development • iOS & Android • state management • Design System • Figma",
+    "image": "bikefleet.webp",
+    "url": "https://www.getbikefleet.com/"
+  },
+  {
     "title": "Cécile Lochus",
     "description": "Former web designer's portfolio, crafted to reflect her creative universe while ensuring smooth navigation. I managed the full integration using Next.js and Tailwind CSS, orchestrated GSAP animations, and coordinated the project via Trello before deploying on Vercel.\n\nRoles & technologies: Next.js development • Tailwind CSS • GSAP • Figma • Trello • Vercel",
     "image": "cecile-lochus.png",
@@ -16,17 +34,5 @@
     "description": "Personal project automating Spotify playlist creation: each month, Histofy gathers every track you've liked into a single playlist, so you can relive your musical journey without searching for each song. I designed the UI with an artist, built the integration natively (no framework), and developed the script interacting with the Spotify API, deployed via Docker then Vercel.\n\nRoles & technologies: UX/UI design • HTML/CSS/JS integration • Spotify API • DevOps (Docker, Vercel) • Figma • Trello",
     "image": "histofy.jpg",
     "url": "https://www.histofy.fr/"
-  },
-  {
-    "title": "SRMA",
-    "description": "Showcase site for the Salon Régional des Métiers d'Arts in Centre-Val de Loire, highlighting exhibitors, key events, and practical information (access, accommodation, workshops). I handled pixel-perfect integration of the design, ensuring clear, responsive navigation across all devices.\n\nRoles & technologies: integration (front-end only) • HTML • CSS • JavaScript • Figma • Trello",
-    "image": "srma.png",
-    "url": "https://salon-metiersdart.centre-valdeloire.fr/"
-  },
-  {
-    "title": "Les Échappées à vélo",
-    "description": "Cyclotourism platform in Centre-Val de Loire, offering from May to October an interactive calendar of around sixty festive rides and bike routes. I performed the full design integration in WordPress and developed all dynamic features (ride filtering, calendar management, registration forms).\n\nRoles & technologies: integration • PHP • HTML • CSS • JavaScript • jQuery • WordPress • Figma • Trello",
-    "image": "echappees-a-velo.jpg",
-    "url": "https://www.echappeesavelo.fr/"
   }
 ]

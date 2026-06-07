@@ -1,5 +1,23 @@
 [
   {
+    "title": "Graine2Pain",
+    "description": "Portfolio haut de gamme d'Athéna Moreau, designer UX/UI et co-associée chez Selenium Studio. Un site techniquement ambitieux, conçu pour être soumis aux Awwwards : animations avancées, transitions fluides, interactions soignées et effets visuels poussés. J'ai assuré l'intégralité du développement front-end et conseillé le design pour garantir la faisabilité et l'excellence technique de chaque choix créatif.\n\nRôles & technologies : développement front-end complet • conseil design • Next.js • Three.js • GSAP • Tailwind CSS • Figma",
+    "image": "graine2pain.png",
+    "url": "https://graine2pain.fr/"
+  },
+  {
+    "title": "Selenium Studio",
+    "description": "Agence web alliant design et développement haut de gamme, fondée et co-dirigée avec deux associés. Selenium Studio accompagne ses clients de la stratégie à la mise en ligne : landing pages sur mesure, outils B2B/B2C, refonte de marque et automatisations data. J'interviens en tant que créateur et co-dirigeant, pilotant la vision produit et contribuant directement au développement front-end (interfaces rapides, responsives et accessibles).\n\nRôles & technologies : co-fondateur & co-dirigeant • développement front-end • Next.js • React • GSAP • Figma • SEO technique",
+    "image": "selenium-studio.png",
+    "url": "https://selenium-studio.com/"
+  },
+  {
+    "title": "BikeFleet",
+    "description": "Application mobile de gestion de garage pour passionnés de moto. BikeFleet permet de suivre les entretiens, stocker les documents importants (assurance, factures, carte grise) et centraliser l'historique de chaque moto. Disponible sur App Store et Google Play. En tant que développeur front-end principal (React Native), j'ai assuré le développement de bout en bout de l'app iOS/Android, de l'intégration du Design System aux fonctionnalités clés.\n\nRôles & technologies : développement React Native • iOS & Android • state management • Design System • Figma",
+    "image": "bikefleet.webp",
+    "url": "https://www.getbikefleet.com/"
+  },
+  {
     "title": "Cécile Lochus",
     "description": "Ancien portfolio d'une designeuse web, conçu pour refléter son univers créatif tout en offrant une navigation fluide. J'ai géré l'intégration complète sous Next.js et Tailwind CSS, orchestré les animations GSAP et coordonné le projet via Trello, avant un déploiement sur Vercel.\n\nRôles & technologies : développement Next.js • Tailwind CSS • GSAP • Figma • Trello • Vercel",
     "image": "cecile-lochus.png",
@@ -16,17 +34,5 @@
     "description": "Projet personnel d'automatisation de playlists Spotify : chaque mois, Histofy regroupe tous les titres « likés » en une playlist unique, pour revivre facilement son histoire musicale. J'ai conçu le design avec un artiste, assuré l'intégration native (sans framework) et développé le script de communication avec l'API Spotify, déployé via Docker puis Vercel.\n\nRôles & technologies : design UX/UI • intégration HTML/CSS/JS • API Spotify • DevOps (Docker, Vercel) • Figma • Trello",
     "image": "histofy.jpg",
     "url": "https://www.histofy.fr/"
-  },
-  {
-    "title": "SRMA",
-    "description": "Site vitrine du Salon Régional des Métiers d'Arts de Centre-Val de Loire, l'application met en avant les exposants, les temps forts et les informations pratiques (accès, hébergement, workshops). J'ai pris en charge l'intégration fidèle de la maquette, garantissant une navigation claire et responsive sur tous les supports.\n\nRôles & technologies : intégration (sans back-end) • HTML, CSS, JavaScript • Figma • Trello",
-    "image": "srma.png",
-    "url": "https://salon-metiersdart.centre-valdeloire.fr/"
-  },
-  {
-    "title": "Les Échappées à vélo",
-    "description": "Plateforme de cyclotourisme en Centre-Val de Loire, Les Échappées à vélo propose de mai à octobre un agenda interactif d'une soixantaine de balades festives et d'itinéraires à vélo. J'ai réalisé l'intégration complète de la maquette sous WordPress et développé toutes les fonctionnalités dynamiques (filtrage des balades, gestion de l'agenda, formulaires d'inscription).\n\nRôles & technologies : intégration, PHP, HTML, CSS, JavaScript, jQuery, WordPress, Figma, Trello",
-    "image": "echappees-a-velo.jpg",
-    "url": "https://www.echappeesavelo.fr/"
   }
 ]
