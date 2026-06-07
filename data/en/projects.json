@@ -16,17 +16,5 @@
     "description": "Personal project automating Spotify playlist creation: each month, Histofy gathers every track you've liked into a single playlist, so you can relive your musical journey without searching for each song. I designed the UI with an artist, built the integration natively (no framework), and developed the script interacting with the Spotify API, deployed via Docker then Vercel.\n\nRoles & technologies: UX/UI design • HTML/CSS/JS integration • Spotify API • DevOps (Docker, Vercel) • Figma • Trello",
     "image": "histofy.jpg",
     "url": "https://www.histofy.fr/"
-  },
-  {
-    "title": "SRMA",
-    "description": "Showcase site for the Salon Régional des Métiers d'Arts in Centre-Val de Loire, highlighting exhibitors, key events, and practical information (access, accommodation, workshops). I handled pixel-perfect integration of the design, ensuring clear, responsive navigation across all devices.\n\nRoles & technologies: integration (front-end only) • HTML • CSS • JavaScript • Figma • Trello",
-    "image": "srma.png",
-    "url": "https://salon-metiersdart.centre-valdeloire.fr/"
-  },
-  {
-    "title": "Les Échappées à vélo",
-    "description": "Cyclotourism platform in Centre-Val de Loire, offering from May to October an interactive calendar of around sixty festive rides and bike routes. I performed the full design integration in WordPress and developed all dynamic features (ride filtering, calendar management, registration forms).\n\nRoles & technologies: integration • PHP • HTML • CSS • JavaScript • jQuery • WordPress • Figma • Trello",
-    "image": "echappees-a-velo.jpg",
-    "url": "https://www.echappeesavelo.fr/"
   }
 ]
