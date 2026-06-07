@@ -1,5 +1,23 @@
 [
   {
+    "title": "Graine2Pain",
+    "description": "Portfolio haut de gamme d'Athéna Moreau, designer UX/UI et co-associée chez Selenium Studio. Un site techniquement ambitieux, conçu pour être soumis aux Awwwards : animations avancées, transitions fluides, interactions soignées et effets visuels poussés. J'ai assuré l'intégralité du développement front-end et conseillé le design pour garantir la faisabilité et l'excellence technique de chaque choix créatif.\n\nRôles & technologies : développement front-end complet • conseil design • Next.js • Three.js • GSAP • Tailwind CSS • Figma",
+    "image": "graine2pain.png",
+    "url": "https://graine2pain.fr/"
+  },
+  {
+    "title": "Selenium Studio",
+    "description": "Agence web alliant design et développement haut de gamme, fondée et co-dirigée avec deux associés. Selenium Studio accompagne ses clients de la stratégie à la mise en ligne : landing pages sur mesure, outils B2B/B2C, refonte de marque et automatisations data. J'interviens en tant que créateur et co-dirigeant, pilotant la vision produit et contribuant directement au développement front-end (interfaces rapides, responsives et accessibles).\n\nRôles & technologies : co-fondateur & co-dirigeant • développement front-end • Next.js • React • GSAP • Figma • SEO technique",
+    "image": "selenium-studio.png",
+    "url": "https://selenium-studio.com/"
+  },
+  {
+    "title": "BikeFleet",
+    "description": "Application mobile de gestion de garage pour passionnés de moto. BikeFleet permet de suivre les entretiens, stocker les documents importants (assurance, factures, carte grise) et centraliser l'historique de chaque moto. Disponible sur App Store et Google Play. En tant que développeur front-end principal (React Native), j'ai assuré le développement de bout en bout de l'app iOS/Android, de l'intégration du Design System aux fonctionnalités clés.\n\nRôles & technologies : développement React Native • iOS & Android • state management • Design System • Figma",
+    "image": "bikefleet.webp",
+    "url": "https://www.getbikefleet.com/"
+  },
+  {
     "title": "Cécile Lochus",
     "description": "Ancien portfolio d'une designeuse web, conçu pour refléter son univers créatif tout en offrant une navigation fluide. J'ai géré l'intégration complète sous Next.js et Tailwind CSS, orchestré les animations GSAP et coordonné le projet via Trello, avant un déploiement sur Vercel.\n\nRôles & technologies : développement Next.js • Tailwind CSS • GSAP • Figma • Trello • Vercel",
     "image": "cecile-lochus.png",

@@ -1,5 +1,23 @@
 [
   {
+    "title": "Graine2Pain",
+    "description": "Premium portfolio for Athéna Moreau, UX/UI designer and co-associate at Selenium Studio. A technically ambitious site built with Awwwards submission in mind: advanced animations, smooth transitions, refined interactions, and polished visual effects. I handled the entire front-end development and advised on design decisions to ensure both creative excellence and technical feasibility.\n\nRoles & technologies: full front-end development • design consulting • Next.js • Three.js • GSAP • Tailwind CSS • Figma",
+    "image": "graine2pain.png",
+    "url": "https://graine2pain.fr/"
+  },
+  {
+    "title": "Selenium Studio",
+    "description": "Premium web agency combining design and development, founded and co-directed alongside two partners. Selenium Studio supports its clients from strategy to launch: custom landing pages, B2B/B2C tools, rebranding, and data automation. I act as creator and co-director, driving the product vision and directly contributing to front-end development (fast, responsive, and accessible interfaces).\n\nRoles & technologies: co-founder & co-director • front-end development • Next.js • React • GSAP • Figma • Technical SEO",
+    "image": "selenium-studio.png",
+    "url": "https://selenium-studio.com/"
+  },
+  {
+    "title": "BikeFleet",
+    "description": "Mobile app for motorcycle enthusiasts to manage their garage. BikeFleet lets you track maintenance, store key documents (insurance, invoices, registration), and keep a full history for every bike. Available on App Store and Google Play. As lead front-end developer (React Native), I handled end-to-end development of the iOS/Android app, from Design System integration to core features.\n\nRoles & technologies: React Native development • iOS & Android • state management • Design System • Figma",
+    "image": "bikefleet.webp",
+    "url": "https://www.getbikefleet.com/"
+  },
+  {
     "title": "Cécile Lochus",
     "description": "Former web designer's portfolio, crafted to reflect her creative universe while ensuring smooth navigation. I managed the full integration using Next.js and Tailwind CSS, orchestrated GSAP animations, and coordinated the project via Trello before deploying on Vercel.\n\nRoles & technologies: Next.js development • Tailwind CSS • GSAP • Figma • Trello • Vercel",
     "image": "cecile-lochus.png",
