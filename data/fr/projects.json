@@ -12,6 +12,12 @@
     "url": "https://selenium-studio.com/"
   },
   {
+    "title": "Systemity",
+    "description": "Système de gestion et d'opérations pour équipes de racing. Systemity permet aux écuries de compétition de structurer leurs opérations, suivre leurs assets, planifier leurs maintenances, gérer les tâches et coordonner leurs workflows sur une plateforme unique. En tant que Lead Développeur Front-End, j'ai conçu et développé l'architecture complète de l'application web sous Next.js 16 et React 19 : interfaces denses taillées pour un usage desktop intensif, manipulation de données complexes et Design System modulaire.\n\nRôles & technologies : Lead Développeur Front-End • architecture front-end • Next.js 16 • React 19 • TypeScript • Tailwind CSS • TanStack Query",
+    "image": "systemity.png",
+    "url": "https://systemity.com/"
+  },
+  {
     "title": "BikeFleet",
     "description": "Application mobile de gestion de garage pour passionnés de moto. BikeFleet permet de suivre les entretiens, stocker les documents importants (assurance, factures, carte grise) et centraliser l'historique de chaque moto. Disponible sur App Store et Google Play. En tant que développeur front-end principal (React Native), j'ai assuré le développement de bout en bout de l'app iOS/Android, de l'intégration du Design System aux fonctionnalités clés.\n\nRôles & technologies : développement React Native • iOS & Android • state management • Design System • Figma",
     "image": "bikefleet.webp",

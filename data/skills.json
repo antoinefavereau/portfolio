@@ -1,13 +1,33 @@
 [
   {
-    "title": "HTML",
-    "image": "html5.svg",
-    "link": "https://developer.mozilla.org/docs/Web/HTML"
+    "title": "TypeScript",
+    "image": "typescript.svg",
+    "link": "https://www.typescriptlang.org/"
   },
   {
-    "title": "CSS",
-    "image": "css3.svg",
-    "link": "https://developer.mozilla.org/docs/Web/CSS"
+    "title": "React Native",
+    "image": "react-native.svg",
+    "link": "https://reactnative.dev/"
+  },
+  {
+    "title": "Expo",
+    "image": "expo.svg",
+    "link": "https://expo.dev/"
+  },
+  {
+    "title": "Next.js",
+    "image": "nextjs.svg",
+    "link": "https://nextjs.org/"
+  },
+  {
+    "title": "React",
+    "image": "react.svg",
+    "link": "https://react.dev/"
+  },
+  {
+    "title": "Tailwind CSS",
+    "image": "tailwindcss.svg",
+    "link": "https://tailwindcss.com/"
   },
   {
     "title": "JavaScript",
@@ -15,29 +35,49 @@
     "link": "https://developer.mozilla.org/docs/Web/JavaScript"
   },
   {
-    "title": "PHP",
-    "image": "php.svg",
-    "link": "https://www.php.net/"
+    "title": "Supabase",
+    "image": "supabase.svg",
+    "link": "https://supabase.com/"
   },
   {
-    "title": "MySQL",
-    "image": "mysql.svg",
-    "link": "https://www.mysql.com/"
+    "title": "TanStack Query",
+    "image": "tanstack.svg",
+    "link": "https://tanstack.com/query"
   },
   {
-    "title": "Bootstrap",
-    "image": "bootstrap.svg",
-    "link": "https://getbootstrap.com/"
+    "title": "GSAP",
+    "image": "gsap.svg",
+    "link": "https://gsap.com/"
   },
   {
-    "title": "Sass",
-    "image": "sass.svg",
-    "link": "https://sass-lang.com/"
+    "title": "Spline",
+    "image": "spline.svg",
+    "link": "https://spline.design/"
   },
   {
-    "title": "WordPress",
-    "image": "wordpress.svg",
-    "link": "https://wordpress.org/"
+    "title": "Figma",
+    "image": "figma.svg",
+    "link": "https://www.figma.com/"
+  },
+  {
+    "title": "Node.js",
+    "image": "nodejs.svg",
+    "link": "https://nodejs.org/"
+  },
+  {
+    "title": "Vercel",
+    "image": "vercel.svg",
+    "link": "https://vercel.com/home"
+  },
+  {
+    "title": "Angular",
+    "image": "angular.svg",
+    "link": "https://angular.dev/"
+  },
+  {
+    "title": "Strapi",
+    "image": "strapi.svg",
+    "link": "https://strapi.io/"
   },
   {
     "title": "Git",
@@ -48,60 +88,5 @@
     "title": "Github",
     "image": "github.svg",
     "link": "https://github.com/"
-  },
-  {
-    "title": "Figma",
-    "image": "figma.svg",
-    "link": "https://www.figma.com/"
-  },
-  {
-    "title": "React",
-    "image": "react.svg",
-    "link": "https://reactjs.org/"
-  },
-  {
-    "title": "GSAP",
-    "image": "gsap.svg",
-    "link": "https://gsap.com/"
-  },
-  {
-    "title": "Spline",
-    "image": "spline.png",
-    "link": "https://spline.design/"
-  },
-  {
-    "title": "Next.js",
-    "image": "nextjs.svg",
-    "link": "https://nextjs.org/"
-  },
-  {
-    "title": "Vercel",
-    "image": "vercel.svg",
-    "link": "https://vercel.com/home"
-  },
-  {
-    "title": "Node.js",
-    "image": "nodejs.svg",
-    "link": "https://nodejs.org/"
-  },
-  {
-    "title": "Express",
-    "image": "expressjs.svg",
-    "link": "https://expressjs.com/"
-  },
-  {
-    "title": "MongoDB",
-    "image": "mongodb.svg",
-    "link": "https://www.mongodb.com/"
-  },
-  {
-    "title": "Strapi",
-    "image": "strapi.svg",
-    "link": "https://strapi.io/"
-  },
-  {
-    "title": "Angular",
-    "image": "angular.svg",
-    "link": "https://angular.io/"
   }
 ]
