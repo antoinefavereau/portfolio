@@ -36,6 +36,11 @@
     "url": "https://www.getbikefleet.com/"
   },
   {
+    "title": "Systemity",
+    "dates": "2026 - 6 mois",
+    "description": "Plateforme d'opérations pour équipes de racing. <strong>Lead Développeur Front-End</strong> sur l'application web. Conception de l'architecture sous <strong>Next.js 16 et React 19</strong> : interfaces denses pour la planification et le suivi d'assets, coordination de workflows complexes et Design System modulaire sous <strong>Tailwind CSS</strong>."
+  },
+  {
     "title": "Freelance",
     "dates": "2022 - Aujourd'hui",
     "description": "<strong>Développeur web indépendant</strong>. Gestion complète de projets variés (sites vitrines, plateformes complexes), de l'analyse des besoins à la livraison. Cette activité m'a apporté une grande autonomie et une solide polyvalence sur les architectures <strong>front-end et back-end</strong>."
